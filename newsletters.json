@@ -1,0 +1,202 @@
+[
+ {
+  "id": "nl0",
+  "name": "TLDR InfoSec",
+  "publisher": "TLDR",
+  "freq": "Daily (weekdays)",
+  "why": "5-minute daily roundup of breaches, vulns and identity news. The one Dad forwarded; it gives you talking points for interviews.",
+  "url": "https://tldr.tech/infosec",
+  "top": true,
+  "http": "200"
+ },
+ {
+  "id": "nl1",
+  "name": "tl;dr sec",
+  "publisher": "Clint Gibler",
+  "freq": "Weekly",
+  "why": "Best weekly curation of cloud security, AppSec and AWS/Azure IAM tooling. Respected by hiring managers.",
+  "url": "https://tldrsec.com/",
+  "top": true,
+  "http": "200"
+ },
+ {
+  "id": "nl2",
+  "name": "SANS NewsBites",
+  "publisher": "SANS Institute",
+  "freq": "Twice weekly",
+  "why": "Top stories with expert commentary. Quick way to sound current in interviews.",
+  "url": "https://www.sans.org/newsletters/newsbites/",
+  "top": true,
+  "http": "200"
+ },
+ {
+  "id": "nl3",
+  "name": "CISA Cybersecurity Alerts & Advisories",
+  "publisher": "CISA (US Gov)",
+  "freq": "As issued",
+  "why": "Official US alerts on exploited vulns (KEV). Real identity-attack advisories you can quote.",
+  "url": "https://www.cisa.gov/about/contact-us/subscribe-updates-cisa",
+  "top": true,
+  "http": "200"
+ },
+ {
+  "id": "nl4",
+  "name": "Microsoft Entra Blog",
+  "publisher": "Microsoft",
+  "freq": "Weekly-ish",
+  "why": "New Entra ID, PIM, Conditional Access features. This is your SC-300 and day-job platform.",
+  "url": "https://techcommunity.microsoft.com/category/microsoft-entra/blog/microsoft-entra-blog",
+  "top": true,
+  "http": "200"
+ },
+ {
+  "id": "nl5",
+  "name": "SANS OUCH!",
+  "publisher": "SANS Institute",
+  "freq": "Monthly",
+  "why": "Short security-awareness newsletter. Good for explaining security to non-tech users.",
+  "url": "https://www.sans.org/newsletters/ouch/",
+  "top": false,
+  "http": "200"
+ },
+ {
+  "id": "nl6",
+  "name": "Risky Business News",
+  "publisher": "Risky Business Media",
+  "freq": "Weekdays",
+  "why": "Sharp daily news, plus a podcast for your commute.",
+  "url": "https://news.risky.biz/",
+  "top": false,
+  "http": "200"
+ },
+ {
+  "id": "nl7",
+  "name": "The Hacker News",
+  "publisher": "The Hacker News",
+  "freq": "Daily",
+  "why": "Wide coverage of breaches and vulnerabilities.",
+  "url": "https://thehackernews.com/",
+  "top": false,
+  "http": "200"
+ },
+ {
+  "id": "nl8",
+  "name": "Dark Reading",
+  "publisher": "Informa TechTarget",
+  "freq": "Daily",
+  "why": "Enterprise security news including identity and access.",
+  "url": "https://www.darkreading.com/newsletter-signup",
+  "top": false,
+  "http": "200 (verified in browser fetch)"
+ },
+ {
+  "id": "nl9",
+  "name": "SecurityWeek",
+  "publisher": "SecurityWeek",
+  "freq": "Daily",
+  "why": "Industry news plus their identity/IAM coverage.",
+  "url": "https://www.securityweek.com/subscribe/",
+  "top": false,
+  "http": "200"
+ },
+ {
+  "id": "nl10",
+  "name": "Krebs on Security",
+  "publisher": "Brian Krebs",
+  "freq": "Several per week",
+  "why": "Deep investigations into account takeover, MFA bypass and fraud.",
+  "url": "https://krebsonsecurity.com/subscribe/",
+  "top": false,
+  "http": "200"
+ },
+ {
+  "id": "nl11",
+  "name": "Unsupervised Learning",
+  "publisher": "Daniel Miessler",
+  "freq": "Weekly",
+  "why": "Security + AI + career thinking. Helps you connect AI skills to cyber.",
+  "url": "https://danielmiessler.com/newsletter",
+  "top": false,
+  "http": "200"
+ },
+ {
+  "id": "nl12",
+  "name": "Simply Cyber",
+  "publisher": "Gerald Auger",
+  "freq": "Weekly / daily stream",
+  "why": "Career-focused community for breaking into and growing in cyber.",
+  "url": "https://simplycyber.io/",
+  "top": false,
+  "http": "200"
+ },
+ {
+  "id": "nl13",
+  "name": "Okta Blog / Identity newsletter",
+  "publisher": "Okta",
+  "freq": "Weekly",
+  "why": "Workforce and customer identity trends from a top IAM vendor you'll see in job posts.",
+  "url": "https://www.okta.com/blog/",
+  "top": false,
+  "http": "200"
+ },
+ {
+  "id": "nl14",
+  "name": "SailPoint Blog",
+  "publisher": "SailPoint",
+  "freq": "Weekly",
+  "why": "Identity governance (IGA) ideas: access reviews, JML. Many IAM jobs ask for SailPoint.",
+  "url": "https://www.sailpoint.com/blog",
+  "top": false,
+  "http": "200"
+ },
+ {
+  "id": "nl15",
+  "name": "CyberArk Blog",
+  "publisher": "CyberArk",
+  "freq": "Weekly",
+  "why": "Privileged access (PAM) best practices; PAM skills raise IAM pay.",
+  "url": "https://www.cyberark.com/resources/blog",
+  "top": false,
+  "http": "200"
+ },
+ {
+  "id": "nl16",
+  "name": "IDPro Newsletter",
+  "publisher": "IDPro",
+  "freq": "Monthly",
+  "why": "The professional body for identity people; news, Body of Knowledge, CIDPRO cert.",
+  "url": "https://idpro.org/",
+  "top": false,
+  "http": "200"
+ },
+ {
+  "id": "nl17",
+  "name": "Identity Defined Security Alliance (IDSA)",
+  "publisher": "IDSA",
+  "freq": "Monthly",
+  "why": "Vendor-neutral identity security best practices and research.",
+  "url": "https://www.idsalliance.org/",
+  "top": false,
+  "http": "200"
+ },
+ {
+  "id": "nl18",
+  "name": "AWS Security Blog",
+  "publisher": "Amazon Web Services",
+  "freq": "Several per week",
+  "why": "AWS IAM, Identity Center and policy updates; builds on your APTASK AWS IAM work.",
+  "url": "https://aws.amazon.com/blogs/security/",
+  "top": false,
+  "http": "200"
+ },
+ {
+  "id": "nl19",
+  "name": "Cybersecurity Jobs by Infosec-Jobs",
+  "publisher": "infosec-jobs.com",
+  "freq": "Weekly",
+  "why": "Weekly email of new security job openings, including remote IAM roles.",
+  "url": "https://infosec-jobs.com/",
+  "top": false,
+  "http": "200"
+ }
+]
