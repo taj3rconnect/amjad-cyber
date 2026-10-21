@@ -45,6 +45,12 @@ main{max-width:none!important;margin:0!important;padding:0 20px 120px!important}
 #sres .gh{display:block;padding:6px 12px 2px;font-size:11px;font-weight:800;text-transform:uppercase;color:#6b7590;letter-spacing:.06em;pointer-events:none}
 .hamb{display:none;background:none;border:0;color:#fff;font-size:24px;width:44px;height:44px;cursor:pointer}
 #mshade{display:none}
+#jside{transition:transform .25s ease,opacity .25s}body{transition:padding-left .25s ease}
+.jcol{position:absolute;right:8px;top:8px;border:0;background:#eef1fb;border-radius:8px;width:32px;height:32px;cursor:pointer;font-size:16px}
+#jrail{display:none;position:fixed;left:var(--mw);top:calc(var(--tb) + 12px);z-index:41;writing-mode:vertical-rl;transform:rotate(180deg);background:linear-gradient(180deg,#4f46e5,#db2777);color:#fff;border:0;border-radius:12px 0 0 12px;padding:14px 8px;font:700 13px Inter,system-ui;cursor:pointer;box-shadow:0 6px 18px rgba(79,70,229,.3)}
+.jtop{background:rgba(255,255,255,.12);border:0;color:#fff;border-radius:10px;height:40px;padding:0 10px;font:700 13px Inter,system-ui;cursor:pointer;display:none}
+@media(min-width:1280px){body.jcollapsed{padding-left:var(--mw)}body.jcollapsed #jside{transform:translateX(-110%);opacity:0;pointer-events:none}body.jcollapsed #jrail{display:block}body.jcollapsed .totop{left:calc(var(--mw) + 16px)!important}.jtop{display:inline-block}}
+.more{display:block;margin:10px auto;}
 @media(min-width:1280px){body{padding-left:calc(var(--mw) + var(--jw))}.totop{left:calc(var(--mw) + var(--jw) + 16px)!important}}
 @media(min-width:900px) and (max-width:1279px){body{padding-left:var(--mw)}#jside{display:none}.totop{left:calc(var(--mw) + 16px)!important}}
 @media(max-width:899px){.hamb{display:block}#jside{display:none}
@@ -53,16 +59,21 @@ main{max-width:none!important;margin:0!important;padding:0 20px 120px!important}
  main{padding:0 14px 120px!important}}
 </style>`);
 /* ---------- menu ---------- */
-const MENU=[['home','🏠','Home'],['progress','📈','My progress'],['steps','🪜','Steps'],['certs','🎓','Certifications'],['jobs','💼','Jobs found for you'],['jobsearch','🧭','Job search track'],['mustwatch','🎬','Must-watch'],['mustread','📚','Must-read'],['prompts','✨','Prompts'],['bots','🤖','Bots & tools'],['gigs','🧠','AI training gigs'],['today','📰','Today history'],['history','🕘','Ask Dad history'],['guides','📄','Guides'],['quiz','🧩','Retake quiz']];
+const MENU=[['home','🏠','Home'],['progress','📈','My progress'],['steps','🪜','Steps'],['certs','🎓','Certifications'],['jobs','💼','Jobs found for you'],['jobsearch','🧭','Job search track'],['mustwatch','🎬','Must-watch'],['mustread','📚','Must-read'],['prompts','✨','Prompts'],['bots','🤖','Bots & tools'],['gigs','🧠','AI training gigs'],['network','🤝','LinkedIn networking'],['events','📅','Events'],['today','📰','Today history'],['history','🕘','Ask Dad history'],['guides','📄','Guides'],['quiz','🧩','Retake quiz']];
 const top=q1('header.top'),brand=q1('a.brand');
 top.insertAdjacentHTML('afterbegin','<button class="hamb" aria-label="Open menu" type="button">☰</button>');
 document.body.insertAdjacentHTML('beforeend',`<div id="mshade"></div><nav id="smenu" aria-label="Main menu">${MENU.map(([k,i,t])=>`<a href="#/${k}" data-v="${k}"><span>${i}</span>${t}</a>`).join('')}</nav>
-<aside id="jside" aria-label="Jobs found for you"><div class="jh"><h3>💼 Jobs found for you</h3><input class="jsq" type="search" placeholder="Search jobs: title, skill, city, pay…" aria-label="Search jobs"><div class="pills"></div><button class="pfold" type="button">Hide filters</button></div><div class="ls">Loading…</div></aside>`);
+<aside id="jside" aria-label="Jobs found for you"><div class="jh" style="position:relative"><button class="jcol" type="button" aria-label="Hide jobs panel" title="Hide jobs panel">⟨</button><h3>💼 Jobs found for you <span class="jcount mut" style="font-weight:600"></span></h3><input class="jsq" type="search" placeholder="Search jobs: title, skill, city, pay…" aria-label="Search jobs"><div class="pills"></div><button class="pfold" type="button">Hide filters</button> · <button class="rf" type="button">Reset filters</button></div><div class="ls">Loading…</div></aside><button id="jrail" type="button" aria-label="Show jobs panel">💼 Jobs (<span class="jcount2"></span>) ⟩</button>`);top.querySelector('.brand').insertAdjacentHTML('afterend','<button class="jtop" type="button" aria-label="Show or hide jobs panel" title="Show or hide jobs panel">💼 Jobs</button>');
 const body=document.body,mopen=o=>body.classList.toggle('mopen',o);
 q1('.hamb').onclick=()=>mopen(!body.classList.contains('mopen'));q1('#mshade').onclick=()=>mopen(false);
 q1('#smenu').addEventListener('click',e=>{const a=e.target.closest('a');if(a&&a.dataset.v==='quiz'){e.preventDefault();mopen(false);q1('.retake').click();return}mopen(false)});
 brand.onclick=e=>{e.preventDefault();$('.bd.on').forEach(b=>{b.classList.remove('on')});location.hash='#/home'};
-q1('#jside .pfold').onclick=e=>{const p=q1('#jside .pills');p.hidden=!p.hidden;e.target.textContent=p.hidden?'Show filters':'Hide filters'};
+const UK='amjad-ui',ui=()=>LS(UK,{}),setUI=(k,v)=>{const u=ui();u[k]=v;SET(UK,u)};
+function applyUI(){const u=ui();body.classList.toggle('jcollapsed',!!u.jcol);const p=q1('#jside .pills');p.hidden=!!u.pills;q1('#jside .pfold').textContent=u.pills?'Show filters':'Hide filters'}
+q1('#jside .pfold').onclick=()=>{setUI('pills',!ui().pills);applyUI()};
+q1('.jcol').onclick=()=>{setUI('jcol',true);applyUI()};q1('#jrail').onclick=()=>{setUI('jcol',false);applyUI()};
+document.addEventListener('click',e=>{if(e.target.closest('.jtop')){if(innerWidth<1280){location.hash='#/jobs';return}setUI('jcol',!ui().jcol);applyUI()}});
+applyUI();
 /* ---------- views from existing sections ---------- */
 const main=q1('main');const views=document.createElement('div');views.id='views';
 const MAP={hero:'home',coach:'home',letter:'home',accounts:'home',glance:'home','askdad-help':'home',certs:'certs',soc:'steps',grcb:'steps',jobsearch:'jobsearch',roles:'jobsearch',resume:'jobsearch',linkedin:'jobsearch',interview:'jobsearch',apply:'jobsearch',jobs:'_hide',aitrain:'gigs',mustwatch:'mustwatch',mustread:'mustread',bots:'bots'};
@@ -79,26 +90,30 @@ const AK='amjad-applied-v1',FK='amjad-jobfilters',MK='amjad-ivmarks';
 const applied=()=>LS(AK,{}),isAp=j=>{const a=applied();return a[j.id]||a[j.url]};
 function toggleAp(j,on){const a=applied();delete a[j.url];if(on)a[j.id]=new Date().toLocaleDateString('en-US',{timeZone:'America/New_York'});else delete a[j.id];SET(AK,a);drawSide();if(cur.v==='job'||cur.v==='jobs')route()}
 /* ---------- filters ---------- */
-const FG=[['work_mode','Work mode',['On-site','Hybrid','Remote','Remote + travel']],['job_type','Job type',['Contract','Full-time','Contract-to-hire']],['employer_type','Employer',['Direct employer','Consulting/SI','Staffing agency','AI training gig']]];
-const getF=()=>LS(FK,{work_mode:[],job_type:[],employer_type:[]});
+const FG=[['work_mode','Work mode',['On-site','Hybrid','Remote','Remote + travel']],['job_type','Job type',['Contract','Full-time','Contract-to-hire']],['employer_type','Employer',['Direct employer','Consulting/SI','Staffing agency','AI training gig']],['state','State',[]]];
+const getF=()=>Object.assign({work_mode:[],job_type:[],employer_type:[],state:[]},LS(FK,{}));
+const opts=(k,os)=>k==='state'?[...new Set(JOBS.map(j=>j.state).filter(Boolean))].sort((a,b)=>(a==='US')-(b==='US')||a.localeCompare(b)):os;
 let SQ={side:'',main:''};
 const hay=j=>[j.title,j.company,j.location,j.pay,j.mode,j.summary,(j.reqs||[]).join(' '),j.fit,j.source,j.employer_type,j.job_type].join(' ').toLowerCase();
 function filt(w,skipG){const F=getF();return JOBS.filter(j=>FG.every(([k])=>k===skipG||!F[k]?.length||F[k].includes(j[k]))&&(!w||w.toLowerCase().split(/\s+/).every(x=>hay(j).includes(x))))}
 function pillsHTML(w){const F=getF();const all=!FG.some(([k])=>F[k]?.length);
- return `<button class="pl${all?' on':''}" data-all="1" type="button">All<i>${filt(w).length}</i></button>`+FG.map(([k,l,os])=>`<span class="gl">${l}</span>`+os.map(o=>{const n=filt(w,k).filter(j=>j[k]===o).length;return `<button class="pl${F[k]?.includes(o)?' on':''}" data-g="${k}" data-o="${E(o)}" type="button">${E(o)}<i>${n}</i></button>`}).join('')).join('')}
+ return `<button class="pl${all?' on':''}" data-all="1" type="button">All<i>${filt(w).length}</i></button>`+FG.map(([k,l,os])=>`<span class="gl">${l}</span>`+opts(k,os).map(o=>{const n=filt(w,k).filter(j=>j[k]===o).length;return `<button class="pl${F[k]?.includes(o)?' on':''}" data-g="${k}" data-o="${E(o)}" type="button">${E(o==='US'?'Remote (any US)':o)}<i>${n}</i></button>`}).filter((h,i,a)=>k!=='state'||!/<i>0<\/i>/.test(h)||getF().state.includes(opts(k,os)[i])).join('')).join('')}
 document.addEventListener('click',e=>{const p=e.target.closest('.pills .pl');if(!p)return;let F=getF();
- if(p.dataset.all)F={work_mode:[],job_type:[],employer_type:[]};else{const g=p.dataset.g,o=p.dataset.o;F[g]=F[g]||[];F[g]=F[g].includes(o)?F[g].filter(x=>x!==o):[...F[g],o]}
+ if(p.dataset.all)F={work_mode:[],job_type:[],employer_type:[],state:[]};else{const g=p.dataset.g,o=p.dataset.o;F[g]=F[g]||[];F[g]=F[g].includes(o)?F[g].filter(x=>x!==o):[...F[g],o]}
  SET(FK,F);drawSide();if(cur.v==='jobs')route()});
 const sortJ=L=>[...L].sort((a,b)=>(a.group==='gig')-(b.group==='gig')||String(b.posted).localeCompare(String(a.posted)));
 const wk=Date.now()-7*864e5,loc=j=>j.location&&j.location.toLowerCase().startsWith(String(j.work_mode).toLowerCase())?j.location:`${j.work_mode} · ${j.location}`;
-function card(j,w,act){return `<a class="jbc${isAp(j)?' ap':''}${act?' on':''}" href="#/job/${E(j.id)}"><span class="t">${hl(j.title,w)}</span>${Date.parse(j.posted)>wk?'<span class="new">NEW</span>':''}<div class="m">${hl(j.company,w)}</div><div class="p">${hl(j.pay,w)}</div><div class="m">${hl(loc(j),w)} · ${E(j.job_type)} · ${E(j.employer_type)}</div><div class="m">${E(j.source)} · posted ${E(j.posted)}${isAp(j)?' · ✅ Applied '+E(isAp(j)):''}</div>
+function card(j,w,act){return `<a class="jbc${isAp(j)?' ap':''}${act?' on':''}" href="#/job/${E(j.id)}"><span class="t">${hl(j.title,w)}</span>${Date.parse(j.posted)>wk?'<span class="new">NEW</span>':''}<div class="m">${hl(j.company,w)}</div><div class="p">${hl(j.pay,w)}</div><div class="m">${hl(loc(j),w)} · ${E(j.job_type)} · ${E(j.employer_type)}</div><div class="m">${j.source&&j.source!==j.employer_type?E(j.source)+' · ':''}posted ${E(j.posted)}${j.pay_est?' · pay est.':''}${isAp(j)?' · ✅ Applied '+E(isAp(j)):''}</div>
 <div class="row"><button class="jbtn sec2 sm" data-ap="${E(j.id)}" type="button">${isAp(j)?'✅ Applied':'Mark applied'}</button><button class="jbtn sec2 sm" data-iv="${E(j.id)}" type="button">🎤 Practice interview</button></div></a>`}
 document.addEventListener('click',e=>{const a=e.target.closest('[data-ap]'),v=e.target.closest('[data-iv]');if(a){e.preventDefault();e.stopPropagation();const j=JOBS.find(x=>x.id===a.dataset.ap);toggleAp(j,!isAp(j))}else if(v){e.preventDefault();e.stopPropagation();location.hash='#/interview/'+v.dataset.iv}},true);
-function drawSide(){const w=SQ.side,L=sortJ(filt(w));q1('#jside .pills').innerHTML=pillsHTML(w);q1('#jside .ls').innerHTML=L.map(j=>card(j,w,cur.v==='job'&&cur.a===j.id||cur.v==='interview'&&cur.a===j.id)).join('')||'<p class="mut" style="padding:8px">No jobs match these filters. Tap All to reset.</p>'}
+let PG={side:30,main:30};
+function drawSide(){const w=SQ.side,L=sortJ(filt(w));$('.jcount').forEach(e=>e.textContent='('+L.length+')');$('.jcount2').forEach(e=>e.textContent=L.length);q1('#jside .pills').innerHTML=pillsHTML(w);q1('#jside .ls').innerHTML=L.slice(0,PG.side).map(j=>card(j,w,cur.v==='job'&&cur.a===j.id||cur.v==='interview'&&cur.a===j.id)).join('')+(L.length>PG.side?`<button class="jbtn sec2 more" data-more="side" type="button">Show more (${L.length-PG.side})</button>`:'')||'<p class="mut" style="padding:8px">No jobs match these filters. Tap All to reset.</p>'}
 q1('#jside .jsq').addEventListener('input',e=>{SQ.side=e.target.value.trim();drawSide()});
+document.addEventListener('click',e=>{const m=e.target.closest('[data-more]');if(!m)return;PG[m.dataset.more]+=30;if(m.dataset.more==='side')drawSide();else{route.keep=true;const y=scrollY;RV.jobs().then(()=>scrollTo(0,y))}});
+const ls=q1('#jside .ls');ls.addEventListener('scroll',()=>{if(ls.scrollTop+ls.clientHeight>ls.scrollHeight-300&&q1('[data-more=side]',ls)){PG.side+=30;const t=ls.scrollTop;drawSide();ls.scrollTop=t}},{passive:true});
 /* ---------- router ---------- */
 let cur={v:'home'};
-function parse(){const h=location.hash||'#/home';if(h.startsWith('#/')){const [v,...a]=h.slice(2).split('/');return {v:v||'home',a:decodeURIComponent(a.join('/'))}}
+function parse(){const h=location.hash||'#/home';if(h.startsWith('#/')){const [v0,...a]=h.slice(2).split('?')[0].split('/'),v=v0;return {v:v||'home',a:decodeURIComponent(a.join('/'))}}
  const id=h.slice(1);const el=document.getElementById(id);if(id==='today')return {v:'today'};if(el){const sec=el.closest('[data-view]');if(sec)return {v:sec.dataset.view,anchor:id}}return {v:'home'}}
 function show(v){$('#views>[data-view]').forEach(el=>el.classList.toggle('vhide',el.dataset.view!==v));dyn.hidden=$('#views>[data-view]').some(el=>el.dataset.view===v);
  $('#smenu a').forEach(a=>a.classList.toggle('on',a.dataset.v===v||(v==='job'||v==='interview')&&a.dataset.v==='jobs'))}
@@ -109,8 +124,8 @@ addEventListener('hashchange',route);
 /* ---------- dynamic views ---------- */
 const RV={};
 RV.jobs=async()=>{await jobsReady;const w=SQ.main,L=sortJ(filt(w));dyn.innerHTML=`<h1>💼 Jobs found for you</h1><p class="mut">Verified roles paying $100K+ (or $75+/hr contract): NY/NJ on-site or hybrid, remote anywhere in the US, and travel roles. AI training gigs are listed separately and can pay less. Tap a job for details, interview practice and the apply link.</p>
-<input class="jsq" id="jmq" type="search" placeholder="Search jobs: title, skill, city, pay…" value="${E(w)}" style="max-width:520px"><div class="pills">${pillsHTML(w)}</div><div id="jml">${L.map(j=>card(j,w)).join('')||'<p class="mut">No jobs match these filters. Tap All to reset.</p>'}</div>`;
- const i=q1('#jmq');i.oninput=()=>{SQ.main=i.value.trim();q1('#jml').innerHTML=sortJ(filt(SQ.main)).map(j=>card(j,SQ.main)).join('');q1('.vw .pills').innerHTML=pillsHTML(SQ.main)}};
+<input class="jsq" id="jmq" type="search" placeholder="Search jobs: title, skill, city, pay…" value="${E(w)}" style="max-width:520px"><button class="rf" type="button">Reset filters</button><div class="pills">${pillsHTML(w)}</div><div id="jml">${L.slice(0,PG.main).map(j=>card(j,w)).join('')+(L.length>PG.main?`<button class="jbtn sec2 more" data-more="main" type="button">Show more (${L.length-PG.main})</button>`:'')||'<p class="mut">No jobs match these filters. Tap All to reset.</p>'}</div>`;
+ const i=q1('#jmq');i.oninput=()=>{SQ.main=i.value.trim();q1('#jml').innerHTML=sortJ(filt(SQ.main)).slice(0,PG.main).map(j=>card(j,SQ.main)).join('');q1('.vw .pills').innerHTML=pillsHTML(SQ.main)}};
 RV.job=async id=>{await jobsReady;const j=JOBS.find(x=>x.id===id);if(!j){dyn.innerHTML='<h1>Job not found</h1><p><a href="#/jobs">Back to jobs</a></p>';return}drawSide();
  const site=(()=>{try{return new URL(j.url).hostname.replace(/^www\./,'')}catch(e){return 'the site'}})();
  dyn.innerHTML=`<p><a href="#/jobs">← All jobs</a></p><h1>${E(j.title)}</h1><p class="mut" style="font-size:17px">${E(j.company)}</p>
@@ -119,7 +134,7 @@ RV.job=async id=>{await jobsReady;const j=JOBS.find(x=>x.id===id);if(!j){dyn.inn
 ${j.summary?`<div class="card"><h3>About the role</h3><p>${E(j.summary)}</p>${(j.reqs||[]).length?'<h3>Key requirements</h3><ul>'+j.reqs.map(r=>`<li>${E(r)}</li>`).join('')+'</ul>':''}</div>`:''}
 ${j.fit?`<div class="card"><h3>💪 Why it fits you</h3><p>${E(j.fit)}</p></div>`:''}
 ${(j.gaps||[]).length?`<div class="card"><h3>🎯 Gaps to prep</h3><ul>${j.gaps.map(g=>`<li>${E(g)}</li>`).join('')}</ul></div>`:''}
-<div class="card"><h3>Original listing</h3>${j.frameable?`<iframe class="jd" src="${E(j.url)}" title="Original job listing" loading="lazy" referrerpolicy="no-referrer"></iframe><p class="mut">If the listing looks blank, <a href="${E(j.url)}" target="_blank" rel="noopener">open it on ${E(site)} ↗</a>.</p>`:`<p class="mut">${E(site)} doesn't allow its listings to be shown inside other sites, so open it in a new tab:</p><a class="jbtn pri" href="${E(j.url)}" target="_blank" rel="noopener">Open on ${E(site)} ↗</a>`}</div>`};
+<div class="card"><h3>Original listing</h3><p style="word-break:break-all">🔗 <a href="${E(j.url)}" target="_blank" rel="noopener">${E(j.url)} ↗</a></p>${j.frameable?`<iframe class="jd" src="${E(j.url)}" title="Original job listing" loading="lazy" referrerpolicy="no-referrer"></iframe><p class="mut">If the listing looks blank, <a href="${E(j.url)}" target="_blank" rel="noopener">open it on ${E(site)} ↗</a>.</p>`:`<p class="mut">This listing can't be shown inside the app, so open it in a new tab:</p><a class="jbtn pri" href="${E(j.url)}" target="_blank" rel="noopener">Open on ${E(site)} ↗</a>`}</div>`};
 /* interview */
 const post=(b)=>fetch(W()+'/interview',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b)}).then(r=>r.json());
 const marks=()=>LS(MK,{});function setMark(k,m,q){const M=marks();M[k]={m,q:String(q).slice(0,200),ts:Date.now()};SET(MK,M)}
@@ -217,6 +232,16 @@ const sres=q1('#sres');if(sres){new MutationObserver(()=>{if(sres.__g)return;con
 /* legacy */
 $('a[href="history.html"]').forEach(a=>a.setAttribute('href','#/history'));
 $('a[href="#jobs"]').forEach(a=>a.setAttribute('href','#/jobs'));
-addSearch();drawSide();jobsReady.then(drawSide);route();
+/* clear (×) buttons on every search field */
+document.head.insertAdjacentHTML('beforeend','<style>.sxw{position:relative;display:block}.sxw>input{padding-right:36px!important;width:100%;box-sizing:border-box}.sxb{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:28px;height:28px;border:0;border-radius:50%;background:#e3e8f7;color:#33415c;font-size:16px;line-height:1;cursor:pointer;display:none}.sxw.has .sxb{display:block}input[type=search]::-webkit-search-cancel-button{display:none}.rf{font-size:12px;color:#db2777;background:none;border:0;cursor:pointer;padding:4px 0}</style>');
+function enh(i){if(i.__sx)return;i.__sx=1;const w=document.createElement('span');w.className='sxw';if(i.style.maxWidth)w.style.maxWidth=i.style.maxWidth;i.parentNode.insertBefore(w,i);w.append(i);
+ const b=document.createElement('button');b.type='button';b.className='sxb';b.setAttribute('aria-label','Clear search');b.textContent='×';w.append(b);
+ const up=()=>w.classList.toggle('has',!!i.value);i.addEventListener('input',up);up();
+ const clr=()=>{i.value='';i.dispatchEvent(new Event('input',{bubbles:true}));up();i.focus()};b.onclick=clr;
+ i.addEventListener('keydown',e=>{if(e.key==='Escape'&&i.value){e.preventDefault();e.stopPropagation();clr()}})}
+const enhAll=()=>$('input[type=search],#sq,.jsq').forEach(enh);enhAll();new MutationObserver(enhAll).observe(document.body,{childList:true,subtree:true});
+document.addEventListener('click',e=>{if(e.target.closest('.rf')){SET(FK,{work_mode:[],job_type:[],employer_type:[],state:[]});drawSide();if(cur.v==='jobs')route()}});
+window.__shell={RV,route,dyn,E,md,hl,LS,SET,ET,W,jobsReady,getJobs:()=>JOBS,cur:()=>cur,loadHist};
+addSearch();drawSide();jobsReady.then(drawSide);setTimeout(route,0);
 window.addEventListener('amjad-quiz-done',()=>{location.hash='#/home'});
 })();

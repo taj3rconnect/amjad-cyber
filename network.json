@@ -1,0 +1,599 @@
+{
+"experts": [
+{
+"name": "Merill Fernando",
+"url": "https://www.linkedin.com/in/merill",
+"role": "Ex-Microsoft Entra PM, founder of Jozra/Maester, Entra.News",
+"why": "The best weekly Entra news + free tools (Graph X-Ray, Maester). Daily micro-lessons on Entra."
+},
+{
+"name": "Jef Kazimer",
+"url": "https://www.linkedin.com/in/jefkazimer",
+"role": "Principal PM, Microsoft Entra",
+"why": "Entra product insider; ID Governance, lifecycle workflows."
+},
+{
+"name": "Tarek Dawoud",
+"url": "https://www.linkedin.com/in/tarekdawoud",
+"role": "Principal PM Manager, Microsoft Entra",
+"why": "Entra architecture guidance from the customer engineering team."
+},
+{
+"name": "Alex Weinert",
+"url": "https://www.linkedin.com/in/alexweinert",
+"role": "CPO Semperis, ex-VP Identity Security at Microsoft",
+"why": "Classic posts on MFA and identity attacks. Great interview talking points."
+},
+{
+"name": "Pamela Dingle",
+"url": "https://www.linkedin.com/in/pameladingle",
+"role": "Director of Identity Standards, Microsoft",
+"why": "Standards (FIDO, OIDC, passkeys) explained clearly."
+},
+{
+"name": "John Savill",
+"url": "https://www.linkedin.com/in/john-savill",
+"role": "CTO Americas, Microsoft; Azure Master Class",
+"why": "His free Entra/identity deep dives are SC-300 gold."
+},
+{
+"name": "Thomas Naunheim",
+"url": "https://www.linkedin.com/in/thomasnaunheim",
+"role": "Microsoft Security MVP, cloud identity",
+"why": "EntraOps and the Entra ID Attack & Defense Playbook."
+},
+{
+"name": "Jan Bakker",
+"url": "https://www.linkedin.com/in/jan-bakker",
+"role": "Microsoft MVP, Entra IAM consultant",
+"why": "Practical Conditional Access, PIM and passkeys how-tos. Started at a service desk like you."
+},
+{
+"name": "Daniel Chronlund",
+"url": "https://www.linkedin.com/in/daniel-chronlund-0b714a21",
+"role": "Microsoft MVP, Identity & Access",
+"why": "Conditional Access designs and automation."
+},
+{
+"name": "Nathan McNulty",
+"url": "https://www.linkedin.com/in/nathanmcnulty",
+"role": "Microsoft MVP, Entra/Defender architect",
+"why": "Hands-on Entra and Intune security tips."
+},
+{
+"name": "Fabian Bader",
+"url": "https://www.linkedin.com/in/fabianbader",
+"role": "Microsoft MVP, cybersecurity architect",
+"why": "Deep Entra research and tools."
+},
+{
+"name": "Christopher Brumm",
+"url": "https://www.linkedin.com/in/christopherbrumm",
+"role": "Microsoft Security MVP",
+"why": "Entra security architecture posts."
+},
+{
+"name": "Sami Lamppu",
+"url": "https://www.linkedin.com/in/sami-lamppu",
+"role": "Microsoft Security MVP",
+"why": "Entra + Defender identity security research."
+},
+{
+"name": "Peter van der Woude",
+"url": "https://www.linkedin.com/in/peterwoude",
+"role": "Microsoft Security MVP (Intune)",
+"why": "Intune + identity: matches your current work."
+},
+{
+"name": "Andy Robbins",
+"url": "https://www.linkedin.com/in/robbinsandy",
+"role": "Co-founder SpecterOps, BloodHound",
+"why": "How attackers abuse AD/Entra paths: great for least-privilege stories."
+},
+{
+"name": "Ian Glazer",
+"url": "https://www.linkedin.com/in/iglazer",
+"role": "Identity product strategy, CrowdStrike; IDPro founder",
+"why": "Big-picture identity thinking."
+},
+{
+"name": "Heather Flanagan",
+"url": "https://www.linkedin.com/in/hlflanagan",
+"role": "Spherical Cow Consulting; identity standards",
+"why": "Readable takes on identity standards."
+},
+{
+"name": "Lance Peterman",
+"url": "https://www.linkedin.com/in/lancepeterman",
+"role": "IAM leader, Dick's Sporting Goods; IDPro",
+"why": "Practitioner IAM program lessons; IDPro community."
+},
+{
+"name": "Jeff Steadman",
+"url": "https://www.linkedin.com/in/jeffsteadman",
+"role": "Host, Identity at the Center podcast",
+"why": "Weekly IAM podcast: careers, IGA, PAM."
+},
+{
+"name": "Mike Kiser",
+"url": "https://www.linkedin.com/in/mike-kiser",
+"role": "Director of Strategy & Standards, SailPoint",
+"why": "Identity governance ideas, SailPoint world."
+},
+{
+"name": "Mark McClain",
+"url": "https://www.linkedin.com/in/markmcclainceo",
+"role": "CEO & founder, SailPoint",
+"why": "IGA industry direction."
+},
+{
+"name": "Udi Mokady",
+"url": "https://www.linkedin.com/in/udimokady",
+"role": "Founder, CyberArk",
+"why": "Privileged access industry view."
+},
+{
+"name": "Gerald Auger, PhD",
+"url": "https://www.linkedin.com/in/geraldauger",
+"role": "Simply Cyber founder",
+"why": "Daily threat brief + career advice; very welcoming community."
+},
+{
+"name": "Josh Madakor",
+"url": "https://www.linkedin.com/in/joshmadakor",
+"role": "Cyber trainer, ex-Microsoft",
+"why": "Career-switch stories and hands-on labs."
+},
+{
+"name": "Mike Chapple",
+"url": "https://www.linkedin.com/in/mikechapple",
+"role": "Professor, cybersecurity author",
+"why": "Cert study (Security+, CISSP) guidance."
+},
+{
+"name": "Jason Dion",
+"url": "https://www.linkedin.com/in/jasondion",
+"role": "Founder, Dion Training",
+"why": "Cert prep (CySA+, Security+) and career tips."
+},
+{
+"name": "Caitlin Sarian",
+"url": "https://www.linkedin.com/in/caitlin-sarian",
+"role": "Cybersecurity Girl, educator",
+"why": "Approachable career + security content."
+}
+],
+"groups": [
+{
+"name": "Identity and Access Management Specialists",
+"url": "https://www.linkedin.com/search/results/groups/?keywords=Identity+and+Access+Management+Specialists",
+"members": "25,000+ (per Solutions Review)",
+"why": "The largest IAM-only group, founded 2007.",
+"verified": "Named in Solutions Review list"
+},
+{
+"name": "Digital Identity and Access Management",
+"url": "https://www.linkedin.com/search/results/groups/?keywords=Digital+Identity+and+Access+Management",
+"members": "~7,500",
+"why": "Smaller, discussion-heavy IAM group.",
+"verified": "Named in Solutions Review list"
+},
+{
+"name": "Information Security Network",
+"url": "https://www.linkedin.com/search/results/groups/?keywords=Information+Security+Network",
+"members": "140,000+",
+"why": "Huge infosec network; job posts and career threads.",
+"verified": "Named in Solutions Review list"
+},
+{
+"name": "Security Industry Group (SecIndGroup)",
+"url": "https://www.linkedin.com/search/results/groups/?keywords=Security+Industry+Group",
+"members": "100,000+",
+"why": "Broad security community; good reach for posts.",
+"verified": "Named in Solutions Review list"
+},
+{
+"name": "IT Audit and Governance Group",
+"url": "https://www.linkedin.com/search/results/groups/?keywords=Information+Technology+Audit+and+Governance",
+"members": "Large",
+"why": "Access reviews/SOX side of IAM; matches your audit-trail work.",
+"verified": "Named in Solutions Review list"
+},
+{
+"name": "Non-Human & AI Identity Management Group",
+"url": "https://www.nhimg.org/nhi-linkedin-group",
+"members": "~1,750",
+"why": "Service accounts and AI agents: the newest IAM topic.",
+"verified": "Official group page"
+},
+{
+"name": "Microsoft Entra (official LinkedIn community page)",
+"url": "https://www.linkedin.com/company/microsoft-entra",
+"members": "Follow page",
+"why": "Official Entra news, events and community posts.",
+"verified": "Official page"
+}
+],
+"communities": [
+{
+"name": "IDPro (identity professionals association)",
+"url": "https://idpro.org/",
+"why": "The professional body for IAM; CIDPRO cert and Body of Knowledge."
+},
+{
+"name": "IAM User Groups: New York, Philadelphia (IDPro list)",
+"url": "https://idpro.org/iam-user-groups/",
+"why": "Local IAM meetups in NYC/Philly: closest real IAM networking."
+},
+{
+"name": "ISSA New Jersey Chapter",
+"url": "https://nj-issa.org/",
+"why": "Monthly NJ meetings (virtual/in-person); NJ security leaders."
+},
+{
+"name": "ISC2 New Jersey Chapter",
+"url": "https://newjersey.isc2chapters.isc2.org/",
+"why": "Your local ISC2 chapter; member Discord; CPEs."
+},
+{
+"name": "OWASP New York City chapter",
+"url": "https://owasp.org/chapters/new-york-city/meetings",
+"why": "App security meetups in NYC."
+},
+{
+"name": "Simply Cyber community",
+"url": "https://www.simplycyber.io/",
+"why": "Free daily brief + friendly career community (Discord linked from site)."
+}
+],
+"people": [
+{
+"name": "Titus Sa***l",
+"first": "Titus",
+"title": "Director, Identity and Access Management",
+"company": "EY",
+"kind": "IAM leader",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Titus+Director%2C+Identity+and+Access+Management+EY",
+"job": "lh-cyber-entra",
+"job_title": "Cyber Security Engineer (Entra ID, Intune, IAM)"
+},
+{
+"name": "Rajeevan Ch***n",
+"first": "Rajeevan",
+"title": "Associate Director - Identity & Access Management",
+"company": "EY",
+"kind": "IAM leader",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Rajeevan+Associate+Director+-+Identity+%26+Access+Management+EY",
+"job": "lh-cyber-entra",
+"job_title": "Cyber Security Engineer (Entra ID, Intune, IAM)"
+},
+{
+"name": "Jason Re***r",
+"first": "Jason",
+"title": "Assistant Director, Identity & Access Management",
+"company": "EY",
+"kind": "IAM leader",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Jason+Assistant+Director%2C+Identity+%26+Access+Management+EY",
+"job": "lh-cyber-entra",
+"job_title": "Cyber Security Engineer (Entra ID, Intune, IAM)"
+},
+{
+"name": "Gaurav Po***y",
+"first": "Gaurav",
+"title": "Assistant Director of Identity and Access Management Engineering",
+"company": "EY",
+"kind": "IAM leader",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Gaurav+Assistant+Director+of+Identity+and+Access+Management+Engineering+EY",
+"job": "lh-cyber-entra",
+"job_title": "Cyber Security Engineer (Entra ID, Intune, IAM)"
+},
+{
+"name": "Marie Le***a",
+"first": "Marie",
+"title": "Manager, Identity and Access Management",
+"company": "EY",
+"kind": "IAM leader",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Marie+Manager%2C+Identity+and+Access+Management+EY",
+"job": "lh-cyber-entra",
+"job_title": "Cyber Security Engineer (Entra ID, Intune, IAM)"
+},
+{
+"name": "Bhola Ga***m",
+"first": "Bhola",
+"title": "Senior Technical Recruiter",
+"company": "EY",
+"kind": "Recruiter",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Bhola+Senior+Technical+Recruiter+EY",
+"job": "lh-cyber-entra",
+"job_title": "Cyber Security Engineer (Entra ID, Intune, IAM)"
+},
+{
+"name": "Henry Ea***y",
+"first": "Henry",
+"title": "Experienced Hire Recruiter - Tech Consulting",
+"company": "EY",
+"kind": "Recruiter",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Henry+Experienced+Hire+Recruiter+-+Tech+Consulting+EY",
+"job": "lh-cyber-entra",
+"job_title": "Cyber Security Engineer (Entra ID, Intune, IAM)"
+},
+{
+"name": "Matthew Th***t",
+"first": "Matthew",
+"title": "Early Careers Recruiter Tech Risk",
+"company": "EY",
+"kind": "Recruiter",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Matthew+Early+Careers+Recruiter+Tech+Risk+EY",
+"job": "lh-cyber-entra",
+"job_title": "Cyber Security Engineer (Entra ID, Intune, IAM)"
+},
+{
+"name": "David Ba***n",
+"first": "David",
+"title": "Director, Identity and Access Management",
+"company": "New York University",
+"kind": "IAM leader",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=David+Director%2C+Identity+and+Access+Management+New+York+University",
+"job": "nyu-pam-entra",
+"job_title": "System Administrator II (PAM/Entra ID)"
+},
+{
+"name": "Myisha Fr***n",
+"first": "Myisha",
+"title": "Global Director, Identity & Access Management",
+"company": "Deloitte",
+"kind": "IAM leader",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Myisha+Global+Director%2C+Identity+%26+Access+Management+Deloitte",
+"job": "deloitte-iam-architect",
+"job_title": "IAM Architect, Delivery Senior Consultant"
+},
+{
+"name": "Phani Ak***i",
+"first": "Phani",
+"title": "IAM Manager",
+"company": "Deloitte",
+"kind": "IAM leader",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Phani+IAM+Manager+Deloitte",
+"job": "deloitte-iam-architect",
+"job_title": "IAM Architect, Delivery Senior Consultant"
+},
+{
+"name": "Suoresh A",
+"first": "Suoresh",
+"title": "Senior IAM Manager",
+"company": "Deloitte",
+"kind": "IAM leader",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Suoresh+Senior+IAM+Manager+Deloitte",
+"job": "deloitte-iam-architect",
+"job_title": "IAM Architect, Delivery Senior Consultant"
+},
+{
+"name": "Vishwanath Ba***i",
+"first": "Vishwanath",
+"title": "Manager of Identity and Access Management",
+"company": "Deloitte",
+"kind": "IAM leader",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Vishwanath+Manager+of+Identity+and+Access+Management+Deloitte",
+"job": "deloitte-iam-architect",
+"job_title": "IAM Architect, Delivery Senior Consultant"
+},
+{
+"name": "Jackson Mi***r",
+"first": "Jackson",
+"title": "Senior Manager, Identity and Access Management",
+"company": "Deloitte",
+"kind": "IAM leader",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Jackson+Senior+Manager%2C+Identity+and+Access+Management+Deloitte",
+"job": "deloitte-iam-architect",
+"job_title": "IAM Architect, Delivery Senior Consultant"
+},
+{
+"name": "Dean Ma***y",
+"first": "Dean",
+"title": "Strategic Talent Acquisition Partner",
+"company": "Deloitte",
+"kind": "Recruiter",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Dean+Strategic+Talent+Acquisition+Partner+Deloitte",
+"job": "deloitte-iam-architect",
+"job_title": "IAM Architect, Delivery Senior Consultant"
+},
+{
+"name": "Grace Ca***t",
+"first": "Grace",
+"title": "Technical Recruiter",
+"company": "Deloitte",
+"kind": "Recruiter",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Grace+Technical+Recruiter+Deloitte",
+"job": "deloitte-iam-architect",
+"job_title": "IAM Architect, Delivery Senior Consultant"
+},
+{
+"name": "Amy Lu***z",
+"first": "Amy",
+"title": "Technical Recruiter",
+"company": "Deloitte",
+"kind": "Recruiter",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Amy+Technical+Recruiter+Deloitte",
+"job": "deloitte-iam-architect",
+"job_title": "IAM Architect, Delivery Senior Consultant"
+},
+{
+"name": "Kathy Ca***t",
+"first": "Kathy",
+"title": "Senior Talent Acquisition Partner",
+"company": "Insmed Incorporated",
+"kind": "Recruiter",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Kathy+Senior+Talent+Acquisition+Partner+Insmed+Incorporated",
+"job": "insmed-sr-iam",
+"job_title": "Senior IAM Engineer (Microsoft Entra ID)"
+},
+{
+"name": "Michelle Cl***s",
+"first": "Michelle",
+"title": "Senior Recruiter / Senior Talent Acquisition Partner",
+"company": "Insmed Incorporated",
+"kind": "Recruiter",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Michelle+Senior+Recruiter+%2F+Senior+Talent+Acquisition+Partner+Insmed+Incorporated",
+"job": "insmed-sr-iam",
+"job_title": "Senior IAM Engineer (Microsoft Entra ID)"
+},
+{
+"name": "Tara Gr***e",
+"first": "Tara",
+"title": "Senior Talent Acquisition Business Partner",
+"company": "Insmed Incorporated",
+"kind": "Recruiter",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Tara+Senior+Talent+Acquisition+Business+Partner+Insmed+Incorporated",
+"job": "insmed-sr-iam",
+"job_title": "Senior IAM Engineer (Microsoft Entra ID)"
+},
+{
+"name": "Melinda Ge***s",
+"first": "Melinda",
+"title": "Program Manager/ Iam-ii",
+"company": "CACI International Inc",
+"kind": "IAM leader",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Melinda+Program+Manager%2F+Iam-ii+CACI+International+Inc",
+"job": "caci-iam",
+"job_title": "IAM Engineer"
+},
+{
+"name": "Debbie Ru***r",
+"first": "Debbie",
+"title": "Senior Talent Acquisition Partner -CACI",
+"company": "CACI International Inc",
+"kind": "Recruiter",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Debbie+Senior+Talent+Acquisition+Partner+-CACI+CACI+International+Inc",
+"job": "caci-iam",
+"job_title": "IAM Engineer"
+},
+{
+"name": "Shadman Na***m",
+"first": "Shadman",
+"title": "Technical Recruiter",
+"company": "CACI International Inc",
+"kind": "Recruiter",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Shadman+Technical+Recruiter+CACI+International+Inc",
+"job": "caci-iam",
+"job_title": "IAM Engineer"
+},
+{
+"name": "Chang Han",
+"first": "Chang",
+"title": "Technical Recruiter",
+"company": "CACI International Inc",
+"kind": "Recruiter",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Chang+Technical+Recruiter+CACI+International+Inc",
+"job": "caci-iam",
+"job_title": "IAM Engineer"
+},
+{
+"name": "Ilya Si***v",
+"first": "Ilya",
+"title": "Head of Identity Governance and Administration",
+"company": "Guardian",
+"kind": "IAM leader",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Ilya+Head+of+Identity+Governance+and+Administration+Guardian",
+"job": "guardian-sr-iam",
+"job_title": "Senior Identity and Access Management Engineer"
+},
+{
+"name": "Chris Lu***k",
+"first": "Chris",
+"title": "Head of Identity and Access Management Engineering",
+"company": "Guardian",
+"kind": "IAM leader",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Chris+Head+of+Identity+and+Access+Management+Engineering+Guardian",
+"job": "guardian-sr-iam",
+"job_title": "Senior Identity and Access Management Engineer"
+},
+{
+"name": "Alvin La***g",
+"first": "Alvin",
+"title": "Technology Recruiter",
+"company": "Guardian",
+"kind": "Recruiter",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Alvin+Technology+Recruiter+Guardian",
+"job": "guardian-sr-iam",
+"job_title": "Senior Identity and Access Management Engineer"
+},
+{
+"name": "Raymond Sh***n",
+"first": "Raymond",
+"title": "Senior Technical Recruiter",
+"company": "Guardian",
+"kind": "Recruiter",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Raymond+Senior+Technical+Recruiter+Guardian",
+"job": "guardian-sr-iam",
+"job_title": "Senior Identity and Access Management Engineer"
+},
+{
+"name": "Rob Ra***z",
+"first": "Rob",
+"title": "Senior Technical Recruiter - Talent Acquisition",
+"company": "Guardian",
+"kind": "Recruiter",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Rob+Senior+Technical+Recruiter+-+Talent+Acquisition+Guardian",
+"job": "guardian-sr-iam",
+"job_title": "Senior Identity and Access Management Engineer"
+},
+{
+"name": "Taylor Po***r",
+"first": "Taylor",
+"title": "Lead Technical Recruiter",
+"company": "FanDuel",
+"kind": "Recruiter",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Taylor+Lead+Technical+Recruiter+FanDuel",
+"job": "fanduel-sr-iam-nyc",
+"job_title": "Senior IAM Engineer"
+},
+{
+"name": "Cal Th***l",
+"first": "Cal",
+"title": "Senior Technical Recruiter",
+"company": "FanDuel",
+"kind": "Recruiter",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Cal+Senior+Technical+Recruiter+FanDuel",
+"job": "fanduel-sr-iam-nyc",
+"job_title": "Senior IAM Engineer"
+},
+{
+"name": "Gabrielle Ou***e",
+"first": "Gabrielle",
+"title": "Talent Acquisition - Senior Technical Recruiter",
+"company": "FanDuel",
+"kind": "Recruiter",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Gabrielle+Talent+Acquisition+-+Senior+Technical+Recruiter+FanDuel",
+"job": "fanduel-sr-iam-nyc",
+"job_title": "Senior IAM Engineer"
+},
+{
+"name": "Brendan Mc***n",
+"first": "Brendan",
+"title": "Divisional Recruiter",
+"company": "Piper Companies",
+"kind": "Recruiter",
+"li_search": "https://www.linkedin.com/search/results/people/?keywords=Brendan+Divisional+Recruiter+Piper+Companies",
+"job": "zp-azure-iam",
+"job_title": "Azure IAM Engineer"
+}
+],
+"templates": {
+"connect_leader": "Hi {first}, I'm an IT/IAM specialist in NJ automating Joiner-Mover-Leaver for 200+ users with Entra ID and AD, now going deep on SC-300. I admire the identity work at {company} and would love to connect and learn from you.",
+"connect_recruiter": "Hi {first}, I'm an IAM-focused IT pro in Edison, NJ (Entra ID, AD, JML automation, AWS IAM, Security+). I saw {company} hiring for identity roles and would love to connect. US citizen, open to hybrid/remote.",
+"connect_expert": "Hi {first}, your posts on identity have helped me a lot while I move from IT support into IAM (Entra ID, SC-300). Thank you for sharing. I'd love to connect and keep learning from you.",
+"follow_up": "Thanks for connecting, {first}! Quick question: what skills do you see making the biggest difference for IAM engineers on your team right now? I'm building Entra PIM, access reviews and Graph automation labs and want to focus on what matters.",
+"hidden_jobs": "Hi {first}, hope your week is going well. I'm actively looking for an IAM Analyst/Engineer role (Entra ID, AD, JML automation, AWS IAM). Are there any identity openings at {company} that aren't posted yet, or someone you'd suggest I talk to? Happy to share my resume. Thank you!",
+"referral": "Hi {first}, I applied for the {job} role at {company}. My background: 4 years automating JML for 200+ users with Adaxes/Entra/AD plus AWS IAM admin and Security+. Would you be comfortable referring me or pointing me to the hiring manager? Thanks so much either way.",
+"group_intro": "Hi everyone! I'm Amjad, an IT Support Coordinator in NJ moving into IAM. I automate Joiner-Mover-Leaver for 200+ users with Adaxes across AD, Entra ID and M365, and I'm studying for SC-300. Looking forward to learning from you all. What's one IAM skill you wish you'd learned earlier?"
+},
+"tips": [
+"Headline: \"IAM Analyst | Entra ID · Active Directory · JML Automation · AWS IAM | Security+ | SC-300 in progress\"",
+"About: 3 short paragraphs: what you do (JML for 200+ users, least privilege, audit trails), proof with numbers, what you want next (IAM Analyst/Engineer, NJ/NY hybrid or remote).",
+"Turn on Open to Work (recruiters only) with titles: IAM Analyst, IAM Engineer, Identity Engineer, Entra ID Engineer.",
+"Skills: pin Microsoft Entra ID, Identity & Access Management, Active Directory. Add Conditional Access, PIM, PowerShell, SAML, Okta as you learn them.",
+"Post once a week: a lab screenshot + 3 lines on what you learned (e.g., \"Built my first PIM eligible role today\"). Comment thoughtfully on 3 expert posts a week.",
+"Send 5 connection requests a week with a personal note; follow up once after 7 days; never send more than one follow-up.",
+"Featured section: link your best lab write-up or the Graph PowerShell script you built."
+]
+}
