@@ -2,6 +2,68 @@
  "criteria": "$100K+ salary (range midpoint) or $75+/hr; gigs listed separately",
  "jobs": [
   {
+   "id": "fanduel-sr-iam-nyc",
+   "title": "Senior IAM Engineer",
+   "company": "FanDuel",
+   "pay": "$138,000–$173,000/yr",
+   "pay_min": 138000,
+   "type": "Full-time",
+   "mode": "On-site/Hybrid NY/NJ",
+   "location": "New York, NY (hybrid)",
+   "source": "Built In",
+   "url": "https://builtin.com/job/senior-iam-engineer/11109451",
+   "posted": "2026-10-18",
+   "summary": "Senior engineer on FanDuel's identity team: SSO/federation, provisioning and access governance for a fast-moving regulated gaming company.",
+   "reqs": [
+    "Enterprise IAM engineering (SSO, MFA, lifecycle)",
+    "SAML/OIDC integrations",
+    "Automation (PowerShell/Python)",
+    "Access reviews and audit evidence"
+   ],
+   "fit": "Your JML automation in Adaxes and audit-trail discipline map straight to their lifecycle and compliance needs.",
+   "gaps": [
+    "Senior title: prepare 2 deep JML automation stories with numbers",
+    "Hands-on SAML/OIDC app integration (Steps 10-11)"
+   ],
+   "group": "main",
+   "work_mode": "Hybrid",
+   "job_type": "Full-time",
+   "employer_type": "Direct employer",
+   "frameable": true
+  },
+  {
+   "id": "zp-azure-iam",
+   "title": "Azure IAM Engineer",
+   "company": "Piper Companies (client: technology organization)",
+   "pay": "$105,000–$129,000/yr",
+   "pay_min": 105000,
+   "type": "Full-time",
+   "mode": "Remote",
+   "location": "Remote (US, EST/CST)",
+   "source": "Employer site",
+   "url": "https://careers.zpgroup.com/details/2932/azure_iam_engineer",
+   "posted": "2026-10-16",
+   "summary": "Design and run Entra ID for a highly secure cloud environment (new IL5 offering): SSO, MFA, conditional access, RBAC/ABAC, app integration, documentation.",
+   "reqs": [
+    "Administering Entra ID",
+    "SSO, MFA, conditional access, RBAC",
+    "Identity federation",
+    "Okta/SailPoint/IaC a plus"
+   ],
+   "fit": "Entra ID + MFA + least-privilege groups are your daily work; Security+ fits secure-environment roles.",
+   "gaps": [
+    "Conditional access design (Step 4)",
+    "IL5 / government cloud basics",
+    "Terraform or IaC basics"
+   ],
+   "group": "main",
+   "work_mode": "Remote",
+   "job_type": "Full-time",
+   "employer_type": "Staffing agency",
+   "frameable": false
+  },
+  {
+   "id": "piper-azure-entra",
    "title": "Azure Entra IAM Engineer",
    "company": "Piper Companies (client: enterprise organization)",
    "pay": "$115,000–$135,000/yr",
@@ -11,25 +73,150 @@
    "location": "Remote (US)",
    "source": "Employer site",
    "url": "https://careers.pipercompanies.com/details/2759/azure_entra_iam_engineer_176426",
-   "posted": "2026-10-15",
-   "fit": "Entra Enterprise Apps, access reviews, PIM, JML automation, Graph API. Exactly the Steps 3–9 skills.",
-   "group": "main"
+   "posted": "2026-10-13",
+   "summary": "Build Entra ID Enterprise Apps, access reviews, PIM, entitlement management and automated JML provisioning from HR to AD and apps.",
+   "reqs": [
+    "Entra Enterprise Apps",
+    "Access Reviews, PIM, Entitlement Management",
+    "JML automation",
+    "SAML/OAuth/OIDC, Graph API, IaC"
+   ],
+   "fit": "This is literally your JML job in Entra, at engineer level. Steps 3-9 skills.",
+   "gaps": [
+    "PIM and access reviews hands-on (Steps 5-6)",
+    "Microsoft Graph PowerShell (Step 8)",
+    "5+ yrs IAM ask: frame APTASK + WSAudiology as 5+ yrs identity work"
+   ],
+   "group": "main",
+   "work_mode": "Remote",
+   "job_type": "Full-time",
+   "employer_type": "Staffing agency",
+   "frameable": false
   },
   {
-   "title": "Senior IAM Engineer (Microsoft Entra ID)",
-   "company": "Insmed",
-   "pay": "$133,000–$173,000/yr",
-   "pay_min": 133000,
+   "id": "lh-cyber-entra",
+   "title": "Cyber Security Engineer (Entra ID, Intune, IAM)",
+   "company": "Lawrence Harvey (client: global organization)",
+   "pay": "$120,000–$130,000/yr",
+   "pay_min": 120000,
+   "type": "Full-time",
+   "mode": "Remote",
+   "location": "Remote (US)",
+   "source": "Staffing agency",
+   "url": "https://jobmesh.io/job/5421d85c-e3a4-4b68-a661-3002bae62378",
+   "posted": "2026-10-20",
+   "summary": "Security engineer owning Entra ID, Intune and IAM controls for a global organization.",
+   "reqs": [
+    "Entra ID administration",
+    "Intune device compliance",
+    "IAM policies and MFA",
+    "Security operations"
+   ],
+   "fit": "Entra + Intune + JML is your exact current stack.",
+   "gaps": [
+    "Conditional access with device compliance",
+    "Talk about security incidents you helped contain"
+   ],
+   "group": "main",
+   "work_mode": "Remote",
+   "job_type": "Full-time",
+   "employer_type": "Staffing agency",
+   "frameable": false
+  },
+  {
+   "id": "caci-iam",
+   "title": "IAM Engineer",
+   "company": "CACI",
+   "pay": "$114,600–$252,100/yr",
+   "pay_min": 114600,
+   "type": "Full-time",
+   "mode": "Remote",
+   "location": "Remote (US)",
+   "source": "Remote job board",
+   "url": "https://remoteroles.so/jobs/caci-iam-engineer-remote-4346633672842eaf",
+   "posted": "2026-10-20",
+   "summary": "Mid-level IAM engineer for federal customers: PIV/certificate auth and FIDO, SSO onboarding, access roles, lifecycle workflows, Entra ID and PAM improvements.",
+   "reqs": [
+    "PIV / certificate-based auth, FIDO",
+    "SSO with modern protocols",
+    "Role design and lifecycle workflows",
+    "Entra ID and privileged access"
+   ],
+   "fit": "Onboarding/offboarding automation and role naming are your strengths; US citizen helps for federal work.",
+   "gaps": [
+    "PIV/CBA and FIDO2 basics",
+    "PAM concepts (Step 12 CyberArk)",
+    "Federal / clearance context"
+   ],
+   "group": "main",
+   "work_mode": "Remote",
+   "job_type": "Full-time",
+   "employer_type": "Direct employer",
+   "frameable": true
+  },
+  {
+   "id": "nyu-pam-entra",
+   "title": "System Administrator II (PAM/Entra ID)",
+   "company": "New York University",
+   "pay": "$110,000–$130,000/yr",
+   "pay_min": 110000,
    "type": "Full-time",
    "mode": "On-site/Hybrid NY/NJ",
-   "location": "Bridgewater, NJ (hybrid, mostly remote)",
-   "source": "Hirify (employer listing)",
-   "url": "https://hirify.me/jobs/909095-senior-iam-engineer-entra",
+   "location": "New York, NY (mostly remote)",
+   "source": "Employer site",
+   "url": "https://uscareers-nyu.icims.com/jobs/15735/system-administrator-ii-%28pam-entraid%29/job",
    "posted": "2026-10",
-   "fit": "AD + Entra ID, Conditional Access, MFA, PIM, JML automation, PowerShell/Graph. A stretch role worth applying to after SC-300.",
-   "group": "main"
+   "summary": "Administer privileged access management and Entra ID for the university.",
+   "reqs": [
+    "Entra ID administration",
+    "PAM platform administration",
+    "PowerShell",
+    "Least privilege"
+   ],
+   "fit": "Sysadmin-level Entra + least privilege is a natural next step from your role.",
+   "gaps": [
+    "PAM tooling (Step 12)",
+    "PIM for admin roles (Step 5)"
+   ],
+   "group": "main",
+   "work_mode": "Hybrid",
+   "job_type": "Full-time",
+   "employer_type": "Direct employer",
+   "frameable": true
   },
   {
+   "id": "mufg-iam-analyst",
+   "title": "Identity & Access Management Analyst (AVP)",
+   "company": "MUFG",
+   "pay": "$92,000–$123,000/yr",
+   "pay_min": 92000,
+   "type": "Full-time",
+   "mode": "On-site/Hybrid NY/NJ",
+   "location": "Jersey City, NJ (4 days on-site)",
+   "source": "Company career page",
+   "url": "https://mufgub.wd3.myworkdayjobs.com/en-US/MUFG-Careers/job/Identity---Access-Management-Analyst_10079405-WD",
+   "posted": "2026-09-24",
+   "summary": "IAM Operations AVP: lifecycle of human and service accounts, access management for the Applications team, backing up the VP and steering offshore providers.",
+   "reqs": [
+    "3+ yrs IAM / infosec / tech ops",
+    "ServiceNow, IGA, Active Directory, Azure, PAM",
+    "Ticket queue management",
+    "Excel analysis (macros/formulas)"
+   ],
+   "fit": "Ticket-driven JML at scale with audit trails is exactly your WSAudiology work; close to home.",
+   "gaps": [
+    "IGA tool basics (SailPoint, Step 12)",
+    "Excel/automation examples",
+    "Leading vendors or offshore teams"
+   ],
+   "group": "main",
+   "work_mode": "Hybrid",
+   "job_type": "Full-time",
+   "employer_type": "Direct employer",
+   "frameable": false
+  },
+  {
+   "id": "smtb-iam-analyst",
    "title": "Identity Access Management Analyst",
    "company": "Sumitomo Mitsui Trust Bank",
    "pay": "$90,000–$125,000/yr",
@@ -37,25 +224,146 @@
    "type": "Full-time",
    "mode": "On-site/Hybrid NY/NJ",
    "location": "New York, NY (hybrid)",
-   "source": "Teal (employer listing)",
+   "source": "Teal (aggregator)",
    "url": "https://www.tealhq.com/job/identity-access-management-analyst_7ea1aead85d366465753320e9bbbe7d4eefe2",
    "posted": "2026-08",
-   "fit": "Identity governance, access administration, least privilege. Negotiate toward the top of the range.",
-   "group": "main"
+   "summary": "Bank IAM analyst: provisioning, access reviews and controls evidence.",
+   "reqs": [
+    "User provisioning",
+    "Access recertification",
+    "Audit and controls",
+    "AD / Entra"
+   ],
+   "fit": "Banks value your audit-trail and least-privilege habits.",
+   "gaps": [
+    "Access review campaigns (Step 6)",
+    "SOX-style controls language"
+   ],
+   "group": "main",
+   "work_mode": "Hybrid",
+   "job_type": "Full-time",
+   "employer_type": "Direct employer",
+   "frameable": true
   },
   {
-   "title": "Cyber Security Engineer (Entra ID, Intune, IAM)",
-   "company": "Lawrence Harvey (client: global organization)",
-   "pay": "$120,000–$130,000/yr",
-   "pay_min": 120000,
+   "id": "guardian-sr-iam",
+   "title": "Senior Identity and Access Management Engineer",
+   "company": "Guardian Life",
+   "pay": "$99,150–$162,885/yr",
+   "pay_min": 99150,
    "type": "Full-time",
-   "mode": "Remote",
-   "location": "Remote, East Coast hours",
-   "source": "Jobmesh",
-   "url": "https://jobmesh.io/job/5421d85c-e3a4-4b68-a661-3002bae62378",
-   "posted": "2026-10-20",
-   "fit": "Entra ID, Intune, MFA, Conditional Access; lists Security+ and SC-300 as preferred certs.",
-   "group": "main"
+   "mode": "On-site/Hybrid NY/NJ",
+   "location": "Holmdel, NJ (3 days on-site)",
+   "source": "Simplify (aggregator)",
+   "url": "https://simplify.jobs/p/f8043c86-efbc-4a07-876d-38c28c846ee8/Senior-Identity-and-Access-Management-Engineer",
+   "posted": "2026-08-01",
+   "summary": "Senior IAM engineer at a large insurer: identity platforms, provisioning and governance.",
+   "reqs": [
+    "Enterprise IAM engineering",
+    "Provisioning and governance",
+    "Directory services",
+    "Automation"
+   ],
+   "fit": "NJ insurer, no sponsorship needed; your JML automation story fits.",
+   "gaps": [
+    "IGA platform depth",
+    "Senior-level design stories"
+   ],
+   "group": "main",
+   "work_mode": "Hybrid",
+   "job_type": "Full-time",
+   "employer_type": "Direct employer",
+   "frameable": false
+  },
+  {
+   "id": "insmed-sr-iam",
+   "title": "Senior IAM Engineer (Microsoft Entra ID)",
+   "company": "Insmed",
+   "pay": "$133,000–$173,000/yr",
+   "pay_min": 133000,
+   "type": "Full-time",
+   "mode": "On-site/Hybrid NY/NJ",
+   "location": "Bridgewater, NJ (hybrid)",
+   "source": "Job board",
+   "url": "https://hirify.me/jobs/909095-senior-iam-engineer-entra",
+   "posted": "2026-10",
+   "summary": "Own Entra ID identity engineering for a biotech: conditional access, PIM, app SSO and lifecycle automation.",
+   "reqs": [
+    "Entra ID engineering",
+    "Conditional access, PIM",
+    "App SSO",
+    "Lifecycle automation"
+   ],
+   "fit": "Entra-focused and in NJ: a stretch role worth applying to after SC-300.",
+   "gaps": [
+    "SC-300 (Step 15)",
+    "Conditional access + PIM depth"
+   ],
+   "group": "main",
+   "work_mode": "Hybrid",
+   "job_type": "Full-time",
+   "employer_type": "Direct employer",
+   "frameable": true
+  },
+  {
+   "id": "ey-digital-identity",
+   "title": "Cyber – Digital Identity SME, Senior (Consulting)",
+   "company": "EY",
+   "pay": "$104,800–$192,200/yr",
+   "pay_min": 104800,
+   "type": "Full-time",
+   "mode": "Travel",
+   "location": "Location open (US), client travel",
+   "source": "Company career page",
+   "url": "https://careers.ey.com/ey/job/Dallas-Cyber-Digital-Identity-SME-Senior-Consulting-Location-OPEN-TX-75204/1269110901/",
+   "posted": "2026-10",
+   "summary": "Consulting senior delivering identity programs (IGA, access management, PAM) for EY clients; location open with client travel.",
+   "reqs": [
+    "IAM implementation experience",
+    "IGA / access management / PAM tools",
+    "Client-facing delivery",
+    "Certifications a plus"
+   ],
+   "fit": "Big-4 consulting values hands-on JML + Entra + AWS IAM; location open.",
+   "gaps": [
+    "Consulting-style case answers",
+    "One IGA tool demo (SailPoint/Okta)"
+   ],
+   "group": "main",
+   "work_mode": "Remote + travel",
+   "job_type": "Full-time",
+   "employer_type": "Consulting/SI",
+   "frameable": false
+  },
+  {
+   "id": "deloitte-iam-architect",
+   "title": "IAM Architect, Delivery Senior Consultant",
+   "company": "Deloitte",
+   "pay": "$124,700–$207,800/yr",
+   "pay_min": 124700,
+   "type": "Full-time",
+   "mode": "Travel",
+   "location": "US (about 15% travel)",
+   "source": "Company career page",
+   "url": "https://apply.deloitte.com/en_US/careers/JobDetail/IAM-Architect-Delivery-Senior-Consultant/366528",
+   "posted": "2026-10",
+   "summary": "Senior consultant designing and delivering IAM solutions for clients; about 15% travel.",
+   "reqs": [
+    "IAM architecture and delivery",
+    "IGA/AM/PAM platforms",
+    "Client stakeholder management",
+    "Documentation and design"
+   ],
+   "fit": "Stretch consulting role: your end-to-end JML design is the core story.",
+   "gaps": [
+    "Architecture diagrams of your JML flow",
+    "SC-300 + Okta milestones"
+   ],
+   "group": "main",
+   "work_mode": "Remote + travel",
+   "job_type": "Full-time",
+   "employer_type": "Consulting/SI",
+   "frameable": false
   },
   {
    "title": "CVE Vulnerability Expert (AI training)",
@@ -69,7 +377,12 @@
    "url": "https://work.mercor.com/jobs/list_AAABoDrLTtVzOBh5_cNK5rFh/cve-vulnerability-expert",
    "posted": "2026-10",
    "fit": "A stretch (it asks for AppSec/pen-testing experience). Worth watching; similar cyber listings open often.",
-   "group": "gig"
+   "group": "gig",
+   "id": "mercor-cve-vulnerability-expert-ai-training",
+   "work_mode": "Remote",
+   "job_type": "Contract",
+   "employer_type": "AI training gig",
+   "frameable": false
   },
   {
    "title": "Cybersecurity / IT domain-expert roles",
@@ -83,7 +396,12 @@
    "url": "https://www.mercor.com/experts/",
    "posted": "ongoing",
    "fit": "Create a profile, choose cybersecurity and IT, and take the AI interview.",
-   "group": "gig"
+   "group": "gig",
+   "id": "mercor-experts-cybersecurity-it-domain-expert-roles",
+   "work_mode": "Remote",
+   "job_type": "Contract",
+   "employer_type": "AI training gig",
+   "frameable": false
   },
   {
    "title": "Cybersecurity / IAM AI trainer roles",
@@ -97,7 +415,12 @@
    "url": "https://www.micro1.ai/jobs",
    "posted": "ongoing",
    "fit": "Lots of live roles. Filter for cybersecurity and IT, then complete the AI interview.",
-   "group": "gig"
+   "group": "gig",
+   "id": "micro1-cybersecurity-iam-ai-trainer-roles",
+   "work_mode": "Remote",
+   "job_type": "Contract",
+   "employer_type": "AI training gig",
+   "frameable": false
   }
  ]
 }

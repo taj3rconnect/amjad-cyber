@@ -38,7 +38,7 @@ const qB=q1('#qBd'),qF=q1('#qF');function quiz(){if(prof){for(const[k,v]of Objec
 $('input[type=text]',qF).forEach(t=>t.addEventListener('input',()=>{const c=t.parentElement.querySelector('input[type=checkbox]');if(c)c.checked=!!t.value.trim()}));
 $('input[name=tools]',qF).forEach(c=>c.addEventListener('change',()=>{if(c.checked){if(c.value==='none')$('input[name=tools]',qF).forEach(x=>{if(x!==c)x.checked=false});else{const n=q1('input[name=tools][value=none]',qF);n.checked=false}}}));
 qF.onsubmit=e=>{e.preventDefault();const f=new FormData(qF);const tx=n=>(f.get(n)||'').trim().slice(0,60);prof={dir:f.getAll('dir'),dirOther:tx('dirOther'),certs:f.getAll('certs'),tools:f.getAll('tools'),toolsOther:tx('toolsOther'),goal:f.get('goal'),mode:f.getAll('mode'),modeOther:tx('modeOther'),hours:f.get('hours'),at:today()};if(!prof.certs.length)prof.certs=['sc300'];if(!prof.dir.length)prof.dir=['iam'];if(prof.tools.includes('other')&&!prof.toolsOther)prof.toolsOther='My work AI';
- localStorage.setItem(PK,JSON.stringify(prof));closeM(qB);adapt();toast('Your plan is ready 🎯');setTimeout(()=>q1('#accounts').scrollIntoView({behavior:'smooth'}),300)};
+ localStorage.setItem(PK,JSON.stringify(prof));closeM(qB);adapt();toast('Your plan is ready 🎯');setTimeout(()=>{location.hash='#accounts';const a=q1('#accounts');a&&a.scrollIntoView()},300)};
 $('.retake').forEach(b=>b.onclick=quiz);
 // prompts
 const pB=q1('#ppBd'),pre=q1('pre',pB),seg=q1('.seg',pB);let cur='';

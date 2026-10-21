@@ -1,16 +1,1 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Ask Dad history · Amjad</title><link rel="manifest" href="manifest.json"><meta name="theme-color" content="#0b1b3f"><link rel="icon" href="favicon.png"><link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
-<style>body{margin:0;font:16px/1.6 Inter,system-ui,sans-serif;background:#f6f8ff;color:#33415c}header{position:sticky;top:0;z-index:5;background:rgba(11,27,63,.95);padding:10px 14px;padding-top:max(10px,env(safe-area-inset-top));display:flex;gap:10px;align-items:center}header a{color:#fff;font-weight:700;text-decoration:none;min-height:44px;display:flex;align-items:center}main{max-width:780px;margin:0 auto;padding:16px 16px 80px}h1{color:#0b1b3f;font-family:system-ui;margin:.3em 0}
-input{width:100%;box-sizing:border-box;height:48px;border:1px solid #e3e8f7;border-radius:14px;padding:0 14px;font-size:16px}.it{background:#fff;border:1px solid #e3e8f7;border-radius:16px;padding:16px;margin:14px 0}.t{font-size:13px;color:#6b7590}.q{font-weight:700;color:#0b1b3f;margin:.4em 0}.a{white-space:pre-wrap}.v a{display:block;margin:4px 0;color:#4f46e5}.mut{color:#6b7590}mark{background:#fef08a}</style></head>
-<body><header><a href="./">← Amjad's IAM Career Path</a></header><main><h1>🕘 Ask Dad history</h1><p class="mut">Every Ask Dad conversation, newest first. Times are Eastern (ET). The same history shows on every device.</p>
-<input id="s" type="search" placeholder="Search questions and answers…" aria-label="Search history"><p class="mut" id="n">Loading…</p><div id="L"></div></main>
-<script src="config.js"></script><script>
-const E=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));let D=[];
-const fmt=ts=>new Date(ts).toLocaleString('en-US',{timeZone:'America/New_York',weekday:'short',month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'})+' ET';
-function hl(t,w){t=E(t);if(!w)return t;return t.replace(new RegExp('('+w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi'),'<mark>$1</mark>')}
-function render(){const w=s.value.trim().toLowerCase();const L2=D.filter(x=>!w||(x.q+' '+x.a+' '+x.videos.map(v=>v.title).join(' ')).toLowerCase().includes(w));
- n.textContent=L2.length+' conversation'+(L2.length===1?'':'s')+(w?' match "'+s.value.trim()+'"':'');
- L.innerHTML=L2.map(x=>`<div class="it"><div class="t">${fmt(x.ts)}</div><div class="q">Q: ${hl(x.q,w)}</div><div class="a">${hl(x.a,w)}</div>${x.videos.length?'<div class="v"><b>Videos</b>'+x.videos.map(v=>`<a href="${E(v.url)}" target="_blank" rel="noopener">▶ ${E(v.title)} <span class="mut">(${E(v.channel)}, ${E(v.date)})</span></a>`).join('')+'</div>':''}</div>`).join('')||'<p class="mut">Nothing yet. Ask Dad something from the chat bubble on the main page.</p>'}
-s.addEventListener('input',render);
-fetch((window.ASKDAD_URL||'').replace(/\/$/,'')+'/history',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json()}).then(d=>{D=d;render()}).catch(()=>{n.textContent='Couldn\'t load the history right now. Please try again in a moment.'});
-if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js');
-</script></body></html>
+<!doctype html><meta charset="utf-8"><title>Redirecting…</title><meta http-equiv="refresh" content="0;url=./#/history"><script>location.replace("./#/history")</script><a href="./#/history">Continue</a>
