@@ -451,6 +451,9 @@
    "job_type": "Full-time",
    "employer_type": "Direct employer",
    "group": "main",
+   "also_in": [
+    "United States"
+   ],
    "frameable": false
   },
   {
@@ -722,6 +725,9 @@
    "job_type": "Full-time",
    "employer_type": "Direct employer",
    "group": "main",
+   "also_in": [
+    "Kalamazoo, MI"
+   ],
    "frameable": false
   },
   {
@@ -963,6 +969,9 @@
    "job_type": "Full-time",
    "employer_type": "Consulting/SI",
    "group": "main",
+   "also_in": [
+    "New York, NY"
+   ],
    "frameable": false
   },
   {
@@ -1457,6 +1466,9 @@
    "job_type": "Full-time",
    "employer_type": "Consulting/SI",
    "group": "main",
+   "also_in": [
+    "Florham Park, NJ"
+   ],
    "frameable": false
   },
   {
@@ -1494,41 +1506,6 @@
    "work_mode": "On-site",
    "job_type": "Full-time",
    "employer_type": "Direct employer",
-   "group": "main",
-   "frameable": false
-  },
-  {
-   "id": "pwc-privileged-access-management-sr-associate-576928",
-   "title": "Privileged Access Management - Sr Associate",
-   "company": "PwC",
-   "pay": "$77,000–$202,000/yr",
-   "pay_min": 77000.0,
-   "pay_est": false,
-   "type": "Full-time",
-   "mode": "On-site NY/NJ",
-   "location": "Florham Park, NJ",
-   "state": "NJ",
-   "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4480576928",
-   "posted": "2026-10-17",
-   "summary": "The Opportunity As a Privileged Access Management Sr Associate you will focus on securing and managing access to systems and data through identity and access management work within our Cybersecurity practice. As a Senior Associate you will analyze complex access challenges, build meaningful client connections, guide junior team members, and use critical thinking to develop solutions that support b",
-   "reqs": [
-    "Entra ID / Azure AD",
-    "Active Directory",
-    "CyberArk",
-    "PIM / PAM",
-    "Access reviews / certifications",
-    "Joiner-Mover-Leaver",
-    "AWS IAM"
-   ],
-   "fit": "You already work with Entra ID / Azure AD, Active Directory, Access reviews / certifications, Joiner-Mover-Leaver, AWS IAM.",
-   "gaps": [
-    "CyberArk: covered in your Steps",
-    "PIM / PAM: covered in your Steps"
-   ],
-   "work_mode": "On-site",
-   "job_type": "Full-time",
-   "employer_type": "Consulting/SI",
    "group": "main",
    "frameable": false
   },
@@ -1668,43 +1645,6 @@
    "frameable": false
   },
   {
-   "id": "stryker-manager-cybersecurity-privileged-access-ma-997446",
-   "title": "Manager, Cybersecurity, Privileged Access Management - Remote",
-   "company": "Stryker",
-   "pay": "$135,600–$225,900/yr",
-   "pay_min": 135600.0,
-   "pay_est": false,
-   "type": "Full-time",
-   "mode": "Remote",
-   "location": "Kalamazoo, MI",
-   "state": "MI",
-   "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4479997446",
-   "posted": "2026-10-19",
-   "summary": "Preference will be given to candidates residing in the Eastern or Central time zones. As a PAM Manager, you will lead Stryker’s enterprise Privileged Access Management program, protecting privileged accounts, credentials, secrets, and sessions across on-premises, cloud, and hybrid environments.",
-   "reqs": [
-    "Entra ID / Azure AD",
-    "CyberArk",
-    "BeyondTrust/Delinea",
-    "PIM / PAM",
-    "Joiner-Mover-Leaver",
-    "Zero Trust",
-    "SOX / audit"
-   ],
-   "fit": "You already work with Entra ID / Azure AD, Joiner-Mover-Leaver, SOX / audit.",
-   "gaps": [
-    "CyberArk: covered in your Steps",
-    "BeyondTrust/Delinea: covered in your Steps",
-    "PIM / PAM: covered in your Steps",
-    "Zero Trust: covered in your Steps"
-   ],
-   "work_mode": "Remote",
-   "job_type": "Full-time",
-   "employer_type": "Direct employer",
-   "group": "main",
-   "frameable": false
-  },
-  {
    "id": "stryker-manager-cybersecurity-non-human-identity-s-986243",
    "title": "Manager, Cybersecurity, Non-Human Identity Security - Remote",
    "company": "Stryker",
@@ -1735,40 +1675,6 @@
    "work_mode": "Remote",
    "job_type": "Full-time",
    "employer_type": "Direct employer",
-   "group": "main",
-   "frameable": false
-  },
-  {
-   "id": "pwc-identity-and-access-management-sr-manager-577867",
-   "title": "Identity and Access Management - Sr Manager",
-   "company": "PwC",
-   "pay": "$124,000–$280,000/yr",
-   "pay_min": 124000.0,
-   "pay_est": false,
-   "type": "Full-time",
-   "mode": "On-site NY/NJ",
-   "location": "New York, NY",
-   "state": "NY",
-   "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4480577867",
-   "posted": "2026-10-17",
-   "summary": "The Opportunity As an Identity and Access Management - Sr Manager you will lead client support efforts focused on confirming secure, efficient access to systems and data, while shaping strategies that help protect sensitive information and manage user identities within our Cybersecurity practice. As a Senior Manager you will lead large projects, guide teams through complexity with sound judgment, ",
-   "reqs": [
-    "Entra ID / Azure AD",
-    "Active Directory",
-    "CyberArk",
-    "PIM / PAM",
-    "AWS IAM",
-    "SOX / audit"
-   ],
-   "fit": "You already work with Entra ID / Azure AD, Active Directory, AWS IAM, SOX / audit.",
-   "gaps": [
-    "CyberArk: covered in your Steps",
-    "PIM / PAM: covered in your Steps"
-   ],
-   "work_mode": "On-site",
-   "job_type": "Full-time",
-   "employer_type": "Consulting/SI",
    "group": "main",
    "frameable": false
   },
@@ -1850,44 +1756,6 @@
    "fit": "Builds on your JML, Entra ID and AWS IAM experience.",
    "gaps": [],
    "work_mode": "On-site",
-   "job_type": "Full-time",
-   "employer_type": "Direct employer",
-   "group": "main",
-   "frameable": false
-  },
-  {
-   "id": "stryker-principal-engineer-cybersecurity-iga-remot-995366",
-   "title": "Principal Engineer, Cybersecurity, IGA - Remote",
-   "company": "Stryker",
-   "pay": "$135,600–$225,900/yr",
-   "pay_min": 135600.0,
-   "pay_est": false,
-   "type": "Full-time",
-   "mode": "Remote",
-   "location": "United States",
-   "state": "US",
-   "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4479995366",
-   "posted": "2026-10-19",
-   "summary": "Preference will be given to candidates residing in the Eastern or Central time zones. As an IGA Principal Engineer, you will build and operate enterprise identity governance, authentication, and authorization services that protect access across the organization.",
-   "reqs": [
-    "Entra ID / Azure AD",
-    "Active Directory",
-    "SailPoint",
-    "Saviynt",
-    "SAML",
-    "OAuth/OIDC",
-    "SCIM",
-    "MFA"
-   ],
-   "fit": "You already work with Entra ID / Azure AD, Active Directory, MFA, Access reviews / certifications, Joiner-Mover-Leaver.",
-   "gaps": [
-    "SailPoint: covered in your Steps",
-    "Saviynt: covered in your Steps",
-    "SAML: covered in your Steps",
-    "OAuth/OIDC: covered in your Steps"
-   ],
-   "work_mode": "Remote",
    "job_type": "Full-time",
    "employer_type": "Direct employer",
    "group": "main",
@@ -2391,6 +2259,11 @@
    "job_type": "Full-time",
    "employer_type": "Direct employer",
    "group": "main",
+   "also_in": [
+    "Addison, TX",
+    "Durham, NC",
+    "Reston, VA"
+   ],
    "frameable": false
   },
   {
@@ -2496,37 +2369,31 @@
    "frameable": false
   },
   {
-   "id": "reddit-inc-senior-backend-engineer-iam-743276",
+   "id": "reddit-senior-backend-engineer-iam-435033",
    "title": "Senior Backend Engineer, IAM",
-   "company": "Reddit, Inc.",
+   "company": "Reddit",
    "pay": "Not posted · est. $110K–$150K (market)",
    "pay_min": 110000,
    "pay_est": true,
    "type": "Full-time",
    "mode": "Remote",
-   "location": "San Francisco, CA",
-   "state": "CA",
-   "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4442743276",
-   "posted": "2026-10-14",
-   "summary": "It's built on shared interests, passion, and trust, and is home to the most open and authentic conversations on the internet. Every day, Reddit users submit, vote, and comment on the topics they care most about.",
-   "reqs": [
-    "Entra ID / Azure AD",
-    "SAML",
-    "OAuth/OIDC",
-    "AWS IAM",
-    "RBAC"
-   ],
-   "fit": "You already work with Entra ID / Azure AD, AWS IAM, RBAC.",
-   "gaps": [
-    "SAML: covered in your Steps",
-    "OAuth/OIDC: covered in your Steps"
-   ],
+   "location": "Remote - United States",
+   "state": "US",
+   "source": "Greenhouse (company ATS)",
+   "url": "https://job-boards.greenhouse.io/reddit/jobs/8044767",
+   "posted": "2026-10-15",
+   "summary": "It’s built on shared interests, passion, and trust, and is home to the most open and authentic conversations on the internet. Every day, Reddit users submit, vote, and comment on the topics they care most about.",
+   "reqs": [],
+   "fit": "Builds on your JML, Entra ID and AWS IAM experience.",
+   "gaps": [],
    "work_mode": "Remote",
    "job_type": "Full-time",
    "employer_type": "Direct employer",
    "group": "main",
-   "frameable": false
+   "also_in": [
+    "San Francisco, CA"
+   ],
+   "frameable": true
   },
   {
    "id": "mongodb-senior-software-engineer-identity-access-m-932228",
@@ -2844,6 +2711,9 @@
    "job_type": "Full-time",
    "employer_type": "Consulting/SI",
    "group": "main",
+   "also_in": [
+    "Jersey City, NJ"
+   ],
    "frameable": false
   },
   {
@@ -2974,77 +2844,9 @@
    "job_type": "Full-time",
    "employer_type": "Consulting/SI",
    "group": "main",
-   "frameable": false
-  },
-  {
-   "id": "deloitte-pam-cyberark-beyond-trust-and-or-delinea--108094",
-   "title": "PAM(CyberArk, Beyond Trust and/or Delinea) Senior Consultant",
-   "company": "Deloitte",
-   "pay": "Not posted · est. $110K–$150K (market)",
-   "pay_min": 110000,
-   "pay_est": true,
-   "type": "Full-time",
-   "mode": "On-site NY/NJ",
-   "location": "Morristown, NJ",
-   "state": "NJ",
-   "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4462108094",
-   "posted": "2026-10-14",
-   "summary": "Our Deloitte Cyber team understands the unique challenges and opportunities businesses face in cybersecurity. Join our team to deliver powerful solutions to help our clients navigate the ever-changing threat landscape.",
-   "reqs": [
-    "CyberArk",
-    "BeyondTrust/Delinea",
-    "SCIM",
-    "PIM / PAM"
+   "also_in": [
+    "Morristown, NJ"
    ],
-   "fit": "Builds on your JML, Entra ID and AWS IAM experience.",
-   "gaps": [
-    "CyberArk: covered in your Steps",
-    "BeyondTrust/Delinea: covered in your Steps",
-    "SCIM: covered in your Steps",
-    "PIM / PAM: covered in your Steps"
-   ],
-   "work_mode": "On-site",
-   "job_type": "Full-time",
-   "employer_type": "Consulting/SI",
-   "group": "main",
-   "frameable": false
-  },
-  {
-   "id": "tanium-staff-identity-and-access-management-engine-383264",
-   "title": "Staff Identity and Access Management Engineer",
-   "company": "Tanium",
-   "pay": "Not posted · est. $110K–$150K (market)",
-   "pay_min": 110000,
-   "pay_est": true,
-   "type": "Full-time",
-   "mode": "Hybrid",
-   "location": "Reston, VA",
-   "state": "VA",
-   "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4461383264",
-   "posted": "2026-10-16",
-   "summary": "The Basics We're looking for a Staff IAM engineer to design, implement, and manage identity and access management (IAM) and identity governance (IGA) solutions across Tanium's corporate infrastructure. You'll evaluate new IAM/IGA technologies, partner with cross-functional teams on strategy, and keep our identity ecosystem secure, compliant, and efficient.",
-   "reqs": [
-    "Entra ID / Azure AD",
-    "Active Directory",
-    "SailPoint",
-    "Saviynt",
-    "MFA",
-    "PIM / PAM",
-    "PowerShell"
-   ],
-   "fit": "You already work with Entra ID / Azure AD, Active Directory, MFA.",
-   "gaps": [
-    "SailPoint: covered in your Steps",
-    "Saviynt: covered in your Steps",
-    "PIM / PAM: covered in your Steps",
-    "PowerShell: covered in your Steps"
-   ],
-   "work_mode": "Hybrid",
-   "job_type": "Full-time",
-   "employer_type": "Direct employer",
-   "group": "main",
    "frameable": false
   },
   {
@@ -3070,43 +2872,6 @@
    "fit": "You already work with Joiner-Mover-Leaver, RBAC.",
    "gaps": [
     "PIM / PAM: covered in your Steps"
-   ],
-   "work_mode": "Hybrid",
-   "job_type": "Full-time",
-   "employer_type": "Direct employer",
-   "group": "main",
-   "frameable": false
-  },
-  {
-   "id": "tanium-staff-identity-and-access-management-engine-371458",
-   "title": "Staff Identity and Access Management Engineer",
-   "company": "Tanium",
-   "pay": "Not posted · est. $110K–$150K (market)",
-   "pay_min": 110000,
-   "pay_est": true,
-   "type": "Full-time",
-   "mode": "Hybrid",
-   "location": "Durham, NC",
-   "state": "NC",
-   "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4461371458",
-   "posted": "2026-10-15",
-   "summary": "The Basics We're looking for a Staff IAM engineer to design, implement, and manage identity and access management (IAM) and identity governance (IGA) solutions across Tanium's corporate infrastructure. You'll evaluate new IAM/IGA technologies, partner with cross-functional teams on strategy, and keep our identity ecosystem secure, compliant, and efficient.",
-   "reqs": [
-    "Entra ID / Azure AD",
-    "Active Directory",
-    "SailPoint",
-    "Saviynt",
-    "MFA",
-    "PIM / PAM",
-    "PowerShell"
-   ],
-   "fit": "You already work with Entra ID / Azure AD, Active Directory, MFA.",
-   "gaps": [
-    "SailPoint: covered in your Steps",
-    "Saviynt: covered in your Steps",
-    "PIM / PAM: covered in your Steps",
-    "PowerShell: covered in your Steps"
    ],
    "work_mode": "Hybrid",
    "job_type": "Full-time",
@@ -3345,6 +3110,9 @@
    "job_type": "Full-time",
    "employer_type": "Direct employer",
    "group": "main",
+   "also_in": [
+    "Dallas, TX"
+   ],
    "frameable": false
   },
   {
@@ -3402,6 +3170,9 @@
    "job_type": "Full-time",
    "employer_type": "Direct employer",
    "group": "main",
+   "also_in": [
+    "San Jose, CA"
+   ],
    "frameable": false
   },
   {
@@ -3507,36 +3278,9 @@
    "job_type": "Full-time",
    "employer_type": "Consulting/SI",
    "group": "main",
-   "frameable": false
-  },
-  {
-   "id": "deloitte-cyber-identity-saviynt-engineering-manage-657962",
-   "title": "Cyber Identity - Saviynt Engineering Manager",
-   "company": "Deloitte",
-   "pay": "Not posted · est. $110K–$150K (market)",
-   "pay_min": 110000,
-   "pay_est": true,
-   "type": "Full-time",
-   "mode": "On-site NY/NJ",
-   "location": "Morristown, NJ",
-   "state": "NJ",
-   "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4459657962",
-   "posted": "2026-10-09",
-   "summary": "Our Deloitte Cyber team understands the unique challenges and opportunities businesses face in cybersecurity. Join our team to deliver powerful solutions to help our clients navigate the ever-changing threat landscape.",
-   "reqs": [
-    "Saviynt",
-    "Java"
+   "also_in": [
+    "Morristown, NJ"
    ],
-   "fit": "Builds on your JML, Entra ID and AWS IAM experience.",
-   "gaps": [
-    "Saviynt: covered in your Steps",
-    "Java: covered in your Steps"
-   ],
-   "work_mode": "On-site",
-   "job_type": "Full-time",
-   "employer_type": "Consulting/SI",
-   "group": "main",
    "frameable": false
   },
   {
@@ -3788,43 +3532,6 @@
    "frameable": false
   },
   {
-   "id": "tanium-staff-identity-and-access-management-engine-369864",
-   "title": "Staff Identity and Access Management Engineer",
-   "company": "Tanium",
-   "pay": "Not posted · est. $110K–$150K (market)",
-   "pay_min": 110000,
-   "pay_est": true,
-   "type": "Full-time",
-   "mode": "Hybrid",
-   "location": "Addison, TX",
-   "state": "TX",
-   "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4461369864",
-   "posted": "2026-10-16",
-   "summary": "The Basics We're looking for a Staff IAM engineer to design, implement, and manage identity and access management (IAM) and identity governance (IGA) solutions across Tanium's corporate infrastructure. You'll evaluate new IAM/IGA technologies, partner with cross-functional teams on strategy, and keep our identity ecosystem secure, compliant, and efficient.",
-   "reqs": [
-    "Entra ID / Azure AD",
-    "Active Directory",
-    "SailPoint",
-    "Saviynt",
-    "MFA",
-    "PIM / PAM",
-    "PowerShell"
-   ],
-   "fit": "You already work with Entra ID / Azure AD, Active Directory, MFA.",
-   "gaps": [
-    "SailPoint: covered in your Steps",
-    "Saviynt: covered in your Steps",
-    "PIM / PAM: covered in your Steps",
-    "PowerShell: covered in your Steps"
-   ],
-   "work_mode": "Hybrid",
-   "job_type": "Full-time",
-   "employer_type": "Direct employer",
-   "group": "main",
-   "frameable": false
-  },
-  {
    "id": "mclane-company-inc-sr-cybersecurity-engineer-iam-754009",
    "title": "Sr Cybersecurity Engineer - IAM",
    "company": "McLane Company, Inc.",
@@ -4017,6 +3724,10 @@
    "job_type": "Full-time",
    "employer_type": "Direct employer",
    "group": "main",
+   "also_in": [
+    "Bloomington, IL",
+    "Richardson, TX"
+   ],
    "frameable": false
   },
   {
@@ -4109,6 +3820,9 @@
    "job_type": "Full-time",
    "employer_type": "Consulting/SI",
    "group": "main",
+   "also_in": [
+    "Montvale, NJ"
+   ],
    "frameable": false
   },
   {
@@ -4138,6 +3852,9 @@
    "job_type": "Full-time",
    "employer_type": "Direct employer",
    "group": "main",
+   "also_in": [
+    "East Hanover, NJ"
+   ],
    "frameable": false
   },
   {
@@ -4167,82 +3884,6 @@
     "OAuth/OIDC: covered in your Steps"
    ],
    "work_mode": "On-site",
-   "job_type": "Full-time",
-   "employer_type": "Direct employer",
-   "group": "main",
-   "frameable": false
-  },
-  {
-   "id": "kpmg-us-manager-identity-access-management-850623",
-   "title": "Manager, Identity Access Management",
-   "company": "KPMG US",
-   "pay": "Not posted · est. $110K–$150K (market)",
-   "pay_min": 110000,
-   "pay_est": true,
-   "type": "Full-time",
-   "mode": "On-site NY/NJ",
-   "location": "Montvale, NJ",
-   "state": "NJ",
-   "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4476850623",
-   "posted": "2026-10-09",
-   "summary": "The KPMG Advisory practice is at the forefront of transformation, offering excellent opportunities for individuals to advance their careers and expertise with KPMG. Looking ahead, we anticipate continued evolution and success within the practice, fostering both personal and professional development, thereby creating new pathways for growth.",
-   "reqs": [
-    "SailPoint"
-   ],
-   "fit": "Builds on your JML, Entra ID and AWS IAM experience.",
-   "gaps": [
-    "SailPoint: covered in your Steps"
-   ],
-   "work_mode": "On-site",
-   "job_type": "Full-time",
-   "employer_type": "Consulting/SI",
-   "group": "main",
-   "frameable": false
-  },
-  {
-   "id": "state-farm-lead-iam-security-engineer-409328",
-   "title": "Lead IAM Security Engineer",
-   "company": "State Farm",
-   "pay": "Not posted · est. $110K–$150K (market)",
-   "pay_min": 110000,
-   "pay_est": true,
-   "type": "Full-time",
-   "mode": "Hybrid",
-   "location": "Richardson, TX",
-   "state": "TX",
-   "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4480409328",
-   "posted": "2026-10-20",
-   "summary": "Overview Being good neighbors – helping people, investing in our communities, and making the world a better place – is who we are at State Farm. It is at the core of how we operate and the reason for our success.",
-   "reqs": [],
-   "fit": "Builds on your JML, Entra ID and AWS IAM experience.",
-   "gaps": [],
-   "work_mode": "Hybrid",
-   "job_type": "Full-time",
-   "employer_type": "Direct employer",
-   "group": "main",
-   "frameable": false
-  },
-  {
-   "id": "vanguard-lead-identity-platform-engineer-842969",
-   "title": "Lead Identity Platform Engineer",
-   "company": "Vanguard",
-   "pay": "Not posted · est. $110K–$150K (market)",
-   "pay_min": 110000,
-   "pay_est": true,
-   "type": "Full-time",
-   "mode": "Hybrid",
-   "location": "Dallas, TX",
-   "state": "TX",
-   "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4479842969",
-   "posted": "2026-10-19",
-   "summary": "We are seeking a highly skilled and innovative Lead Identity Platform Engineer to drive the strategy, architecture, engineering, and continuous evolution of our enterprise Workforce Identity Platform. This role serves as the senior technical authority responsible for designing scalable identity solutions, advancing platform capabilities, and enabling seamless access experiences across the organiza",
-   "reqs": [],
-   "fit": "Builds on your JML, Entra ID and AWS IAM experience.",
-   "gaps": [],
-   "work_mode": "Hybrid",
    "job_type": "Full-time",
    "employer_type": "Direct employer",
    "group": "main",
@@ -4358,37 +3999,6 @@
    "frameable": false
   },
   {
-   "id": "deloitte-cyber-identity-ciam-security-engineer-con-568566",
-   "title": "Cyber Identity - CIAM Security Engineer/Consultant",
-   "company": "Deloitte",
-   "pay": "Not posted · est. $110K–$150K (market)",
-   "pay_min": 110000,
-   "pay_est": true,
-   "type": "Full-time",
-   "mode": "On-site NY/NJ",
-   "location": "Jersey City, NJ",
-   "state": "NJ",
-   "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4473568566",
-   "posted": "2026-10-21",
-   "summary": "Our Deloitte Cyber team understands the unique challenges and opportunities businesses face in cybersecurity. Join our team to deliver powerful solutions to help our clients navigate the ever-changing threat landscape.",
-   "reqs": [
-    "Okta",
-    "OAuth/OIDC",
-    "MFA"
-   ],
-   "fit": "You already work with MFA.",
-   "gaps": [
-    "Okta: covered in your Steps",
-    "OAuth/OIDC: covered in your Steps"
-   ],
-   "work_mode": "On-site",
-   "job_type": "Full-time",
-   "employer_type": "Consulting/SI",
-   "group": "main",
-   "frameable": false
-  },
-  {
    "id": "keeper-security-inc-senior-qa-analyst-privileged-a-988588",
    "title": "Senior QA Analyst, Privileged Access Management",
    "company": "Keeper Security, Inc.",
@@ -4459,30 +4069,6 @@
    "frameable": false
   },
   {
-   "id": "state-farm-lead-iam-security-engineer-294910",
-   "title": "Lead IAM Security Engineer",
-   "company": "State Farm",
-   "pay": "Not posted · est. $110K–$150K (market)",
-   "pay_min": 110000,
-   "pay_est": true,
-   "type": "Full-time",
-   "mode": "Hybrid",
-   "location": "Bloomington, IL",
-   "state": "IL",
-   "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4480294910",
-   "posted": "2026-10-20",
-   "summary": "Overview Being good neighbors – helping people, investing in our communities, and making the world a better place – is who we are at State Farm. It is at the core of how we operate and the reason for our success.",
-   "reqs": [],
-   "fit": "Builds on your JML, Entra ID and AWS IAM experience.",
-   "gaps": [],
-   "work_mode": "Hybrid",
-   "job_type": "Full-time",
-   "employer_type": "Direct employer",
-   "group": "main",
-   "frameable": false
-  },
-  {
    "id": "crowe-identity-and-access-management-manager-520292",
    "title": "Identity and Access Management Manager",
    "company": "Crowe",
@@ -4535,10 +4121,13 @@
    "job_type": "Full-time",
    "employer_type": "Consulting/SI",
    "group": "main",
+   "also_in": [
+    "Jersey City, NJ"
+   ],
    "frameable": false
   },
   {
-   "id": "deloitte-microsoft-identity-entra-id-senior-consul-353209",
+   "id": "deloitte-microsoft-identity-entra-id-senior-consul-350206",
    "title": "Microsoft Identity Entra ID Senior Consultant",
    "company": "Deloitte",
    "pay": "Not posted · est. $110K–$150K (market)",
@@ -4546,11 +4135,11 @@
    "pay_est": true,
    "type": "Full-time",
    "mode": "On-site NY/NJ",
-   "location": "Morristown, NJ",
-   "state": "NJ",
+   "location": "Jericho, NY",
+   "state": "NY",
    "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4421353209",
-   "posted": "2026-10-08",
+   "url": "https://www.linkedin.com/jobs/view/4421350206",
+   "posted": "2026-10-09",
    "summary": "Our Deloitte Cyber team helps organizations address evolving cybersecurity challenges across identity, access, and platform security. Join our team to deliver solutions that help clients strengthen resilience, modernize identity environments, and manage cyber risk with confidence.",
    "reqs": [
     "Entra ID / Azure AD",
@@ -4570,39 +4159,13 @@
    "job_type": "Full-time",
    "employer_type": "Consulting/SI",
    "group": "main",
-   "frameable": false
-  },
-  {
-   "id": "mondel-z-international-product-owner-iam-sr-manage-051928",
-   "title": "Product Owner, IAM Sr. Manager, Identity Governance & Life Cycle",
-   "company": "Mondelēz International",
-   "pay": "Not posted · est. $110K–$150K (market)",
-   "pay_min": 110000,
-   "pay_est": true,
-   "type": "Full-time",
-   "mode": "On-site NY/NJ",
-   "location": "East Hanover, NJ",
-   "state": "NJ",
-   "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4398051928",
-   "posted": "2026-10-18",
-   "summary": "Job Description Are You Ready to Make It Happen at Mondelēz International? Join our Mission to Lead the Future of Snacking.",
-   "reqs": [
-    "Access reviews / certifications",
-    "Joiner-Mover-Leaver",
-    "RBAC",
-    "SOX / audit"
+   "also_in": [
+    "Morristown, NJ"
    ],
-   "fit": "You already work with Access reviews / certifications, Joiner-Mover-Leaver, RBAC, SOX / audit.",
-   "gaps": [],
-   "work_mode": "On-site",
-   "job_type": "Full-time",
-   "employer_type": "Direct employer",
-   "group": "main",
    "frameable": false
   },
   {
-   "id": "deloitte-cyber-identity-fde-engineering-manager-889130",
+   "id": "deloitte-cyber-identity-fde-engineering-manager-895095",
    "title": "Cyber Identity - FDE Engineering Manager",
    "company": "Deloitte",
    "pay": "Not posted · est. $110K–$150K (market)",
@@ -4610,11 +4173,11 @@
    "pay_est": true,
    "type": "Full-time",
    "mode": "On-site NY/NJ",
-   "location": "Princeton, NJ",
-   "state": "NJ",
+   "location": "Rochester, NY",
+   "state": "NY",
    "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4430889130",
-   "posted": "2026-10-09",
+   "url": "https://www.linkedin.com/jobs/view/4430895095",
+   "posted": "2026-10-10",
    "summary": "As an Engineering Manager in Deloitte Cyber's Digital Trust & Privacy practice, you will help clients solve complex identity, access, and data protection challenges through AI-enabled engineering solutions. This role sits at the intersection of client engagement and hands-on delivery, combining domain depth with the ability to architect, build, and deploy production-grade solutions.",
    "reqs": [
     "PIM / PAM"
@@ -4627,6 +4190,9 @@
    "job_type": "Full-time",
    "employer_type": "Consulting/SI",
    "group": "main",
+   "also_in": [
+    "Princeton, NJ"
+   ],
    "frameable": false
   },
   {
@@ -4723,7 +4289,7 @@
    "frameable": false
   },
   {
-   "id": "deloitte-cyber-identity-ciam-senior-engineering-ma-598819",
+   "id": "deloitte-cyber-identity-ciam-senior-engineering-ma-103759",
    "title": "Cyber Identity - CIAM Senior Engineering Management Specialist/Senior Consultant",
    "company": "Deloitte",
    "pay": "Not posted · est. $110K–$150K (market)",
@@ -4731,11 +4297,11 @@
    "pay_est": true,
    "type": "Full-time",
    "mode": "On-site NY/NJ",
-   "location": "Jericho, NY",
-   "state": "NY",
+   "location": "Morristown, NJ",
+   "state": "NJ",
    "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4423598819",
-   "posted": "2026-10-11",
+   "url": "https://www.linkedin.com/jobs/view/4424103759",
+   "posted": "2026-10-12",
    "summary": "Our Deloitte Cyber team understands the unique challenges and opportunities businesses face in cybersecurity. Join our team to deliver powerful solutions to help our clients navigate the ever-changing threat landscape.",
    "reqs": [
     "Okta",
@@ -4751,35 +4317,9 @@
    "job_type": "Full-time",
    "employer_type": "Consulting/SI",
    "group": "main",
-   "frameable": false
-  },
-  {
-   "id": "deloitte-cyber-operate-senior-manager-identity-704994",
-   "title": "Cyber Operate Senior Manager- Identity",
-   "company": "Deloitte",
-   "pay": "Not posted · est. $110K–$150K (market)",
-   "pay_min": 110000,
-   "pay_est": true,
-   "type": "Full-time",
-   "mode": "On-site NY/NJ",
-   "location": "Jersey City, NJ",
-   "state": "NJ",
-   "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4473704994",
-   "posted": "2026-10-21",
-   "summary": "Deloitte helps organizations protect and grow their business by delivering risk management solutions across critical domains, including cyber. Within that environment, this role leads the delivery, growth, and continuous improvement of large-scale Identity and Access Management (IAM) managed services engagements.",
-   "reqs": [
-    "MFA",
-    "PIM / PAM"
+   "also_in": [
+    "Jericho, NY"
    ],
-   "fit": "You already work with MFA.",
-   "gaps": [
-    "PIM / PAM: covered in your Steps"
-   ],
-   "work_mode": "On-site",
-   "job_type": "Full-time",
-   "employer_type": "Consulting/SI",
-   "group": "main",
    "frameable": false
   },
   {
@@ -4796,37 +4336,6 @@
    "source": "LinkedIn",
    "url": "https://www.linkedin.com/jobs/view/4448655990",
    "posted": "2026-10-08",
-   "summary": "Our Deloitte Cyber team understands the unique challenges and opportunities businesses face in cybersecurity. Join our team to deliver powerful solutions to help our clients navigate the ever-changing threat landscape.",
-   "reqs": [
-    "Okta",
-    "Ping Identity",
-    "MFA"
-   ],
-   "fit": "You already work with MFA.",
-   "gaps": [
-    "Okta: covered in your Steps",
-    "Ping Identity: covered in your Steps"
-   ],
-   "work_mode": "On-site",
-   "job_type": "Full-time",
-   "employer_type": "Consulting/SI",
-   "group": "main",
-   "frameable": false
-  },
-  {
-   "id": "deloitte-cyber-identity-ciam-senior-engineering-ma-103759",
-   "title": "Cyber Identity - CIAM Senior Engineering Management Specialist/Senior Consultant",
-   "company": "Deloitte",
-   "pay": "Not posted · est. $110K–$150K (market)",
-   "pay_min": 110000,
-   "pay_est": true,
-   "type": "Full-time",
-   "mode": "On-site NY/NJ",
-   "location": "Morristown, NJ",
-   "state": "NJ",
-   "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4424103759",
-   "posted": "2026-10-12",
    "summary": "Our Deloitte Cyber team understands the unique challenges and opportunities businesses face in cybersecurity. Join our team to deliver powerful solutions to help our clients navigate the ever-changing threat landscape.",
    "reqs": [
     "Okta",
@@ -4903,35 +4412,9 @@
    "job_type": "Full-time",
    "employer_type": "Consulting/SI",
    "group": "main",
-   "frameable": false
-  },
-  {
-   "id": "deloitte-cyber-identity-sailpoint-senior-consultan-063906",
-   "title": "Cyber Identity - SailPoint Senior Consultant - Senior Engineering Management Specialist",
-   "company": "Deloitte",
-   "pay": "Not posted · est. $110K–$150K (market)",
-   "pay_min": 110000,
-   "pay_est": true,
-   "type": "Full-time",
-   "mode": "On-site NY/NJ",
-   "location": "Jersey City, NJ",
-   "state": "NJ",
-   "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4479063906",
-   "posted": "2026-10-13",
-   "summary": "Join our Deloitte Cyber team to deliver powerful solutions to help our clients navigate the ever-changing threat landscape. Through powerful solutions and managed services that simplify complexity, we enable our clients to operate with resilience, grow with confidence, and proactively manage to secure success.",
-   "reqs": [
-    "SailPoint",
-    "Joiner-Mover-Leaver"
+   "also_in": [
+    "Jersey City, NJ"
    ],
-   "fit": "You already work with Joiner-Mover-Leaver.",
-   "gaps": [
-    "SailPoint: covered in your Steps"
-   ],
-   "work_mode": "On-site",
-   "job_type": "Full-time",
-   "employer_type": "Consulting/SI",
-   "group": "main",
    "frameable": false
   },
   {
@@ -4989,34 +4472,6 @@
    "work_mode": "Hybrid",
    "job_type": "Full-time",
    "employer_type": "Direct employer",
-   "group": "main",
-   "frameable": false
-  },
-  {
-   "id": "deloitte-cyber-identity-fde-engineering-manager-895095",
-   "title": "Cyber Identity - FDE Engineering Manager",
-   "company": "Deloitte",
-   "pay": "Not posted · est. $110K–$150K (market)",
-   "pay_min": 110000,
-   "pay_est": true,
-   "type": "Full-time",
-   "mode": "On-site NY/NJ",
-   "location": "Rochester, NY",
-   "state": "NY",
-   "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4430895095",
-   "posted": "2026-10-10",
-   "summary": "As an Engineering Manager in Deloitte Cyber's Digital Trust & Privacy practice, you will help clients solve complex identity, access, and data protection challenges through AI-enabled engineering solutions. This role sits at the intersection of client engagement and hands-on delivery, combining domain depth with the ability to architect, build, and deploy production-grade solutions.",
-   "reqs": [
-    "PIM / PAM"
-   ],
-   "fit": "Builds on your JML, Entra ID and AWS IAM experience.",
-   "gaps": [
-    "PIM / PAM: covered in your Steps"
-   ],
-   "work_mode": "On-site",
-   "job_type": "Full-time",
-   "employer_type": "Consulting/SI",
    "group": "main",
    "frameable": false
   },
@@ -5192,41 +4647,6 @@
    "frameable": false
   },
   {
-   "id": "deloitte-microsoft-identity-entra-id-senior-consul-350206",
-   "title": "Microsoft Identity Entra ID Senior Consultant",
-   "company": "Deloitte",
-   "pay": "Not posted · est. $110K–$150K (market)",
-   "pay_min": 110000,
-   "pay_est": true,
-   "type": "Full-time",
-   "mode": "On-site NY/NJ",
-   "location": "Jericho, NY",
-   "state": "NY",
-   "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4421350206",
-   "posted": "2026-10-09",
-   "summary": "Our Deloitte Cyber team helps organizations address evolving cybersecurity challenges across identity, access, and platform security. Join our team to deliver solutions that help clients strengthen resilience, modernize identity environments, and manage cyber risk with confidence.",
-   "reqs": [
-    "Entra ID / Azure AD",
-    "Active Directory",
-    "OAuth/OIDC",
-    "MFA",
-    "Conditional Access",
-    "PIM / PAM"
-   ],
-   "fit": "You already work with Entra ID / Azure AD, Active Directory, MFA.",
-   "gaps": [
-    "OAuth/OIDC: covered in your Steps",
-    "Conditional Access: covered in your Steps",
-    "PIM / PAM: covered in your Steps"
-   ],
-   "work_mode": "On-site",
-   "job_type": "Full-time",
-   "employer_type": "Consulting/SI",
-   "group": "main",
-   "frameable": false
-  },
-  {
    "id": "v-group-inc-oracle-oci-and-iam-consultant-596997",
    "title": "Oracle OCI and IAM Consultant",
    "company": "V Group Inc.",
@@ -5376,33 +4796,6 @@
    "frameable": false
   },
   {
-   "id": "bill-principal-information-security-identity-and-d-646056",
-   "title": "Principal Information Security - Identity and Data Security",
-   "company": "BILL",
-   "pay": "Not posted · est. $110K–$150K (market)",
-   "pay_min": 110000,
-   "pay_est": true,
-   "type": "Full-time",
-   "mode": "Remote",
-   "location": "San Jose, CA",
-   "state": "CA",
-   "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4470646056",
-   "posted": "2026-10-14",
-   "summary": "Innovate with purpose At BILL, we believe in empowering the businesses that drive our economy. By replacing outdated financial processes with innovative tools, we help businesses—from startups to established brands—make smarter decisions and gain control of their operations.",
-   "reqs": [
-    "AWS IAM",
-    "SOX / audit"
-   ],
-   "fit": "You already work with AWS IAM, SOX / audit.",
-   "gaps": [],
-   "work_mode": "Remote",
-   "job_type": "Full-time",
-   "employer_type": "Direct employer",
-   "group": "main",
-   "frameable": false
-  },
-  {
    "id": "trace3-sr-security-solutions-architect-iga-pam-nhi-471114",
    "title": "Sr. Security Solutions Architect | IGA/PAM/NHI (Remote)",
    "company": "Trace3",
@@ -5457,6 +4850,9 @@
    "job_type": "Full-time",
    "employer_type": "Consulting/SI",
    "group": "main",
+   "also_in": [
+    "Jersey City, NJ"
+   ],
    "frameable": false
   },
   {
@@ -5482,34 +4878,6 @@
    "work_mode": "On-site",
    "job_type": "Full-time",
    "employer_type": "Direct employer",
-   "group": "main",
-   "frameable": false
-  },
-  {
-   "id": "deloitte-cyber-identity-fde-senior-consultant-seni-898064",
-   "title": "Cyber Identity - FDE Senior Consultant - Senior Engineering Management Specialist",
-   "company": "Deloitte",
-   "pay": "Not posted · est. $110K–$150K (market)",
-   "pay_min": 110000,
-   "pay_est": true,
-   "type": "Full-time",
-   "mode": "On-site NY/NJ",
-   "location": "Jersey City, NJ",
-   "state": "NJ",
-   "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4430898064",
-   "posted": "2026-10-08",
-   "summary": "As a Senior Consultant in Deloitte Cyber's Digital Trust & Privacy practice, you will help clients solve complex identity, access, and data protection challenges through AI-enabled engineering solutions. This role sits at the intersection of client engagement and hands-on delivery, combining domain depth with the ability to architect, build, and deploy production-grade solutions.",
-   "reqs": [
-    "PIM / PAM"
-   ],
-   "fit": "Builds on your JML, Entra ID and AWS IAM experience.",
-   "gaps": [
-    "PIM / PAM: covered in your Steps"
-   ],
-   "work_mode": "On-site",
-   "job_type": "Full-time",
-   "employer_type": "Consulting/SI",
    "group": "main",
    "frameable": false
   },
@@ -5959,30 +5327,6 @@
    "employer_type": "Direct employer",
    "group": "main",
    "frameable": false
-  },
-  {
-   "id": "reddit-senior-backend-engineer-iam-435033",
-   "title": "Senior Backend Engineer, IAM",
-   "company": "Reddit",
-   "pay": "Not posted · est. $110K–$150K (market)",
-   "pay_min": 110000,
-   "pay_est": true,
-   "type": "Full-time",
-   "mode": "Remote",
-   "location": "Remote - United States",
-   "state": "US",
-   "source": "Greenhouse (company ATS)",
-   "url": "https://job-boards.greenhouse.io/reddit/jobs/8044767",
-   "posted": "2026-10-15",
-   "summary": "It’s built on shared interests, passion, and trust, and is home to the most open and authentic conversations on the internet. Every day, Reddit users submit, vote, and comment on the topics they care most about.",
-   "reqs": [],
-   "fit": "Builds on your JML, Entra ID and AWS IAM experience.",
-   "gaps": [],
-   "work_mode": "Remote",
-   "job_type": "Full-time",
-   "employer_type": "Direct employer",
-   "group": "main",
-   "frameable": true
   },
   {
    "id": "reddit-staff-software-engineer-identity-access-man-838516",
@@ -6484,34 +5828,6 @@
    "frameable": true
   },
   {
-   "id": "palantir-platform-engineer-identity-infrastructure-340268",
-   "title": "Platform Engineer - Identity Infrastructure",
-   "company": "Palantir",
-   "pay": "Not posted · est. $110K–$150K (market)",
-   "pay_min": 110000,
-   "pay_est": true,
-   "type": "Full-time",
-   "mode": "Hybrid",
-   "location": "Palo Alto, CA hybrid",
-   "state": "CA",
-   "source": "Lever (company ATS)",
-   "url": "https://jobs.lever.co/palantir/721fe5ca-73b8-4223-826e-93a528194821",
-   "posted": "2026-08-04",
-   "summary": "A World-Changing Company Palantir builds the world’s leading software for data-driven decisions and operations. By bringing the right data to the people who need it, our platforms empower our partners to develop lifesaving drugs, forecast supply chain disruptions, locate missing children, and more.",
-   "reqs": [
-    "Entra ID / Azure AD",
-    "AWS IAM",
-    "SOX / audit"
-   ],
-   "fit": "You already work with Entra ID / Azure AD, AWS IAM, SOX / audit.",
-   "gaps": [],
-   "work_mode": "Hybrid",
-   "job_type": "Full-time",
-   "employer_type": "Direct employer",
-   "group": "main",
-   "frameable": true
-  },
-  {
    "id": "palantir-platform-engineer-identity-infrastructure-765126",
    "title": "Platform Engineer - Identity Infrastructure",
    "company": "Palantir",
@@ -6545,6 +5861,9 @@
    "job_type": "Full-time",
    "employer_type": "Direct employer",
    "group": "main",
+   "also_in": [
+    "Palo Alto, CA hybrid"
+   ],
    "frameable": true
   },
   {
@@ -6576,37 +5895,9 @@
    "job_type": "Full-time",
    "employer_type": "Direct employer",
    "group": "main",
-   "frameable": true
-  },
-  {
-   "id": "palantir-senior-identity-security-engineer-505671",
-   "title": "Senior Identity Security Engineer",
-   "company": "Palantir",
-   "pay": "Not posted · est. $110K–$150K (market)",
-   "pay_min": 110000,
-   "pay_est": true,
-   "type": "Full-time",
-   "mode": "Hybrid",
-   "location": "Palo Alto, CA hybrid",
-   "state": "CA",
-   "source": "Lever (company ATS)",
-   "url": "https://jobs.lever.co/palantir/bb7af139-064c-4a59-a784-9ba8c4324d21",
-   "posted": "2026-05-28",
-   "summary": "A World-Changing Company Palantir builds the world’s leading software for data-driven decisions and operations. By bringing the right data to the people who need it, our platforms empower our partners to develop lifesaving drugs, forecast supply chain disruptions, locate missing children, and more.",
-   "reqs": [
-    "SAML",
-    "OAuth/OIDC",
-    "RBAC"
+   "also_in": [
+    "Palo Alto, CA hybrid"
    ],
-   "fit": "You already work with RBAC.",
-   "gaps": [
-    "SAML: covered in your Steps",
-    "OAuth/OIDC: covered in your Steps"
-   ],
-   "work_mode": "Hybrid",
-   "job_type": "Full-time",
-   "employer_type": "Direct employer",
-   "group": "main",
    "frameable": true
   },
   {
