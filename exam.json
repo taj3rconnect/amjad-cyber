@@ -1,0 +1,2402 @@
+[
+{
+"q": "You are the identity administrator for Contoso. The company is planning a hybrid identity solution and wants to minimize on-premises footprint while still synchronizing user accounts, groups, and password hashes to Microsoft Entra ID. Which synchronization method should you recommend?",
+"choices": [
+"A. Microsoft Entra Connect with full synchronization",
+"B. Microsoft Entra Cloud Sync",
+"C. Microsoft Entra Connect with pass-through authentication only",
+"D. Microsoft Identity Manager (MIM)"
+],
+"answer": 1,
+"explain": "Microsoft Entra Cloud Sync is the recommended lightweight agent-based solution that runs on multiple servers, has a smaller on-premises footprint, and supports synchronizing users, groups, and password hashes. Entra Connect is the older, heavier solution that requires more infrastructure. Pass-through authentication does not synchronize password hashes, and MIM is legacy and not the strategic direction.",
+"objective": "Implement and manage hybrid identity",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-0"
+},
+{
+"q": "Contoso uses Microsoft Entra Connect to synchronize identities. The on-premises Active Directory contains a security group named SG-Exec that should be synchronized to Entra ID as a Microsoft 365 Group with dynamic membership rules applied in the cloud. What must be done to achieve this?",
+"choices": [
+"A. Convert the group to a distribution group before synchronization",
+"B. Enable group writeback and create the dynamic group in Entra ID",
+"C. Synchronize the security group and then change its group type in Entra ID",
+"D. Use Entra Cloud Sync instead of Entra Connect"
+],
+"answer": 1,
+"explain": "Security groups synchronized from on-premises cannot be directly converted to Microsoft 365 Groups with dynamic membership in Entra ID. The recommended approach is to enable group writeback and create a new dynamic Microsoft 365 Group in the cloud. Changing group type after sync is not supported, and switching sync tools does not solve the group type limitation.",
+"objective": "Implement and manage hybrid identity",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-1"
+},
+{
+"q": "Which of the following objects can be synchronized to Microsoft Entra ID using Entra Connect Cloud Sync? (Choose all that apply, but select the best single answer that represents the most complete option)",
+"choices": [
+"A. Users and security groups only",
+"B. Users, groups, and devices",
+"C. Users, groups, password hashes, and public folder contacts",
+"D. Users, groups, and password hashes"
+],
+"answer": 3,
+"explain": "Entra Cloud Sync supports synchronizing users, groups (security and Microsoft 365), and password hashes. It does not support device synchronization or public folder contacts (those require full Entra Connect). Option D is the most accurate single choice among the provided options.",
+"objective": "Implement and manage hybrid identity",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-2"
+},
+{
+"q": "You need to create a guest user account for a partner company that uses a non-Azure AD identity provider. The partner must be able to access a specific SharePoint Online site using their existing corporate credentials. What should you configure?",
+"choices": [
+"A. Direct federation using SAML 2.0",
+"B. Microsoft Entra B2B with email one-time passcode",
+"C. Microsoft Entra B2B with Google federation",
+"D. Self-service sign-up with custom workflow"
+],
+"answer": 0,
+"explain": "Direct federation (SAML/WS-Fed) allows the partner to use their own corporate identity provider for authentication, which matches the requirement. Email OTP is for organizations without an identity provider. Google federation is limited to Google accounts only. Self-service sign-up is for consumer scenarios, not corporate partners.",
+"objective": "Implement and manage external identities",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-3"
+},
+{
+"q": "What is the default synchronization interval for password hash synchronization when using Microsoft Entra Connect?",
+"choices": [
+"A. Every 2 minutes",
+"B. Every 30 minutes",
+"C. Every 2 hours",
+"D. Every 24 hours"
+],
+"answer": 1,
+"explain": "Password hash synchronization with Entra Connect occurs every 30 minutes by default. The 2-minute interval applies to other attribute syncs in newer versions, but password hash sync remains on a 30-minute cycle. The 2-hour and 24-hour options are incorrect.",
+"objective": "Implement and manage hybrid identity",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-4"
+},
+{
+"q": "Your organization has a requirement to prevent all guest users from being able to enumerate the membership of any Microsoft 365 Group. Which setting in the Microsoft Entra admin center should you modify?",
+"choices": [
+"A. External collaboration settings \u2013 Guest user access",
+"B. External collaboration settings \u2013 Guest invite restrictions",
+"C. Group settings \u2013 Restrict guest access to groups",
+"D. User settings \u2013 Restrict access to the Entra admin portal"
+],
+"answer": 2,
+"explain": "The Group settings option 'Restrict guest access to groups' controls whether guests can see group membership. This is the specific control needed. External collaboration settings control invitation and user access levels but do not directly control group membership visibility. The other options are unrelated.",
+"objective": "Implement and manage external identities",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-5"
+},
+{
+"q": "You are configuring Microsoft Entra Connect for a hybrid environment. The company wants to use Seamless Single Sign-On (SSO) and Password Hash Synchronization. Which two prerequisites must be met? (Choose two, but select the option that lists the correct pair)",
+"choices": [
+"A. The server must be domain-joined and have direct internet access",
+"B. Port 443 must be open outbound and the server must have line-of-sight to a writable domain controller",
+"C. The forest functional level must be Windows Server 2012 or higher and the Entra Connect server must be joined to the domain",
+"D. Azure AD Connect Health must be installed and the server must run Windows Server 2019"
+],
+"answer": 2,
+"explain": "For Seamless SSO and PHS, the forest functional level must be at least Windows Server 2012 and the Entra Connect server must be domain joined. Option B is partially correct but incomplete. Option A is incorrect because the server does not require direct internet access if a proxy is configured. Option D is not required.",
+"objective": "Implement and manage hybrid identity",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-6"
+},
+{
+"q": "A user object synchronized from on-premises Active Directory to Microsoft Entra ID has the attribute userType set to 'Member'. You want this user to be treated as a guest in Entra ID for licensing and Conditional Access purposes. What is the recommended way to achieve this?",
+"choices": [
+"A. Change the userType attribute to 'Guest' in on-premises AD and wait for the next sync cycle",
+"B. Use the Microsoft Graph API to update the userType property in Entra ID",
+"C. Disable and re-enable the user account in Entra ID",
+"D. Add the user to the 'Guests' security group"
+],
+"answer": 1,
+"explain": "For synchronized users, the userType attribute is authoritative from on-premises and cannot be changed directly in Entra ID. The recommended and supported method is to update the userType using Microsoft Graph API (or PowerShell) in the cloud. Changing it on-premises is not honored for this attribute. The other options do not change the userType property.",
+"objective": "Implement and manage user identities",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-7"
+},
+{
+"q": "Which of the following is a key advantage of Microsoft Entra Cloud Sync over Microsoft Entra Connect?",
+"choices": [
+"A. It supports more object types including devices and contacts",
+"B. It uses a lightweight multi-agent architecture with no single point of failure",
+"C. It provides real-time synchronization instead of scheduled",
+"D. It includes built-in group writeback capabilities without additional configuration"
+],
+"answer": 1,
+"explain": "Entra Cloud Sync uses multiple lightweight agents for high availability and has a much smaller on-premises footprint than the full Entra Connect synchronization service. It does not support more object types (actually supports fewer), is not real-time, and still requires configuration for group writeback.",
+"objective": "Implement and manage hybrid identity",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-8"
+},
+{
+"q": "You manage external identities for Fabrikam. Several vendors need to access internal applications using their own corporate identities from identity providers that support OpenID Connect. What feature should you configure in Microsoft Entra ID to meet this requirement with the least administrative effort?",
+"choices": [
+"A. Microsoft Entra B2B direct federation",
+"B. Microsoft Entra B2C custom policies",
+"C. Self-service sign-up with identity providers",
+"D. Microsoft Entra External Identities with SAML applications"
+],
+"answer": 0,
+"explain": "Microsoft Entra B2B direct federation supports both SAML 2.0 and OpenID Connect identity providers, allowing users to sign in with their corporate credentials. This is the correct B2B feature for organizational partners. B2C is for consumer-facing applications, self-service sign-up is for email-based scenarios, and the SAML option is too narrow.",
+"objective": "Implement and manage external identities",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-9"
+},
+{
+"q": "You are the identity administrator for Contoso. The company wants to synchronize user accounts and groups from an on-premises Active Directory to Microsoft Entra ID while minimizing the amount of data sent to the cloud. Which hybrid identity solution should you implement?",
+"choices": [
+"A. Microsoft Entra Connect with full synchronization",
+"B. Microsoft Entra Cloud Sync",
+"C. Microsoft Entra Connect with pass-through authentication only",
+"D. Microsoft Entra Connect Health"
+],
+"answer": 1,
+"explain": "Microsoft Entra Cloud Sync is the recommended lightweight solution that uses a cloud-based provisioning agent and sends significantly less data to the cloud compared to the full Entra Connect sync client. Option A uses the legacy heavier client, option C is an authentication method not a sync method, and option D is a monitoring tool.",
+"objective": "Implement and manage hybrid identity",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-10"
+},
+{
+"q": "Which of the following objects can be synchronized to Microsoft Entra ID using Microsoft Entra Connect?",
+"choices": [
+"A. Users, groups, and devices",
+"B. Users, groups, contacts, and devices",
+"C. Users and security groups only",
+"D. Users, distribution groups, and computer accounts only"
+],
+"answer": 1,
+"explain": "Entra Connect can synchronize users, groups (both security and distribution), contacts, and devices. Option A is missing contacts, option C is too restrictive, and option D incorrectly limits group types and includes computer accounts which are not directly synced as objects.",
+"objective": "Implement and manage hybrid identity",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-11"
+},
+{
+"q": "Contoso is planning a merger with Fabrikam. Fabrikam users need to access Contoso resources using their existing Fabrikam credentials without creating new accounts. What should you configure in Microsoft Entra ID?",
+"choices": [
+"A. A new Entra ID tenant for Fabrikam",
+"B. Cross-tenant synchronization",
+"C. B2B collaboration with external identities",
+"D. Password hash synchronization between tenants"
+],
+"answer": 2,
+"explain": "B2B collaboration allows external users (Fabrikam) to use their own credentials to access Contoso resources through invitations or self-service sign-up. Cross-tenant sync is for internal employee synchronization between tenants, not guest access. Options A and D are not the correct approach for this scenario.",
+"objective": "Implement and manage external identities",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-12"
+},
+{
+"q": "You need to create a group in Microsoft Entra ID that will be used to assign licenses to users in the Marketing department. The group must be dynamically updated when users change departments. Which group type and membership type should you configure?",
+"choices": [
+"A. Microsoft 365 group with assigned membership",
+"B. Security group with dynamic user membership",
+"C. Security group with assigned membership",
+"D. Microsoft 365 group with dynamic device membership"
+],
+"answer": 1,
+"explain": "A security group with dynamic user membership uses membership rules based on user attributes (such as department) and can be used for license assignment. Microsoft 365 groups can also be dynamic but are primarily for collaboration. Device membership is not applicable for user licensing.",
+"objective": "Implement and manage user identities",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-13"
+},
+{
+"q": "Which protocol and port combination is used by default for synchronization between Microsoft Entra Connect and Microsoft Entra ID?",
+"choices": [
+"A. HTTPS over port 443",
+"B. HTTP over port 80",
+"C. LDAP over port 389",
+"D. SMB over port 445"
+],
+"answer": 0,
+"explain": "Microsoft Entra Connect uses outbound HTTPS connections over port 443 to communicate with Entra ID. LDAP, HTTP, and SMB are not used for the synchronization service communication with the cloud.",
+"objective": "Implement and manage hybrid identity",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-14"
+},
+{
+"q": "Your organization has a requirement to allow users to sign in with their on-premises credentials without storing password hashes in the cloud. Which authentication method should be implemented with Microsoft Entra Connect?",
+"choices": [
+"A. Password hash synchronization",
+"B. Federation with AD FS",
+"C. Pass-through authentication",
+"D. Seamless single sign-on only"
+],
+"answer": 2,
+"explain": "Pass-through authentication validates passwords against on-premises Active Directory without storing hashes in the cloud. Password hash sync stores hashes, federation uses AD FS, and seamless SSO is a sign-in enhancement that works with either PHS or PTA.",
+"objective": "Implement and manage hybrid identity",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-15"
+},
+{
+"q": "You are configuring a new Entra ID tenant for a partner organization. You want to allow users from contoso.com to access your applications as guests. What must be configured in the External Identities section?",
+"choices": [
+"A. Enable B2C user flows",
+"B. Add contoso.com as an identity provider in B2B",
+"C. Configure cross-tenant access settings to allow inbound access from contoso.com",
+"D. Create a new conditional access policy for external users"
+],
+"answer": 2,
+"explain": "Cross-tenant access settings must be configured to allow inbound B2B access from specific tenants such as contoso.com. Adding as an identity provider is not required for standard B2B. B2C is for consumer identities, and conditional access is applied after the external user is allowed.",
+"objective": "Implement and manage external identities",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-16"
+},
+{
+"q": "What is the maximum number of on-premises Active Directory forests that a single Microsoft Entra Connect server can synchronize to a single Microsoft Entra tenant?",
+"choices": [
+"A. 1",
+"B. 5",
+"C. 10",
+"D. No limit"
+],
+"answer": 1,
+"explain": "A single Entra Connect server can synchronize up to 5 on-premises AD forests to one Entra tenant. Synchronization from more than 5 forests requires additional Connect servers or the use of Entra Cloud Sync.",
+"objective": "Implement and manage hybrid identity",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-17"
+},
+{
+"q": "Litware Inc. wants to create a dynamic security group that includes all users whose job title contains 'Manager' and who are located in the United States. Which membership rule syntax should be used?",
+"choices": [
+"A. (user.jobTitle -contains \"Manager\") -and (user.country -eq \"US\")",
+"B. (user.jobTitle equals \"Manager\") and (user.country equals \"United States\")",
+"C. user.jobTitle -like \"*Manager*\" && user.usageLocation -eq \"US\"",
+"D. (user.title contains \"Manager\") or (user.country -eq \"US\")"
+],
+"answer": 0,
+"explain": "The correct syntax uses the -contains and -eq operators with the proper attribute names (jobTitle and country). Option B uses incorrect operator names, option C uses usageLocation instead of country and incorrect operators, and option D uses 'or' instead of 'and' and the wrong attribute (title).",
+"objective": "Implement and manage user identities",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-18"
+},
+{
+"q": "You have deployed Microsoft Entra Cloud Sync for a hybrid environment. After the initial sync cycle, you notice that several on-premises groups are missing in Entra ID. What is the most likely reason?",
+"choices": [
+"A. The groups are distribution groups and were not selected in the sync scope",
+"B. Cloud Sync does not support group synchronization",
+"C. The groups have more than 500 members",
+"D. The Entra Cloud Sync service account does not have Replicating Directory Changes permission"
+],
+"answer": 3,
+"explain": "The Cloud Sync service account requires the 'Replicating Directory Changes' permission on the on-premises domain to read group objects. Cloud Sync does support group synchronization (eliminating B), distribution groups are supported, and member count is not a limiting factor for visibility.",
+"objective": "Implement and manage hybrid identity",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-19"
+},
+{
+"q": "Your organization is planning to synchronize user accounts from an on-premises Active Directory to Microsoft Entra ID. You need to choose a synchronization method that supports password hash synchronization, pass-through authentication, and seamless single sign-on while minimizing the number of servers required. Which solution should you recommend?",
+"choices": [
+"A. Microsoft Entra Connect with password hash synchronization",
+"B. Microsoft Entra Cloud Sync",
+"C. Microsoft Entra Connect with pass-through authentication",
+"D. Microsoft Entra Connect cloud provisioning"
+],
+"answer": 1,
+"explain": "Microsoft Entra Cloud Sync is the recommended modern solution as it is a lightweight agent-based service that supports password hash sync, PTA, and SSO with significantly lower infrastructure requirements than the legacy Entra Connect sync client. Option A and C refer to the older Entra Connect sync client which requires more servers and maintenance. Option D is not a valid product name.",
+"objective": "Implement and manage hybrid identity",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-20"
+},
+{
+"q": "You are configuring group writeback from Microsoft Entra ID to an on-premises Active Directory. Which type of group can be successfully written back using Entra Connect?",
+"choices": [
+"A. Microsoft 365 groups",
+"B. Security groups with dynamic membership",
+"C. Security groups with assigned membership",
+"D. All of the above"
+],
+"answer": 2,
+"explain": "Only security groups that have assigned membership can be written back to on-premises AD. Microsoft 365 groups and dynamic groups are cloud-only and cannot be written back. This limitation is important when planning group management in hybrid environments.",
+"objective": "Implement and manage hybrid identity",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-21"
+},
+{
+"q": "Contoso is using Microsoft Entra Connect to synchronize identities. The HR department has asked that all users with the job title 'Contractor' be automatically added to a specific security group in Microsoft Entra ID. What is the best way to achieve this requirement?",
+"choices": [
+"A. Create a dynamic user group using the jobTitle attribute",
+"B. Use Entra Connect to create an OU filter for contractors",
+"C. Configure group writeback rules in Entra Connect",
+"D. Manually add contractors to the group on a weekly basis"
+],
+"answer": 0,
+"explain": "Dynamic user groups in Microsoft Entra ID can automatically add or remove members based on attributes such as jobTitle. This is the most efficient method. Entra Connect OU filtering controls which objects are synchronized but does not create dynamic group membership in the cloud. Group writeback works in the opposite direction.",
+"objective": "Implement and manage user identities",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-22"
+},
+{
+"q": "Which of the following is a valid source of authority for a user account that has been synchronized from on-premises Active Directory to Microsoft Entra ID using Entra Connect?",
+"choices": [
+"A. Microsoft Entra ID",
+"B. On-premises Active Directory",
+"C. Both simultaneously",
+"D. Neither - the account is orphaned"
+],
+"answer": 1,
+"explain": "When an object is synchronized from on-premises AD using Entra Connect, the source of authority remains on-premises. Most attributes can only be changed in the on-premises AD and then synchronized to the cloud. This is a core concept of hybrid identity with Entra Connect.",
+"objective": "Implement and manage hybrid identity",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-23"
+},
+{
+"q": "You need to allow users from a partner organization using their own Azure AD tenant to access your company's SaaS application registered in Microsoft Entra ID. What should you configure?",
+"choices": [
+"A. Microsoft Entra B2B collaboration",
+"B. Microsoft Entra B2C",
+"C. Microsoft Entra Domain Services",
+"D. Self-service password reset"
+],
+"answer": 0,
+"explain": "Microsoft Entra B2B collaboration is designed for inviting and managing external users from other organizations (including other Azure AD tenants) to access your resources. B2C is for consumer-facing applications with local accounts or social identity providers. Domain Services is for managed domain services.",
+"objective": "Implement and manage external identities",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-24"
+},
+{
+"q": "Your company is migrating from Microsoft Entra Connect to Microsoft Entra Cloud Sync. What is one key advantage of Cloud Sync over the traditional Entra Connect sync client?",
+"choices": [
+"A. It supports more than 500,000 objects",
+"B. It uses multiple lightweight agents for high availability without a single point of failure",
+"C. It can synchronize directly to multiple forests without additional configuration",
+"D. It does not support password hash synchronization"
+],
+"answer": 1,
+"explain": "Entra Cloud Sync uses multiple lightweight provisioning agents that can be installed on several servers, providing high availability and eliminating the single point of failure that exists with the traditional Entra Connect sync client. Both solutions support large object counts and PHS.",
+"objective": "Implement and manage hybrid identity",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-25"
+},
+{
+"q": "What is the default synchronization interval when using Microsoft Entra Connect to sync changes from on-premises Active Directory to Microsoft Entra ID?",
+"choices": [
+"A. Every 30 minutes",
+"B. Every 60 minutes",
+"C. Every 3 hours",
+"D. Real-time synchronization"
+],
+"answer": 0,
+"explain": "The default synchronization cycle for Entra Connect is every 30 minutes. While you can force a sync or change the schedule, the out-of-the-box setting is 30 minutes. Real-time synchronization is not available with Entra Connect.",
+"objective": "Implement and manage hybrid identity",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-26"
+},
+{
+"q": "You are the identity administrator for Fabrikam. The company has recently acquired a startup that uses Google Workspace. Fabrikam wants these external users to access internal resources using their Google accounts. What is the recommended approach?",
+"choices": [
+"A. Create local accounts for all external users",
+"B. Use Microsoft Entra B2B with Google as an identity provider",
+"C. Configure federation using AD FS",
+"D. Use Microsoft Entra B2C with custom policies"
+],
+"answer": 1,
+"explain": "Microsoft Entra B2B collaboration natively supports Google as an identity provider, allowing external users to sign in with their Google accounts without creating new credentials. This is the simplest and most secure approach for partner users. B2C is intended for consumer applications, not internal resource access.",
+"objective": "Implement and manage external identities",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-27"
+},
+{
+"q": "Which attribute is used by default to match on-premises AD users with Microsoft Entra ID accounts during the synchronization process with Entra Connect?",
+"choices": [
+"A. objectGUID",
+"B. userPrincipalName",
+"C. mail",
+"D. msDS-ConsistencyGuid"
+],
+"answer": 3,
+"explain": "By default, Entra Connect uses the msDS-ConsistencyGuid attribute (which is populated with the objectGUID value) as the source anchor for matching objects. This provides more flexibility than using objectGUID directly because it can be moved between forests. UPN and mail are used for sign-in but not as the immutable source anchor.",
+"objective": "Implement and manage hybrid identity",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-28"
+},
+{
+"q": "A company wants to implement a hybrid identity solution with the least possible on-premises footprint. They need to support password hash synchronization and self-service password reset writeback. Which deployment model meets these requirements?",
+"choices": [
+"A. Entra Connect with full SQL Server",
+"B. Entra Cloud Sync",
+"C. Entra Connect with pass-through authentication only",
+"D. AD FS with Entra Connect"
+],
+"answer": 1,
+"explain": "Microsoft Entra Cloud Sync is specifically designed for organizations wanting a minimal on-premises footprint. It runs as a lightweight agent, supports password hash synchronization, and enables password writeback for self-service password reset. It is the strategic future direction from Microsoft.",
+"objective": "Implement and manage hybrid identity",
+"cert": "SC-300",
+"domain": "Implement and manage user identities",
+"id": "SC-300-29"
+},
+{
+"q": "You need to enforce MFA for all users accessing Microsoft 365 resources from outside the corporate network. Which Conditional Access policy configuration achieves this with the least administrative effort?",
+"choices": [
+"A. Create a policy with User risk as Medium and above, grant access with MFA",
+"B. Create a policy with Locations set to Any location except trusted locations, grant access requiring MFA",
+"C. Create a policy with Device platforms set to All platforms, grant access requiring MFA",
+"D. Create a policy with Cloud apps set to All cloud apps, block access when sign-in risk is Low"
+],
+"answer": 1,
+"explain": "Option B is correct because it specifically targets external access using named locations (trusted locations), which is the standard and most efficient way to require MFA for non-corporate networks. Option A incorrectly uses risk-based conditions instead of location. Option C would require MFA everywhere including inside the office. Option D uses a block action instead of MFA requirement.",
+"objective": "Implement Conditional Access",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-30"
+},
+{
+"q": "What is the primary difference between User risk and Sign-in risk detections in Microsoft Entra ID Protection?",
+"choices": [
+"A. User risk is calculated in real time while Sign-in risk is calculated offline",
+"B. User risk represents the probability that a user account has been compromised, while Sign-in risk represents the probability that a specific authentication request is compromised",
+"C. Sign-in risk can only be remediated with password reset while User risk can be remediated with MFA",
+"D. User risk applies only to hybrid identities while Sign-in risk applies to cloud-only identities"
+],
+"answer": 1,
+"explain": "Option B is correct because User risk focuses on the likelihood an account is compromised (e.g., leaked credentials), whereas Sign-in risk evaluates the specific login attempt (e.g., anomalous location or impossible travel). Option A is incorrect as both can be real-time or offline. Option C is wrong because both can use similar remediation methods. Option D is incorrect as both apply to all identity types.",
+"objective": "Implement Identity Protection",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-31"
+},
+{
+"q": "Contoso is piloting passwordless authentication. The security team wants to allow users to sign in with FIDO2 security keys for Microsoft 365 but only from compliant devices. Which two configurations are required? (Choose two.)",
+"choices": [
+"A. Enable the FIDO2 security key method in the Authentication methods policy",
+"B. Create a Conditional Access policy requiring compliant device and grant with Passwordless sign-in",
+"C. Configure a custom authentication strength that includes FIDO2",
+"D. Enable passwordless sign-in in the Entra ID tenant settings"
+],
+"answer": 0,
+"explain": "Option A is correct because the Authentication methods policy must explicitly enable FIDO2 keys before they can be used. Option C is also correct because authentication strengths allow Conditional Access policies to require specific methods like FIDO2. Option B is incorrect because there is no 'Passwordless sign-in' grant control. Option D is incorrect as there is no such tenant-wide setting.",
+"objective": "Implement passwordless authentication",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-32"
+},
+{
+"q": "Which of the following is a supported method for registering a FIDO2 security key in Microsoft Entra ID?",
+"choices": [
+"A. Only through the MySecurityInfo portal",
+"B. Through the MySecurityInfo portal, during Windows 10/11 OOBE, or via Microsoft Authenticator",
+"C. Only during Windows Hello for Business provisioning",
+"D. Through the Entra admin center under Protection > Authentication methods"
+],
+"answer": 1,
+"explain": "Option B is correct because users can register FIDO2 keys via the MySecurityInfo portal, during Windows setup, and through the Authenticator app. Option A is too restrictive. Option C is incorrect because FIDO2 and Windows Hello for Business are separate. Option D is incorrect because end users cannot register keys from the admin center.",
+"objective": "Implement passwordless authentication",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-33"
+},
+{
+"q": "A user reports they cannot complete MFA registration because they do not have a mobile phone. The organization wants to allow this user to use Microsoft Authenticator on a tablet instead. What should you do?",
+"choices": [
+"A. Enable 'Remember MFA on trusted devices' in the MFA service settings",
+"B. Add the tablet's browser as a trusted device in Conditional Access",
+"C. Enable the Microsoft Authenticator app as an available authentication method in the Authentication methods policy",
+"D. Create a Conditional Access policy excluding the user from MFA requirements"
+],
+"answer": 2,
+"explain": "Option C is correct because the Authentication methods policy controls which methods (including Authenticator app) are available for users to register and use. Option A only controls persistent sessions. Option B does not enable the method. Option D would weaken security and is not best practice.",
+"objective": "Implement MFA",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-34"
+},
+{
+"q": "You are configuring a Conditional Access policy to require MFA for all administrators. The policy should not apply when an administrator is accessing the Entra admin center from a hybrid Azure AD joined device in the corporate office. Which two conditions should you configure? (Choose two.)",
+"choices": [
+"A. Include all users, then exclude the Administrators role",
+"B. Include specific users and groups that contain the admin accounts",
+"C. Configure Locations to exclude the corporate office IP ranges",
+"D. Configure Device state to exclude Hybrid Azure AD joined devices"
+],
+"answer": 1,
+"explain": "Option B is correct because targeting specific admin groups or roles is the recommended method. Option C is correct because excluding trusted corporate locations prevents MFA when admins are in the office. Option A is wrong because you should not include all users then exclude roles for admin-only policies. Option D is incorrect because excluding hybrid joined devices would likely increase MFA prompts.",
+"objective": "Implement Conditional Access",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-35"
+},
+{
+"q": "What is the effect of setting a risk-based Conditional Access policy to 'Medium and above' for Sign-in risk with a 'Block access' control?",
+"choices": [
+"A. All users with any sign-in risk will be blocked",
+"B. Users with medium or high sign-in risk will be blocked from signing in",
+"C. Only users with high sign-in risk will be blocked",
+"D. Users will be prompted for MFA instead of being blocked"
+],
+"answer": 1,
+"explain": "Option B is correct because selecting 'Medium and above' includes both medium and high risk sign-ins, and the 'Block' grant control prevents access. Option A is incorrect because low risk is excluded. Option C is incorrect because it ignores medium risk. Option D is wrong because the policy uses Block, not Require MFA.",
+"objective": "Implement Identity Protection",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-36"
+},
+{
+"q": "Your organization wants to implement phishing-resistant MFA. Which authentication method should you recommend?",
+"choices": [
+"A. SMS-based verification code",
+"B. Microsoft Authenticator app push notification",
+"C. FIDO2 security key",
+"D. Voice call verification"
+],
+"answer": 2,
+"explain": "Option C is correct because FIDO2 security keys are phishing-resistant as the private key never leaves the device and requires physical presence. Options A, B, and D can all be phished to varying degrees. Microsoft recommends FIDO2 or Windows Hello for Business for phishing-resistant authentication.",
+"objective": "Implement MFA",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-37"
+},
+{
+"q": "You notice several users have a 'User risk' state of 'At risk' in the Identity Protection dashboard. What is the recommended first step to remediate these users?",
+"choices": [
+"A. Immediately disable all accounts",
+"B. Configure a Conditional Access policy with User risk condition set to Medium and above requiring password change",
+"C. Enable self-remediation by allowing users to change their password using the MyAccount portal",
+"D. Run a risk detection report and investigate each user manually"
+],
+"answer": 1,
+"explain": "Option B is correct because a risk-based Conditional Access policy is the recommended automated way to force password changes for users at risk. Option A is too disruptive. Option C is not possible because users at risk are typically blocked from self-service password reset. Option D is manual and not scalable for many users.",
+"objective": "Implement Identity Protection",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-38"
+},
+{
+"q": "Which of the following cannot be used as a condition in a Microsoft Entra Conditional Access policy?",
+"choices": [
+"A. User risk level",
+"B. Browser type and version",
+"C. Client app type (Exchange ActiveSync, Browser, etc.)",
+"D. Number of days since last password change"
+],
+"answer": 3,
+"explain": "Option D is correct because Conditional Access does not support 'days since last password change' as a condition. Options A, B, and C are all valid conditions: User risk is available when Identity Protection is enabled, browser can be filtered, and client app type is a standard condition.",
+"objective": "Implement Conditional Access",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-39"
+},
+{
+"q": "You are the identity administrator for Contoso. The company wants to enforce MFA for all users accessing Microsoft 365 resources from outside the corporate network. Which Conditional Access policy configuration achieves this with the least administrative effort?",
+"choices": [
+"A. Create a policy with Users: All users, Cloud apps: Microsoft 365, Conditions: Location (Any location except trusted locations), Grant: Require MFA",
+"B. Create a policy with Users: All users, Cloud apps: All cloud apps, Conditions: Device platforms: All devices, Grant: Require MFA",
+"C. Create a policy with Users: All guest users, Cloud apps: Office 365, Conditions: Client apps: Mobile apps and desktop clients, Grant: Require MFA",
+"D. Create a policy with Users: All users, Cloud apps: Microsoft 365, Conditions: Sign-in risk: Medium and above, Grant: Require MFA"
+],
+"answer": 0,
+"explain": "Option A is correct because it specifically targets external access using named locations (trusted locations) and applies only to Microsoft 365 apps, which is the most targeted and least disruptive approach. Option B is too broad as it would require MFA from inside the corporate network as well. Option C only targets guests and specific client apps, which does not meet the requirement. Option D relies on Identity Protection risk signals instead of location, which is not the requirement.",
+"objective": "Implement Conditional Access",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-40"
+},
+{
+"q": "What is the primary difference between Security defaults and Conditional Access policies in Microsoft Entra ID?",
+"choices": [
+"A. Security defaults cannot be customized while Conditional Access policies are fully customizable",
+"B. Security defaults only apply to Azure AD Premium P1 while Conditional Access requires P2",
+"C. Security defaults protect only against password spray while Conditional Access protects against all attacks",
+"D. Security defaults require a minimum of 10 users while Conditional Access has no user limit"
+],
+"answer": 0,
+"explain": "Security defaults provide a basic set of preconfigured security settings that cannot be modified, whereas Conditional Access policies offer granular, customizable control over when and how authentication is enforced. Both features are available with Azure AD Premium P1. Security defaults enable multiple security features including MFA for all users.",
+"objective": "Implement Conditional Access",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-41"
+},
+{
+"q": "Your organization is piloting passwordless authentication using Microsoft Authenticator. A pilot user reports they can no longer sign in after their phone was replaced. What is the most likely cause?",
+"choices": [
+"A. The user must re-register the new device in the Authentication methods blade",
+"B. The Conditional Access policy is blocking the new device",
+"C. The user's password has expired",
+"D. The user needs to contact the help desk to reset their password hash"
+],
+"answer": 0,
+"explain": "Passwordless authentication using Microsoft Authenticator is tied to the specific device. When a user gets a new phone, they must re-register the new device as an authentication method. This is a common scenario during passwordless deployments. Options B, C, and D are not the primary cause of this specific issue.",
+"objective": "Implement passwordless authentication",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-42"
+},
+{
+"q": "Which of the following correctly describes how Microsoft Entra ID Identity Protection risk detections work?",
+"choices": [
+"A. Sign-in risk evaluates the likelihood that the sign-in was performed by the identity owner, while user risk evaluates the likelihood that the user account has been compromised",
+"B. User risk only evaluates anonymous IP addresses while sign-in risk evaluates all risk types",
+"C. Both user risk and sign-in risk require Azure AD Premium P2 and cannot be used with Conditional Access",
+"D. Identity Protection risk detections only work with on-premises Active Directory accounts"
+],
+"answer": 0,
+"explain": "Identity Protection uses two main risk types: user risk (likelihood the account is compromised) and sign-in risk (likelihood the sign-in request is not from the account owner). These risk signals can be used in Conditional Access policies and are available with Microsoft Entra ID P2. Option C is incorrect because risk-based policies are commonly used with Conditional Access.",
+"objective": "Implement Identity Protection",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-43"
+},
+{
+"q": "You need to implement MFA for a group of executives who frequently travel internationally. The solution must minimize false positives while still providing strong security. Which Conditional Access configuration should you use?",
+"choices": [
+"A. Require MFA for all sign-ins from locations outside the corporate HQ",
+"B. Require MFA when sign-in risk is detected as medium or high",
+"C. Require MFA for all sign-ins regardless of location or risk",
+"D. Block access from any country outside of the executives' normal travel regions"
+],
+"answer": 1,
+"explain": "Using sign-in risk as a condition (option B) is the most intelligent approach as it leverages Identity Protection's machine learning to only challenge users when anomalous behavior is detected. This reduces friction for legitimate travel while still providing strong protection. Option A would create excessive MFA prompts during normal travel. Option C creates too much friction. Option D could inadvertently block legitimate travel.",
+"objective": "Implement Conditional Access",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-44"
+},
+{
+"q": "What is the minimum license required to use risk-based Conditional Access policies that leverage Identity Protection?",
+"choices": [
+"A. Microsoft Entra ID Free",
+"B. Microsoft Entra ID P1",
+"C. Microsoft Entra ID P2",
+"D. Microsoft 365 E3"
+],
+"answer": 2,
+"explain": "Risk-based Conditional Access policies that use user risk and sign-in risk require Microsoft Entra ID P2 (formerly Azure AD Premium P2). Microsoft Entra ID P1 includes Conditional Access but not the Identity Protection risk analytics. Microsoft 365 E3 includes P1 capabilities but not P2.",
+"objective": "Implement Identity Protection",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-45"
+},
+{
+"q": "Contoso is implementing phishing-resistant authentication. The security team wants to require Windows Hello for Business for all users accessing sensitive applications. Which policy type should be used to enforce this requirement?",
+"choices": [
+"A. Authentication strength Conditional Access policy",
+"B. Named location policy",
+"C. Identity Protection user risk policy",
+"D. Authentication methods policy in the MFA blade"
+],
+"answer": 0,
+"explain": "Authentication strength policies (a type of Conditional Access grant control) allow organizations to require specific strong authentication methods such as phishing-resistant methods like Windows Hello for Business or FIDO2 keys. This is the recommended modern approach for enforcing phishing-resistant authentication. The other options cannot enforce specific authentication methods at this granularity.",
+"objective": "Implement passwordless authentication",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-46"
+},
+{
+"q": "A user receives a Conditional Access prompt requiring MFA but their only registered authentication method is a phone number that no longer works. What is the recommended administrative action?",
+"choices": [
+"A. Use the Authentication methods blade to add a temporary access pass for the user",
+"B. Disable the Conditional Access policy for this user",
+"C. Reset the user's password from the Microsoft Entra admin center",
+"D. Delete and recreate the user account"
+],
+"answer": 0,
+"explain": "A Temporary Access Pass (TAP) is the recommended secure method to allow a user to sign in and register new MFA methods when they have lost access to all their authentication methods. Option B would weaken security. Password reset (option C) would not help if they cannot complete MFA. Option D is unnecessary and disruptive.",
+"objective": "Implement authentication and access management",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-47"
+},
+{
+"q": "Which of the following is a valid authentication method that can be used with passwordless sign-in in Microsoft Entra ID?",
+"choices": [
+"A. FIDO2 security key",
+"B. SMS-based one-time passcode",
+"C. Security questions",
+"D. Email-based OTP"
+],
+"answer": 0,
+"explain": "FIDO2 security keys are fully supported for passwordless sign-in and are phishing-resistant. SMS, security questions, and email OTP are not considered passwordless methods and do not meet modern passwordless requirements. Microsoft strongly recommends FIDO2 keys or Microsoft Authenticator for passwordless scenarios.",
+"objective": "Implement passwordless authentication",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-48"
+},
+{
+"q": "You are investigating a risky user flagged by Identity Protection. The user risk level is listed as High and the detection type is 'Leaked credentials'. What is the recommended immediate action?",
+"choices": [
+"A. Force the user to change their password on next sign-in and reset their MFA methods",
+"B. Monitor the account for the next 24 hours before taking action",
+"C. Disable the user's account permanently",
+"D. Add the user to an exclusion list for Identity Protection"
+],
+"answer": 0,
+"explain": "When Identity Protection detects leaked credentials with a High risk level, the recommended action is to force a password change and re-register MFA methods. This mitigates the immediate risk of the compromised credentials being used. Simply monitoring (B) or permanently disabling (C) are not the best first responses. Excluding the user (D) would reduce security.",
+"objective": "Implement Identity Protection",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-49"
+},
+{
+"q": "You are the identity administrator for Contoso. The company wants to enforce MFA for all users accessing Microsoft 365 apps from outside the corporate network. Which Conditional Access policy configuration achieves this with the least administrative effort?",
+"choices": [
+"A. Create a policy with Users: All users, Cloud apps: Microsoft 365, Conditions: Location (exclude trusted IPs), Grant: Require MFA",
+"B. Create a policy with Users: All users, Cloud apps: All cloud apps, Conditions: Device state (include hybrid Azure AD joined), Grant: Require MFA",
+"C. Enable Security defaults in Microsoft Entra ID",
+"D. Create a named location for the corporate network and apply it to the MFA registration policy"
+],
+"answer": 0,
+"explain": "Option A is correct because it specifically targets access from outside trusted locations for Microsoft 365 apps, meeting the requirement with precision. Option B incorrectly uses device state instead of location. Security defaults (C) would enforce broader MFA requirements that may exceed the stated need. Option D only handles registration, not enforcement during sign-in.",
+"objective": "Implement Conditional Access",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-50"
+},
+{
+"q": "What is the primary difference between User Risk and Sign-in Risk detections in Microsoft Entra ID Protection?",
+"choices": [
+"A. User Risk is calculated in real time while Sign-in Risk is calculated offline",
+"B. User Risk focuses on the probability that a user account has been compromised, while Sign-in Risk focuses on the probability that a specific authentication request is compromised",
+"C. Sign-in Risk can only trigger block actions while User Risk can only trigger MFA",
+"D. User Risk requires Microsoft Entra ID P2 while Sign-in Risk works with P1"
+],
+"answer": 1,
+"explain": "Option B is correct. User Risk assesses the likelihood an identity has been compromised (e.g., leaked credentials), whereas Sign-in Risk evaluates the legitimacy of a particular login attempt (e.g., anomalous location or impossible travel). The other options contain factual inaccuracies regarding timing, available controls, and licensing.",
+"objective": "Implement Identity Protection",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-51"
+},
+{
+"q": "Contoso recently enabled passwordless authentication using Microsoft Authenticator. Some users report they can no longer sign in from their iOS devices. Which setting should you verify first?",
+"choices": [
+"A. Ensure the Authentication methods policy has 'Microsoft Authenticator' enabled for passwordless sign-in",
+"B. Verify that Conditional Access policies do not block the 'Authenticator App' client app",
+"C. Check that users have registered FIDO2 security keys as a fallback method",
+"D. Confirm that iOS devices are marked as compliant in Intune"
+],
+"answer": 0,
+"explain": "Option A is correct because the Authentication methods policy must explicitly enable passwordless phone sign-in for the Microsoft Authenticator app. The other choices, while potentially relevant in other scenarios, are not the primary reason passwordless sign-in would fail specifically on iOS devices after enabling the feature.",
+"objective": "Implement passwordless authentication",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-52"
+},
+{
+"q": "Which of the following is a supported method for registering a FIDO2 security key in Microsoft Entra ID?",
+"choices": [
+"A. Only through the My Security Info portal when the user is already signed in",
+"B. Through the My Security Info portal or during Windows 10/11 out-of-box experience (OOBE) when joined to Microsoft Entra ID",
+"C. Only by an administrator using the Microsoft Entra admin center",
+"D. Through the Microsoft Authenticator app on mobile devices"
+],
+"answer": 1,
+"explain": "Option B is correct. FIDO2 keys can be registered by users via My Security Info or during the OOBE for Microsoft Entra joined devices. Option A is too restrictive, C is incorrect because users can self-register, and D is false because the Authenticator app does not register FIDO2 keys.",
+"objective": "Implement passwordless authentication",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-53"
+},
+{
+"q": "You need to reduce the risk of MFA fatigue attacks against executives. Which Conditional Access policy setting should you configure?",
+"choices": [
+"A. Sign-in risk as Low and above with a grant control of Require password change",
+"B. Configure an authentication strength requiring phishing-resistant methods for the executive group",
+"C. Block legacy authentication protocols for all users",
+"D. Require compliant device for all cloud apps"
+],
+"answer": 1,
+"explain": "Option B is correct because requiring phishing-resistant authentication methods (such as FIDO2 or Windows Hello for Business) significantly mitigates MFA fatigue (also known as push bombing) attacks. The other options do not directly address the MFA fatigue vector.",
+"objective": "Implement MFA",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-54"
+},
+{
+"q": "What occurs when a user is added to the 'Users at high risk' risk-based Conditional Access policy with a 'Block access' grant control?",
+"choices": [
+"A. The user is immediately blocked from all sign-ins until an admin resets the password",
+"B. The user is blocked only when Microsoft Entra ID Protection calculates a high user risk level",
+"C. The policy has no effect until the user attempts to register for MFA",
+"D. The user receives a warning but can still sign in from trusted locations"
+],
+"answer": 1,
+"explain": "Option B is correct. Risk-based policies evaluate the risk level calculated by Identity Protection at the time of sign-in. If the user's risk is high, the block is enforced. Option A is incorrect because blocking is risk-based, not permanent. Options C and D misrepresent the policy behavior.",
+"objective": "Implement Identity Protection",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-55"
+},
+{
+"q": "Your organization wants to implement number matching in Microsoft Authenticator to improve MFA security. Which license is required to use this feature?",
+"choices": [
+"A. Microsoft Entra ID Free",
+"B. Microsoft Entra ID P1",
+"C. Microsoft Entra ID P2",
+"D. Microsoft 365 E3"
+],
+"answer": 2,
+"explain": "Option C is correct. Number matching and additional advanced MFA features such as location context in the Authenticator app require Microsoft Entra ID P2 licensing. P1 and Free tiers do not support these enhanced MFA protections.",
+"objective": "Implement MFA",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-56"
+},
+{
+"q": "You notice several users have been flagged for 'Anonymous IP address' sign-in risk. What is the most likely cause?",
+"choices": [
+"A. Users are signing in from a TOR network",
+"B. Users have outdated operating systems",
+"C. The users' passwords have been leaked on the dark web",
+"D. Users are signing in from a new country"
+],
+"answer": 0,
+"explain": "Option A is correct. The 'Anonymous IP address' detection typically indicates sign-ins from anonymous proxy services such as TOR. Option C relates to leaked credentials (User Risk), while B and D relate to other risk detections such as unfamiliar features or atypical travel.",
+"objective": "Implement Identity Protection",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-57"
+},
+{
+"q": "Which of the following best describes the effect of enabling 'Require reauthentication every 30 days' in a Conditional Access policy for Microsoft 365 applications?",
+"choices": [
+"A. Users must re-enter their password and complete MFA every 30 days",
+"B. Users are forced to register a new MFA method every 30 days",
+"C. The policy has no effect because sign-in frequency is configured in the Authentication methods policy",
+"D. Users must perform MFA every time they access the application after 30 days of inactivity"
+],
+"answer": 0,
+"explain": "Option A is correct. The Sign-in frequency control in Conditional Access can require users to reauthenticate (password + MFA) at a specified interval. Option D is close but incorrect because the control applies regardless of activity. The other options are factually wrong.",
+"objective": "Implement Conditional Access",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-58"
+},
+{
+"q": "A security audit reveals that several service accounts are using basic authentication to access Exchange Online. What is the recommended approach to secure these accounts while maintaining functionality?",
+"choices": [
+"A. Create a Conditional Access policy that blocks legacy authentication for all users except the service accounts",
+"B. Enable modern authentication on the service accounts and update the applications to use OAuth 2.0 with a client secret or certificate",
+"C. Add the service accounts to the break-glass emergency access group",
+"D. Register the service accounts for MFA using a hardware token"
+],
+"answer": 1,
+"explain": "Option B is correct. The long-term recommended solution is to move away from basic authentication entirely by adopting modern authentication with OAuth 2.0 using secrets or certificates. Blocking legacy auth (A) would break the service accounts. Options C and D do not solve the root problem.",
+"objective": "Implement authentication and access management",
+"cert": "SC-300",
+"domain": "Implement authentication and access management",
+"id": "SC-300-59"
+},
+{
+"q": "Your organization needs to allow a third-party SaaS application to authenticate users via single sign-on without storing credentials. The solution must support both SAML 2.0 and OpenID Connect. Which workload identity type should you create in Microsoft Entra ID?",
+"choices": [
+"A. Managed identity",
+"B. Enterprise application only",
+"C. App registration",
+"D. Service principal without app registration"
+],
+"answer": 2,
+"explain": "An app registration is required when you need to configure custom authentication settings, expose APIs, or support modern protocols such as OIDC and SAML for third-party applications. Enterprise applications represent the instantiated service principal but do not allow you to configure authentication flows or certificates. Managed identities are designed for Azure resource-to-Azure resource authentication and do not support SAML/OIDC federation with SaaS apps.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-60"
+},
+{
+"q": "Contoso is implementing single sign-on for an on-premises web application that supports SAML 2.0. The application must be registered in Microsoft Entra ID. What is the correct object to create first?",
+"choices": [
+"A. A managed identity assigned to the web server",
+"B. An app registration with Redirect URI",
+"C. An enterprise application using the Non-gallery option",
+"D. A system-assigned managed identity"
+],
+"answer": 2,
+"explain": "For SAML-based SSO with non-gallery applications, you create an enterprise application directly from the Microsoft Entra admin center using the Non-gallery option. This automatically creates the associated service principal. An app registration is not required for simple SAML enterprise apps. Managed identities cannot be used for SAML federation with on-premises web apps.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-61"
+},
+{
+"q": "Which of the following statements is true regarding the difference between an app registration and an enterprise application in Microsoft Entra ID?",
+"choices": [
+"A. An app registration is the local representation; the enterprise application is the global representation",
+"B. An app registration defines the application in the tenant; the enterprise application is the service principal instance",
+"C. An enterprise application can be used for OIDC but an app registration cannot",
+"D. Only enterprise applications can be granted API permissions"
+],
+"answer": 1,
+"explain": "An app registration is the definition of the application within the tenant (where you configure API permissions, authentication, and branding). The enterprise application is the service principal object that represents the instantiated application in the directory. Both can be used for OIDC and SAML. API permissions are requested on the app registration.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-62"
+},
+{
+"q": "You need to enable a logic app to authenticate to Microsoft Graph using its own identity without storing any credentials. What should you configure?",
+"choices": [
+"A. App registration with client secret",
+"B. User-assigned managed identity",
+"C. Enterprise application with SAML SSO",
+"D. System-assigned managed identity on the Logic App"
+],
+"answer": 3,
+"explain": "A system-assigned managed identity is automatically created and tied to the lifecycle of the Logic App. It can obtain tokens for Microsoft Graph without any credential management. User-assigned managed identities are standalone and reusable across resources. App registrations require secret or certificate management, which violates the no-credential requirement.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-63"
+},
+{
+"q": "Your company wants to implement SSO for a custom line-of-business application using OpenID Connect. The application will run in Azure Container Apps. What is the recommended identity approach?",
+"choices": [
+"A. Register the app in Microsoft Entra ID, then use a user-assigned managed identity for the container",
+"B. Create an app registration, configure OIDC settings, and use client credentials flow with a certificate",
+"C. Create only an enterprise application with OIDC enabled",
+"D. Use a system-assigned managed identity and configure it as a SAML provider"
+],
+"answer": 1,
+"explain": "For a custom application using OIDC, you must create an app registration to configure the authentication settings, redirect URIs, and expose the application as a relying party. A certificate should be used instead of a client secret for production workloads. Managed identities are not used as the identity of the application itself when the app needs to act as an OIDC client; they are better suited for Azure resource authentication.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-64"
+},
+{
+"q": "What is the maximum number of credentials (secrets or certificates) that can be added to a single app registration in Microsoft Entra ID?",
+"choices": [
+"A. 5",
+"B. 50",
+"C. 2",
+"D. Unlimited"
+],
+"answer": 1,
+"explain": "Microsoft Entra ID supports a maximum of 50 credentials (combination of client secrets and certificates) per app registration. This limit helps prevent abuse while still allowing rotation strategies. The other numbers listed are incorrect.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-65"
+},
+{
+"q": "You are planning workload identities for several Azure Functions that need to call Azure Key Vault. The solution must follow least privilege and support automatic credential rotation. Which identity type meets these requirements?",
+"choices": [
+"A. App registration with client secret rotated every 30 days",
+"B. System-assigned managed identity with RBAC role assignment",
+"C. Enterprise application using password-based SSO",
+"D. User-assigned managed identity with a manually uploaded certificate"
+],
+"answer": 1,
+"explain": "System-assigned managed identities provide Azure AD-backed identities that require no credential management and support automatic rotation. They are the Microsoft-recommended approach for Azure Functions accessing Key Vault. App registrations require secret or certificate management. Enterprise applications with password SSO are not suitable for service-to-service scenarios.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-66"
+},
+{
+"q": "A developer has created an app registration for a daemon application that uses the client credentials flow. The application must be restricted so it can only obtain tokens for the Microsoft Graph API permission User.Read.All. Where should you configure this restriction?",
+"choices": [
+"A. In the enterprise application blade under Permissions",
+"B. In the app registration under API permissions and then grant admin consent",
+"C. In the app registration under Authentication settings",
+"D. In Conditional Access policies only"
+],
+"answer": 1,
+"explain": "API permissions are configured on the app registration object. After adding the delegated or application permission (User.Read.All in this case), admin consent must be granted. The enterprise application blade shows the granted permissions but you cannot add them there. Authentication settings control sign-in methods, not permission scoping.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-67"
+},
+{
+"q": "Your security team requires that all workload identities use certificate-based authentication instead of client secrets. Which two objects can be configured to support certificate credentials? (Choose two.)",
+"choices": [
+"A. Managed identity",
+"B. App registration",
+"C. Enterprise application",
+"D. System-assigned identity for an Azure VM"
+],
+"answer": 1,
+"explain": "Only app registrations (and the associated service principals) support the upload of X.509 certificates for authentication. Managed identities (both system-assigned and user-assigned) use Azure AD-issued tokens and do not support or require certificates. Enterprise applications are the service principal instances and inherit the credential capability from the app registration.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-68"
+},
+{
+"q": "You need to enable SAML-based SSO for a gallery application that appears in the Microsoft Entra application gallery. What is the simplest method?",
+"choices": [
+"A. Create a new app registration and manually configure SAML settings",
+"B. Add the application from the gallery as an enterprise application and configure SSO",
+"C. Assign a managed identity to the application",
+"D. Create both an app registration and an enterprise application manually"
+],
+"answer": 1,
+"explain": "Gallery applications are pre-integrated and should be added as enterprise applications directly from the gallery. This automatically provisions the correct SAML configuration templates and best practices. Creating a separate app registration is unnecessary and can cause duplication. Managed identities are not used for SAML SSO to gallery SaaS applications.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-69"
+},
+{
+"q": "Your organization needs to allow a third-party SaaS application to access Microsoft Graph data on behalf of users without storing credentials. Which workload identity type should you use, and which protocol is most appropriate?",
+"choices": [
+"A. Enterprise application with SAML",
+"B. App registration with a client secret and OAuth 2.0",
+"C. Managed identity with OIDC",
+"D. App registration with a certificate and SAML"
+],
+"answer": 1,
+"explain": "An app registration with a client secret (or certificate) combined with the OAuth 2.0 authorization code or client credentials flow is the correct approach for a third-party SaaS app to securely call Microsoft Graph. SAML is used for web SSO, not API access. Managed identities are for Azure resources only and do not support third-party SaaS scenarios in this context. Enterprise applications are the instantiated service principals, not the registration itself.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-70"
+},
+{
+"q": "You are planning to implement single sign-on for a custom line-of-business application that supports OpenID Connect. The application must request both an ID token and an access token. Which two objects must you create in Microsoft Entra ID? (Choose two.)",
+"choices": [
+"A. An enterprise application only",
+"B. An app registration and an enterprise application",
+"C. A managed identity and a service principal",
+"D. An app registration and a conditional access policy"
+],
+"answer": 1,
+"explain": "You must create an app registration to define the application\u2019s identity, redirect URIs, API permissions, and token configuration. An enterprise application (service principal) is automatically created in the tenant when you register the app and is required for SSO and assignment. Managed identities are for Azure resources only. A conditional access policy is optional for additional controls.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-71"
+},
+{
+"q": "Contoso wants to enable SSO for an on-premises application that only supports SAML 2.0. The application will be accessed by users in multiple Azure AD tenants. What is the recommended approach?",
+"choices": [
+"A. Create a multitenant app registration and configure SAML SSO on the enterprise application",
+"B. Use a system-assigned managed identity with SAML",
+"C. Create a single-tenant app registration and use OIDC",
+"D. Register the application as an enterprise app only without an app registration"
+],
+"answer": 0,
+"explain": "For SAML-based SSO with external tenants, a multitenant app registration is required so each tenant can consent and create its own service principal. The SAML SSO settings are then configured on the enterprise application object. Managed identities cannot be used for SAML SSO. OIDC is not supported by the application. An enterprise app cannot exist without a corresponding app registration for custom SAML apps.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-72"
+},
+{
+"q": "Which of the following is true regarding managed identities in Microsoft Entra ID?",
+"choices": [
+"A. They can be used to authenticate to on-premises applications using SAML",
+"B. They automatically rotate their credentials and can be granted permissions to Azure resources without storing secrets",
+"C. They require manual certificate management and are visible in the App registrations blade",
+"D. They can only be used with user-assigned identities for outbound API calls"
+],
+"answer": 1,
+"explain": "Managed identities (both system-assigned and user-assigned) eliminate the need to store credentials because Entra ID automatically handles credential rotation. They are commonly used to authenticate to Azure resources via Microsoft Entra ID. They do not support SAML for on-premises apps, are not visible under App registrations, and do not require manual certificate management.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-73"
+},
+{
+"q": "You need to grant a web application the ability to call the Microsoft Graph API as the signed-in user. The application uses OIDC for authentication. What should you configure on the app registration?",
+"choices": [
+"A. Add delegated permissions for Microsoft Graph and use the authorization code flow",
+"B. Add application permissions and use the client credentials flow",
+"C. Enable implicit grant flow for access tokens",
+"D. Configure a SAML signing certificate"
+],
+"answer": 0,
+"explain": "To act on behalf of the signed-in user, you must request delegated permissions and use the OAuth 2.0 authorization code flow (with PKCE for public clients). Application permissions and client credentials flow run as the application itself, not the user. Implicit grant is considered legacy. SAML is not used with Microsoft Graph API calls.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-74"
+},
+{
+"q": "A company is migrating several enterprise applications from ADFS to Microsoft Entra ID. Many of the applications were configured with relying party trusts using WS-Federation. What is the recommended replacement protocol when moving to Entra ID?",
+"choices": [
+"A. Continue using WS-Federation",
+"B. Use SAML 2.0",
+"C. Switch to OIDC",
+"D. Use OAuth 2.0 client credentials"
+],
+"answer": 1,
+"explain": "Microsoft Entra ID primarily supports SAML 2.0 for enterprise applications that previously used WS-Federation in ADFS. While OIDC is preferred for modern applications, legacy enterprise apps that only support WS-Fed/SAML should be configured with SAML 2.0 in Entra ID. WS-Federation is not natively supported for new configurations in Entra ID.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-75"
+},
+{
+"q": "You have an Azure Function that needs to read secrets from Azure Key Vault without storing any credentials in code or configuration. Which workload identity type meets this requirement with the least administrative effort?",
+"choices": [
+"A. App registration with a client secret",
+"B. System-assigned managed identity",
+"C. Enterprise application with SAML SSO",
+"D. User-assigned managed identity only"
+],
+"answer": 1,
+"explain": "A system-assigned managed identity is automatically created with the Azure Function, automatically receives a service principal, and Entra ID rotates its credentials. You simply grant the managed identity the required Key Vault RBAC or access policy. App registrations require secret/certificate management. SAML is irrelevant for this scenario.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-76"
+},
+{
+"q": "What is the key difference between an app registration and an enterprise application in Microsoft Entra ID?",
+"choices": [
+"A. App registrations define the application\u2019s configuration across tenants; enterprise applications are tenant-specific instances",
+"B. Enterprise applications are used only for SAML; app registrations are used only for OIDC",
+"C. App registrations cannot be granted API permissions",
+"D. Enterprise applications are created first and automatically create app registrations"
+],
+"answer": 0,
+"explain": "The app registration (application object) lives in the home tenant and defines global settings such as branding, redirect URIs, and API permissions. The enterprise application (service principal) is the tenant-specific instance that holds assignments, SSO settings, and user consent. The other options are incorrect statements.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-77"
+},
+{
+"q": "Your security team requires that all workload identities use certificate-based authentication instead of client secrets. Which two methods allow you to meet this requirement? (Choose two.)",
+"choices": [
+"A. Upload a certificate to an app registration",
+"B. Use a system-assigned managed identity",
+"C. Configure a federated identity credential with GitHub",
+"D. Add a client secret with a very long expiration"
+],
+"answer": 0,
+"explain": "Uploading an X.509 certificate to an app registration is a supported method for certificate-based authentication. Federated identity credentials (workload identity federation) also remove the need for secrets by using external identity providers. Managed identities use their own automatic credential system but are not configured via certificates on app registrations. Long-lived client secrets are explicitly against the requirement.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-78"
+},
+{
+"q": "You are configuring SSO for a new SaaS application that supports OIDC and is listed in the Microsoft Entra gallery. What is the simplest way to add and configure this application?",
+"choices": [
+"A. Create a new app registration manually and then create an enterprise application",
+"B. Add the application from the Entra gallery; an enterprise application is created automatically",
+"C. Create a managed identity and link it to the SaaS application",
+"D. Register the application as multitenant and configure SAML manually"
+],
+"answer": 1,
+"explain": "Gallery applications automatically create the enterprise application (service principal) and pre-populate SSO settings when added from the Entra gallery. This is the simplest and recommended method. Manual app registration is unnecessary for gallery apps. Managed identities cannot be used for SaaS SSO. The application uses OIDC, not SAML.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-79"
+},
+{
+"q": "Your organization needs to allow a third-party SaaS application to access Microsoft Graph data on behalf of users without storing credentials. The application must support single sign-on. Which authentication protocol should you configure when registering the app in Microsoft Entra ID?",
+"choices": [
+"A. SAML 2.0",
+"B. OAuth 2.0 with OpenID Connect",
+"C. WS-Federation",
+"D. LDAP"
+],
+"answer": 1,
+"explain": "OAuth 2.0 with OpenID Connect is the correct choice because it enables delegated access to Microsoft Graph using modern authentication flows and supports SSO. SAML is primarily used for enterprise SSO to web apps, not for calling Microsoft Graph APIs on behalf of users. WS-Federation and LDAP are legacy protocols not suitable for this scenario.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-80"
+},
+{
+"q": "You are planning to implement a managed identity for an Azure Function that needs to authenticate to Azure Key Vault. Which type of managed identity should you use if the function will be deployed to multiple regions and must continue to work if one region fails?",
+"choices": [
+"A. System-assigned managed identity",
+"B. User-assigned managed identity",
+"C. Hybrid managed identity",
+"D. On-premises managed identity"
+],
+"answer": 1,
+"explain": "A user-assigned managed identity is the correct choice because it is a standalone Azure resource that can be assigned to multiple instances across regions. System-assigned identities are tied to the lifecycle of a single resource and would not survive region failover as easily. The other options do not exist in Microsoft Entra ID.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-81"
+},
+{
+"q": "Which of the following is true regarding the difference between app registrations and enterprise applications in Microsoft Entra ID?",
+"choices": [
+"A. App registrations define the application in the tenant where it was created; enterprise applications are the service principal instances in each tenant where the app is used.",
+"B. Enterprise applications are used only for SAML SSO, while app registrations are used only for OIDC.",
+"C. App registrations cannot be granted API permissions; only enterprise applications can.",
+"D. There is no functional difference between the two objects."
+],
+"answer": 0,
+"explain": "App registrations represent the application definition (client ID, secrets, permissions) in the home tenant, while enterprise applications are the service principal objects that represent instances of that app in each tenant. Option B is incorrect because both can support multiple protocols. Option C is wrong because permissions are requested in the app registration.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-82"
+},
+{
+"q": "Contoso is implementing SSO for a new line-of-business web application using SAML 2.0. The application requires the user\u2019s email address and department to be sent in the SAML assertion. Where should you configure the required claims?",
+"choices": [
+"A. In the app registration blade under API permissions",
+"B. In the enterprise application blade under Single sign-on > Attributes & Claims",
+"C. In Microsoft Entra ID > User settings",
+"D. In the application\u2019s own configuration file only"
+],
+"answer": 1,
+"explain": "Claims for SAML-based enterprise applications are configured in the enterprise application\u2019s Single sign-on section under Attributes & Claims. App registrations handle OAuth/OIDC scopes and claims differently. User settings and the application config alone cannot control what Entra ID sends in the SAML token.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-83"
+},
+{
+"q": "You need to grant an Azure Logic App the ability to read secrets from Azure Key Vault without using client secrets or certificates. What is the recommended and most secure approach?",
+"choices": [
+"A. Register an app and upload a certificate",
+"B. Use a system-assigned managed identity and assign Key Vault permissions",
+"C. Use a service principal with a client secret rotated every 30 days",
+"D. Enable Azure AD Domain Services"
+],
+"answer": 1,
+"explain": "Using a system-assigned managed identity is the recommended approach because Microsoft Entra ID automatically manages the identity lifecycle and no secrets are stored. Certificates and client secrets introduce secret management overhead. Azure AD Domain Services is unrelated to workload identities.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-84"
+},
+{
+"q": "What is the maximum validity period you can configure for a client secret created on an app registration in Microsoft Entra ID?",
+"choices": [
+"A. 6 months",
+"B. 12 months",
+"C. 24 months",
+"D. 36 months"
+],
+"answer": 2,
+"explain": "Microsoft Entra ID allows client secrets to be valid for up to 24 months (2 years). While shorter periods are recommended for security, the platform maximum is 24 months. The other values are either too short or exceed the current platform limit.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-85"
+},
+{
+"q": "Your company\u2019s security policy requires that all workload identities use certificate-based authentication instead of client secrets. When creating an app registration, where do you upload the certificate?",
+"choices": [
+"A. Under Certificates & secrets > Certificates",
+"B. Under API permissions",
+"C. Under Branding",
+"D. Under Owners"
+],
+"answer": 0,
+"explain": "Certificates are uploaded in the Certificates & secrets blade under the Certificates tab. This enables the application to authenticate using the certificate instead of a secret. The other sections do not support certificate upload for authentication.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-86"
+},
+{
+"q": "You have an on-premises application that needs to authenticate to Microsoft 365 using modern authentication. The application cannot use a browser redirect. Which OAuth 2.0 flow should be implemented?",
+"choices": [
+"A. Authorization code flow",
+"B. Implicit flow",
+"C. Client credentials flow",
+"D. Device authorization grant flow"
+],
+"answer": 3,
+"explain": "The device authorization grant flow (device code flow) is designed for devices or applications that cannot display a browser. It allows the user to visit a URL on another device to sign in. Client credentials flow is for daemon apps without user context. Authorization code and implicit flows require browser interaction.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-87"
+},
+{
+"q": "Which Microsoft Entra ID feature allows you to restrict which users and groups can sign in to a specific enterprise application that uses SAML SSO?",
+"choices": [
+"A. Conditional Access policies assigned to the enterprise app",
+"B. App registration manifest settings",
+"C. Azure AD Connect sync rules",
+"D. Application proxy settings"
+],
+"answer": 0,
+"explain": "Conditional Access policies can be scoped directly to enterprise applications to control user access. The app registration manifest does not control user assignment. Sync rules and Application Proxy are for different purposes.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-88"
+},
+{
+"q": "You are designing a workload identity strategy for several Azure resources that need to authenticate to each other. Microsoft recommends using managed identities instead of service principals with client secrets for this purpose. Why?",
+"choices": [
+"A. Managed identities automatically rotate credentials and eliminate secret management.",
+"B. Managed identities cost less than service principals.",
+"C. Service principals cannot be granted RBAC permissions.",
+"D. Managed identities support SAML but service principals do not."
+],
+"answer": 0,
+"explain": "Managed identities eliminate the need to store and rotate credentials because Microsoft Entra ID handles authentication completely. This significantly reduces administrative overhead and security risk. The other statements are false: both can use RBAC, cost is not the primary factor, and SAML is not the relevant protocol for service-to-service communication.",
+"objective": "Plan and implement workload identities",
+"cert": "SC-300",
+"domain": "Plan and implement workload identities",
+"id": "SC-300-89"
+},
+{
+"q": "Your organization wants to automatically grant access to a set of resources for new contractors for exactly 90 days. Which Microsoft Entra ID feature should you use to meet this requirement with the least administrative effort?",
+"choices": [
+"A. Entitlement management access packages",
+"B. Privileged Identity Management (PIM) eligible assignments",
+"C. Access reviews",
+"D. Lifecycle workflows"
+],
+"answer": 0,
+"explain": "Entitlement management access packages allow you to bundle resources with defined policies including automatic expiration after a set number of days. PIM is for privileged roles only and does not provide automatic time-bound package assignment for general resources. Access reviews are for periodic attestation, not automated provisioning. Lifecycle workflows focus on joiner/mover/leaver scenarios rather than time-bound entitlement packages.",
+"objective": "Plan and implement entitlement management",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-90"
+},
+{
+"q": "You need to ensure that all users who are members of the 'Finance-Approvers' group have their group membership reviewed every 90 days. What should you create in Microsoft Entra ID?",
+"choices": [
+"A. An access package with a policy requiring approval",
+"B. A scheduled access review for the group",
+"C. A PIM just-in-time activation policy",
+"D. A lifecycle workflow with a custom task"
+],
+"answer": 1,
+"explain": "Access reviews are specifically designed to periodically review and attest to group memberships or access. Access packages focus on requesting and assigning access, not recurring reviews. PIM is for privileged roles and does not replace group membership reviews. Lifecycle workflows are for identity lifecycle events such as onboarding or offboarding, not recurring attestation.",
+"objective": "Plan and implement access reviews",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-91"
+},
+{
+"q": "What is the primary purpose of using lifecycle workflows in Microsoft Entra ID?",
+"choices": [
+"A. To provide just-in-time privileged access to roles",
+"B. To automate identity management tasks during joiner, mover, and leaver events",
+"C. To create access packages for resource entitlement",
+"D. To perform real-time access certification of users"
+],
+"answer": 1,
+"explain": "Lifecycle workflows automate tasks such as user provisioning, attribute updates, and offboarding based on HR-driven events. PIM provides just-in-time privileged access. Entitlement management uses access packages. Access reviews focus on certification, not automation of lifecycle events.",
+"objective": "Plan and implement lifecycle workflows",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-92"
+},
+{
+"q": "A company wants to allow users to request membership to an access package that automatically expires after 30 days unless renewed. Which two features must be configured together to meet this requirement? (Choose two.)",
+"choices": [
+"A. Entitlement management access package with expiration policy",
+"B. Privileged Identity Management activation requirement",
+"C. Access review with self-review enabled",
+"D. Lifecycle workflow with expiration task"
+],
+"answer": 0,
+"explain": "Entitlement management access packages support policies that define expiration after a fixed number of days and allow renewal requests. PIM is limited to privileged roles and does not manage general access packages. Access reviews are for attestation, not automatic expiration. Lifecycle workflows do not replace the built-in expiration capabilities of access packages.",
+"objective": "Plan and implement entitlement management",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-93"
+},
+{
+"q": "You are configuring Privileged Identity Management (PIM) for the Global Administrator role. You want to require approval before activation and enforce a maximum activation time of 4 hours. Where do you configure these settings?",
+"choices": [
+"A. In an access package policy",
+"B. In a PIM role setting policy",
+"C. In an access review configuration",
+"D. In a lifecycle workflow template"
+],
+"answer": 1,
+"explain": "PIM role setting policies allow administrators to require approval, set maximum activation duration, and configure other just-in-time controls for specific roles. Access packages, access reviews, and lifecycle workflows do not control PIM role activation settings.",
+"objective": "Plan and implement Privileged Identity Management",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-94"
+},
+{
+"q": "Your security team requires that all users with the Application Administrator role must justify their continued need for the role every month. Which solution should you implement?",
+"choices": [
+"A. Create a recurring access review for the role",
+"B. Configure an access package with mandatory approval",
+"C. Enable PIM with permanent assignments",
+"D. Create a lifecycle workflow that runs monthly"
+],
+"answer": 0,
+"explain": "Access reviews can be scheduled to run against privileged roles and require users or managers to attest to continued need. Access packages are for requesting access, not reviewing existing role membership. PIM permanent assignments do not enforce periodic justification. Lifecycle workflows are not designed for recurring role justification.",
+"objective": "Plan and implement access reviews",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-95"
+},
+{
+"q": "What is the recommended way to automatically remove a user's access to all resources when their employment status changes to 'Terminated' in your HR system?",
+"choices": [
+"A. Create a custom script using Microsoft Graph",
+"B. Configure a lifecycle workflow with a 'Leaver' template",
+"C. Schedule a monthly access review for all users",
+"D. Use entitlement management with an expiration policy"
+],
+"answer": 1,
+"explain": "Lifecycle workflows include pre-built Leaver templates that automatically revoke access, remove group memberships, and perform other offboarding tasks when triggered by HR attribute changes. Manual scripts require ongoing maintenance. Access reviews and entitlement management expiration are not event-driven by HR status changes.",
+"objective": "Plan and implement lifecycle workflows",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-96"
+},
+{
+"q": "You need to allow users to request temporary access to a SharePoint site and a specific application for a maximum of 14 days. The request must go through a designated approver. Which Microsoft Entra feature should you use?",
+"choices": [
+"A. Privileged Identity Management for groups",
+"B. Entitlement management access package",
+"C. Lifecycle workflow with approval task",
+"D. Access review with self-attestation"
+],
+"answer": 1,
+"explain": "Entitlement management access packages let you bundle resources (SharePoint site + enterprise application), define request workflows with approvers, and set maximum duration. PIM for groups is limited to security and Microsoft 365 groups for PIM-enabled scenarios. Lifecycle workflows are for automated lifecycle events, not user-driven requests. Access reviews are for review, not initial access requests.",
+"objective": "Plan and implement entitlement management",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-97"
+},
+{
+"q": "Which of the following is a valid use case for using access reviews in Microsoft Entra ID?",
+"choices": [
+"A. Automatically provisioning new users from an HR system",
+"B. Periodically recertifying guest user access to resources",
+"C. Enforcing just-in-time activation of privileged roles",
+"D. Creating time-bound access packages"
+],
+"answer": 1,
+"explain": "Access reviews are designed to periodically recertify whether users (especially guests) should continue to have access. Provisioning is handled by lifecycle workflows or HR integration. Just-in-time activation is a PIM feature. Time-bound access is configured within entitlement management access packages.",
+"objective": "Plan and implement access reviews",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-98"
+},
+{
+"q": "Your organization is implementing Microsoft Entra Permissions Management as part of their identity governance strategy. You want to reduce standing access to highly privileged Azure resources. Which approach aligns best with governance best practices?",
+"choices": [
+"A. Assign permanent Owner roles at the subscription level",
+"B. Use PIM with eligible assignments and require justification and approval",
+"C. Create access packages that never expire",
+"D. Disable access reviews for administrative roles"
+],
+"answer": 1,
+"explain": "Privileged Identity Management (PIM) with eligible assignments follows the principle of least privilege and zero standing access by requiring activation with justification and approval. Permanent assignments violate governance best practices. Access packages are not typically used for Azure resource roles at scale. Disabling access reviews reduces visibility and control.",
+"objective": "Plan and implement Privileged Identity Management",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-99"
+},
+{
+"q": "You need to automatically grant access to a set of SaaS applications for users in the Marketing department when they are hired, and remove access 30 days after their employment ends. Which Microsoft Entra ID feature should you use to meet this requirement with the least administrative effort?",
+"choices": [
+"A. Entitlement management access packages with catalog and policies",
+"B. Privileged Identity Management (PIM) eligible assignments",
+"C. Access reviews with recurring schedule",
+"D. Microsoft Entra Lifecycle Workflows with custom tasks"
+],
+"answer": 3,
+"explain": "Microsoft Entra Lifecycle Workflows are designed for joiner-mover-leaver scenarios and can automatically trigger tasks such as granting or revoking access based on employee lifecycle events. Entitlement management is better suited for on-demand access packages, PIM is for privileged roles, and access reviews are for periodic attestation rather than automated lifecycle events.",
+"objective": "Plan and automate identity governance",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-100"
+},
+{
+"q": "Which of the following is a valid use case for Microsoft Entra Entitlement Management?",
+"choices": [
+"A. Automatically elevating users to Global Administrator on a just-in-time basis",
+"B. Creating access packages that allow users to request access to resources with approval workflows",
+"C. Running quarterly reviews of group membership for all security groups",
+"D. Automatically provisioning users into on-premises Active Directory"
+],
+"answer": 1,
+"explain": "Entitlement management enables the creation of access packages that bundle resources with built-in request, approval, and lifecycle policies. PIM is used for just-in-time privileged access, access reviews handle attestation, and lifecycle workflows or provisioning handle user lifecycle automation.",
+"objective": "Plan and automate identity governance",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-101"
+},
+{
+"q": "Your organization wants to require that all users with the Application Administrator role must use Privileged Identity Management to activate the role for a maximum of 4 hours. What should you configure?",
+"choices": [
+"A. An access review for the role",
+"B. A PIM role setting with activation maximum duration and require justification",
+"C. An entitlement management access package for the role",
+"D. A lifecycle workflow that assigns the role permanently"
+],
+"answer": 1,
+"explain": "PIM role settings allow administrators to define activation duration, require justification, MFA, and approval. Access reviews are for reviewing existing assignments, entitlement management is for packages of resources, and lifecycle workflows are not used to manage privileged role activation.",
+"objective": "Plan and automate identity governance",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-102"
+},
+{
+"q": "You are planning an access review for all guest users in the organization. The review should occur every quarter, and reviewers should be the guests' sponsors. Which two settings must be configured? (Choose two.)",
+"choices": [
+"A. Set review frequency to Quarterly",
+"B. Select Self-review as the reviewer",
+"C. Enable the 'Require reviewers to provide a reason' option",
+"D. Set reviewers to 'Guest's sponsor (User attribute)'"
+],
+"answer": 0,
+"explain": "For recurring access reviews of guests, setting the frequency to Quarterly and selecting the sponsor as reviewer are both required. Self-review would allow guests to review themselves, which is not desired. While requiring a reason is a good practice, it is not mandatory for this specific scenario.",
+"objective": "Plan and automate identity governance",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-103"
+},
+{
+"q": "What is the primary purpose of the 'Lifecycle Workflows' feature in Microsoft Entra ID?",
+"choices": [
+"A. To provide just-in-time access to privileged roles",
+"B. To automate identity lifecycle tasks such as onboarding, offboarding, and attribute changes",
+"C. To create catalogs of resources for users to request access",
+"D. To perform real-time risk-based conditional access"
+],
+"answer": 1,
+"explain": "Lifecycle Workflows automate repetitive HR-driven tasks (joiner, mover, leaver) using predefined or custom workflows triggered by events or schedules. PIM handles privileged access, entitlement management manages access packages, and risk-based policies belong to Identity Protection.",
+"objective": "Plan and automate identity governance",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-104"
+},
+{
+"q": "A company wants to allow managers to request access to a custom application and a SharePoint site for their team members on a temporary basis. Which approach should be recommended?",
+"choices": [
+"A. Create a PIM eligible assignment for each user",
+"B. Build an access package in Entitlement Management that includes both resources and assign a manager approval policy",
+"C. Schedule a weekly access review for the application and site",
+"D. Use a Lifecycle Workflow with a custom task to assign group membership"
+],
+"answer": 1,
+"explain": "Entitlement management access packages are the recommended way to bundle multiple resources and allow managers to request time-limited access with approval. PIM is only for privileged roles, access reviews are for attestation, and lifecycle workflows are better suited for automated HR events rather than ad-hoc manager requests.",
+"objective": "Plan and automate identity governance",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-105"
+},
+{
+"q": "You need to ensure that all users who have been assigned the Security Administrator role for longer than 90 days have their assignment reviewed. What should you create?",
+"choices": [
+"A. A Microsoft Entra Lifecycle Workflow",
+"B. An access review with a scope of role assignments and a one-time or recurring schedule",
+"C. An entitlement management access package with an expiration policy",
+"D. A Privileged Identity Management permanent eligible assignment"
+],
+"answer": 1,
+"explain": "Access reviews are specifically designed to periodically review and attest to existing role and group memberships. Lifecycle workflows are for automated provisioning/deprovisioning, entitlement management is for requesting new access, and PIM permanent assignments defeat the purpose of time-bound review.",
+"objective": "Plan and automate identity governance",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-106"
+},
+{
+"q": "Which of the following statements about Entitlement Management access packages is correct?",
+"choices": [
+"A. Access packages can only contain Azure AD roles",
+"B. Access packages support automatic expiration of assignments and can require recurring access reviews",
+"C. Access packages cannot be shared with external users",
+"D. Access packages are managed exclusively through PowerShell"
+],
+"answer": 1,
+"explain": "Access packages can include groups, applications, SharePoint sites, and other resources. They support lifecycle policies including expiration and recurring access reviews. They support external users via B2B and can be managed through the Azure portal, Graph, or PowerShell.",
+"objective": "Plan and automate identity governance",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-107"
+},
+{
+"q": "Your security team wants to reduce standing access to highly privileged roles. What is the recommended Microsoft Entra feature and configuration to achieve this?",
+"choices": [
+"A. Create access reviews for all users in those roles every month",
+"B. Use Privileged Identity Management to convert assignments to eligible and require activation with approval and MFA",
+"C. Configure Lifecycle Workflows to remove users from the roles after 30 days",
+"D. Add all privileged roles to a single entitlement management catalog"
+],
+"answer": 1,
+"explain": "Privileged Identity Management (PIM) is the correct solution for eliminating standing access by making roles eligible for time-bound, approved activation with strong authentication. Access reviews are complementary but do not prevent standing access. Lifecycle workflows and entitlement management are not designed for privileged role activation control.",
+"objective": "Plan and automate identity governance",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-108"
+},
+{
+"q": "You are configuring a Lifecycle Workflow to run when a user's 'employeeHireDate' attribute is within 5 days. Which workflow category and trigger type should you select?",
+"choices": [
+"A. Joiner workflow with 'On attribute change' trigger",
+"B. Leaver workflow with scheduled execution",
+"C. Pre-hire workflow with 'On schedule' trigger based on employeeHireDate",
+"D. Mover workflow with 'On demand' trigger"
+],
+"answer": 2,
+"explain": "The pre-hire (joiner) workflow category with a scheduled trigger based on the employeeHireDate attribute is the correct choice for automating tasks shortly before a new hire starts. Leaver workflows are for offboarding, mover for internal changes, and on-attribute-change triggers are used differently.",
+"objective": "Plan and automate identity governance",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-109"
+},
+{
+"q": "You need to automatically grant access to a set of applications and SharePoint sites for users who are added to a specific HR group. The access should be removed automatically when the user leaves the group. Which Microsoft Entra ID feature should you use to meet this requirement with the least administrative effort?",
+"choices": [
+"A. Entitlement management access packages",
+"B. Privileged Identity Management (PIM)",
+"C. Access reviews",
+"D. Lifecycle workflows"
+],
+"answer": 0,
+"explain": "Entitlement management access packages allow you to bundle resources (apps, sites, groups) and automatically assign them based on group membership or requests, with automatic revocation when the user no longer meets the policy. PIM is for just-in-time privileged access, access reviews are for periodic attestation, and lifecycle workflows focus on joiner/mover/leaver processes rather than dynamic group-based resource bundles.",
+"objective": "Plan and automate identity governance",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-110"
+},
+{
+"q": "Which of the following is a valid use case for Microsoft Entra ID lifecycle workflows?",
+"choices": [
+"A. Automatically assigning users to security groups based on attribute changes",
+"B. Sending welcome emails and assigning licenses to new hires on their start date",
+"C. Performing just-in-time elevation for administrative roles",
+"D. Automatically approving access package requests"
+],
+"answer": 1,
+"explain": "Lifecycle workflows are designed for joiner, mover, and leaver scenarios. They can trigger tasks such as sending emails, assigning or removing licenses, and updating attributes on specific dates or events. Options A and D are handled by entitlement management or dynamic groups, while C is the purpose of Privileged Identity Management.",
+"objective": "Plan and automate identity governance",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-111"
+},
+{
+"q": "Contoso is implementing entitlement management. They want users to be able to request access to an access package that expires after 90 days unless renewed. The renewal must require approval from the resource owner. Which two settings should be configured in the access package policy? (Choose two.)",
+"choices": [
+"A. Enable access reviews",
+"B. Set the expiration to 90 days",
+"C. Require justification on request",
+"D. Configure a renewal policy requiring approval"
+],
+"answer": 3,
+"explain": "The correct combination is B and D. Setting the expiration to 90 days and configuring a renewal policy that requires approval ensures the access package expires and forces the user to request renewal with owner approval. Access reviews (A) are a separate feature, and requiring justification (C) is useful but not required for the renewal scenario described.",
+"objective": "Plan and automate identity governance",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-112"
+},
+{
+"q": "You are configuring Privileged Identity Management (PIM) for Microsoft Entra roles. Your company wants to ensure that all Global Administrator activations require both approval and a ticket number. Which PIM settings should you configure?",
+"choices": [
+"A. Require justification and notification only",
+"B. Require approval and a custom authentication context",
+"C. Enable approval and configure the 'Require ticket information' setting",
+"D. Set maximum activation duration to 1 hour"
+],
+"answer": 2,
+"explain": "PIM allows you to require approval for role activation and also requires a ticket number (e.g., ServiceNow ID) by enabling the 'Require ticket information' setting. This meets both requirements. Option A lacks approval, B uses an unrelated authentication context, and D only controls duration.",
+"objective": "Plan and automate identity governance",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-113"
+},
+{
+"q": "Which Microsoft Entra ID feature allows you to automate the removal of group membership and license assignment for users whose employment status changes to 'terminated' in the HR system?",
+"choices": [
+"A. Entitlement management catalog",
+"B. Access certification campaign",
+"C. Lifecycle workflows with a leaver template",
+"D. Privileged Identity Management eligible assignments"
+],
+"answer": 2,
+"explain": "Lifecycle workflows include pre-built leaver templates that can trigger actions such as removing group memberships, revoking licenses, and sending notifications when a user's employment status changes. The other options do not provide automated leaver orchestration based on HR attribute changes.",
+"objective": "Plan and automate identity governance",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-114"
+},
+{
+"q": "You need to periodically review guest users' access to Microsoft 365 Groups and Teams. The review should be performed by the group owners and automatically remove access if the reviewer does not respond within 14 days. Which feature meets this requirement?",
+"choices": [
+"A. Entitlement management access packages",
+"B. Microsoft Entra ID access reviews",
+"C. Lifecycle workflows",
+"D. Privileged Identity Management access reviews"
+],
+"answer": 1,
+"explain": "Microsoft Entra ID access reviews are specifically designed for periodic attestation of group, app, and role memberships. They support auto-apply policies that remove access when reviewers do not respond. PIM access reviews are limited to privileged roles, while entitlement management and lifecycle workflows serve different automation purposes.",
+"objective": "Plan and automate identity governance",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-115"
+},
+{
+"q": "What is the maximum duration a user can be assigned to an eligible PIM role without requiring re-activation?",
+"choices": [
+"A. 1 hour",
+"B. 8 hours",
+"C. 30 days",
+"D. Indefinitely (permanent eligible)"
+],
+"answer": 3,
+"explain": "PIM supports permanent eligible assignments, meaning the user remains eligible for the role indefinitely until an administrator removes the eligibility. The other values represent common maximum activation durations, not the eligibility period itself.",
+"objective": "Plan and automate identity governance",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-116"
+},
+{
+"q": "Your organization wants to allow managers to request access packages on behalf of their direct reports. Which entitlement management setting must be enabled to support this scenario?",
+"choices": [
+"A. Allow managers to request access packages",
+"B. Enable self-service requests",
+"C. Allow users to request on behalf of others",
+"D. Configure a policy with 'Manager as approver'"
+],
+"answer": 0,
+"explain": "The entitlement management setting 'Allow managers to request access packages' must be enabled in the access package policy to permit managers to request on behalf of their reports. The other options either relate to self-service or approval workflows rather than the ability to request on behalf of others.",
+"objective": "Plan and automate identity governance",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-117"
+},
+{
+"q": "A company is planning to use lifecycle workflows to automate the offboarding process. They want the workflow to trigger 5 days after the 'employeeLeaveDateTime' attribute is populated in Microsoft Entra ID. Which trigger type should be selected when creating the workflow?",
+"choices": [
+"A. On attribute change",
+"B. On schedule (recurring)",
+"C. Time-based after attribute change",
+"D. On user creation"
+],
+"answer": 2,
+"explain": "The 'Time-based after attribute change' trigger allows the workflow to start a specified number of days after a particular attribute (such as employeeLeaveDateTime) is updated. This is the correct choice for delayed offboarding actions. 'On attribute change' would trigger immediately, while the other options do not fit the delayed scenario.",
+"objective": "Plan and automate identity governance",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-118"
+},
+{
+"q": "Which of the following statements about Microsoft Entra ID entitlement management is correct?",
+"choices": [
+"A. Access packages can only contain Azure AD roles",
+"B. Every access package must be associated with at least one access review",
+"C. You can configure access packages to expire or require renewal",
+"D. Access packages are limited to internal users only"
+],
+"answer": 2,
+"explain": "Entitlement management access packages support configurable expiration and renewal policies, including requiring approval for renewal. Access packages can contain groups, apps, SharePoint sites, and Azure roles. Access reviews are optional, and external users are fully supported.",
+"objective": "Plan and automate identity governance",
+"cert": "SC-300",
+"domain": "Plan and automate identity governance",
+"id": "SC-300-119"
+},
+{
+"q": "Your organization uses Microsoft Entra ID with Conditional Access policies. You need to block access to Microsoft 365 apps for users signing in from a specific country while allowing access from all other locations. Which Conditional Access policy configuration achieves this with the least administrative effort?",
+"choices": [
+"A. Create a named location for the blocked country and use it in a block grant control",
+"B. Create a named location for allowed countries and use an allow grant control with 'require all selected controls'",
+"C. Use the 'All locations' condition and exclude the specific country as a named location with a block control",
+"D. Configure a sign-in risk policy instead of a location-based Conditional Access policy"
+],
+"answer": 2,
+"explain": "The correct approach is to select 'All locations' in the Conditional Access condition and then exclude the specific country as a named location. This ensures the policy applies broadly while carving out the exception. Option A would require creating and maintaining a list of all allowed countries. Option B is overly complex and not the recommended pattern. Option D uses the wrong policy type as sign-in risk is based on Identity Protection signals, not geography.",
+"objective": "Implement Conditional Access",
+"cert": "SC-500",
+"domain": "Secure identity and access in Azure",
+"id": "SC-500-120"
+},
+{
+"q": "Which Microsoft Entra ID feature provides just-in-time access to privileged roles and requires approval workflows before activation?",
+"choices": [
+"A. Microsoft Entra ID Access Reviews",
+"B. Microsoft Entra Privileged Identity Management (PIM)",
+"C. Microsoft Entra Role-Based Access Control (RBAC)",
+"D. Microsoft Entra ID Identity Protection"
+],
+"answer": 1,
+"explain": "Microsoft Entra Privileged Identity Management (PIM) enables just-in-time privileged access with approval workflows, time-bound activations, and audit history. Access Reviews are for periodic attestation of group and app membership. RBAC is for permission assignment but does not provide JIT or approval. Identity Protection focuses on risk detection and remediation.",
+"objective": "Implement Privileged Identity Management",
+"cert": "SC-500",
+"domain": "Secure identity and access in Azure",
+"id": "SC-500-121"
+},
+{
+"q": "Contoso has a hybrid environment with on-premises Active Directory and Microsoft Entra ID. The security team wants to ensure that all privileged accounts used for Azure resource management are cloud-only accounts and are not synchronized from on-premises. Which recommendation should you provide?",
+"choices": [
+"A. Use cloud-only accounts for Global Administrators and Privileged Role Administrators",
+"B. Enable password hash synchronization for all privileged accounts",
+"C. Configure seamless SSO for all administrative accounts",
+"D. Disable directory synchronization for the OU containing privileged accounts"
+],
+"answer": 0,
+"explain": "Microsoft recommends using cloud-only accounts for privileged roles such as Global Administrator to reduce the attack surface from on-premises compromise. Synchronizing privileged accounts increases risk if the on-premises environment is breached. Options B and C increase dependency on on-premises infrastructure. Option D is not a supported or recommended configuration.",
+"objective": "Design and implement identity governance",
+"cert": "SC-500",
+"domain": "Secure identity and access in Azure",
+"id": "SC-500-122"
+},
+{
+"q": "What is the maximum number of Global Administrators recommended by Microsoft for a Microsoft Entra tenant?",
+"choices": [
+"A. 2",
+"B. 5",
+"C. 10",
+"D. Unlimited"
+],
+"answer": 1,
+"explain": "Microsoft recommends having fewer than 5 Global Administrators to reduce the attack surface. The absolute minimum is 2 for break-glass accounts. Having too many global admins increases risk of compromise. There is no hard limit, but best practice is to stay under 5 and use more granular roles instead.",
+"objective": "Manage Microsoft Entra ID identities and roles",
+"cert": "SC-500",
+"domain": "Secure identity and access in Azure",
+"id": "SC-500-123"
+},
+{
+"q": "You are designing an access control strategy for an Azure subscription that contains highly sensitive data. The compliance team requires that any access to the subscription must be approved by at least two people and expire after 8 hours. Which solution should you implement?",
+"choices": [
+"A. Azure RBAC with custom roles and Conditional Access",
+"B. Microsoft Entra Privileged Identity Management with eligible assignments and approval workflow",
+"C. Microsoft Entra ID Access Reviews with recurring schedule",
+"D. Azure Policy with custom initiative"
+],
+"answer": 1,
+"explain": "Privileged Identity Management (PIM) supports eligible role assignments that require approval and can be configured with maximum activation duration (8 hours). It provides the exact capabilities requested. Access Reviews are for periodic review, not real-time approval. Azure RBAC alone does not provide approval workflows or time-bound access.",
+"objective": "Implement Privileged Identity Management",
+"cert": "SC-500",
+"domain": "Secure identity and access in Azure",
+"id": "SC-500-124"
+},
+{
+"q": "Which authentication method in Microsoft Entra ID is considered the most secure when combined with Conditional Access policies requiring phishing-resistant authentication?",
+"choices": [
+"A. Password + SMS verification",
+"B. FIDO2 security key",
+"C. Microsoft Authenticator app passwordless sign-in",
+"D. Certificate-based authentication"
+],
+"answer": 1,
+"explain": "FIDO2 security keys are phishing-resistant and provide the strongest authentication method currently supported. While Microsoft Authenticator passwordless is also strong, hardware-bound FIDO2 keys offer better protection against compromise. Password + SMS is considered weak. Certificate-based authentication can be strong but is more complex to deploy at scale.",
+"objective": "Implement authentication and authorization",
+"cert": "SC-500",
+"domain": "Secure identity and access in Azure",
+"id": "SC-500-125"
+},
+{
+"q": "A company wants to automatically disable accounts that have not signed in for 90 days across their Microsoft Entra ID tenant and connected applications. Which feature should be used to achieve this?",
+"choices": [
+"A. Microsoft Entra ID Lifecycle Workflows",
+"B. Microsoft Entra ID Access Reviews",
+"C. Conditional Access sign-in frequency",
+"D. Identity Protection risk-based policies"
+],
+"answer": 0,
+"explain": "Lifecycle Workflows in Microsoft Entra ID allow automated tasks based on time since last sign-in, including disabling or deleting accounts. Access Reviews require manual attestation. Conditional Access sign-in frequency controls re-authentication, not account disablement. Identity Protection focuses on risk signals rather than inactivity.",
+"objective": "Design and implement identity governance",
+"cert": "SC-500",
+"domain": "Secure identity and access in Azure",
+"id": "SC-500-126"
+},
+{
+"q": "You need to grant a contractor temporary read access to a specific resource group in Azure for 5 days. The contractor should not receive any permanent permissions. What is the recommended approach?",
+"choices": [
+"A. Assign an RBAC role directly to the user's account with a custom time limit",
+"B. Use Microsoft Entra Privileged Identity Management to create an eligible assignment with an activation maximum of 5 days",
+"C. Create a Conditional Access policy that allows access only during a specific date range",
+"D. Add the user to a security group that has the required RBAC role assigned"
+],
+"answer": 1,
+"explain": "Privileged Identity Management allows time-bound eligible role assignments that expire automatically. This follows the principle of just-in-time and least privilege. Direct RBAC assignments are permanent. Conditional Access controls authentication, not authorization to resources. Security groups would also result in permanent access.",
+"objective": "Implement Privileged Identity Management",
+"cert": "SC-500",
+"domain": "Secure identity and access in Azure",
+"id": "SC-500-127"
+},
+{
+"q": "Which report in Microsoft Entra ID should you review to identify users who are using weak authentication methods such as SMS-based multifactor authentication?",
+"choices": [
+"A. Sign-in logs",
+"B. Authentication methods usage report",
+"C. Audit logs",
+"D. Risky users report"
+],
+"answer": 1,
+"explain": "The Authentication methods usage report provides detailed insights into which MFA methods users are registering and using, including SMS, voice calls, and authenticator apps. Sign-in logs show authentication events but not registration trends. Audit logs track configuration changes. The risky users report focuses on Identity Protection risk detections.",
+"objective": "Implement authentication and authorization",
+"cert": "SC-500",
+"domain": "Secure identity and access in Azure",
+"id": "SC-500-128"
+},
+{
+"q": "Your organization is planning a Zero Trust architecture. The security team wants to ensure that all administrative access to Azure resources requires both a compliant device and a strong authentication method. Which combination of features should you recommend?",
+"choices": [
+"A. Conditional Access with device compliance and phishing-resistant MFA",
+"B. Microsoft Defender for Cloud with just-in-time network access",
+"C. Azure Policy and RBAC only",
+"D. Microsoft Entra ID Lifecycle Workflows and Access Reviews"
+],
+"answer": 0,
+"explain": "Conditional Access policies can require both device compliance (via Intune) and a phishing-resistant authentication method such as FIDO2 or Windows Hello for Business. This aligns with Zero Trust principles. Defender for Cloud JIT is for virtual machines. Azure Policy and RBAC alone do not enforce device state or authentication strength. Lifecycle Workflows and Access Reviews serve different purposes.",
+"objective": "Implement Conditional Access",
+"cert": "SC-500",
+"domain": "Secure identity and access in Azure",
+"id": "SC-500-129"
+},
+{
+"q": "You are the security administrator for Contoso. The company wants to ensure that all virtual machines in the East US region can only communicate with approved Azure services over the Microsoft backbone network without traversing the public internet. Which solution should you implement?",
+"choices": [
+"A. Azure Firewall with DNAT rules",
+"B. Network Security Groups with service tags",
+"C. Azure Private Link endpoints",
+"D. Azure Virtual Network service endpoints"
+],
+"answer": 3,
+"explain": "Azure Virtual Network service endpoints provide secure and direct connectivity to Azure PaaS services over the Microsoft backbone network, keeping traffic off the public internet. Private Link is service-specific and more complex to manage at scale, while NSGs and Azure Firewall do not fully prevent public internet traversal for PaaS services.",
+"objective": "Design and implement secure networking solutions",
+"cert": "SC-500",
+"domain": "Secure networking",
+"id": "SC-500-130"
+},
+{
+"q": "Which Microsoft Entra ID feature allows you to create conditional access policies based on the network location of the user attempting to access corporate resources?",
+"choices": [
+"A. Named locations",
+"B. Authentication methods",
+"C. Risk-based policies",
+"D. Continuous Access Evaluation"
+],
+"answer": 0,
+"explain": "Named locations in Microsoft Entra ID (formerly Azure AD) allow administrators to define trusted IP address ranges or countries so Conditional Access policies can grant or block access based on network location. The other options do not directly tie policy decisions to the source network.",
+"objective": "Secure networking with Microsoft Entra ID",
+"cert": "SC-500",
+"domain": "Secure networking",
+"id": "SC-500-131"
+},
+{
+"q": "Contoso recently suffered a data exfiltration incident through an Azure SQL Database. The security team wants to ensure that all traffic to the SQL Database is forced through a private IP address only. What is the recommended approach?",
+"choices": [
+"A. Enable public network access and use NSG rules",
+"B. Deploy Azure Private Link and disable public network access",
+"C. Use Azure Firewall in front of the database",
+"D. Configure VNet service endpoints with Microsoft.Sql tag"
+],
+"answer": 1,
+"explain": "Azure Private Link provides a private IP address within the virtual network for the Azure SQL Database and allows complete disabling of public network access. Service endpoints still use public DNS and do not fully isolate the service like Private Link does.",
+"objective": "Design and implement secure networking solutions",
+"cert": "SC-500",
+"domain": "Secure networking",
+"id": "SC-500-132"
+},
+{
+"q": "What is the primary purpose of Azure DDoS Protection Standard when deployed with a virtual network?",
+"choices": [
+"A. Encrypt traffic between virtual machines",
+"B. Provide always-on traffic monitoring and automatic mitigation of Layer 3, 4, and 7 attacks",
+"C. Filter outbound traffic to the internet",
+"D. Replace the need for Network Security Groups"
+],
+"answer": 1,
+"explain": "Azure DDoS Protection Standard offers always-on monitoring, automatic mitigation, and cost protection for Layer 3\u20137 volumetric, protocol, and application-layer attacks. It complements, but does not replace, NSGs or encryption solutions.",
+"objective": "Secure networking with Azure Firewall and DDoS protection",
+"cert": "SC-500",
+"domain": "Secure networking",
+"id": "SC-500-133"
+},
+{
+"q": "You need to inspect and filter all east-west and north-south traffic between two peered virtual networks that contain highly sensitive workloads. Which Azure service should you deploy in a hub-and-spoke topology?",
+"choices": [
+"A. Azure Application Gateway",
+"B. Azure Firewall Premium",
+"C. Azure Bastion",
+"D. Microsoft Defender for Cloud"
+],
+"answer": 1,
+"explain": "Azure Firewall Premium, when placed in a hub virtual network, can inspect and filter traffic between spokes (east-west) as well as to the internet or on-premises (north-south). Application Gateway is Layer 7 only for inbound web traffic, and Bastion is for secure RDP/SSH access.",
+"objective": "Design and implement secure networking solutions",
+"cert": "SC-500",
+"domain": "Secure networking",
+"id": "SC-500-134"
+},
+{
+"q": "Which of the following statements is true regarding Azure Bastion?",
+"choices": [
+"A. It provides a public IP address directly to virtual machines",
+"B. It allows RDP and SSH connectivity over TLS without exposing VMs to the public internet",
+"C. It replaces the need for Network Security Groups",
+"D. It only supports Windows virtual machines"
+],
+"answer": 1,
+"explain": "Azure Bastion is a fully managed PaaS service that provides secure RDP and SSH connectivity to VMs using HTML5 over TLS, without exposing the VMs to the public internet. It works with both Windows and Linux and should be used in conjunction with NSGs.",
+"objective": "Secure remote access and bastion services",
+"cert": "SC-500",
+"domain": "Secure networking",
+"id": "SC-500-135"
+},
+{
+"q": "A company wants to automatically block outbound connections to known malicious IP addresses and domains from all Azure resources. Which solution provides native threat intelligence integration for this purpose?",
+"choices": [
+"A. Azure DDoS Protection Basic",
+"B. Azure Firewall with Threat Intelligence enabled in Alert and Deny mode",
+"C. Network Security Groups with custom deny rules",
+"D. Azure Private Link"
+],
+"answer": 1,
+"explain": "Azure Firewall with Threat Intelligence enabled in Alert and Deny mode uses Microsoft's threat intelligence feed to automatically block traffic to known malicious IPs and domains. NSGs lack built-in threat intelligence, and the other options do not provide this capability.",
+"objective": "Secure networking with Azure Firewall and DDoS protection",
+"cert": "SC-500",
+"domain": "Secure networking",
+"id": "SC-500-136"
+},
+{
+"q": "You are designing network security for a multi-tenant Azure environment. Several business units need to prevent lateral movement between their subnets while still allowing access to shared services in a hub network. What is the most effective approach?",
+"choices": [
+"A. Place all subnets in the same virtual network and use NSGs with strict rules",
+"B. Use virtual network peering with User-Defined Routes and Azure Firewall in the hub",
+"C. Deploy each business unit in a separate Azure subscription only",
+"D. Enable Azure Virtual Network encryption"
+],
+"answer": 1,
+"explain": "Using a hub-and-spoke topology with virtual network peering, User-Defined Routes, and Azure Firewall in the hub allows centralized traffic inspection and effective segmentation to prevent lateral movement. Relying solely on NSGs in a flat VNet is harder to manage at scale.",
+"objective": "Design and implement secure networking solutions",
+"cert": "SC-500",
+"domain": "Secure networking",
+"id": "SC-500-137"
+},
+{
+"q": "What Microsoft Entra ID capability enables administrators to require that users connecting from outside the corporate network must use phishing-resistant authentication methods?",
+"choices": [
+"A. Authentication strength",
+"B. Security defaults",
+"C. Identity Protection risk policy",
+"D. Seamless SSO"
+],
+"answer": 0,
+"explain": "Authentication strength in Conditional Access policies allows administrators to require specific strong methods (such as FIDO2 or certificate-based authentication) based on network location or other signals. The other features do not directly enforce authentication method requirements based on network context.",
+"objective": "Secure networking with Microsoft Entra ID",
+"cert": "SC-500",
+"domain": "Secure networking",
+"id": "SC-500-138"
+},
+{
+"q": "Contoso's compliance team requires that all traffic leaving Azure virtual networks destined for the internet must be logged and inspected by a next-generation firewall appliance running in active-active mode. Which deployment model meets this requirement with built-in Azure support?",
+"choices": [
+"A. Azure Firewall in a single virtual network",
+"B. Azure Firewall Manager with secured virtual hubs and route tables",
+"C. Network Virtual Appliance with Azure Load Balancer in active-active configuration",
+"D. Azure Application Gateway with WAF"
+],
+"answer": 2,
+"explain": "Deploying a third-party Network Virtual Appliance (NVA) with Azure Load Balancer in active-active mode is a supported pattern for customers who require specific next-generation firewall features not yet available in Azure Firewall. Azure Firewall Manager and secured hubs are limited to Azure Firewall.",
+"objective": "Secure networking with Azure Firewall and DDoS protection",
+"cert": "SC-500",
+"domain": "Secure networking",
+"id": "SC-500-139"
+},
+{
+"q": "You are the security administrator for Contoso. The company stores highly sensitive customer PII in an Azure SQL Database. Compliance requires that data must remain encrypted at all times, even while being processed in memory. Which feature should you enable?",
+"choices": [
+"A. Always Encrypted with secure enclaves",
+"B. Transparent Data Encryption (TDE)",
+"C. Azure Disk Encryption",
+"D. Dynamic Data Masking"
+],
+"answer": 0,
+"explain": "Always Encrypted with secure enclaves allows rich querying and in-memory encryption of sensitive data using enclaves, satisfying the requirement that data remains encrypted even during processing. TDE only protects data at rest, Azure Disk Encryption is for VMs, and Dynamic Data Masking only obscures data in query results.",
+"objective": "Secure compute, storage, and databases",
+"cert": "SC-500",
+"domain": "Secure compute, storage and databases",
+"id": "SC-500-140"
+},
+{
+"q": "Which Microsoft Entra permission model should be used to assign just-in-time access to manage an Azure Virtual Machine using Privileged Identity Management (PIM)?",
+"choices": [
+"A. Azure RBAC role assignment with permanent active assignment",
+"B. Microsoft Entra role assignment with eligible assignment",
+"C. Azure RBAC eligible assignment through PIM",
+"D. Microsoft Entra group membership with dynamic rules"
+],
+"answer": 2,
+"explain": "Azure RBAC eligible assignments through Privileged Identity Management provide just-in-time access specifically for Azure resources such as virtual machines. Microsoft Entra roles are for directory-level permissions, not Azure resource management. Permanent assignments violate JIT principles.",
+"objective": "Secure compute, storage, and databases",
+"cert": "SC-500",
+"domain": "Secure compute, storage and databases",
+"id": "SC-500-141"
+},
+{
+"q": "Your organization needs to ensure that Azure Blob Storage containing regulated financial data can only be accessed from specific corporate IP ranges and selected virtual networks. What is the recommended configuration?",
+"choices": [
+"A. Enable public network access and use SAS tokens",
+"B. Configure storage firewall with selected networks and IP ranges, and disable public network access",
+"C. Use Azure Front Door with WAF policies only",
+"D. Enable private endpoints and allow all public IP addresses"
+],
+"answer": 1,
+"explain": "Configuring the storage account firewall to allow only selected virtual networks and IP address ranges while disabling public network access provides network-level isolation for regulated data. Option A leaves the storage publicly reachable, and private endpoints should not allow all public IPs.",
+"objective": "Secure compute, storage, and databases",
+"cert": "SC-500",
+"domain": "Secure compute, storage and databases",
+"id": "SC-500-142"
+},
+{
+"q": "What is the primary purpose of Azure Confidential Computing when deploying virtual machines?",
+"choices": [
+"A. To provide hardware-based trusted execution environments (TEEs) that protect data in use",
+"B. To automatically encrypt data at rest using customer-managed keys",
+"C. To scan virtual machines for malware in real time",
+"D. To enforce network segmentation between VMs"
+],
+"answer": 0,
+"explain": "Azure Confidential Computing leverages hardware-based trusted execution environments (such as Intel SGX or AMD SEV) to protect data while it is being processed in memory. The other options relate to encryption at rest, malware protection, or network controls respectively.",
+"objective": "Secure compute, storage, and databases",
+"cert": "SC-500",
+"domain": "Secure compute, storage and databases",
+"id": "SC-500-143"
+},
+{
+"q": "Contoso stores sensitive documents in Azure Files. The security team wants to ensure that all access is authenticated using Microsoft Entra ID and that NTFS-style ACLs can be enforced. Which authentication method and storage type should be used?",
+"choices": [
+"A. Storage Account Keys with Premium FileStorage",
+"B. Microsoft Entra Kerberos authentication with Premium FileStorage",
+"C. Shared Access Signatures with Standard tier",
+"D. Local AD DS authentication with Standard tier"
+],
+"answer": 1,
+"explain": "Microsoft Entra Kerberos authentication on Premium FileStorage enables identity-based access with full NTFS ACL support using Microsoft Entra ID identities. Storage keys are not identity-based, SAS is not ideal for persistent mount scenarios, and local AD DS is being deprecated in favor of Microsoft Entra Domain Services or direct Entra Kerberos.",
+"objective": "Secure compute, storage, and databases",
+"cert": "SC-500",
+"domain": "Secure compute, storage and databases",
+"id": "SC-500-144"
+},
+{
+"q": "Which Azure service provides automatic vulnerability assessment and threat detection specifically for Azure SQL Database and Azure SQL Managed Instance?",
+"choices": [
+"A. Microsoft Defender for Storage",
+"B. Microsoft Defender for SQL",
+"C. Microsoft Defender for Cloud Apps",
+"D. Azure Policy"
+],
+"answer": 1,
+"explain": "Microsoft Defender for SQL delivers vulnerability assessment, advanced threat protection, and anomaly detection tailored for Azure SQL Database and Managed Instance. Defender for Storage is for Blob, Files, and Data Lake, while the other options do not provide SQL-specific threat detection.",
+"objective": "Secure compute, storage, and databases",
+"cert": "SC-500",
+"domain": "Secure compute, storage and databases",
+"id": "SC-500-145"
+},
+{
+"q": "You manage a set of Azure VMs that process credit card data. Company policy requires that disk encryption keys are under organizational control and automatically rotated every 90 days. Which solution meets these requirements?",
+"choices": [
+"A. Azure Disk Encryption with customer-managed keys stored in Azure Key Vault with automatic rotation enabled",
+"B. Server-side encryption with platform-managed keys",
+"C. BitLocker with keys stored in Azure AD",
+"D. Azure Storage Service Encryption using customer-managed keys without rotation"
+],
+"answer": 0,
+"explain": "Azure Disk Encryption combined with customer-managed keys (CMK) in Azure Key Vault with automatic key rotation satisfies both control and rotation requirements. Platform-managed keys remove customer control, BitLocker is not the Azure-native solution, and omitting rotation violates policy.",
+"objective": "Secure compute, storage, and databases",
+"cert": "SC-500",
+"domain": "Secure compute, storage and databases",
+"id": "SC-500-146"
+},
+{
+"q": "What is the effect of enabling infrastructure encryption (double encryption) on an Azure Storage account?",
+"choices": [
+"A. Data is encrypted once at the service level and again at the infrastructure level using a separate encryption key",
+"B. It replaces customer-managed keys with platform-managed keys",
+"C. It disables public network access automatically",
+"D. It enables encryption only for metadata, not for data"
+],
+"answer": 0,
+"explain": "Infrastructure encryption (double encryption) applies a second layer of encryption at the Azure infrastructure level using a different key, providing extra protection even if the service-level encryption is compromised. It does not replace key types, affect network settings, or limit encryption to metadata.",
+"objective": "Secure compute, storage, and databases",
+"cert": "SC-500",
+"domain": "Secure compute, storage and databases",
+"id": "SC-500-147"
+},
+{
+"q": "A development team needs to run containers in Azure that process confidential data. The containers must run in isolated hardware enclaves to protect code and data from the host operating system and Azure operators. Which service should be recommended?",
+"choices": [
+"A. Azure Container Instances with Confidential Computing",
+"B. Azure Kubernetes Service with standard nodes",
+"C. Azure App Service with private endpoints",
+"D. Azure Functions on Linux"
+],
+"answer": 0,
+"explain": "Azure Container Instances (ACI) with Confidential Computing provides hardware-based enclave support (DCsv2-series) that protects container workloads from the host and cloud operators. Standard AKS, App Service, and Functions do not provide this level of hardware-level isolation for containers.",
+"objective": "Secure compute, storage, and databases",
+"cert": "SC-500",
+"domain": "Secure compute, storage and databases",
+"id": "SC-500-148"
+},
+{
+"q": "Which of the following is a built-in Microsoft Defender for Cloud recommendation for securing Azure databases?",
+"choices": [
+"A. Enable private link for all Azure SQL servers",
+"B. Enable Microsoft Entra-only authentication for Azure SQL",
+"C. Disable public network access on all storage accounts",
+"D. Require SSL connections for all MySQL and PostgreSQL servers"
+],
+"answer": 1,
+"explain": "Enabling Microsoft Entra-only authentication (formerly Azure AD-only) is a high-severity Defender for Cloud recommendation that removes local SQL authentication and forces modern identity-based access. While private link and SSL are important, they are not the specific built-in recommendation referenced here.",
+"objective": "Secure compute, storage, and databases",
+"cert": "SC-500",
+"domain": "Secure compute, storage and databases",
+"id": "SC-500-149"
+},
+{
+"q": "Your organization uses Microsoft Defender for Cloud to protect Azure workloads. The security team wants to ensure that Defender for Cloud automatically remediates misconfigurations for Azure resources using built-in capabilities. Which feature should be enabled?",
+"choices": [
+"A. Just-In-Time VM access",
+"B. Auto-provisioning for Log Analytics agents",
+"C. Security recommendations with auto-remediation",
+"D. Continuous export to Event Hub"
+],
+"answer": 2,
+"explain": "Security recommendations with auto-remediation (now called Workflow Automation or Auto Remediation) allows Defender for Cloud to automatically apply fixes for many misconfigurations. Just-In-Time is for VM access control, auto-provisioning handles agent deployment, and continuous export is for data routing, not remediation.",
+"objective": "Manage Microsoft Defender for Cloud",
+"cert": "SC-500",
+"domain": "Manage security operations with Defender for Cloud and Sentinel",
+"id": "SC-500-150"
+},
+{
+"q": "You are configuring Microsoft Sentinel for a multi-tenant environment. The SOC needs to create analytics rules that can be reused across different Microsoft Entra ID tenants. What is the recommended approach?",
+"choices": [
+"A. Create the rules in each tenant manually",
+"B. Use Content Hub solutions and deploy via ARM templates",
+"C. Export rules from one workspace and import them via the UI",
+"D. Use Microsoft Sentinel notebooks to replicate rules"
+],
+"answer": 1,
+"explain": "Content Hub solutions combined with ARM templates or API-based deployment allow reusable, version-controlled analytics rules across tenants. Manual creation does not scale, direct UI export/import is error-prone, and notebooks are for data analysis, not rule management.",
+"objective": "Manage Microsoft Sentinel",
+"cert": "SC-500",
+"domain": "Manage security operations with Defender for Cloud and Sentinel",
+"id": "SC-500-151"
+},
+{
+"q": "Which Microsoft Sentinel feature allows you to automatically add an entity to a watchlist when a specific incident is closed as 'True Positive'?",
+"choices": [
+"A. Automation rules with Playbooks",
+"B. Analytics rule scheduled query",
+"C. Threat intelligence indicator ingestion",
+"D. Entity behavior analytics"
+],
+"answer": 0,
+"explain": "Automation rules with Playbooks (Logic Apps) can trigger on incident creation or updates and perform actions such as adding entities to watchlists. The other options do not provide automatic watchlist population based on incident status.",
+"objective": "Configure and manage Microsoft Sentinel",
+"cert": "SC-500",
+"domain": "Manage security operations with Defender for Cloud and Sentinel",
+"id": "SC-500-152"
+},
+{
+"q": "A security administrator notices that several high-severity recommendations in Microsoft Defender for Cloud are not being acted upon. What is the most efficient way to ensure these recommendations are automatically remediated when possible?",
+"choices": [
+"A. Assign an Azure Policy with DeployIfNotExists effect",
+"B. Enable the 'Auto-remediate' toggle on each recommendation",
+"C. Create a Logic App triggered by Microsoft Defender for Cloud",
+"D. Use Defender for Cloud's built-in workflow automation with remediation tasks"
+],
+"answer": 3,
+"explain": "Defender for Cloud's workflow automation with remediation tasks (formerly auto-remediation) is the native, supported method for automatic remediation of supported recommendations. While Azure Policy can be used, the built-in workflow automation is the most direct and recommended approach within Defender for Cloud.",
+"objective": "Manage Microsoft Defender for Cloud",
+"cert": "SC-500",
+"domain": "Manage security operations with Defender for Cloud and Sentinel",
+"id": "SC-500-153"
+},
+{
+"q": "What is the correct retention period for data stored in a Microsoft Sentinel workspace using the default pricing tier before additional charges apply?",
+"choices": [
+"A. 30 days",
+"B. 90 days",
+"C. 180 days",
+"D. 365 days"
+],
+"answer": 1,
+"explain": "Microsoft Sentinel includes 90 days of free data retention in the default Pay-As-You-Go tier. Retention beyond 90 days incurs additional storage costs. The other values are either too short or represent extended retention options that require explicit configuration.",
+"objective": "Manage Microsoft Sentinel",
+"cert": "SC-500",
+"domain": "Manage security operations with Defender for Cloud and Sentinel",
+"id": "SC-500-154"
+},
+{
+"q": "You need to investigate suspicious sign-in activity across multiple Azure subscriptions. Which Microsoft Defender for Cloud feature provides a unified view of identity-related security alerts from Microsoft Entra ID and other sources?",
+"choices": [
+"A. Cloud Security Explorer",
+"B. Secure Score",
+"C. Microsoft Defender for Identity integration",
+"D. Asset inventory with identity context"
+],
+"answer": 2,
+"explain": "Integration with Microsoft Defender for Identity (and Entra ID Protection via Defender for Cloud) brings identity-based alerts into the Defender for Cloud console for unified investigation. Cloud Security Explorer is for hunting, Secure Score is for posture, and asset inventory lacks deep identity correlation.",
+"objective": "Manage Microsoft Defender for Cloud",
+"cert": "SC-500",
+"domain": "Manage security operations with Defender for Cloud and Sentinel",
+"id": "SC-500-155"
+},
+{
+"q": "In Microsoft Sentinel, you want to create a detection that triggers only when the same IP address performs failed sign-ins against more than five different user accounts within 30 minutes. Which KQL function should you primarily use?",
+"choices": [
+"A. join",
+"B. summarize with make_set and count",
+"C. extend with ago()",
+"D. union"
+],
+"answer": 1,
+"explain": "The summarize operator with make_set (to collect unique users) and count is the most efficient way to identify one source targeting multiple accounts. The other operators are useful but do not directly solve the cardinality problem required for this scenario.",
+"objective": "Create and manage analytics rules in Microsoft Sentinel",
+"cert": "SC-500",
+"domain": "Manage security operations with Defender for Cloud and Sentinel",
+"id": "SC-500-156"
+},
+{
+"q": "Your company has enabled Defender for Cloud on all subscriptions. The compliance team asks for a report showing current regulatory compliance posture against NIST 800-53. Where can this information be found natively?",
+"choices": [
+"A. Microsoft Sentinel Workbooks",
+"B. Defender for Cloud Regulatory Compliance dashboard",
+"C. Azure Policy Compliance blade",
+"D. Microsoft Purview Compliance Manager"
+],
+"answer": 1,
+"explain": "The Regulatory Compliance dashboard in Microsoft Defender for Cloud provides built-in and custom compliance reports including NIST 800-53 mappings and current status. While Azure Policy and Purview are related, the Defender for Cloud blade is the centralized location for cloud workload protection compliance posture.",
+"objective": "Manage Microsoft Defender for Cloud",
+"cert": "SC-500",
+"domain": "Manage security operations with Defender for Cloud and Sentinel",
+"id": "SC-500-157"
+},
+{
+"q": "You are designing an automation in Microsoft Sentinel that should close low-severity incidents from a specific analytics rule and add a comment. What is the most appropriate automation type to use?",
+"choices": [
+"A. Analytics rule automation",
+"B. Automation rule with a Logic App playbook",
+"C. Scheduled query rule with webhook action",
+"D. Incident automation using Azure Functions only"
+],
+"answer": 1,
+"explain": "Automation rules with Logic App playbooks provide the most flexible and maintainable way to perform actions (close incidents, add comments) based on conditions such as severity or analytics rule name. Direct analytics rule automation is more limited, and the other options are either outdated or overly complex.",
+"objective": "Configure security orchestration, automation, and response (SOAR) in Microsoft Sentinel",
+"cert": "SC-500",
+"domain": "Manage security operations with Defender for Cloud and Sentinel",
+"id": "SC-500-158"
+},
+{
+"q": "Which statement is true regarding the relationship between Microsoft Defender for Cloud and Microsoft Sentinel?",
+"choices": [
+"A. Defender for Cloud can send alerts to Sentinel only through the legacy connector",
+"B. Enabling the Defender for Cloud connector in Sentinel automatically creates incidents from high-severity alerts",
+"C. Sentinel is required to enable Defender for Cloud threat protection",
+"D. Defender for Cloud uses Sentinel notebooks for investigation"
+],
+"answer": 1,
+"explain": "When the Microsoft Defender for Cloud connector is enabled in Sentinel, it streams alerts and creates incidents based on configured severity (default is High and Medium). The connector is modern and bidirectional. Sentinel is not required for Defender for Cloud, and notebooks are an optional investigation tool.",
+"objective": "Manage Microsoft Defender for Cloud and Microsoft Sentinel integration",
+"cert": "SC-500",
+"domain": "Manage security operations with Defender for Cloud and Sentinel",
+"id": "SC-500-159"
+}
+]

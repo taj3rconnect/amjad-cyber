@@ -23,7 +23,7 @@ const old=q1('#sq');const sq=old.cloneNode(true);old.replaceWith(sq);sq.placehol
 const wrap=q1('.srch');const gs=document.createElement('div');gs.id='gs';gs.setAttribute('role','listbox');wrap.append(gs);q1('#sres')&&(q1('#sres').style.display='none');
 q1('.sbtn').onclick=()=>{wrap.classList.toggle('open');if(wrap.classList.contains('open'))sq.focus()};
 addEventListener('keydown',e=>{if(e.key==='/'&&!/INPUT|TEXTAREA/.test(document.activeElement.tagName)){e.preventDefault();wrap.classList.add('open');sq.focus()}});
-let MS=null,DOCS=null,loading=null;const GORD=['Jobs','Videos','Documents','Certifications','Steps','Prompts','Job search','Bots & tools','AI training gigs','Events','Networking','Today','Ask Dad history','Interview questions'];
+let MS=null,DOCS=null,loading=null;const GORD=['Jobs','Videos','Documents','Certifications','Steps','Prompts','Job search','Bots & tools','AI training gigs','Events','Networking','Today','Ask Dad history','Interview questions','Cert exam prep','Portfolio projects','Target companies','Newsletters','Mentorship','LinkedIn content plan'];
 function loadScript(src){return new Promise((r,j)=>{const s=document.createElement('script');s.src=src;s.onload=r;s.onerror=j;document.head.append(s)})}
 function ensure(){if(loading)return loading;loading=(async()=>{await loadScript('vendor/minisearch.js');DOCS=await (await fetch('search.json',{cache:'no-cache'})).json();
  try{const H0=await S.loadHist(),H=Array.isArray(H0)?H0:(H0.items||H0.log||[]);H.forEach(h=>DOCS.push({i:DOCS.length,t:'Ask Dad history',ti:h.q||h.question||'',x:h.a||h.answer||'',r:'#/history'}))}catch(e){}

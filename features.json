@@ -1,0 +1,481 @@
+{
+ "companies": [
+  {
+   "id": "c0",
+   "name": "Microsoft",
+   "url": "https://careers.microsoft.com/",
+   "why": "Remote/hybrid; Entra is your platform",
+   "http": "200"
+  },
+  {
+   "id": "c1",
+   "name": "Okta",
+   "url": "https://www.okta.com/company/careers/",
+   "why": "Pure identity company; remote US",
+   "http": "200"
+  },
+  {
+   "id": "c2",
+   "name": "SailPoint",
+   "url": "https://www.sailpoint.com/careers",
+   "why": "IGA leader; remote US",
+   "http": "200"
+  },
+  {
+   "id": "c3",
+   "name": "CyberArk",
+   "url": "https://www.cyberark.com/careers/",
+   "why": "PAM leader; NJ/NY presence",
+   "http": "200"
+  },
+  {
+   "id": "c4",
+   "name": "Ping Identity",
+   "url": "https://www.pingidentity.com/en/company/careers.html",
+   "why": "Identity vendor; remote",
+   "http": "200"
+  },
+  {
+   "id": "c5",
+   "name": "Saviynt",
+   "url": "https://saviynt.com/careers",
+   "why": "Cloud IGA; remote",
+   "http": "200"
+  },
+  {
+   "id": "c6",
+   "name": "Prudential Financial",
+   "url": "https://www.prudential.com/careers",
+   "why": "Newark NJ; large IAM team",
+   "http": "200"
+  },
+  {
+   "id": "c7",
+   "name": "Johnson & Johnson",
+   "url": "https://www.careers.jnj.com/",
+   "why": "New Brunswick NJ, near Edison",
+   "http": "200"
+  },
+  {
+   "id": "c8",
+   "name": "Merck",
+   "url": "https://jobs.merck.com/",
+   "why": "Rahway NJ; pharma IAM",
+   "http": "200"
+  },
+  {
+   "id": "c9",
+   "name": "BMS (Bristol Myers Squibb)",
+   "url": "https://careers.bms.com/",
+   "why": "Princeton/Lawrenceville NJ",
+   "http": "200"
+  },
+  {
+   "id": "c10",
+   "name": "ADP",
+   "url": "https://jobs.adp.com/",
+   "why": "Roseland NJ HQ",
+   "http": "200"
+  },
+  {
+   "id": "c11",
+   "name": "Verizon",
+   "url": "https://www.verizon.com/about/careers",
+   "why": "Basking Ridge NJ",
+   "http": "200"
+  },
+  {
+   "id": "c12",
+   "name": "BD (Becton Dickinson)",
+   "url": "https://jobs.bd.com/",
+   "why": "Franklin Lakes NJ",
+   "http": "200"
+  },
+  {
+   "id": "c13",
+   "name": "Guardian Life",
+   "url": "https://www.guardianlife.com/careers",
+   "why": "NYC/hybrid; posted IAM roles",
+   "http": "200"
+  },
+  {
+   "id": "c14",
+   "name": "MetLife",
+   "url": "https://www.metlife.com/about-us/careers/",
+   "why": "NYC + Cary",
+   "http": "301"
+  },
+  {
+   "id": "c15",
+   "name": "JPMorgan Chase",
+   "url": "https://careers.jpmorgan.com/",
+   "why": "Jersey City/NYC; big IAM org",
+   "http": "200"
+  },
+  {
+   "id": "c16",
+   "name": "Goldman Sachs",
+   "url": "https://www.goldmansachs.com/careers/",
+   "why": "Jersey City/NYC",
+   "http": "200"
+  },
+  {
+   "id": "c17",
+   "name": "Morgan Stanley",
+   "url": "https://www.morganstanley.com/careers",
+   "why": "NYC; identity engineering",
+   "http": "200"
+  },
+  {
+   "id": "c18",
+   "name": "MUFG",
+   "url": "https://careers.mufgamericas.com/",
+   "why": "NYC/Jersey City; posted IAM roles",
+   "http": "200"
+  },
+  {
+   "id": "c19",
+   "name": "FanDuel",
+   "url": "https://www.fanduel.careers/",
+   "why": "NJ/NYC; posted IAM role",
+   "http": "200"
+  },
+  {
+   "id": "c20",
+   "name": "Deloitte",
+   "url": "https://www2.deloitte.com/us/en/careers/careers.html",
+   "why": "Consulting; IAM practice",
+   "http": "200"
+  },
+  {
+   "id": "c21",
+   "name": "EY",
+   "url": "https://careers.ey.com/",
+   "why": "Consulting; IAM practice",
+   "http": "200"
+  },
+  {
+   "id": "c22",
+   "name": "KPMG",
+   "url": "https://www.kpmguscareers.com/",
+   "why": "Consulting; identity practice",
+   "http": "200"
+  },
+  {
+   "id": "c23",
+   "name": "CACI",
+   "url": "https://careers.caci.com/",
+   "why": "Gov/defense IAM",
+   "http": "200"
+  },
+  {
+   "id": "c24",
+   "name": "CrowdStrike",
+   "url": "https://www.crowdstrike.com/careers/",
+   "why": "Remote; identity protection",
+   "http": "200"
+  }
+ ],
+ "mentors": [
+  {
+   "id": "m0",
+   "name": "ISSA NJ Chapter",
+   "url": "https://nj-issa.org/",
+   "what": "Local chapter; meetups where members informally mentor",
+   "how": "Join as member, attend a meeting, ask a board member for a mentor intro",
+   "http": "000"
+  },
+  {
+   "id": "m1",
+   "name": "ISSA International Mentor program",
+   "url": "https://www.issa.org/",
+   "what": "Member mentoring resources",
+   "how": "Join ISSA; check member benefits for mentoring",
+   "http": "200"
+  },
+  {
+   "id": "m2",
+   "name": "ISC2 New Jersey Chapter",
+   "url": "https://newjersey.isc2chapters.isc2.org/",
+   "what": "Chapter events with experienced CISSPs",
+   "how": "Attend a meeting, introduce yourself as an IAM career changer",
+   "http": "200"
+  },
+  {
+   "id": "m3",
+   "name": "IDPro",
+   "url": "https://idpro.org/",
+   "what": "Identity professional community Slack with mentoring-minded members",
+   "how": "Join IDPro, post intro in Slack, ask about mentorship",
+   "http": "200"
+  },
+  {
+   "id": "m4",
+   "name": "WiCyS (Women in CyberSecurity)",
+   "url": "https://www.wicys.org/",
+   "what": "Mentorship program; welcomes allies",
+   "how": "Join as an ally member; apply to mentorship cohort",
+   "http": "200"
+  },
+  {
+   "id": "m5",
+   "name": "Cyversity",
+   "url": "https://www.cyversity.org/",
+   "what": "Free mentorship for underrepresented groups in cyber",
+   "how": "Become a member and apply to the mentorship program",
+   "http": "200"
+  },
+  {
+   "id": "m6",
+   "name": "ADPList",
+   "url": "https://adplist.org/",
+   "what": "Free 1:1 sessions with security and IAM mentors",
+   "how": "Sign up free, search 'identity' or 'IAM', book a 30-min session",
+   "http": "200"
+  },
+  {
+   "id": "m7",
+   "name": "The Cyber Mentor Dojo",
+   "url": "https://www.cybermentordojo.com/",
+   "what": "Free cyber career mentoring community",
+   "how": "Join, read the guidelines, request a mentor",
+   "http": "200"
+  },
+  {
+   "id": "m8",
+   "name": "Simply Cyber community",
+   "url": "https://simplycyber.io/",
+   "what": "Career coaching community and Discord",
+   "how": "Join Discord; use the mentorship / career channels",
+   "http": "200"
+  },
+  {
+   "id": "m9",
+   "name": "Cybersecurity Mentorship (CyberSecMentor)",
+   "url": "https://www.mentorcruise.com/",
+   "what": "Paid option if free routes are slow",
+   "how": "Only if you choose; many offer free trial calls",
+   "http": "200"
+  }
+ ],
+ "vouchers": [
+  {
+   "name": "Microsoft Virtual Training Days (Security)",
+   "url": "https://events.microsoft.com/en-us/mvtd",
+   "why": "Free 1\u20132 day courses; some include a 50%\u2013100% exam discount",
+   "http": "200"
+  },
+  {
+   "name": "Microsoft Learn SC-300 path",
+   "url": "https://learn.microsoft.com/en-us/credentials/certifications/identity-and-access-administrator/",
+   "why": "Official free study path + practice assessment",
+   "http": "200"
+  },
+  {
+   "name": "Microsoft Learn practice assessment SC-300",
+   "url": "https://learn.microsoft.com/en-us/credentials/certifications/identity-and-access-administrator/practice/assessment?assessment-type=practice&assessmentId=46",
+   "why": "Free official practice test",
+   "http": "200"
+  },
+  {
+   "name": "Microsoft Learn Cloud Skills Challenge / events",
+   "url": "https://learn.microsoft.com/en-us/training/",
+   "why": "Watch for free voucher challenges",
+   "http": "200"
+  },
+  {
+   "name": "ISC2 Certified in Cybersecurity (free)",
+   "url": "https://www.isc2.org/certifications/cc",
+   "why": "Free CC training + exam via One Million program",
+   "http": "200"
+  }
+ ],
+ "projects": [
+  {
+   "id": "p-jml",
+   "title": "PowerShell + Microsoft Graph JML automation",
+   "goal": "Automate Joiner/Mover/Leaver for a test tenant: create users from CSV, assign groups by department, disable and strip access on leave, log every change.",
+   "steps": [
+    "Get a free Microsoft 365 developer/trial tenant (or use Entra free tier)",
+    "Install Microsoft.Graph PowerShell; connect with least-privilege scopes",
+    "Write New-Joiner.ps1 reading users.csv \u2192 New-MgUser + group membership by dept",
+    "Write Move-User.ps1 swapping groups on dept change",
+    "Write Remove-Leaver.ps1: disable, revoke sessions, remove groups, export audit CSV",
+    "Add -WhatIf support and a log file",
+    "Push to your own GitHub repo with README and sample CSV (fake data only)"
+   ],
+   "shots": [
+    "CSV input",
+    "PowerShell run output",
+    "Entra user + groups after run",
+    "Audit log CSV"
+   ],
+   "resume": "Built PowerShell/Microsoft Graph automation for joiner-mover-leaver lifecycle with least-privilege scopes, WhatIf safety and audit logging, mirroring my production JML work for 200+ users.",
+   "interview": "Walk through how you'd prevent orphaned access, why least-privilege Graph scopes matter, and how you tested safely.",
+   "readme": "# PowerShell + Microsoft Graph JML automation\n\n## Goal\nAutomate Joiner/Mover/Leaver for a test tenant: create users from CSV, assign groups by department, disable and strip access on leave, log every change.\n\n## What I built\n- \n\n## Tech\nMicrosoft Entra ID \u00b7 Microsoft Graph \u00b7 PowerShell\n\n## How to run\n1. \n\n## Screenshots\n\n## What I learned\n\n> Lab tenant only. No real company data."
+  },
+  {
+   "id": "p-ca",
+   "title": "Entra Conditional Access baseline",
+   "goal": "Design and document a Conditional Access baseline: MFA for all, block legacy auth, admin protections, device compliance, break-glass accounts.",
+   "steps": [
+    "Create 2 break-glass accounts excluded from all policies",
+    "Build policies in report-only mode first",
+    "Require MFA for admins; then all users",
+    "Block legacy authentication",
+    "Require compliant device for sensitive apps (doc if no Intune)",
+    "Use What If tool and sign-in logs to validate",
+    "Export policies as JSON (Graph) into your repo"
+   ],
+   "shots": [
+    "Policy list",
+    "What If results",
+    "Sign-in log showing CA applied",
+    "Report-only insights"
+   ],
+   "resume": "Designed a Conditional Access baseline (MFA, legacy-auth block, admin protection, break-glass) validated with report-only mode and What If, exported as code.",
+   "interview": "Explain report-only rollout, break-glass design and how you'd handle exceptions.",
+   "readme": "# Entra Conditional Access baseline\n\n## Goal\nDesign and document a Conditional Access baseline: MFA for all, block legacy auth, admin protections, device compliance, break-glass accounts.\n\n## What I built\n- \n\n## Tech\nMicrosoft Entra ID \u00b7 Microsoft Graph \u00b7 PowerShell\n\n## How to run\n1. \n\n## Screenshots\n\n## What I learned\n\n> Lab tenant only. No real company data."
+  },
+  {
+   "id": "p-pim",
+   "title": "PIM + access reviews",
+   "goal": "Show privileged access done right: just-in-time admin roles, approval, and recurring access reviews.",
+   "steps": [
+    "Enable Entra ID P2 trial",
+    "Make Global/User Admin roles eligible (not active) in PIM",
+    "Require MFA + justification + approval on activation",
+    "Set max activation 4 hours; enable alerts",
+    "Create quarterly access review for privileged roles and a group",
+    "Complete a review; document outcomes"
+   ],
+   "shots": [
+    "PIM role settings",
+    "Activation request + approval",
+    "Access review results"
+   ],
+   "resume": "Implemented Entra PIM just-in-time access with approval and MFA, plus recurring access reviews, reducing standing admin privilege to zero in a lab tenant.",
+   "interview": "Why JIT beats standing access, how reviews support SOX audits.",
+   "readme": "# PIM + access reviews\n\n## Goal\nShow privileged access done right: just-in-time admin roles, approval, and recurring access reviews.\n\n## What I built\n- \n\n## Tech\nMicrosoft Entra ID \u00b7 Microsoft Graph \u00b7 PowerShell\n\n## How to run\n1. \n\n## Screenshots\n\n## What I learned\n\n> Lab tenant only. No real company data."
+  },
+  {
+   "id": "p-okta",
+   "title": "Okta SSO (SAML) + SCIM provisioning demo",
+   "goal": "Connect a SaaS/test app to Okta with SAML SSO and SCIM automatic provisioning.",
+   "steps": [
+    "Sign up for a free Okta Integrator (developer) org",
+    "Add a SAML app (e.g., a SAML test SP) and configure ACS/Entity ID",
+    "Assign users/groups; test SP- and IdP-initiated login",
+    "Capture a SAML assertion with SAML-tracer and annotate it",
+    "Enable SCIM to an app that supports it (or a SCIM test server) and show create/deactivate",
+    "Document the flow with a diagram"
+   ],
+   "shots": [
+    "App SAML settings",
+    "SAML-tracer assertion (redacted)",
+    "SCIM provisioning log"
+   ],
+   "resume": "Built Okta SAML SSO and SCIM provisioning integration, documenting assertion attributes and lifecycle automation.",
+   "interview": "Explain the SAML flow end to end and what SCIM solves.",
+   "readme": "# Okta SSO (SAML) + SCIM provisioning demo\n\n## Goal\nConnect a SaaS/test app to Okta with SAML SSO and SCIM automatic provisioning.\n\n## What I built\n- \n\n## Tech\nMicrosoft Entra ID \u00b7 Microsoft Graph \u00b7 PowerShell\n\n## How to run\n1. \n\n## Screenshots\n\n## What I learned\n\n> Lab tenant only. No real company data."
+  },
+  {
+   "id": "p-audit",
+   "title": "IAM audit report script",
+   "goal": "One script that produces an access hygiene report: stale accounts, users without MFA, guests, privileged role holders, apps with expiring secrets.",
+   "steps": [
+    "Use Graph PowerShell or Python (msgraph) with read-only scopes",
+    "Query sign-in activity for 90-day stale users",
+    "Report MFA registration status",
+    "List guests and privileged role members",
+    "List app registrations with secrets expiring in 30 days",
+    "Output an HTML/CSV report; schedule it"
+   ],
+   "shots": [
+    "Report HTML",
+    "Code snippet",
+    "Findings summary"
+   ],
+   "resume": "Wrote an automated IAM hygiene report (stale accounts, MFA gaps, privileged roles, expiring app secrets) using read-only Microsoft Graph.",
+   "interview": "How you'd prioritize findings and turn them into remediation tickets.",
+   "readme": "# IAM audit report script\n\n## Goal\nOne script that produces an access hygiene report: stale accounts, users without MFA, guests, privileged role holders, apps with expiring secrets.\n\n## What I built\n- \n\n## Tech\nMicrosoft Entra ID \u00b7 Microsoft Graph \u00b7 PowerShell\n\n## How to run\n1. \n\n## Screenshots\n\n## What I learned\n\n> Lab tenant only. No real company data."
+  }
+ ],
+ "posts": [
+  {
+   "id": "w0",
+   "week": 1,
+   "title": "Why I'm moving from IT support into IAM (and what JML taught me)",
+   "draft": "Why I'm moving from IT support into IAM (and what JML taught me)\n\nThis week I focused on this as part of my move into Identity & Access Management. Key takeaway: [one concrete lesson].\n\nWhat I did: [1\u20132 lines on the lab/study].\nWhat surprised me: [one line].\n\nIf you work in IAM, I'd love to hear how you handle this.\n\n#IAM #EntraID #Cybersecurity #IdentitySecurity"
+  },
+  {
+   "id": "w1",
+   "week": 2,
+   "title": "What I learned building PowerShell JML automation (Project 1)",
+   "draft": "What I learned building PowerShell JML automation (Project 1)\n\nThis week I focused on this as part of my move into Identity & Access Management. Key takeaway: [one concrete lesson].\n\nWhat I did: [1\u20132 lines on the lab/study].\nWhat surprised me: [one line].\n\nIf you work in IAM, I'd love to hear how you handle this.\n\n#IAM #EntraID #Cybersecurity #IdentitySecurity"
+  },
+  {
+   "id": "w2",
+   "week": 3,
+   "title": "Conditional Access in plain English: 5 policies every tenant needs",
+   "draft": "Conditional Access in plain English: 5 policies every tenant needs\n\nThis week I focused on this as part of my move into Identity & Access Management. Key takeaway: [one concrete lesson].\n\nWhat I did: [1\u20132 lines on the lab/study].\nWhat surprised me: [one line].\n\nIf you work in IAM, I'd love to hear how you handle this.\n\n#IAM #EntraID #Cybersecurity #IdentitySecurity"
+  },
+  {
+   "id": "w3",
+   "week": 4,
+   "title": "Studying for SC-300: my week 1 notes",
+   "draft": "Studying for SC-300: my week 1 notes\n\nThis week I focused on this as part of my move into Identity & Access Management. Key takeaway: [one concrete lesson].\n\nWhat I did: [1\u20132 lines on the lab/study].\nWhat surprised me: [one line].\n\nIf you work in IAM, I'd love to hear how you handle this.\n\n#IAM #EntraID #Cybersecurity #IdentitySecurity"
+  },
+  {
+   "id": "w4",
+   "week": 5,
+   "title": "PIM: why standing admin access is risky",
+   "draft": "PIM: why standing admin access is risky\n\nThis week I focused on this as part of my move into Identity & Access Management. Key takeaway: [one concrete lesson].\n\nWhat I did: [1\u20132 lines on the lab/study].\nWhat surprised me: [one line].\n\nIf you work in IAM, I'd love to hear how you handle this.\n\n#IAM #EntraID #Cybersecurity #IdentitySecurity"
+  },
+  {
+   "id": "w5",
+   "week": 6,
+   "title": "SAML vs OIDC explained with a pizza delivery analogy",
+   "draft": "SAML vs OIDC explained with a pizza delivery analogy\n\nThis week I focused on this as part of my move into Identity & Access Management. Key takeaway: [one concrete lesson].\n\nWhat I did: [1\u20132 lines on the lab/study].\nWhat surprised me: [one line].\n\nIf you work in IAM, I'd love to hear how you handle this.\n\n#IAM #EntraID #Cybersecurity #IdentitySecurity"
+  },
+  {
+   "id": "w6",
+   "week": 7,
+   "title": "3 identity headlines this week and what they mean (from TLDR InfoSec)",
+   "draft": "3 identity headlines this week and what they mean (from TLDR InfoSec)\n\nThis week I focused on this as part of my move into Identity & Access Management. Key takeaway: [one concrete lesson].\n\nWhat I did: [1\u20132 lines on the lab/study].\nWhat surprised me: [one line].\n\nIf you work in IAM, I'd love to hear how you handle this.\n\n#IAM #EntraID #Cybersecurity #IdentitySecurity"
+  },
+  {
+   "id": "w7",
+   "week": 8,
+   "title": "My IAM audit script found these 5 common gaps",
+   "draft": "My IAM audit script found these 5 common gaps\n\nThis week I focused on this as part of my move into Identity & Access Management. Key takeaway: [one concrete lesson].\n\nWhat I did: [1\u20132 lines on the lab/study].\nWhat surprised me: [one line].\n\nIf you work in IAM, I'd love to hear how you handle this.\n\n#IAM #EntraID #Cybersecurity #IdentitySecurity"
+  },
+  {
+   "id": "w8",
+   "week": 9,
+   "title": "Passing SC-300: what helped most",
+   "draft": "Passing SC-300: what helped most\n\nThis week I focused on this as part of my move into Identity & Access Management. Key takeaway: [one concrete lesson].\n\nWhat I did: [1\u20132 lines on the lab/study].\nWhat surprised me: [one line].\n\nIf you work in IAM, I'd love to hear how you handle this.\n\n#IAM #EntraID #Cybersecurity #IdentitySecurity"
+  },
+  {
+   "id": "w9",
+   "week": 10,
+   "title": "Event recap: what I learned at a NJ security meetup",
+   "draft": "Event recap: what I learned at a NJ security meetup\n\nThis week I focused on this as part of my move into Identity & Access Management. Key takeaway: [one concrete lesson].\n\nWhat I did: [1\u20132 lines on the lab/study].\nWhat surprised me: [one line].\n\nIf you work in IAM, I'd love to hear how you handle this.\n\n#IAM #EntraID #Cybersecurity #IdentitySecurity"
+  },
+  {
+   "id": "w10",
+   "week": 11,
+   "title": "How AI tools help me write safer PowerShell",
+   "draft": "How AI tools help me write safer PowerShell\n\nThis week I focused on this as part of my move into Identity & Access Management. Key takeaway: [one concrete lesson].\n\nWhat I did: [1\u20132 lines on the lab/study].\nWhat surprised me: [one line].\n\nIf you work in IAM, I'd love to hear how you handle this.\n\n#IAM #EntraID #Cybersecurity #IdentitySecurity"
+  },
+  {
+   "id": "w11",
+   "week": 12,
+   "title": "Access reviews: the boring control that saves audits",
+   "draft": "Access reviews: the boring control that saves audits\n\nThis week I focused on this as part of my move into Identity & Access Management. Key takeaway: [one concrete lesson].\n\nWhat I did: [1\u20132 lines on the lab/study].\nWhat surprised me: [one line].\n\nIf you work in IAM, I'd love to hear how you handle this.\n\n#IAM #EntraID #Cybersecurity #IdentitySecurity"
+  }
+ ],
+ "exam_dates": {
+  "SC-300": ""
+ }
+}

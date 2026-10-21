@@ -1,24 +1,65 @@
 {
-  "items": [
-    {
-      "date": "2026-10-21",
-      "product": "Microsoft Security",
-      "headline": "Now Microsoft Defender can discover the AI agents running on company laptops",
-      "explanation": "On October 19, 2026 Microsoft announced it is extending Project Perception to secure 'the agentic insider': Guardian Agents watch AI agents and contain risky actions, and Microsoft Defender can now discover dozens of local AI agent types (such as coding agents) once it sees them running on onboarded devices. The message is that agents need their own identity, least-privilege permissions and monitoring, just like people.",
-      "why": "AI agents are becoming a new kind of identity. Companies will need IAM people who can give agents their own identities, scope their access, review it and remove it, which is JML for agents. Saying this in an interview shows you're current.",
-      "say": "Did you know Microsoft now treats AI agents as insiders that need their own identity and least-privilege access?",
-      "source": "https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/",
-      "source_label": "Microsoft Security Blog: Agents are your newest insiders (Oct 19, 2026)",
-      "video": "",
-      "video_title": "",
-      "prompts": {
-        "cla": "Hi Claude! I'm Amjad, an IT Support Coordinator moving into Identity & Access Management (IAM). I hold Security+ and I'm studying for SC-300. I practice only in my own lab tenant with made-up users.\n\nContext: Today in AI & Cyber: Now Microsoft Defender can discover the AI agents running on company laptops\nMy task: explain in simple terms how an IAM team should manage the lifecycle of AI agents (creation, ownership, least-privilege access, access reviews, removal), with a short joiner/mover/leaver checklist for agents.\n\nPlease (1) ask me up to 3 quick questions if anything is unclear, (2) walk me through it in short, numbered steps, and (3) finish with a ready-to-use result (table, checklist, script or doc) I can save to my portfolio. Keep it encouraging and concise.",
-        "cop": "Hi Copilot! I'm Amjad, an IT Support Coordinator growing into Identity & Access Management. I'm working inside our Microsoft 365 apps and following my company's AI and data policy.\n\nContext: Today in AI & Cyber: Now Microsoft Defender can discover the AI agents running on company laptops\nMy task: explain in simple terms how an IAM team should manage the lifecycle of AI agents (creation, ownership, least-privilege access, access reviews, removal), with a short joiner/mover/leaver checklist for agents.\n\nPlease (1) ask me up to 3 quick questions, and let me point you to files with / (for example /[JML checklist]), (2) give short numbered steps using Entra admin center, Teams, Word, Excel or Outlook where it helps, and (3) put the finished result in a Copilot Page I can edit. Keep it concise.",
-        "gpt": "Hi ChatGPT! I'm Amjad, an IT Support Coordinator growing into Identity & Access Management, using ChatGPT (my company's Enterprise workspace or my own Plus plan) under our AI and data policy.\n\nContext: Today in AI & Cyber: Now Microsoft Defender can discover the AI agents running on company laptops\nMy task: explain in simple terms how an IAM team should manage the lifecycle of AI agents (creation, ownership, least-privilege access, access reviews, removal), with a short joiner/mover/leaver checklist for agents.\n\nPlease (1) ask me up to 3 quick questions, (2) give short numbered steps, and (3) finish with a clean result I can paste into a doc or canvas. Keep it concise.",
-        "grk": "Hey Grok! I'm Amjad, an IT Support Coordinator leveling up into Identity & Access Management (IAM). Security+ done, SC-300 next. I only practice in my own lab tenant with made-up users.\n\nContext: Today in AI & Cyber: Now Microsoft Defender can discover the AI agents running on company laptops\nMy task: explain in simple terms how an IAM team should manage the lifecycle of AI agents (creation, ownership, least-privilege access, access reviews, removal), with a short joiner/mover/leaver checklist for agents.\n\nPlease (1) ask me up to 3 quick questions if you need to, (2) walk me through it in short numbered steps, plain and direct, and (3) end with a ready-to-use result (checklist, table or script) I can drop into my portfolio.",
-        "gem": "Hi Gemini! I'm Amjad, an IT Support Coordinator moving into Identity & Access Management (IAM), studying for SC-300. I practice only in my own lab tenant with made-up users.\n\nContext: Today in AI & Cyber: Now Microsoft Defender can discover the AI agents running on company laptops\nMy task: explain in simple terms how an IAM team should manage the lifecycle of AI agents (creation, ownership, least-privilege access, access reviews, removal), with a short joiner/mover/leaver checklist for agents.\n\nPlease (1) ask me up to 3 clarifying questions, (2) give short numbered steps, and (3) finish with a clean result I can export to Google Docs or Sheets for my portfolio. Keep it concise and encouraging.",
-        "oth": "Hi! I'm Amjad, an IT Support Coordinator growing into Identity & Access Management (IAM), with Security+ and SC-300 in progress. Please follow my organization's AI and data policy; I'll use only lab or approved data.\n\nContext: Today in AI & Cyber: Now Microsoft Defender can discover the AI agents running on company laptops\nMy task: explain in simple terms how an IAM team should manage the lifecycle of AI agents (creation, ownership, least-privilege access, access reviews, removal), with a short joiner/mover/leaver checklist for agents.\n\nPlease (1) ask me up to 3 quick questions if anything is unclear, (2) walk me through it in short numbered steps, and (3) finish with a ready-to-use result (checklist, table, script or short doc). Keep it clear and concise."
-      }
-    }
-  ]
+ "items": [
+  {
+   "date": "2026-10-21",
+   "product": "Microsoft Security",
+   "headline": "Now Microsoft Defender can discover the AI agents running on company laptops",
+   "explanation": "On October 19, 2026 Microsoft announced it is extending Project Perception to secure 'the agentic insider': Guardian Agents watch AI agents and contain risky actions, and Microsoft Defender can now discover dozens of local AI agent types (such as coding agents) once it sees them running on onboarded devices. The message is that agents need their own identity, least-privilege permissions and monitoring, just like people.",
+   "why": "AI agents are becoming a new kind of identity. Companies will need IAM people who can give agents their own identities, scope their access, review it and remove it, which is JML for agents. Saying this in an interview shows you're current.",
+   "say": "Did you know Microsoft now treats AI agents as insiders that need their own identity and least-privilege access?",
+   "source": "https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/",
+   "source_label": "Microsoft Security Blog: Agents are your newest insiders (Oct 19, 2026)",
+   "video": "",
+   "video_title": "",
+   "prompts": {
+    "cla": "Hi Claude! I'm Amjad, an IT Support Coordinator moving into Identity & Access Management (IAM). I hold Security+ and I'm studying for SC-300. I practice only in my own lab tenant with made-up users.\n\nContext: Today in AI & Cyber: Now Microsoft Defender can discover the AI agents running on company laptops\nMy task: explain in simple terms how an IAM team should manage the lifecycle of AI agents (creation, ownership, least-privilege access, access reviews, removal), with a short joiner/mover/leaver checklist for agents.\n\nPlease (1) ask me up to 3 quick questions if anything is unclear, (2) walk me through it in short, numbered steps, and (3) finish with a ready-to-use result (table, checklist, script or doc) I can save to my portfolio. Keep it encouraging and concise.",
+    "cop": "Hi Copilot! I'm Amjad, an IT Support Coordinator growing into Identity & Access Management. I'm working inside our Microsoft 365 apps and following my company's AI and data policy.\n\nContext: Today in AI & Cyber: Now Microsoft Defender can discover the AI agents running on company laptops\nMy task: explain in simple terms how an IAM team should manage the lifecycle of AI agents (creation, ownership, least-privilege access, access reviews, removal), with a short joiner/mover/leaver checklist for agents.\n\nPlease (1) ask me up to 3 quick questions, and let me point you to files with / (for example /[JML checklist]), (2) give short numbered steps using Entra admin center, Teams, Word, Excel or Outlook where it helps, and (3) put the finished result in a Copilot Page I can edit. Keep it concise.",
+    "gpt": "Hi ChatGPT! I'm Amjad, an IT Support Coordinator growing into Identity & Access Management, using ChatGPT (my company's Enterprise workspace or my own Plus plan) under our AI and data policy.\n\nContext: Today in AI & Cyber: Now Microsoft Defender can discover the AI agents running on company laptops\nMy task: explain in simple terms how an IAM team should manage the lifecycle of AI agents (creation, ownership, least-privilege access, access reviews, removal), with a short joiner/mover/leaver checklist for agents.\n\nPlease (1) ask me up to 3 quick questions, (2) give short numbered steps, and (3) finish with a clean result I can paste into a doc or canvas. Keep it concise.",
+    "grk": "Hey Grok! I'm Amjad, an IT Support Coordinator leveling up into Identity & Access Management (IAM). Security+ done, SC-300 next. I only practice in my own lab tenant with made-up users.\n\nContext: Today in AI & Cyber: Now Microsoft Defender can discover the AI agents running on company laptops\nMy task: explain in simple terms how an IAM team should manage the lifecycle of AI agents (creation, ownership, least-privilege access, access reviews, removal), with a short joiner/mover/leaver checklist for agents.\n\nPlease (1) ask me up to 3 quick questions if you need to, (2) walk me through it in short numbered steps, plain and direct, and (3) end with a ready-to-use result (checklist, table or script) I can drop into my portfolio.",
+    "gem": "Hi Gemini! I'm Amjad, an IT Support Coordinator moving into Identity & Access Management (IAM), studying for SC-300. I practice only in my own lab tenant with made-up users.\n\nContext: Today in AI & Cyber: Now Microsoft Defender can discover the AI agents running on company laptops\nMy task: explain in simple terms how an IAM team should manage the lifecycle of AI agents (creation, ownership, least-privilege access, access reviews, removal), with a short joiner/mover/leaver checklist for agents.\n\nPlease (1) ask me up to 3 clarifying questions, (2) give short numbered steps, and (3) finish with a clean result I can export to Google Docs or Sheets for my portfolio. Keep it concise and encouraging.",
+    "oth": "Hi! I'm Amjad, an IT Support Coordinator growing into Identity & Access Management (IAM), with Security+ and SC-300 in progress. Please follow my organization's AI and data policy; I'll use only lab or approved data.\n\nContext: Today in AI & Cyber: Now Microsoft Defender can discover the AI agents running on company laptops\nMy task: explain in simple terms how an IAM team should manage the lifecycle of AI agents (creation, ownership, least-privilege access, access reviews, removal), with a short joiner/mover/leaver checklist for agents.\n\nPlease (1) ask me up to 3 quick questions if anything is unclear, (2) walk me through it in short numbered steps, and (3) finish with a ready-to-use result (checklist, table, script or short doc). Keep it clear and concise."
+   },
+   "featured": true
+  },
+  {
+   "date": "2026-10-21",
+   "product": "BeyondTrust",
+   "headline": "A remote-access tool used by IT admins had a zero-day that attackers exploited",
+   "explanation": "BeyondTrust Remote Support (formerly Bomgar) had a critical flaw, CVE-2026-102764, that let an unauthenticated attacker run file operations on the appliance. A suspected China-linked espionage group exploited it in late August 2026. CISA added it to the Known Exploited Vulnerabilities list on October 16 and urged everyone to patch right away.",
+   "why": "BeyondTrust is a privileged access (PAM) vendor. Remote support tools hold the keys to many machines, so they are prime targets. IAM and PAM teams have to patch them fast, limit who can reach their admin pages, and rotate credentials after an incident.",
+   "say": "When a privileged-access tool like BeyondTrust has a zero-day, I'd patch it, restrict admin access to trusted networks, review the logs, and rotate any credentials it stored.",
+   "source": "https://www.cisa.gov/news-events/alerts/2026/10/16/cisa-urges-patching-critical-vulnerability-beyondtrust-remote-support",
+   "source_label": "CISA alert (Oct 16, 2026)"
+  },
+  {
+   "date": "2026-10-21",
+   "product": "Web PKI",
+   "headline": "Browsers blocked 8 eMudhra certificate authorities after their keys turned out to be weak",
+   "explanation": "The private keys for eight eMudhra intermediate certificate authorities were generated with too little randomness, so anyone could forge HTTPS certificates. Chrome, Firefox, Apple and Microsoft blocked them within days, and Chrome is removing the related root on October 27.",
+   "why": "Certificates are identities for machines and websites. This is a reminder that 'non-human identity' includes certificates, and they need inventory, rotation, and fast revocation, just like user accounts.",
+   "say": "Certificates are machine identities. The eMudhra incident shows why you need a certificate inventory and a way to replace them quickly.",
+   "source": "https://blog.google/security/protecting-chrome-and-android-users-from-compromised-emudhra-intermediate-ca-certificates/",
+   "source_label": "Google Security Blog (Oct 20, 2026)"
+  },
+  {
+   "date": "2026-10-21",
+   "product": "DHS / CISA",
+   "headline": "DHS ordered federal agencies to remove DeepSeek AI products",
+   "explanation": "A DHS order made public October 20 requires federal civilian agencies to remove DeepSeek products, including third-party tools built on DeepSeek models, and stop buying them. DHS cited data going to servers in China and app vulnerabilities.",
+   "why": "Companies are writing similar 'approved AI tools' policies. Controlling which apps people can sign into (app governance, Conditional Access, blocking unsanctioned SaaS) is IAM work.",
+   "say": "Banning an AI tool only works if identity controls back it up, for example blocking sign-in to unapproved apps with Conditional Access.",
+   "source": "https://www.cnbc.com/2026/10/20/us-deepseek-federal-agency-ban.html",
+   "source_label": "CNBC (Oct 20, 2026)"
+  },
+  {
+   "date": "2026-10-21",
+   "product": "Meta Muse",
+   "headline": "Shared AI chats from Meta Muse were findable by anyone through DNS records",
+   "explanation": "Researchers at Claroc found more than 6,800 shared Muse conversation links in passive DNS. The chat title was built into the web address, and the pages opened without a login. Some held loan applications and confidential business notes. Meta paused the sharing feature.",
+   "why": "'Anyone with the link' is not access control. Good IAM means sharing tied to a named identity, with expiry and review, which is the same idea behind access reviews in Entra.",
+   "say": "The Muse leak is a good example of why 'anyone with the link' sharing is risky. Access should be tied to an identity and expire.",
+   "source": "https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/",
+   "source_label": "Ars Technica (Oct 20, 2026)"
+  }
+ ]
 }

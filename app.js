@@ -53,11 +53,19 @@ q1('.cbtn',pB).onclick=async()=>{try{await navigator.clipboard.writeText(cur)}ca
 document.addEventListener('click',e=>{const b=e.target.closest('.embed button');if(!b)return;const w=b.parentElement,i=w.dataset.id;w.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${i}?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen title="YouTube video"></iframe>`});
 // today
 const E=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-async function openToday(e){e&&e.preventDefault();openM('tmBd');const C=q1('#tmC');try{const{items}=await(await fetch('today.json?'+Date.now())).json();const t=items[0];
- let h=`<span class="tp">${E(t.product)}</span><h3 id="tmH">${E(t.headline)}</h3><p class="mut sm">${new Date(t.date+'T12:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'})}</p><p>${E(t.explanation)}</p><div class="bx"><b>Why it matters for you</b>${E(t.why)}</div><div class="bx"><b>Say this in an interview</b>“${E(t.say)}”</div>`;
+let TD=null,TI=0;
+function drawToday(){const C=q1('#tmC'),items=TD,t=items[TI];
+ let h=`<div class="tnav" style="display:flex;align-items:center;gap:8px;margin-bottom:8px"><button class="ibtn2" data-tn="-1" aria-label="Previous item" ${TI?'':'disabled'}>←</button><span class="sm mut">Item ${TI+1} of ${items.length}${t.featured?' · ⭐ Today\'s pick':''}</span><button class="ibtn2" data-tn="1" aria-label="Next item" ${TI<items.length-1?'':'disabled'}>→</button><button class="ibtn2" data-tr aria-label="Refresh" title="Refresh">↻</button></div><span class="tp">${E(t.product)}</span><h3 id="tmH">${E(t.headline)}</h3><p class="mut sm">${new Date(t.date+'T12:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'})}</p><p>${E(t.explanation)}</p><div class="bx"><b>Why it matters for you</b>${E(t.why)}</div><div class="bx"><b>Say this in an interview</b>“${E(t.say)}”</div>`;
  if(t.prompts){PROMPTS.today=t.prompts;h+=`<p><button class="tpb" data-k="today">✨ Try this prompt</button></p>`}
  if(t.video)h+=`<div class="embed" data-id="${E(t.video)}"><button aria-label="Play video"><img src="https://i.ytimg.com/vi/${E(t.video)}/hqdefault.jpg" alt=""><span class="pbtn">▶</span></button></div><p class="sm mut">${E(t.video_title)}</p>`;
- h+=`<p class="sm mut">Source: <a href="${E(t.source)}" target="_blank" rel="noopener">${E(t.source_label)}</a> · <a href="today.html">Earlier items</a></p>`;C.innerHTML=h}catch(err){C.textContent='Couldn\'t load today\'s item. Please try again in a moment.'}}
+ h+=`<p class="sm mut">Source: <a href="${E(t.source)}" target="_blank" rel="noopener">${E(t.source_label)}</a> · <a href="#/today">All earlier items</a></p>`;C.innerHTML=h;
+ C.querySelectorAll('[data-tn]').forEach(b=>b.onclick=()=>stepToday(+b.dataset.tn));C.querySelector('[data-tr]').onclick=()=>loadToday(true)}
+function stepToday(n){if(!TD)return;const k=TI+n;if(k<0||k>=TD.length)return;TI=k;drawToday();q1('#tmBd .m')&&(q1('#tmBd .m').scrollTop=0)}
+async function loadToday(refresh){const C=q1('#tmC');try{const{items}=await(await fetch('today.json?'+Date.now())).json();const f=items.filter(x=>x.featured),r=items.filter(x=>!x.featured);const fi=items.findIndex(x=>x.featured);TD=fi>=0?[items[fi],...items.filter((_,i)=>i!==fi)]:items;if(!refresh)TI=0;TI=Math.min(TI,TD.length-1);drawToday()}catch(err){C.textContent='Couldn\'t load today\'s item. Please try again in a moment.'}}
+async function openToday(e){e&&e.preventDefault();openM('tmBd');TI=0;loadToday()}
+addEventListener('keydown',e=>{if(!q1('#tmBd.on')||/INPUT|TEXTAREA/.test(document.activeElement.tagName))return;if(e.key==='ArrowRight')stepToday(1);if(e.key==='ArrowLeft')stepToday(-1)});
+{let sx=0,sy=0;const tb=q1('#tmBd');tb&&tb.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;sy=e.touches[0].clientY},{passive:true});tb&&tb.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.5)stepToday(dx<0?1:-1)},{passive:true})}
+document.head.insertAdjacentHTML('beforeend','<style>.ibtn2{width:36px;height:36px;border-radius:10px;border:1px solid #dfe4f5;background:#fff;font:700 17px Inter,system-ui;cursor:pointer;color:#0b1b3f}.ibtn2:disabled{opacity:.35;cursor:default}.ibtn2[data-tr]{margin-left:auto;font-size:15px}</style>');
 $('[data-today],a.tpill').forEach(a=>a.addEventListener('click',openToday));
 if(location.hash==='#today')openToday();
 // jobs

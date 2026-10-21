@@ -1,5 +1,5 @@
 /* Server-side progress sync. localStorage = offline cache; the Ask Dad worker's Durable Object = source of truth. Latest timestamp wins per key. */
-(()=>{const KEYS=['amjad-roadmap-v1','amjad-profile','amjad-streak','amjad-pv','amjad-applied-v1','amjad-ivmarks','amjad-jobfilters','amjad-ui','amjad-net','amjad-events','amjad-nl'],TK='amjad-sync-ts';
+(()=>{const KEYS=['amjad-roadmap-v1','amjad-profile','amjad-streak','amjad-pv','amjad-applied-v1','amjad-ivmarks','amjad-jobfilters','amjad-ui','amjad-net','amjad-events','amjad-nl','amjad-apps','amjad-proj','amjad-exam','amjad-posts','amjad-cos','amjad-mentor'],TK='amjad-sync-ts';
 const SP=Storage.prototype,oSet=SP.setItem,oRm=SP.removeItem,ls=window.localStorage,U=()=>(window.ASKDAD_URL||'').replace(/\/$/,'')+'/state';
 let T={};try{T=JSON.parse(ls.getItem(TK)||'{}')}catch(e){}
 let dirty={},tm=null,quiet=false;
