@@ -2,6 +2,7 @@
 (()=>{const $=(s,r=document)=>[...r.querySelectorAll(s)],q1=(s,r=document)=>r.querySelector(s),E=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const W=()=>(window.ASKDAD_URL||'').replace(/\/$/,''),LS=(k,d)=>{try{return JSON.parse(localStorage.getItem(k))??d}catch(e){return d}},SET=(k,v)=>localStorage.setItem(k,JSON.stringify(v));
 const ET=ts=>new Date(ts).toLocaleString('en-US',{timeZone:'America/New_York',month:'short',day:'numeric',year:'numeric',hour:'numeric',minute:'2-digit'})+' ET';
+const md=t=>E(String(t??'').replace(/^#+\s*/gm,'')).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/(^|\W)\*(?!\s)(.+?)\*(?=\W|$)/g,'$1<i>$2</i>').replace(/`([^`]+)`/g,'<code>$1</code>').replace(/\n/g,'<br>');
 const hl=(t,w)=>{t=E(t);if(!w)return t;return t.replace(new RegExp('('+w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi'),'<mark>$1</mark>')};
 /* ---------- CSS ---------- */
 document.head.insertAdjacentHTML('beforeend',`<style>
@@ -12,7 +13,7 @@ body{padding-top:var(--tb)}
 body,main,.hero,.sec,.coach,h1,h2,h3,p,.bd .m,.modal,.qz{text-align:left!important}
 main{max-width:none!important;margin:0!important;padding:0 20px 120px!important}
 #views>section,#views>div{max-width:980px}
-.navg{display:none!important}
+.navg{display:none!important}.vhide{display:none!important}
 #smenu{position:fixed;left:0;top:var(--tb);bottom:0;width:var(--mw);background:#0b1b3f;color:#cfd8ff;overflow:auto;z-index:45;padding:10px 8px 80px;font:600 14px/1.3 Inter,system-ui,sans-serif}
 #smenu a{display:flex;gap:10px;align-items:center;color:#cfd8ff;text-decoration:none;padding:10px 12px;border-radius:12px;min-height:40px}
 #smenu a:hover{background:rgba(255,255,255,.08)}#smenu a.on{background:linear-gradient(90deg,#4f46e5,#db2777);color:#fff}
@@ -35,7 +36,8 @@ main{max-width:none!important;margin:0!important;padding:0 20px 120px!important}
 .vw h1{font-size:clamp(24px,3vw,34px);color:#0b1b3f;margin:18px 0 6px}.vw .card{background:#fff;border:1px solid #e3e8f7;border-radius:18px;padding:18px 20px;margin:14px 0}
 .vw .mut{color:#6b7590}.vw .kv{display:grid;grid-template-columns:max-content 1fr;gap:4px 14px;font-size:14.5px}.vw .kv b{color:#0b1b3f}
 .vw iframe.jd{width:100%;height:70vh;border:1px solid #e3e8f7;border-radius:14px;background:#fff}
-.qcard .qt{font-weight:700;color:#0b1b3f}.qcard .ty{font-size:11px;font-weight:700;text-transform:uppercase;color:#db2777;letter-spacing:.06em}.qcard .ans{display:none;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:12px 14px;margin-top:10px;white-space:pre-wrap}.qcard .ans.on{display:block}
+.qcard .qt{font-weight:700;color:#0b1b3f}.qcard .ty{font-size:11px;font-weight:700;text-transform:uppercase;color:#db2777;letter-spacing:.06em}.spin{display:inline-block;width:16px;height:16px;border:3px solid #c7d2fe;border-top-color:#4f46e5;border-radius:50%;animation:sp .8s linear infinite;vertical-align:-3px}@keyframes sp{to{transform:rotate(360deg)}}.sk{height:14px;border-radius:7px;margin:10px 0;background:linear-gradient(90deg,#eef1fb,#f8f9ff,#eef1fb);background-size:200% 100%;animation:skl 1.2s infinite}@keyframes skl{to{background-position:-200% 0}}.mock .b.iv p{margin:.3em 0}
+.qcard .ans{display:none;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:12px;padding:12px 14px;margin-top:10px}.qcard .ans.on{display:block}
 .qcard .acts{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.mk.on{outline:2px solid #4f46e5}
 .mock{display:flex;flex-direction:column;gap:10px}.mock .b{border-radius:14px;padding:12px 14px;white-space:pre-wrap;max-width:760px}.mock .iv{background:#fff;border:1px solid #e3e8f7}.mock .me{background:#eef2ff;align-self:flex-start}
 .mockin{display:flex;gap:8px;align-items:flex-end;margin-top:10px}.mockin textarea{flex:1;min-height:70px;border:1px solid #dfe4f5;border-radius:12px;padding:10px;font:16px/1.4 Inter,system-ui}
@@ -68,7 +70,7 @@ const kids=[...main.children];let pending=[];
 kids.forEach(el=>{if(el.id==='sres'||el.classList.contains('navg'))return;let v=el.classList.contains('hero')?'home':(el.id||'').startsWith('step-')?'steps':MAP[el.id];
  if(!v){pending.push(el);return}pending.forEach(p=>p.dataset.view=v);pending=[];el.dataset.view=v});
 pending.forEach(p=>p.dataset.view='home');
-$('main>[data-view]').forEach(el=>{if(el.dataset.view==='_hide')el.hidden=true;else views.append(el)});
+$('main>[data-view]').forEach(el=>{if(el.dataset.view==='_hide'){el.hidden=true;el.classList.add('vhide')}else views.append(el)});
 main.append(views);
 const dyn=document.createElement('div');dyn.className='vw';dyn.id='dyn';views.append(dyn);
 /* ---------- data ---------- */
@@ -98,7 +100,7 @@ q1('#jside .jsq').addEventListener('input',e=>{SQ.side=e.target.value.trim();dra
 let cur={v:'home'};
 function parse(){const h=location.hash||'#/home';if(h.startsWith('#/')){const [v,...a]=h.slice(2).split('/');return {v:v||'home',a:decodeURIComponent(a.join('/'))}}
  const id=h.slice(1);const el=document.getElementById(id);if(id==='today')return {v:'today'};if(el){const sec=el.closest('[data-view]');if(sec)return {v:sec.dataset.view,anchor:id}}return {v:'home'}}
-function show(v){$('#views>[data-view]').forEach(el=>el.hidden=el.dataset.view!==v);dyn.hidden=$('#views>[data-view]').some(el=>el.dataset.view===v);
+function show(v){$('#views>[data-view]').forEach(el=>el.classList.toggle('vhide',el.dataset.view!==v));dyn.hidden=$('#views>[data-view]').some(el=>el.dataset.view===v);
  $('#smenu a').forEach(a=>a.classList.toggle('on',a.dataset.v===v||(v==='job'||v==='interview')&&a.dataset.v==='jobs'))}
 async function route(){cur=parse();const v=cur.v;show(v);dyn.innerHTML='';drawSide();
  const R=RV[v];if(R){await R(cur.a)}
@@ -127,14 +129,14 @@ async function learn(btn,concept){btn.disabled=true;btn.textContent='Finding a v
 function qcard(k,q,i){const M=marks()[k];return `<div class="card qcard"><div class="ty">${E(q.type||'Question')} · Q${i+1}</div><div class="qt">${E(q.q)}</div>
 <div class="acts"><button class="jbtn sec2 sm" data-show type="button">👀 Show the right answer</button>${q.concept?`<button class="jbtn sec2 sm" data-learn="${E(q.concept)}" type="button">🎓 Learn this concept: ${E(q.concept)}</button>`:''}
 <button class="jbtn sec2 sm mk${M?.m==='got'?' on':''}" data-mk="got" data-k="${E(k)}" type="button">✅ Got it</button><button class="jbtn sec2 sm mk${M?.m==='again'?' on':''}" data-mk="again" data-k="${E(k)}" type="button">🔁 Practice again</button></div>
-<div class="ans">${E(q.a)}${(q.points||[]).length?'\n\nKey points to hit:\n'+q.points.map(p=>'• '+E(p)).join('\n'):''}</div></div>`}
+<div class="ans">${md(q.a)}${(q.points||[]).length?'<p><b>Key points to hit</b></p><ul>'+q.points.map(p=>`<li>${md(p)}</li>`).join('')+'</ul>':''}</div></div>`}
 dyn.addEventListener('click',e=>{const s=e.target.closest('[data-show]'),l=e.target.closest('[data-learn]'),m=e.target.closest('[data-mk]');
  if(s){const a=q1('.ans',s.closest('.qcard'));a.classList.toggle('on');s.textContent=a.classList.contains('on')?'🙈 Hide answer':'👀 Show the right answer'}
  if(l)learn(l,l.dataset.learn);
  if(m){const c=m.closest('.qcard');setMark(m.dataset.k,m.dataset.mk,q1('.qt',c).textContent);$('[data-mk]',c).forEach(b=>b.classList.toggle('on',b===m))}});
 RV.interview=async id=>{await jobsReady;const j=JOBS.find(x=>x.id===id);if(!j){dyn.innerHTML='<h1>Job not found</h1>';return}
  dyn.innerHTML=`<p><a href="#/job/${E(j.id)}">← ${E(j.title)}</a></p><h1>🎤 Interview practice</h1><p class="mut">${E(j.title)} · ${E(j.company)}. You've got this: every rep makes the real one easier.</p>
-<div class="row" style="display:flex;gap:8px;flex-wrap:wrap"><button class="jbtn pri" id="mockGo" type="button">▶ Start live mock interview</button></div><div id="mockBox"></div><div id="prep"><div class="card">Preparing questions tailored to this job and your experience… (first time takes about 20 seconds)</div></div>`;
+<div class="row" style="display:flex;gap:8px;flex-wrap:wrap"><button class="jbtn pri" id="mockGo" type="button">▶ Start live mock interview</button></div><div id="mockBox"></div><div id="prep"><div class="card"><span class="spin"></span> <b>Preparing questions tailored to this job and your experience…</b><p class="mut">First time only takes about 20 seconds, then it's saved and instant.</p><div class="sk"></div><div class="sk" style="width:80%"></div><div class="sk" style="width:60%"></div></div></div>`;
  q1('#mockGo').onclick=()=>mock(j);
  try{const p=await post({mode:'prep',job:jobLite(j)});if(p.error)throw p;
   q1('#prep').innerHTML=`<div class="card"><h3>What the interview will likely look like</h3><p>${E(p.format)}</p></div><h2>Likely questions</h2>`+(p.questions||[]).map((q,i)=>qcard(j.id+':'+i,q,i)).join('')+((p.gaps||[]).length?`<div class="card"><h3>🎯 Gaps to prep for this job</h3><ul>${p.gaps.map(g=>`<li>${E(g)}</li>`).join('')}</ul></div>`:'');
@@ -145,11 +147,18 @@ function mock(j){const sid='iv-'+j.id+'-'+Date.now();let msgs=[],n=0;const box=q
 <div class="mockin"><textarea id="mkT" placeholder="Type your answer…"></textarea><div style="display:flex;flex-direction:column;gap:6px"><button class="jbtn sec2" id="mkMic" type="button" aria-label="Record answer">🎤</button><button class="jbtn pri" id="mkS" type="button">Send</button></div></div>
 <p><button class="jbtn sec2 sm" id="mkEnd" type="button">Finish & get my summary</button></p></div>`;
  const mk=q1('#mk'),T=q1('#mkT');
- const add=(cls,txt)=>{const d=document.createElement('div');d.className='b '+cls;d.textContent=txt;mk.append(d);d.scrollIntoView({block:'nearest'});return d};
- async function turn(end){const w=add('iv','…');try{const d=await post({mode:'turn',sid,job:jobLite(j),msgs,end,max:6});w.textContent=d.reply||'(no reply)';msgs.push({role:'assistant',content:d.reply});
-  const ra=(d.reply.match(/\*\*Right answer:\*\*([\s\S]*?)(\n\*\*Concept|\n\*\*Next|$)/)||[])[1],c=((d.reply.match(/\*\*Concept:\*\*\s*(.+)/)||[])[1]||'').trim();
-  if(ra||c){const k=j.id+':mock:'+sid+':'+n;const qd=document.createElement('div');qd.className='qcard';qd.innerHTML=`<div class="acts">${c?`<button class="jbtn sec2 sm" data-learn="${E(c)}" type="button">🎓 Learn this concept: ${E(c)}</button>`:''}<button class="jbtn sec2 sm mk" data-mk="got" data-k="${E(k)}" type="button">✅ Got it</button><button class="jbtn sec2 sm mk" data-mk="again" data-k="${E(k)}" type="button">🔁 Practice again</button></div><span class="qt" hidden>${E((msgs.filter(m=>m.role==='assistant').slice(-2)[0]?.content.match(/(?:Next question:\*\*|^)([^\n]*\?)/)||[])[1]||'Mock question')}</span>`;mk.append(qd)}
-  if(d.ended){q1('.mockin',box).remove();q1('#mkEnd').remove();add('iv','🎉 Saved to My progress. Great work, Amjad!')}}catch(e){w.textContent='Connection hiccup. Tap Send again.'}}
+ const add=(cls,txt)=>{const d=document.createElement('div');d.className='b '+cls;d.textContent=txt;if(cls==='me')mk.append(d);else mk.append(d);d.scrollIntoView({block:'nearest'});return d};const _x=(cls,txt)=>{const d=document.createElement('div');d.className='b '+cls;d.textContent=txt;mk.append(d);d.scrollIntoView({block:'nearest'});return d};
+ async function turn(end){const w=add('iv','');w.innerHTML='<span class="spin"></span> Interviewer is thinking…';
+  try{const d=await post({mode:'turn',sid,job:jobLite(j),msgs,end,max:6});msgs.push({role:'assistant',content:[d.feedback&&'Feedback: '+d.feedback,d.question&&'Question: '+d.question].filter(Boolean).join('\n')});
+   let h='';if(d.greeting)h+=`<p>${md(d.greeting)}</p>`;
+   if(d.feedback)h+=`<p><b>Feedback:</b> ${md(d.feedback)}</p>`;if(d.score!=null&&!d.summary)h+=`<p><b>Score:</b> ${E(d.score)}/10</p>`;
+   if(d.better_answer)h+=`<details><summary>💡 A stronger version of your answer</summary><p>${md(d.better_answer)}</p></details>`;
+   if(d.summary){const S=d.summary;h+=`<h3>🎉 Interview summary: ${E(S.score)}/10</h3><p><b>Strengths</b></p><ul>${(S.strengths||[]).map(x=>`<li>${md(x)}</li>`).join('')}</ul><p><b>Practise next</b></p><ul>${(S.practice||[]).map(x=>`<li>${md(x)}</li>`).join('')}</ul><p>${md(S.closing||'')}</p>`}
+   w.innerHTML=h||'';if(!h)w.remove();
+   if(d.question){n++;const k=j.id+':mock:'+sid+':'+n,qc=document.createElement('div');qc.className='card qcard';
+    qc.innerHTML=`<div class="ty">Question ${n}</div><div class="qt">${md(d.question)}</div><div class="acts"><button class="jbtn sec2 sm" data-show type="button">👀 Show suggested answer</button>${d.video?`<a class="jbtn sec2 sm" href="${E(d.video.url)}" target="_blank" rel="noopener">🎓 Learn this concept: ▶ ${E(d.video.title)} <span class="mut">(${E(d.video.channel)}, ${E(d.video.date)})</span></a>`:d.concept?`<button class="jbtn sec2 sm" data-learn="${E(d.concept)}" type="button">🎓 Learn this concept: ${E(d.concept)}</button>`:''}<button class="jbtn sec2 sm mk" data-mk="got" data-k="${E(k)}" type="button">✅ Got it</button><button class="jbtn sec2 sm mk" data-mk="again" data-k="${E(k)}" type="button">🔁 Practice again</button></div><div class="ans">${md(d.suggested_answer||'')}${(d.key_points||[]).length?'<p><b>Key points to hit</b></p><ul>'+d.key_points.map(x=>`<li>${md(x)}</li>`).join('')+'</ul>':''}</div>`;
+    mk.append(qc);qc.scrollIntoView({block:'nearest'})}
+   if(d.ended){q1('.mockin',box)?.remove();q1('#mkEnd')?.remove();add('iv','Saved to My progress. Great work, Amjad! 💪')}}catch(e){w.textContent='Connection hiccup. Tap Send again.'}}
  q1('#mkS').onclick=()=>{const t=T.value.trim();if(!t)return;T.value='';add('me',t);msgs.push({role:'user',content:t});n++;turn(false)};
  q1('#mkEnd').onclick=()=>{if(msgs.length)turn(true)};
  let rec=null;q1('#mkMic').onclick=async()=>{const b=q1('#mkMic');if(rec){rec.stop();return}
