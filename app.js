@@ -14,7 +14,7 @@ const boxes=$('input[data-k]');
 function streak(){let d=JSON.parse(localStorage.getItem(SK)||'[]'),n=0,t=new Date();for(;;){const s=t.toLocaleDateString('en-CA');if(d.includes(s)){n++;t.setDate(t.getDate()-1)}else if(n===0&&s===today()){t.setDate(t.getDate()-1)}else break}return n}
 function upd(){const dayB=boxes.filter(b=>/^d\d/.test(b.dataset.k)),n=dayB.filter(b=>b.checked).length;q1('.prog i').style.width=(100*n/dayB.length)+'%';
  let dd=0;for(let d=1;d<=14;d++){const bs=dayB.filter(b=>b.dataset.k.startsWith('d'+d+'-'));if(bs.length&&bs.every(b=>b.checked))dd++}
- q1('#sDone').textContent=boxes.filter(b=>b.checked).length;q1('#sDays').textContent=dd+'/14';q1('#sStreak').textContent=streak();coach()}
+ q1('#sDone').textContent=boxes.filter(b=>b.checked).length;q1('#sDays').textContent=dd+'';q1('#sStreak').textContent=streak();coach()}
 boxes.forEach(b=>{b.checked=!!S[b.dataset.k];b.onchange=()=>{S[b.dataset.k]=b.checked;localStorage.setItem(K,JSON.stringify(S));if(b.checked){const d=JSON.parse(localStorage.getItem(SK)||'[]');if(!d.includes(today())){d.push(today());localStorage.setItem(SK,JSON.stringify(d.slice(-60)))}toast('Nice work, Amjad! ✅')}upd()}});
 // adapt to profile
 const DIRN={iam:'Identity & access engineering',soc:'SOC / security analyst',cloud:'Cloud security',grc:'GRC'};
@@ -29,7 +29,7 @@ function adapt(){const p=prof||{dir:'iam',certs:['sc300'],tool:'copilot',mode:'a
 function coach(){if(!prof){q1('#cTitle').textContent='Let\'s get started';q1('#cNext').innerHTML='Take the 1-minute quiz so I can tailor your plan. <button class="btn" type="button" id="cQ" style="margin-top:8px">Start the quiz</button>';q1('#cQ').onclick=quiz;return}
  const acc=boxes.filter(b=>b.dataset.k.startsWith('acc-'));if(acc.filter(b=>b.checked).length<3){q1('#cTitle').textContent='Next step: set up your job accounts';q1('#cNext').innerHTML='<b>Create at least LinkedIn, HiringCafe and Jobright</b> with IAM alerts at $100K+. <a href="#accounts">Open the checklist →</a>';return}
  for(let d=1;d<=14;d++){const bs=boxes.filter(b=>b.dataset.k.startsWith('d'+d+'-'));const nb=bs.find(b=>!b.checked);if(nb){const t=q1('#day-'+d+' h2').textContent;q1('#cTitle').textContent='Next step: Day '+d;q1('#cNext').innerHTML=`<b>${t}</b><br>${nb.parentElement.textContent} <br><a href="#day-${d}">Go to Day ${d} →</a>`;return}}
- q1('#cTitle').textContent='You finished all 14 days! 🎉';q1('#cNext').innerHTML='Now: apply to 3 roles a week from the <a href="#jobs">Jobs board</a> and book your SC-300 exam.'}
+ q1('#cTitle').textContent='You finished every day of the plan! 🎉';q1('#cNext').innerHTML='Now: apply to 3 roles a week from the <a href="#jobs">Jobs board</a> and book your SC-300 exam.'}
 // quiz
 const qB=q1('#qBd'),qF=q1('#qF');function quiz(){if(prof){for(const[k,v]of Object.entries(prof)){if(k==='certs')$('input[name=certs]',qF).forEach(c=>c.checked=v.includes(c.value));else{const r=q1(`input[name=${k}][value="${v}"]`,qF);if(r)r.checked=true}}}openM('qBd','input')}
 qF.onsubmit=e=>{e.preventDefault();const f=new FormData(qF);prof={dir:f.get('dir'),certs:f.getAll('certs'),tool:f.get('tool'),goal:f.get('goal'),mode:f.get('mode'),hours:f.get('hours'),at:today()};if(!prof.certs.length)prof.certs=['sc300'];
