@@ -1,0 +1,21 @@
+{
+  "items": [
+    {
+      "date": "2026-10-21",
+      "product": "Microsoft Security",
+      "headline": "Now Microsoft Defender can discover the AI agents running on company laptops",
+      "explanation": "On October 19, 2026 Microsoft announced it is extending Project Perception to secure 'the agentic insider': Guardian Agents watch AI agents and contain risky actions, and Microsoft Defender can now discover dozens of local AI agent types (such as coding agents) once it sees them running on onboarded devices. The message is that agents need their own identity, least-privilege permissions and monitoring, just like people.",
+      "why": "AI agents are becoming a new kind of identity. Companies will need IAM people who can give agents their own identities, scope their access, review it and remove it, which is JML for agents. Saying this in an interview shows you're current.",
+      "say": "Did you know Microsoft now treats AI agents as insiders that need their own identity and least-privilege access?",
+      "source": "https://www.microsoft.com/en-us/security/blog/2026/10/19/agents-are-your-newest-insiders-security-must-move-at-their-speed/",
+      "source_label": "Microsoft Security Blog: Agents are your newest insiders (Oct 19, 2026)",
+      "video": "",
+      "video_title": "",
+      "prompts": {
+        "cla": "Hi Claude! I'm Amjad, an IT Support Coordinator moving into Identity & Access Management (IAM). I hold Security+ and I'm studying for SC-300. I practice only in my own lab tenant with made-up users.\n\nContext: Today in AI & Cyber: Now Microsoft Defender can discover the AI agents running on company laptops\nMy task: explain in simple terms how an IAM team should manage the lifecycle of AI agents (creation, ownership, least-privilege access, access reviews, removal), with a short joiner/mover/leaver checklist for agents.\n\nPlease (1) ask me up to 3 quick questions if anything is unclear, (2) walk me through it in short, numbered steps, and (3) finish with a ready-to-use result (table, checklist, script or doc) I can save to my portfolio. Keep it encouraging and concise.",
+        "cop": "Hi Copilot! I'm Amjad, an IT Support Coordinator growing into Identity & Access Management. I'm working inside our Microsoft 365 apps and following my company's AI and data policy.\n\nContext: Today in AI & Cyber: Now Microsoft Defender can discover the AI agents running on company laptops\nMy task: explain in simple terms how an IAM team should manage the lifecycle of AI agents (creation, ownership, least-privilege access, access reviews, removal), with a short joiner/mover/leaver checklist for agents.\n\nPlease (1) ask me up to 3 quick questions, and let me point you to files with / (for example /[JML checklist]), (2) give short numbered steps using Entra admin center, Teams, Word, Excel or Outlook where it helps, and (3) put the finished result in a Copilot Page I can edit. Keep it concise.",
+        "gpt": "Hi ChatGPT! I'm Amjad, an IT Support Coordinator growing into Identity & Access Management, using our company's ChatGPT Enterprise workspace under our AI and data policy.\n\nContext: Today in AI & Cyber: Now Microsoft Defender can discover the AI agents running on company laptops\nMy task: explain in simple terms how an IAM team should manage the lifecycle of AI agents (creation, ownership, least-privilege access, access reviews, removal), with a short joiner/mover/leaver checklist for agents.\n\nPlease (1) ask me up to 3 quick questions, (2) give short numbered steps, and (3) finish with a clean result I can paste into a doc or canvas. Keep it concise."
+      }
+    }
+  ]
+}

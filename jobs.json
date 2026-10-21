@@ -1,0 +1,103 @@
+{
+ "criteria": "$100K+ salary (range midpoint) or $75+/hr; gigs listed separately",
+ "jobs": [
+  {
+   "title": "Azure Entra IAM Engineer",
+   "company": "Piper Companies (client: enterprise organization)",
+   "pay": "$115,000–$135,000/yr",
+   "pay_min": 115000,
+   "type": "Full-time",
+   "mode": "Remote",
+   "location": "Remote (US)",
+   "source": "Employer site",
+   "url": "https://careers.pipercompanies.com/details/2759/azure_entra_iam_engineer_176426",
+   "posted": "2026-10-15",
+   "fit": "Entra Enterprise Apps, access reviews, PIM, JML automation, Graph API. Exactly the Days 3–9 skills.",
+   "group": "main"
+  },
+  {
+   "title": "Senior IAM Engineer (Microsoft Entra ID)",
+   "company": "Insmed",
+   "pay": "$133,000–$173,000/yr",
+   "pay_min": 133000,
+   "type": "Full-time",
+   "mode": "On-site/Hybrid NY/NJ",
+   "location": "Bridgewater, NJ (hybrid, mostly remote)",
+   "source": "Hirify (employer listing)",
+   "url": "https://hirify.me/jobs/909095-senior-iam-engineer-entra",
+   "posted": "2026-10",
+   "fit": "AD + Entra ID, Conditional Access, MFA, PIM, JML automation, PowerShell/Graph. A stretch role worth applying to after SC-300.",
+   "group": "main"
+  },
+  {
+   "title": "Identity Access Management Analyst",
+   "company": "Sumitomo Mitsui Trust Bank",
+   "pay": "$90,000–$125,000/yr",
+   "pay_min": 90000,
+   "type": "Full-time",
+   "mode": "On-site/Hybrid NY/NJ",
+   "location": "New York, NY (hybrid)",
+   "source": "Teal (employer listing)",
+   "url": "https://www.tealhq.com/job/identity-access-management-analyst_7ea1aead85d366465753320e9bbbe7d4eefe2",
+   "posted": "2026-08",
+   "fit": "Identity governance, access administration, least privilege. Negotiate toward the top of the range.",
+   "group": "main"
+  },
+  {
+   "title": "Cyber Security Engineer (Entra ID, Intune, IAM)",
+   "company": "Lawrence Harvey (client: global organization)",
+   "pay": "$120,000–$130,000/yr",
+   "pay_min": 120000,
+   "type": "Full-time",
+   "mode": "Remote",
+   "location": "Remote, East Coast hours",
+   "source": "Jobmesh",
+   "url": "https://jobmesh.io/job/5421d85c-e3a4-4b68-a661-3002bae62378",
+   "posted": "2026-10-20",
+   "fit": "Entra ID, Intune, MFA, Conditional Access; lists Security+ and SC-300 as preferred certs.",
+   "group": "main"
+  },
+  {
+   "title": "CVE Vulnerability Expert (AI training)",
+   "company": "Mercor",
+   "pay": "$70–$90/hr",
+   "pay_min": 70,
+   "type": "Contract (AI training)",
+   "mode": "Remote",
+   "location": "Remote (US)",
+   "source": "Mercor",
+   "url": "https://work.mercor.com/jobs/list_AAABoDrLTtVzOBh5_cNK5rFh/cve-vulnerability-expert",
+   "posted": "2026-10",
+   "fit": "A stretch (it asks for AppSec/pen-testing experience). Worth watching; similar cyber listings open often.",
+   "group": "gig"
+  },
+  {
+   "title": "Cybersecurity / IT domain-expert roles",
+   "company": "Mercor Experts",
+   "pay": "$70–$150/hr typical (platform-advertised)",
+   "pay_min": 70,
+   "type": "Contract (AI training)",
+   "mode": "Remote",
+   "location": "Remote",
+   "source": "Mercor",
+   "url": "https://www.mercor.com/experts/",
+   "posted": "ongoing",
+   "fit": "Create a profile, choose cybersecurity and IT, and take the AI interview.",
+   "group": "gig"
+  },
+  {
+   "title": "Cybersecurity / IAM AI trainer roles",
+   "company": "micro1",
+   "pay": "$45–$125/hr typical (platform-advertised)",
+   "pay_min": 45,
+   "type": "Contract (AI training)",
+   "mode": "Remote",
+   "location": "Remote",
+   "source": "micro1",
+   "url": "https://www.micro1.ai/jobs",
+   "posted": "ongoing",
+   "fit": "Lots of live roles. Filter for cybersecurity and IT, then complete the AI interview.",
+   "group": "gig"
+  }
+ ]
+}
