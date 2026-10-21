@@ -90,20 +90,20 @@ const AK='amjad-applied-v1',FK='amjad-jobfilters',MK='amjad-ivmarks';
 const applied=()=>LS(AK,{}),isAp=j=>{const a=applied();return a[j.id]||a[j.url]};
 function toggleAp(j,on){const a=applied();delete a[j.url];if(on)a[j.id]=new Date().toLocaleDateString('en-US',{timeZone:'America/New_York'});else delete a[j.id];SET(AK,a);drawSide();if(cur.v==='job'||cur.v==='jobs')route()}
 /* ---------- filters ---------- */
-const FG=[['work_mode','Work mode',['On-site','Hybrid','Remote','Remote + travel']],['job_type','Job type',['Contract','Full-time','Contract-to-hire']],['employer_type','Employer',['Direct employer','Consulting/SI','Staffing agency','AI training gig']],['state','State',[]]];
-const getF=()=>Object.assign({work_mode:[],job_type:[],employer_type:[],state:[]},LS(FK,{}));
-const opts=(k,os)=>k==='state'?[...new Set(JOBS.map(j=>j.state).filter(Boolean))].sort((a,b)=>(a==='US')-(b==='US')||a.localeCompare(b)):os;
+const FG=[['work_mode','Work mode',['On-site','Hybrid','Remote','Remote + travel']],['job_type','Job type',['Contract','Full-time','Contract-to-hire']],['employer_type','Employer',['Direct employer','Consulting/SI','Staffing agency','AI training gig']],['state','State',[]],['source','Source',[]]];
+const getF=()=>Object.assign({work_mode:[],job_type:[],employer_type:[],state:[],source:[]},LS(FK,{}));
+const opts=(k,os)=>k==='source'?Object.entries(JOBS.reduce((a,j)=>(j.source&&(a[j.source]=(a[j.source]||0)+1),a),{})).sort((a,b)=>b[1]-a[1]).map(x=>x[0]):k==='state'?[...new Set(JOBS.map(j=>j.state).filter(Boolean))].sort((a,b)=>(a==='US')-(b==='US')||a.localeCompare(b)):os;
 let SQ={side:'',main:''};
 const hay=j=>[j.title,j.company,j.location,j.pay,j.mode,j.summary,(j.reqs||[]).join(' '),j.fit,j.source,j.employer_type,j.job_type].join(' ').toLowerCase();
 function filt(w,skipG){const F=getF();return JOBS.filter(j=>FG.every(([k])=>k===skipG||!F[k]?.length||F[k].includes(j[k]))&&(!w||w.toLowerCase().split(/\s+/).every(x=>hay(j).includes(x))))}
 function pillsHTML(w){const F=getF();const all=!FG.some(([k])=>F[k]?.length);
- return `<button class="pl${all?' on':''}" data-all="1" type="button">All<i>${filt(w).length}</i></button>`+FG.map(([k,l,os])=>`<span class="gl">${l}</span>`+opts(k,os).map(o=>{const n=filt(w,k).filter(j=>j[k]===o).length;return `<button class="pl${F[k]?.includes(o)?' on':''}" data-g="${k}" data-o="${E(o)}" type="button">${E(o==='US'?'Remote (any US)':o)}<i>${n}</i></button>`}).filter((h,i,a)=>k!=='state'||!/<i>0<\/i>/.test(h)||getF().state.includes(opts(k,os)[i])).join('')).join('')}
+ return `<button class="pl${all?' on':''}" data-all="1" type="button">All<i>${filt(w).length}</i></button>`+FG.map(([k,l,os])=>`<span class="gl">${l}</span>`+opts(k,os).map(o=>{const n=filt(w,k).filter(j=>j[k]===o).length;return `<button class="pl${F[k]?.includes(o)?' on':''}" data-g="${k}" data-o="${E(o)}" type="button">${E(o==='US'?'Remote (any US)':o)}<i>${n}</i></button>`}).filter((h,i,a)=>(k!=='state'&&k!=='source')||!/<i>0<\/i>/.test(h)||(getF()[k]||[]).includes(opts(k,os)[i])).join('')).join('')}
 document.addEventListener('click',e=>{const p=e.target.closest('.pills .pl');if(!p)return;let F=getF();
- if(p.dataset.all)F={work_mode:[],job_type:[],employer_type:[],state:[]};else{const g=p.dataset.g,o=p.dataset.o;F[g]=F[g]||[];F[g]=F[g].includes(o)?F[g].filter(x=>x!==o):[...F[g],o]}
+ if(p.dataset.all)F={work_mode:[],job_type:[],employer_type:[],state:[],source:[]};else{const g=p.dataset.g,o=p.dataset.o;F[g]=F[g]||[];F[g]=F[g].includes(o)?F[g].filter(x=>x!==o):[...F[g],o]}
  SET(FK,F);drawSide();if(cur.v==='jobs')route()});
 const sortJ=L=>[...L].sort((a,b)=>(a.group==='gig')-(b.group==='gig')||String(b.posted).localeCompare(String(a.posted)));
 const wk=Date.now()-7*864e5,loc=j=>j.location&&j.location.toLowerCase().startsWith(String(j.work_mode).toLowerCase())?j.location:`${j.work_mode} · ${j.location}`;
-function card(j,w,act){return `<a class="jbc${isAp(j)?' ap':''}${act?' on':''}" href="#/job/${E(j.id)}"><span class="t">${hl(j.title,w)}</span>${Date.parse(j.posted)>wk?'<span class="new">NEW</span>':''}<div class="m">${hl(j.company,w)}</div><div class="p">${hl(j.pay,w)}</div><div class="m">${hl(loc(j),w)} · ${E(j.job_type)} · ${E(j.employer_type)}</div><div class="m">${j.source&&j.source!==j.employer_type?E(j.source)+' · ':''}posted ${E(j.posted)}${j.pay_est?' · pay est.':''}${isAp(j)?' · ✅ Applied '+E(isAp(j)):''}</div>
+function card(j,w,act){return `<a class="jbc${isAp(j)?' ap':''}${act?' on':''}" href="#/job/${E(j.id)}"><span class="t">${hl(j.title,w)}</span>${Date.parse(j.posted)>wk?'<span class="new">NEW</span>':''}<div class="m">${hl(j.company,w)}</div><div class="p">${hl(j.pay,w)}</div><div class="m">${hl(loc(j),w)} · ${E(j.job_type)} · ${E(j.employer_type)}</div><div class="m">${j.source?'via '+E(j.source)+' · ':''}posted ${E(j.posted)}${j.pay_est?' · pay est.':''}${isAp(j)?' · ✅ Applied '+E(isAp(j)):''}</div>
 <div class="row"><button class="jbtn sec2 sm" data-ap="${E(j.id)}" type="button">${isAp(j)?'✅ Applied':'Mark applied'}</button><button class="jbtn sec2 sm" data-iv="${E(j.id)}" type="button">🎤 Practice interview</button></div></a>`}
 document.addEventListener('click',e=>{const a=e.target.closest('[data-ap]'),v=e.target.closest('[data-iv]');if(a){e.preventDefault();e.stopPropagation();const j=JOBS.find(x=>x.id===a.dataset.ap);toggleAp(j,!isAp(j))}else if(v){e.preventDefault();e.stopPropagation();location.hash='#/interview/'+v.dataset.iv}},true);
 let PG={side:30,main:30};
@@ -123,7 +123,7 @@ async function route(){cur=parse();const v=cur.v;show(v);dyn.innerHTML='';drawSi
 addEventListener('hashchange',route);
 /* ---------- dynamic views ---------- */
 const RV={};
-RV.jobs=async()=>{await jobsReady;const w=SQ.main,L=sortJ(filt(w));dyn.innerHTML=`<h1>💼 Jobs found for you</h1><p class="mut">Verified roles paying $100K+ (or $75+/hr contract): NY/NJ on-site or hybrid, remote anywhere in the US, and travel roles. AI training gigs are listed separately and can pay less. Tap a job for details, interview practice and the apply link.</p>
+RV.jobs=async()=>{await jobsReady;const w=SQ.main,L=sortJ(filt(w));dyn.innerHTML=`<h1>💼 Jobs found for you</h1><p class="sm">📊 Market data: <a href="https://www.cyberseek.org/heatmap.html" target="_blank" rel="noopener">CyberSeek heatmap ↗</a> shows cyber job demand and salaries by state, and the <a href="https://www.cyberseek.org/pathway.html" target="_blank" rel="noopener">career pathway ↗</a> shows how roles connect (not a job board).</p><p class="mut">Verified roles paying $100K+ (or $75+/hr contract): NY/NJ on-site or hybrid, remote anywhere in the US, and travel roles. AI training gigs are listed separately and can pay less. Tap a job for details, interview practice and the apply link.</p>
 <input class="jsq" id="jmq" type="search" placeholder="Search jobs: title, skill, city, pay…" value="${E(w)}" style="max-width:520px"><button class="rf" type="button">Reset filters</button><div class="pills">${pillsHTML(w)}</div><div id="jml">${L.slice(0,PG.main).map(j=>card(j,w)).join('')+(L.length>PG.main?`<button class="jbtn sec2 more" data-more="main" type="button">Show more (${L.length-PG.main})</button>`:'')||'<p class="mut">No jobs match these filters. Tap All to reset.</p>'}</div>`;
  const i=q1('#jmq');i.oninput=()=>{SQ.main=i.value.trim();q1('#jml').innerHTML=sortJ(filt(SQ.main)).slice(0,PG.main).map(j=>card(j,SQ.main)).join('');q1('.vw .pills').innerHTML=pillsHTML(SQ.main)}};
 RV.job=async id=>{await jobsReady;const j=JOBS.find(x=>x.id===id);if(!j){dyn.innerHTML='<h1>Job not found</h1><p><a href="#/jobs">Back to jobs</a></p>';return}drawSide();
@@ -240,7 +240,7 @@ function enh(i){if(i.__sx)return;i.__sx=1;const w=document.createElement('span')
  const clr=()=>{i.value='';i.dispatchEvent(new Event('input',{bubbles:true}));up();i.focus()};b.onclick=clr;
  i.addEventListener('keydown',e=>{if(e.key==='Escape'&&i.value){e.preventDefault();e.stopPropagation();clr()}})}
 const enhAll=()=>$('input[type=search],#sq,.jsq').forEach(enh);enhAll();new MutationObserver(enhAll).observe(document.body,{childList:true,subtree:true});
-document.addEventListener('click',e=>{if(e.target.closest('.rf')){SET(FK,{work_mode:[],job_type:[],employer_type:[],state:[]});drawSide();if(cur.v==='jobs')route()}});
+document.addEventListener('click',e=>{if(e.target.closest('.rf')){SET(FK,{work_mode:[],job_type:[],employer_type:[],state:[],source:[]});drawSide();if(cur.v==='jobs')route()}});
 window.__shell={RV,route,dyn,E,md,hl,LS,SET,ET,W,jobsReady,getJobs:()=>JOBS,cur:()=>cur,loadHist};
 addSearch();drawSide();jobsReady.then(drawSide);setTimeout(route,0);
 window.addEventListener('amjad-quiz-done',()=>{location.hash='#/home'});
