@@ -9,11 +9,12 @@ VJ="$VJ" python3 - <<'PY'
 import os,json,datetime as D,zoneinfo,collections
 Z=zoneinfo.ZoneInfo('America/New_York');V=json.loads(os.environ['VJ'])
 def t(x): return D.datetime.fromtimestamp(x/1000 if x>1e11 else x,Z) if isinstance(x,(int,float)) else D.datetime.fromisoformat(str(x).replace('Z','+00:00')).astimezone(Z)
-print(f"{'Date':<12}{'Start (ET)':<12}{'Minutes':>8}  Pages");tot=collections.OrderedDict()
+print(f"{'Date':<12}{'Start (ET)':<12}{'Minutes':>8}  {'Device':<28}Pages");tot=collections.OrderedDict()
 for v in sorted(V,key=lambda v:t(v['start'])):
     s=t(v['start']);m=round((v.get('active_sec') or 0)/60,1);d=s.strftime('%a %b %d')
     pg=[p if isinstance(p,str) else p.get('p','') for p in v.get('pages',[])]
-    print(f"{d:<12}{s.strftime('%I:%M %p'):<12}{m:>8}  {', '.join(dict.fromkeys(pg))[:90]}")
+    print(f"{d:<12}{s.strftime('%I:%M %p'):<12}{m:>8}  {(v.get('device') or '-'):<28}{', '.join(dict.fromkeys(pg))[:90]}")
+    if v.get('secs'): print(f"{'':<34}sections: {', '.join(v['secs'])[:150]}")
     a=tot.setdefault(d,[0,0]);a[0]+=1;a[1]+=m
 print('\nDaily totals (ET):')
 for d,(n,m) in tot.items(): print(f"  {d}: {n} visit(s), {m:.1f} active min")

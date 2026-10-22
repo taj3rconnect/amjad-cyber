@@ -87,8 +87,8 @@ export default {
     }
     if (url.pathname === "/visit" && req.method === "POST") {
       if (o !== ORIGIN) return new Response(null, { status: 204 });
-      const b = await req.text(); if (b.length > 2000) return new Response(null, { status: 413 });
-      await st.fetch("https://do/visit", { method: "POST", body: b }); return new Response(null, { status: 204, headers: h });
+      const b = await req.text(); if (b.length > 6000) return new Response(null, { status: 413 });
+      await st.fetch("https://do/visit", { method: "POST", body: b, headers: { "X-UA": (req.headers.get("User-Agent") || "").slice(0, 300) } }); return new Response(null, { status: 204, headers: h });
     }
     if (url.pathname === "/visits") {
       const k = (req.headers.get("Authorization") || "").replace(/^Bearer /, "");
@@ -210,7 +210,7 @@ export class Store {
     this.sql.exec("CREATE TABLE IF NOT EXISTS ivprep(id TEXT PRIMARY KEY, prep TEXT, ts INTEGER)");
     this.sql.exec("CREATE TABLE IF NOT EXISTS iv(sid TEXT PRIMARY KEY, job TEXT, msgs TEXT, ended INTEGER, score REAL, ts INTEGER, started INTEGER)");
     this.sql.exec("CREATE TABLE IF NOT EXISTS kv(k TEXT PRIMARY KEY, v TEXT, ts INTEGER)");
-    this.sql.exec("CREATE TABLE IF NOT EXISTS visits(sid TEXT PRIMARY KEY, start INTEGER, last INTEGER, active INTEGER, pages TEXT)");
+    this.sql.exec("CREATE TABLE IF NOT EXISTS visits(sid TEXT PRIMARY KEY, start INTEGER, last INTEGER, active INTEGER, pages TEXT)"); for (const c of ["device TEXT","secs TEXT"]) { try { this.sql.exec("ALTER TABLE visits ADD COLUMN " + c) } catch (e) {} }
     this.sql.exec("CREATE TABLE IF NOT EXISTS ev(id INTEGER PRIMARY KEY AUTOINCREMENT, ts INTEGER, kind TEXT, detail TEXT)"); }
   stEvents(k, oldV, newV, ts) {
     const P = s => { try { return JSON.parse(s || "null") } catch (e) { return null } };
@@ -241,13 +241,16 @@ export class Store {
       const sid = String(b.sid || "").replace(/[^\w-]/g, "").slice(0, 40); if (!sid) return Response.json({});
       const now = Date.now(), start = Math.min(+b.start || now, now), act = Math.max(0, Math.min(+b.active || 0, 86400));
       const pages = (Array.isArray(b.pages) ? b.pages : []).map(x => String(x).slice(0, 60)).slice(0, 100);
-      const cur = this.sql.exec("SELECT active,pages FROM visits WHERE sid=?", sid).toArray()[0];
-      if (cur) { const P = [...new Set([...JSON.parse(cur.pages || "[]"), ...pages])].slice(0, 100); this.sql.exec("UPDATE visits SET last=?, active=?, pages=? WHERE sid=?", now, Math.max(cur.active, act), JSON.stringify(P), sid); }
-      else this.sql.exec("INSERT INTO visits(sid,start,last,active,pages) VALUES(?,?,?,?,?)", sid, start, now, act, JSON.stringify(pages));
+      const secs = (Array.isArray(b.secs) ? b.secs : []).map(x => String(x).slice(0, 40)).slice(0, 150);
+      const ua = req.headers.get("X-UA") || "";
+      const dev = (/iPad|Tablet|Android(?!.*Mobile)/i.test(ua) ? "Tablet" : /Mobi|iPhone|Android/i.test(ua) ? "Phone" : "Desktop") + " · " + (/Edg\//.test(ua) ? "Edge" : /OPR\//.test(ua) ? "Opera" : /SamsungBrowser/.test(ua) ? "Samsung" : /CriOS|Chrome\//.test(ua) ? "Chrome" : /FxiOS|Firefox\//.test(ua) ? "Firefox" : /Safari\//.test(ua) ? "Safari" : "Other") + " · " + (/iPhone|iPad|iOS/.test(ua) ? "iOS" : /Android/.test(ua) ? "Android" : /Windows/.test(ua) ? "Windows" : /Mac OS/.test(ua) ? "macOS" : /Linux/.test(ua) ? "Linux" : "?");
+      const cur = this.sql.exec("SELECT active,pages,secs FROM visits WHERE sid=?", sid).toArray()[0];
+      if (cur) { const P = [...new Set([...JSON.parse(cur.pages || "[]"), ...pages])].slice(0, 100), S = [...new Set([...JSON.parse(cur.secs || "[]"), ...secs])].slice(0, 150); this.sql.exec("UPDATE visits SET last=?, active=?, pages=?, secs=?, device=COALESCE(device,?) WHERE sid=?", now, Math.max(cur.active, act), JSON.stringify(P), JSON.stringify(S), dev, sid); }
+      else this.sql.exec("INSERT INTO visits(sid,start,last,active,pages,secs,device) VALUES(?,?,?,?,?,?,?)", sid, start, now, act, JSON.stringify(pages), JSON.stringify(secs), dev);
       return Response.json({ ok: true });
     }
     if (u.pathname === "/visits" && req.method === "DELETE") { const sid = u.searchParams.get("sid") || ""; this.sql.exec("DELETE FROM visits WHERE sid=?", sid); return Response.json({ ok: true, deleted: sid }); }
-    if (u.pathname === "/visits") return Response.json(this.sql.exec("SELECT sid,start,last,active,pages FROM visits ORDER BY start DESC LIMIT ?", +u.searchParams.get("limit") || 500).toArray().map(r => ({ sid: r.sid, start: r.start, last: r.last, active_sec: r.active, pages: JSON.parse(r.pages || "[]") })));
+    if (u.pathname === "/visits") return Response.json(this.sql.exec("SELECT sid,start,last,active,pages,secs,device FROM visits ORDER BY start DESC LIMIT ?", +u.searchParams.get("limit") || 500).toArray().map(r => ({ sid: r.sid, start: r.start, last: r.last, active_sec: r.active, pages: JSON.parse(r.pages || "[]"), secs: JSON.parse(r.secs || "[]"), device: r.device || "" })));
     if (u.pathname === "/state-reset") { this.sql.exec("DELETE FROM kv"); this.sql.exec("INSERT INTO kv(k,v,ts) VALUES('__epoch',?,?)", String(Date.now()), Date.now()); this.sql.exec("DELETE FROM ev"); this.sql.exec("DELETE FROM iv"); return Response.json({ ok: true }); }
     if (u.pathname === "/ivprep" && req.method === "POST") { const b = JSON.parse(await req.text()); this.sql.exec("INSERT OR REPLACE INTO ivprep(id,prep,ts) VALUES(?,?,?)", b.id, JSON.stringify(b.prep), Date.now()); return Response.json({ ok: true }); }
     if (u.pathname === "/ivprep") { const r = this.sql.exec("SELECT prep FROM ivprep WHERE id=?", u.searchParams.get("id")).toArray()[0]; return Response.json(r ? { prep: JSON.parse(r.prep) } : {}); }

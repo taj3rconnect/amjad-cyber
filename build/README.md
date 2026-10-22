@@ -15,3 +15,6 @@ Site repo = ../site (GitHub Pages, branch main). Backup of this folder: repo bra
 Content sources now: index.html (live, edited in place), and the JSON files in ../site
 (network, features, newsletters, exam, docs, today) are edited directly. The old generators
 (site.py/content.py/tpl.html, network.py, features.py, newsletters.py, exam_gen.py, docs.py) were lost and not rebuilt.
+
+Worker deploy (worker/node_modules is a symlink into the read-only Gudiya folder, so deploy from a temp copy):
+`rm -rf /tmp/wdeploy && mkdir -p /tmp/wdeploy/node_modules && cp ../worker/{worker.js,vmap.js,wrangler.toml,package.json} /tmp/wdeploy/ && cd /tmp/wdeploy && CLOUDFLARE_ACCOUNT_ID=c89d41910c2cb63fb5706a491f00fd57 /workspace/amjad-cyber/wtools/node_modules/.bin/wrangler deploy`
