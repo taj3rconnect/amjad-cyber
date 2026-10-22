@@ -1,0 +1,38 @@
+{
+ "checked": 358,
+ "live": 329,
+ "unknown": [
+  "https://himalayas.app/companies/peraton/jobs/senior-mobile-authentication-integration-engineer-ios-android",
+  "https://himalayas.app/companies/servicenow/jobs/advisory-solution-consultant-security-identity-exposure-management-armis-v",
+  "https://himalayas.app/companies/servicenow/jobs/advisory-solution-consultant-security-identity-exposure-management-armis",
+  "https://himalayas.app/companies/intuition-staffing/jobs/iam-developer-healthcare-remote-8420932673",
+  "https://himalayas.app/companies/southern-new-hampshire-university/jobs/iam-engineer-4071358702",
+  "https://himalayas.app/companies/stafford-gray/jobs/senior-identity-security-architect-active-directory-remote-contract",
+  "https://himalayas.app/companies/crowdstrike/jobs/specialist-ng-identity-security",
+  "https://himalayas.app/companies/4126-skechers-usa-france-s-a-s/jobs/sr-manager-identity-security-access-management",
+  "https://himalayas.app/companies/easy-dynamics-corporation/jobs/iam-operational-support",
+  "https://himalayas.app/companies/banner-health/jobs/senior-director-zero-trust-and-identity-security",
+  "https://himalayas.app/companies/cyera-com/jobs/technical-enablement-manager-identity-security",
+  "https://himalayas.app/companies/riot-platforms/jobs/senior-engineer-identity-access-management-iam",
+  "https://himalayas.app/companies/riot-platforms/jobs/director-identity-access-management-iam",
+  "https://himalayas.app/companies/true-zero-technologies/jobs/identity-management-engineer-architect-r-00197",
+  "https://himalayas.app/companies/abbvie/jobs/iam-federation-services-okta-engineer",
+  "https://himalayas.app/companies/guidepoint-security-llc/jobs/practice-lead-privilege-access-management-pam",
+  "https://himalayas.app/companies/strata-information-group/jobs/identity-and-access-management-consultant",
+  "https://himalayas.app/companies/centurylink/jobs/principal-architect-identity-access-and-management-remote-us-5244488532",
+  "https://himalayas.app/companies/look4it/jobs/senior-sap-successfactors-security-consultant-rbp-iam",
+  "https://himalayas.app/companies/guidepoint-security-llc/jobs/security-architect-ad-entra-id-remote-in-the-us",
+  "https://himalayas.app/companies/thrivent-financial-for-lutherans/jobs/principal-engineer-s-identity-and-access-management",
+  "https://himalayas.app/companies/repligen/jobs/senior-identity-access-management-iam-engineer",
+  "https://himalayas.app/companies/servicenow/jobs/advisory-solution-consultant-security-identity-exposure-management-east-c-3698112148",
+  "https://himalayas.app/companies/cyera-com/jobs/solution-architect-identity-security-cx",
+  "https://himalayas.app/companies/healthequity/jobs/sr-iam-security-engineer"
+ ],
+ "dead_scanned": [
+  "https://www.linkedin.com/jobs/view/4481141166",
+  "https://www.dice.com/job-detail/0e27182b-b329-4aa5-9d7e-32878c0a232c",
+  "https://www.clearancejobs.com/jobs/9022627/identity-and-access-managementabac-architect-suitland-md?source=job_search",
+  "https://www.clearancejobs.com/jobs/9003020/senior-ping-identity-integration-engineer-clearable?source=job_search"
+ ],
+ "dead_seed": []
+}

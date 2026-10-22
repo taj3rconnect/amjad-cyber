@@ -1,36 +1,5 @@
 [
  {
-  "id": "fanduel-sr-iam-nyc",
-  "title": "Senior IAM Engineer",
-  "company": "FanDuel",
-  "pay": "$138,000–$173,000/yr",
-  "pay_min": 138000,
-  "type": "Full-time",
-  "mode": "On-site/Hybrid NY/NJ",
-  "location": "New York, NY (hybrid)",
-  "source": "Built In",
-  "url": "https://builtin.com/job/senior-iam-engineer/11109451",
-  "posted": "2026-10-18",
-  "summary": "Senior engineer on FanDuel's identity team: SSO/federation, provisioning and access governance for a fast-moving regulated gaming company.",
-  "reqs": [
-   "Enterprise IAM engineering (SSO, MFA, lifecycle)",
-   "SAML/OIDC integrations",
-   "Automation (PowerShell/Python)",
-   "Access reviews and audit evidence"
-  ],
-  "fit": "Your JML automation in Adaxes and audit-trail discipline map straight to their lifecycle and compliance needs.",
-  "gaps": [
-   "Senior title: prepare 2 deep JML automation stories with numbers",
-   "Hands-on SAML/OIDC app integration (Steps 10-11)"
-  ],
-  "group": "main",
-  "work_mode": "Hybrid",
-  "job_type": "Full-time",
-  "employer_type": "Direct employer",
-  "state": "NY",
-  "frameable": true
- },
- {
   "id": "zp-azure-iam",
   "title": "Azure IAM Engineer",
   "company": "Piper Companies (client: technology organization)",
@@ -86,37 +55,6 @@
    "PIM and access reviews hands-on (Steps 5-6)",
    "Microsoft Graph PowerShell (Step 8)",
    "5+ yrs IAM ask: frame APTASK + WSAudiology as 5+ yrs identity work"
-  ],
-  "group": "main",
-  "work_mode": "Remote",
-  "job_type": "Full-time",
-  "employer_type": "Staffing agency",
-  "state": "US",
-  "frameable": false
- },
- {
-  "id": "lh-cyber-entra",
-  "title": "Cyber Security Engineer (Entra ID, Intune, IAM)",
-  "company": "Lawrence Harvey (client: global organization)",
-  "pay": "$120,000–$130,000/yr",
-  "pay_min": 120000,
-  "type": "Full-time",
-  "mode": "Remote",
-  "location": "Remote (US)",
-  "source": "Staffing agency",
-  "url": "https://jobmesh.io/job/5421d85c-e3a4-4b68-a661-3002bae62378",
-  "posted": "2026-10-20",
-  "summary": "Security engineer owning Entra ID, Intune and IAM controls for a global organization.",
-  "reqs": [
-   "Entra ID administration",
-   "Intune device compliance",
-   "IAM policies and MFA",
-   "Security operations"
-  ],
-  "fit": "Entra + Intune + JML is your exact current stack.",
-  "gaps": [
-   "Conditional access with device compliance",
-   "Talk about security incidents you helped contain"
   ],
   "group": "main",
   "work_mode": "Remote",

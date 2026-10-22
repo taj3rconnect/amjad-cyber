@@ -48,9 +48,11 @@ def posted(p):
     n=int(m.group(1));d={'minute':0,'hour':0,'day':n,'week':7*n,'month':30*n}[m.group(2)]
     return (TODAY-D.timedelta(days=d)).isoformat()
 def slug(s): return re.sub(r'[^a-z0-9]+','-',s.lower()).strip('-')
-REL=re.compile(r'identity|\biam\b|\bidm\b|\bpam\b|\biga\b|access management|access control|okta|sailpoint|saviynt|cyberark|entra|privileged|directory|ping ?identity|ciam|authentication|sso',re.I)
+REL=re.compile(r'identity|\biam\b|\bidm\b|\bpam\b|\biga\b|access management|access control|okta|sailpoint|saviynt|cyberark|\bentra\b|privileged|directory|ping ?identity|ciam|authentication|\bsso\b',re.I)
+FOREIGN=re.compile(r'india|bangalore|bengaluru|hyderabad|pune|canada|toronto|ontario|vancouver|montreal|\buk\b|united kingdom|(?<!new )england|london|ireland|dublin|germany|berlin|poland|warsaw|krak|mexico|guadalajara|jal\.|brazil|s[aã]o paulo|denmark|copenhagen|netherlands|amsterdam|spain|france|paris|singapore|australia|sydney|israel|tel aviv|japan|tokyo|philippines|costa rica|argentina|colombia|romania|portugal|lisbon|emea|apac|latam',re.I)
+NOTIAM=re.compile(r'account executive|sales|physical (security|access)|security officer|guard|intern\b|internship',re.I)
 def norm(r):
-    if not REL.search(r['title']): return None
+    if not REL.search(r['title']) or NOTIAM.search(r['title']): return None
     if r.get('pay'): p,u=tuple(r['pay']),r.get('unit') or 'yr'
     else: p,u=money(r.get('salary') or '')
     if not p:
@@ -67,7 +69,9 @@ def norm(r):
         est=True
     clear=bool(r.get('clearance'))
     if CLR.search(r['title']+' '+r['desc']) and not clear: return None
+    if FOREIGN.search(r['location']+' '+r['title']): return None
     wm=mode(r);st=state(r['location'])
+    if wm=='Hybrid' and st=='': return None
     if wm=='Remote' and st=='' : st='US'
     if wm=='On-site' and st not in ('NY','NJ'): return None
     txt=r['title']+' '+r['desc']
@@ -96,7 +100,7 @@ def main():
     prev=json.load(open('scanned_prev.json')) if os.path.exists('scanned_prev.json') else []
     cut=(TODAY-D.timedelta(days=KEEP_DAYS)).isoformat();carried=0
     for j in prev:
-        if key(j) not in fresh and j.get('posted','')>=cut: fresh[key(j)]=j;carried+=1
+        if key(j) not in fresh and j.get('posted','')>=cut and REL.search(j['title']) and not NOTIAM.search(j['title']) and not FOREIGN.search(j['location']+' '+j['title']) and j.get('state'): fresh[key(j)]=j;carried+=1
     out=sorted(fresh.values(),key=lambda j:j['posted'],reverse=True)
     json.dump(out,open('scanned.json','w'),indent=0,ensure_ascii=False)
     print(f'raw {len(raw)} -> kept fresh {len(out)-carried} + carried {carried} = {len(out)} (scanned.json)')

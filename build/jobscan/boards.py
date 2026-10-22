@@ -1,4 +1,4 @@
-"""Job boards via public pages: Dice, Levels.fyi, ClearanceJobs, Wellfound (JSON-LD JobPosting / __NEXT_DATA__) -> boards_raw.json.
+"""Job boards via public pages: Dice, Levels.fyi, ClearanceJobs, Wellfound, Himalayas API (JSON-LD JobPosting / __NEXT_DATA__) -> boards_raw.json.
 Blocked / no yield (checked Oct 2026): Built In, Jobright, Welcome to the Jungle, Infosec-Jobs, CyberSecurityJobs.com, Work at a Startup."""
 import re,json,html,time,urllib.request,urllib.parse
 UA={'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/130 Safari/537.36','Accept-Language':'en-US'}
@@ -66,9 +66,27 @@ def wellfound():
             x=ld(get(u))
             if x: out.append(frompost('Wellfound',u,x))
     return out
+def himalayas():
+    """Himalayas.app public JSON search API (remote-only board), US-eligible postings from the last 14 days."""
+    import datetime as D
+    out={};cut=time.time()-14*86400
+    for q in ['identity access management','IAM engineer','Okta','SailPoint','CyberArk','Entra ID','privileged access','identity governance','identity security']:
+        for off in (0,20,40):
+            h=get('https://himalayas.app/jobs/api/search?'+urllib.parse.urlencode({'q':q,'country':'US','offset':off}))
+            try: js=json.loads(h).get('jobs',[])
+            except Exception: js=[]
+            for j in js:
+                if 'United States' not in str(j.get('locationRestrictions')) or float(j.get('pubDate') or 0)<cut: continue
+                u=j.get('guid') or j.get('applicationLink','').split('?')[0]
+                lo,hi=j.get('minSalary'),j.get('maxSalary');unit={'annual':'yr','hourly':'hr'}.get(j.get('salaryPeriod'))
+                out[u]=dict(src='Himalayas',id=re.sub(r'\W','',u)[-10:],title=t(j.get('title')),company=t(j.get('companyName')),location='United States (Remote)',desc=t(j.get('description')),
+                    pay=(float(lo),float(hi)) if lo and hi and unit else None,unit=unit,url=u,posted=D.datetime.fromtimestamp(float(j['pubDate'])).strftime('%Y-%m-%d'),crit={'Employment type':j.get('employmentType','')})
+            if len(js)<20: break
+            time.sleep(.5)
+    return list(out.values())
 if __name__=='__main__':
     R=[]
-    for f in (dice,levels,clearance,wellfound):
+    for f in (dice,levels,clearance,wellfound,himalayas):
         try: r=f()
         except Exception as e: print(f.__name__,'FAILED',type(e).__name__); r=[]
         print(f.__name__,len(r));R+=r
