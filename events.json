@@ -1,7 +1,7 @@
 [
  {
   "title": "Simply Cyber Daily Cyber Threat Brief (weekdays 8 AM ET)",
-  "start": "2026-10-22T12:00:00Z",
+  "start": "2026-10-23T12:00:00Z",
   "online": true,
   "org": "Simply Cyber (Gerald Auger)",
   "cost": "Free",
@@ -14,25 +14,25 @@
   "city": null,
   "miles": null,
   "src": "Official site",
-  "id": "ev-0-simply-cyber-daily-cyb",
-  "start_et": "Thu Oct 22, 2026 · 8:00 AM ET"
+  "id": "ev-0-simply-cyber-daily-cyber",
+  "start_et": "Fri Oct 23, 2026 \u00b7 8:00 AM ET"
  },
  {
-  "title": "DirectorPlus (NYC): Agentic engineering and security in the agentic age",
-  "start": "2026-10-22T21:30:00.000Z",
-  "end": "2026-10-23T00:30:00.000Z",
-  "online": false,
+  "title": "Ask Microsoft Anything: How AI-Powered Attacks Happen (and the controls that stop them)",
+  "start": "2026-10-27T16:00:00Z",
+  "end": null,
+  "online": true,
   "venue": null,
-  "city": "New York, NY",
-  "miles": 26,
-  "org": "Peter Bell, WorkOS",
+  "city": null,
+  "miles": null,
+  "org": "Microsoft Security (Tech Community)",
   "cost": "Free",
-  "url": "https://lu.ma/2026-10-director-plus-ny",
-  "why": "Security community; good for networking",
-  "src": "Luma",
+  "url": "https://techcommunity.microsoft.com/event/microsoft-security-events/ask-microsoft-anything-how-ai-powered-attacks-happen--real-threat-scenarios-and-/4559385",
+  "why": "Live Q&A with Microsoft Security product leads; good interview talking points",
+  "src": "Microsoft Tech Community",
   "rec": false,
-  "id": "ev-1-directorplus-nyc-agent",
-  "start_et": "Thu Oct 22, 2026 · 5:30 PM ET"
+  "id": "ev-1-ask-microsoft-anything-ho",
+  "start_et": "Tue Oct 27, 2026 \u00b7 12:00 PM ET"
  },
  {
   "title": "Cyber Security Briefing: Defending at Machine Speed",
@@ -48,8 +48,8 @@
   "why": "Meet NYC security engineers and hiring managers",
   "src": "Luma",
   "rec": true,
-  "id": "ev-2-cyber-security-briefin",
-  "start_et": "Wed Oct 28, 2026 · 5:30 PM ET"
+  "id": "ev-2-cyber-security-briefing-d",
+  "start_et": "Wed Oct 28, 2026 \u00b7 5:30 PM ET"
  },
  {
   "title": "NYC Frontier Hackathon: Build your Autonomous Code Factory",
@@ -65,8 +65,8 @@
   "why": "Security community; good for networking",
   "src": "Luma",
   "rec": false,
-  "id": "ev-3-nyc-frontier-hackathon",
-  "start_et": "Fri Oct 30, 2026 · 9:30 AM ET"
+  "id": "ev-3-nyc-frontier-hackathon-bu",
+  "start_et": "Fri Oct 30, 2026 \u00b7 9:30 AM ET"
  },
  {
   "title": "AWS AI Launchpad for Builders",
@@ -82,8 +82,8 @@
   "why": "Cloud skills + AWS IAM talking points",
   "src": "Luma",
   "rec": false,
-  "id": "ev-4-aws-ai-launchpad-for-b",
-  "start_et": "Fri Oct 30, 2026 · 10:00 AM ET"
+  "id": "ev-4-aws-ai-launchpad-for-buil",
+  "start_et": "Fri Oct 30, 2026 \u00b7 10:00 AM ET"
  },
  {
   "title": "Tribeca Club: Infra & Cyber Dinner",
@@ -99,8 +99,8 @@
   "why": "Meet NYC security engineers and hiring managers",
   "src": "Luma",
   "rec": false,
-  "id": "ev-5-tribeca-club-infra-cyb",
-  "start_et": "Tue Nov 03, 2026 · 6:30 PM ET"
+  "id": "ev-5-tribeca-club-infra-cyber",
+  "start_et": "Tue Nov 03, 2026 \u00b7 6:30 PM ET"
  },
  {
   "title": "Career Talk: Avery Iorio in conversation with Jurij Paraszczak",
@@ -116,8 +116,8 @@
   "why": "Career/hiring conversations",
   "src": "Luma",
   "rec": true,
-  "id": "ev-6-career-talk-avery-iori",
-  "start_et": "Wed Nov 04, 2026 · 11:00 AM ET"
+  "id": "ev-6-career-talk-avery-iorio-i",
+  "start_et": "Wed Nov 04, 2026 \u00b7 11:00 AM ET"
  },
  {
   "title": "ISSA International: Using Eight Years of Cybersecurity Workforce Research to Navigate Your Career",
@@ -133,8 +133,25 @@
   "city": null,
   "miles": null,
   "src": "Official site",
-  "id": "ev-7-issa-international-usi",
-  "start_et": "Wed Nov 04, 2026 · 1:00 PM ET"
+  "id": "ev-7-issa-international-using",
+  "start_et": "Wed Nov 04, 2026 \u00b7 1:00 PM ET"
+ },
+ {
+  "title": "Identity Protection Accelerator: Prepare for SMS MFA Retirement in Microsoft Entra",
+  "start": "2026-11-04T19:00:00Z",
+  "end": null,
+  "online": true,
+  "venue": null,
+  "city": null,
+  "miles": null,
+  "org": "Synergy Advisors",
+  "cost": "Free",
+  "url": "https://synergyadvisors.biz/webinar/identity-protection-accelerator/",
+  "why": "Entra authentication methods and phishing-resistant MFA, straight SC-300 material",
+  "src": "Official site",
+  "rec": true,
+  "id": "ev-8-identity-protection-accel",
+  "start_et": "Wed Nov 04, 2026 \u00b7 2:00 PM ET"
  },
  {
   "title": "Base44 X Contextral Build & Secure Workshop @ NJIT",
@@ -150,8 +167,8 @@
   "why": "Security community; good for networking",
   "src": "Luma",
   "rec": false,
-  "id": "ev-8-base44-x-contextral-bu",
-  "start_et": "Wed Nov 04, 2026 · 3:00 PM ET"
+  "id": "ev-9-base44-x-contextral-build",
+  "start_et": "Wed Nov 04, 2026 \u00b7 3:00 PM ET"
  },
  {
   "title": "Securing your CI/CD with zizmor",
@@ -167,8 +184,8 @@
   "why": "Security community; good for networking",
   "src": "Luma",
   "rec": false,
-  "id": "ev-9-securing-your-ci-cd-wi",
-  "start_et": "Wed Nov 04, 2026 · 6:00 PM ET"
+  "id": "ev-10-securing-your-ci-cd-with",
+  "start_et": "Wed Nov 04, 2026 \u00b7 6:00 PM ET"
  },
  {
   "title": "Fintech Coffee: What an Agentic World means for Identity, Risk and Compliance",
@@ -184,8 +201,8 @@
   "why": "IAM topic: learn and meet identity practitioners",
   "src": "Luma",
   "rec": true,
-  "id": "ev-10-fintech-coffee-what-an",
-  "start_et": "Thu Nov 05, 2026 · 9:00 AM ET"
+  "id": "ev-11-fintech-coffee-what-an-ag",
+  "start_et": "Thu Nov 05, 2026 \u00b7 9:00 AM ET"
  },
  {
   "title": "Okta webinar: Stop fragmented identity tools from leaving you exposed",
@@ -201,8 +218,8 @@
   "city": null,
   "miles": null,
   "src": "Official site",
-  "id": "ev-11-okta-webinar-stop-frag",
-  "start_et": "Thu Nov 05, 2026 · 12:00 PM ET"
+  "id": "ev-12-okta-webinar-stop-fragmen",
+  "start_et": "Thu Nov 05, 2026 \u00b7 12:00 PM ET"
  },
  {
   "title": "The Borderless Office: Identity and Access in the World of Remote-First Growth",
@@ -218,8 +235,25 @@
   "why": "IAM topic: learn and meet identity practitioners",
   "src": "Luma",
   "rec": true,
-  "id": "ev-12-the-borderless-office",
-  "start_et": "Thu Nov 05, 2026 · 7:00 PM ET"
+  "id": "ev-13-the-borderless-office-ide",
+  "start_et": "Thu Nov 05, 2026 \u00b7 7:00 PM ET"
+ },
+ {
+  "title": "Ask Microsoft Anything: Securing your Agentic Insiders with New Capabilities",
+  "start": "2026-11-11T17:00:00Z",
+  "end": null,
+  "online": true,
+  "venue": null,
+  "city": null,
+  "miles": null,
+  "org": "Microsoft Security (Tech Community)",
+  "cost": "Free",
+  "url": "https://techcommunity.microsoft.com/event/microsoft-security-events/ask-microsoft-anything-securing-your-agentic-insiders-with-new-capabilities/4566337",
+  "why": "How Microsoft secures AI agents as identities, a hot IAM topic",
+  "src": "Microsoft Tech Community",
+  "rec": false,
+  "id": "ev-14-ask-microsoft-anything-se",
+  "start_et": "Wed Nov 11, 2026 \u00b7 12:00 PM ET"
  },
  {
   "title": "Rooted in Security: S5",
@@ -235,8 +269,8 @@
   "why": "Security community; good for networking",
   "src": "Luma",
   "rec": false,
-  "id": "ev-13-rooted-in-security-s5",
-  "start_et": "Wed Nov 11, 2026 · 6:00 PM ET"
+  "id": "ev-15-rooted-in-security-s5",
+  "start_et": "Wed Nov 11, 2026 \u00b7 6:00 PM ET"
  },
  {
   "title": "Drinks and Hacking: IT Happy Hour with The Objective-See Foundation",
@@ -252,8 +286,8 @@
   "why": "Tech community in NYC/NJ; practise your IAM pitch",
   "src": "Luma",
   "rec": false,
-  "id": "ev-14-drinks-and-hacking-it",
-  "start_et": "Wed Nov 11, 2026 · 6:00 PM ET"
+  "id": "ev-16-drinks-and-hacking-it-hap",
+  "start_et": "Wed Nov 11, 2026 \u00b7 6:00 PM ET"
  },
  {
   "title": "ISC2 New Jersey Chapter: Welcome Meeting",
@@ -269,8 +303,25 @@
   "rec": true,
   "end": null,
   "src": "Official site",
-  "id": "ev-15-isc2-new-jersey-chapte",
-  "start_et": "Thu Nov 12, 2026 · 6:00 PM ET"
+  "id": "ev-17-isc2-new-jersey-chapter-w",
+  "start_et": "Thu Nov 12, 2026 \u00b7 6:00 PM ET"
+ },
+ {
+  "title": "ISC2 New Jersey Chapter: Capture the Flag for Novices",
+  "start": "2026-11-14T14:00:00Z",
+  "end": "2026-11-14T21:00:00Z",
+  "online": false,
+  "venue": "Saint Peter's University, 2641 John F. Kennedy Blvd",
+  "city": "Jersey City, NJ",
+  "miles": 25,
+  "org": "ISC2 New Jersey Chapter",
+  "cost": "See listing",
+  "url": "https://www.eventbrite.com/e/capture-the-flag-for-novices-tickets-1999228203374",
+  "why": "Beginner-friendly team CTF; hands-on skills and local security contacts",
+  "src": "Eventbrite",
+  "rec": true,
+  "id": "ev-18-isc2-new-jersey-chapter-c",
+  "start_et": "Sat Nov 14, 2026 \u00b7 9:00 AM ET"
  },
  {
   "title": "ISSA New Jersey: AI Governance (Azhar Kazi)",
@@ -286,8 +337,8 @@
   "rec": true,
   "end": null,
   "src": "Official site",
-  "id": "ev-16-issa-new-jersey-ai-gov",
-  "start_et": "Tue Nov 17, 2026 · 6:00 PM ET"
+  "id": "ev-19-issa-new-jersey-ai-govern",
+  "start_et": "Tue Nov 17, 2026 \u00b7 6:00 PM ET"
  },
  {
   "title": "NYC Alt Cloud Meetup (Nov 2026)",
@@ -303,8 +354,25 @@
   "why": "Cloud infrastructure peers (AWS/Azure identity overlaps)",
   "src": "Luma",
   "rec": false,
-  "id": "ev-17-nyc-alt-cloud-meetup-n",
-  "start_et": "Wed Nov 18, 2026 · 5:30 PM ET"
+  "id": "ev-20-nyc-alt-cloud-meetup-nov",
+  "start_et": "Wed Nov 18, 2026 \u00b7 5:30 PM ET"
+ },
+ {
+  "title": "ISACA New Jersey Chapter Membership Meeting (speaker: Mike Gandara, BNY)",
+  "start": "2026-11-19T23:30:00Z",
+  "end": "2026-11-20T02:00:00Z",
+  "online": false,
+  "venue": "Pines Manor, 2085 State Route 27",
+  "city": "Edison, NJ",
+  "miles": 3,
+  "org": "ISACA New Jersey Chapter",
+  "cost": "See listing (dinner buffet included)",
+  "url": "https://engage.isaca.org/newjerseychapter/events/eventdescription?CalendarEventKey=ee293d4c-2d69-4fc1-ab87-01a135f715fb&CommunityKey=3de06995-136a-4983-8ad6-433ba10225ff",
+  "why": "Right in Edison; meet local risk and security leaders over dinner",
+  "src": "ISACA Engage",
+  "rec": true,
+  "id": "ev-21-isaca-new-jersey-chapter",
+  "start_et": "Thu Nov 19, 2026 \u00b7 6:30 PM ET"
  },
  {
   "title": "The Future of Work: AI x Careers Mixer",
@@ -320,8 +388,8 @@
   "why": "Career/hiring conversations",
   "src": "Luma",
   "rec": true,
-  "id": "ev-18-the-future-of-work-ai",
-  "start_et": "Sat Nov 21, 2026 · 6:30 PM ET"
+  "id": "ev-22-the-future-of-work-ai-x-c",
+  "start_et": "Sat Nov 21, 2026 \u00b7 6:30 PM ET"
  },
  {
   "title": "ISC2 NYC & Long Island Chapter Monthly Meeting",
@@ -337,8 +405,8 @@
   "rec": false,
   "end": null,
   "src": "Official site",
-  "id": "ev-19-isc2-nyc-long-island-c",
-  "start_et": "Tue Nov 24, 2026 · 5:00 PM ET"
+  "id": "ev-23-isc2-nyc-long-island-chap",
+  "start_et": "Tue Nov 24, 2026 \u00b7 5:00 PM ET"
  },
  {
   "title": "Gartner Identity & Access Management Summit (Americas)",
@@ -354,8 +422,8 @@
   "rec": false,
   "end": null,
   "src": "Official site",
-  "id": "ev-20-gartner-identity-acces",
-  "start_et": "Mon Dec 07, 2026 · 11:00 AM ET"
+  "id": "ev-24-gartner-identity-access-m",
+  "start_et": "Mon Dec 07, 2026 \u00b7 11:00 AM ET"
  },
  {
   "title": "NYC Alt Cloud Meetup (Dec 2026)",
@@ -371,8 +439,8 @@
   "why": "Cloud infrastructure peers (AWS/Azure identity overlaps)",
   "src": "Luma",
   "rec": false,
-  "id": "ev-21-nyc-alt-cloud-meetup-d",
-  "start_et": "Wed Dec 16, 2026 · 5:30 PM ET"
+  "id": "ev-25-nyc-alt-cloud-meetup-dec",
+  "start_et": "Wed Dec 16, 2026 \u00b7 5:30 PM ET"
  },
  {
   "title": "Identiverse 2027",
@@ -388,7 +456,7 @@
   "rec": false,
   "end": null,
   "src": "Official site",
-  "id": "ev-22-identiverse-2027",
-  "start_et": "Mon Jun 28, 2027 · 12:00 PM ET"
+  "id": "ev-26-identiverse-2027",
+  "start_et": "Mon Jun 28, 2027 \u00b7 12:00 PM ET"
  }
 ]
