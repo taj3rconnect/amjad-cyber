@@ -8613,38 +8613,6 @@
    "frameable": false
   },
   {
-   "id": "piper-azure-entra",
-   "title": "Azure Entra IAM Engineer",
-   "company": "Piper Companies (client: enterprise organization)",
-   "pay": "$115,000–$135,000/yr",
-   "pay_min": 115000,
-   "type": "Full-time",
-   "mode": "Remote",
-   "location": "Remote (US)",
-   "source": "Employer site",
-   "url": "https://careers.pipercompanies.com/details/2759/azure_entra_iam_engineer_176426",
-   "posted": "2026-10-13",
-   "summary": "Build Entra ID Enterprise Apps, access reviews, PIM, entitlement management and automated JML provisioning from HR to AD and apps.",
-   "reqs": [
-    "Entra Enterprise Apps",
-    "Access Reviews, PIM, Entitlement Management",
-    "JML automation",
-    "SAML/OAuth/OIDC, Graph API, IaC"
-   ],
-   "fit": "This is literally your JML job in Entra, at engineer level. Steps 3-9 skills.",
-   "gaps": [
-    "PIM and access reviews hands-on (Steps 5-6)",
-    "Microsoft Graph PowerShell (Step 8)",
-    "5+ yrs IAM ask: frame APTASK + WSAudiology as 5+ yrs identity work"
-   ],
-   "group": "main",
-   "work_mode": "Remote",
-   "job_type": "Full-time",
-   "employer_type": "Staffing agency",
-   "state": "US",
-   "frameable": false
-  },
-  {
    "id": "coinbase-senior-identity-risk-scam-anal-260052",
    "title": "Senior Identity Risk & Scam Analyst ",
    "company": "Coinbase",
