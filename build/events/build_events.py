@@ -15,8 +15,9 @@ prev=[e for e in json.load(open(os.path.join(S,'events.json'))) if e.get('src')=
 seen=set();ev=[]
 for e in seed+luma+prev:
     end=p(e['end']) if e.get('end') else p(e['start'])+D.timedelta(hours=2)
-    if end<now or e['url'] in seen: continue
-    seen.add(e['url']);ev.append(e)
+    k=(e['url'],e['start'])
+    if end<now or k in seen: continue
+    seen.add(k);ev.append(e)
 ev.sort(key=lambda e:p(e['start']))
 for i,e in enumerate(ev):
     e['id']=f"ev-{i}-"+re.sub(r'[^a-z0-9]+','-',e['title'].lower())[:22].strip('-')
