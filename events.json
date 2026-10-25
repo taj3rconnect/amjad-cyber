@@ -69,6 +69,23 @@
   "start_et": "Fri Oct 30, 2026 · 10:00 AM ET"
  },
  {
+  "title": "FIDO Alliance webinar: The Frontline Authentication Gap (passwordless and shared devices)",
+  "start": "2026-11-03T15:00:00Z",
+  "end": "2026-11-03T16:00:00Z",
+  "online": true,
+  "org": "FIDO Alliance",
+  "cost": "Free",
+  "url": "https://fidoalliance.org/event/fido-sponsored-webinar-the-frontline-authentication-gap-what-it-means-for-mission-critical-organizations/",
+  "why": "Passkeys and passwordless authentication, a hot IAM interview topic",
+  "rec": false,
+  "venue": null,
+  "city": null,
+  "miles": null,
+  "src": "Official site",
+  "id": "ev-4-fido-alliance-webinar",
+  "start_et": "Tue Nov 03, 2026 · 10:00 AM ET"
+ },
+ {
   "title": "Tribeca Club: Infra & Cyber Dinner",
   "start": "2026-11-03T23:30:00.000Z",
   "end": "2026-11-04T00:30:00.000Z",
@@ -82,7 +99,7 @@
   "why": "Meet NYC security engineers and hiring managers",
   "src": "Luma",
   "rec": false,
-  "id": "ev-4-tribeca-club-infra-cyb",
+  "id": "ev-5-tribeca-club-infra-cyb",
   "start_et": "Tue Nov 03, 2026 · 6:30 PM ET"
  },
  {
@@ -99,7 +116,7 @@
   "why": "Career/hiring conversations",
   "src": "Luma",
   "rec": true,
-  "id": "ev-5-career-talk-avery-iori",
+  "id": "ev-6-career-talk-avery-iori",
   "start_et": "Wed Nov 04, 2026 · 11:00 AM ET"
  },
  {
@@ -116,8 +133,25 @@
   "city": null,
   "miles": null,
   "src": "Official site",
-  "id": "ev-6-issa-international-usi",
+  "id": "ev-7-issa-international-usi",
   "start_et": "Wed Nov 04, 2026 · 1:00 PM ET"
+ },
+ {
+  "title": "Microsoft Entra: Prepare for SMS MFA retirement (Synergy Advisors webinar)",
+  "start": "2026-11-04T19:00:00Z",
+  "end": "2026-11-04T20:00:00Z",
+  "online": true,
+  "org": "Synergy Advisors (Microsoft partner)",
+  "cost": "Free",
+  "url": "https://synergyadvisors.biz/webinar/identity-protection-accelerator/",
+  "why": "Hands-on look at moving Entra ID to phishing-resistant MFA, directly useful for SC-300",
+  "rec": true,
+  "venue": null,
+  "city": null,
+  "miles": null,
+  "src": "Official site",
+  "id": "ev-8-microsoft-entra-prepar",
+  "start_et": "Wed Nov 04, 2026 · 2:00 PM ET"
  },
  {
   "title": "Base44 X Contextral Build & Secure Workshop @ NJIT",
@@ -133,7 +167,7 @@
   "why": "Security community; good for networking",
   "src": "Luma",
   "rec": false,
-  "id": "ev-7-base44-x-contextral-bu",
+  "id": "ev-9-base44-x-contextral-bu",
   "start_et": "Wed Nov 04, 2026 · 3:00 PM ET"
  },
  {
@@ -150,7 +184,7 @@
   "why": "Security community; good for networking",
   "src": "Luma",
   "rec": false,
-  "id": "ev-8-securing-your-ci-cd-wi",
+  "id": "ev-10-securing-your-ci-cd-wi",
   "start_et": "Wed Nov 04, 2026 · 6:00 PM ET"
  },
  {
@@ -167,7 +201,7 @@
   "why": "IAM topic: learn and meet identity practitioners",
   "src": "Luma",
   "rec": true,
-  "id": "ev-9-fintech-coffee-what-an",
+  "id": "ev-11-fintech-coffee-what-an",
   "start_et": "Thu Nov 05, 2026 · 9:00 AM ET"
  },
  {
@@ -184,7 +218,7 @@
   "city": null,
   "miles": null,
   "src": "Official site",
-  "id": "ev-10-okta-webinar-stop-frag",
+  "id": "ev-12-okta-webinar-stop-frag",
   "start_et": "Thu Nov 05, 2026 · 12:00 PM ET"
  },
  {
@@ -201,7 +235,7 @@
   "why": "IAM topic: learn and meet identity practitioners",
   "src": "Luma",
   "rec": true,
-  "id": "ev-11-the-borderless-office",
+  "id": "ev-13-the-borderless-office",
   "start_et": "Thu Nov 05, 2026 · 7:00 PM ET"
  },
  {
@@ -218,7 +252,7 @@
   "why": "Security community; good for networking",
   "src": "Luma",
   "rec": false,
-  "id": "ev-12-rooted-in-security-s5",
+  "id": "ev-14-rooted-in-security-s5",
   "start_et": "Wed Nov 11, 2026 · 6:00 PM ET"
  },
  {
@@ -235,7 +269,7 @@
   "why": "Tech community in NYC/NJ; practise your IAM pitch",
   "src": "Luma",
   "rec": false,
-  "id": "ev-13-drinks-and-hacking-it",
+  "id": "ev-15-drinks-and-hacking-it",
   "start_et": "Wed Nov 11, 2026 · 6:00 PM ET"
  },
  {
@@ -252,7 +286,7 @@
   "rec": true,
   "end": null,
   "src": "Official site",
-  "id": "ev-14-isc2-new-jersey-chapte",
+  "id": "ev-16-isc2-new-jersey-chapte",
   "start_et": "Thu Nov 12, 2026 · 6:00 PM ET"
  },
  {
@@ -269,7 +303,7 @@
   "rec": false,
   "end": null,
   "src": "Official site",
-  "id": "ev-15-isc2-nj-chapter-captur",
+  "id": "ev-17-isc2-nj-chapter-captur",
   "start_et": "Sat Nov 14, 2026 · 9:00 AM ET"
  },
  {
@@ -286,8 +320,25 @@
   "rec": true,
   "end": null,
   "src": "Official site",
-  "id": "ev-16-issa-new-jersey-ai-gov",
+  "id": "ev-18-issa-new-jersey-ai-gov",
   "start_et": "Tue Nov 17, 2026 · 6:00 PM ET"
+ },
+ {
+  "title": "SANS Fall Cyber Solutions Fest: Identity Security and Zero Trust Track",
+  "start": "2026-11-18T15:00:00Z",
+  "end": "2026-11-18T21:00:00Z",
+  "online": true,
+  "org": "SANS Institute",
+  "cost": "Free",
+  "url": "https://www.sans.org/webcasts/fall-cyber-solutions-fest-2026-identity-security-and-zero-trust-track",
+  "why": "A full free day on identity attacks, MFA bypass, ITDR and Zero Trust, with CPE credits; recordings available if you can't watch live",
+  "rec": true,
+  "venue": null,
+  "city": null,
+  "miles": null,
+  "src": "Official site",
+  "id": "ev-19-sans-fall-cyber-soluti",
+  "start_et": "Wed Nov 18, 2026 · 10:00 AM ET"
  },
  {
   "title": "NYC Alt Cloud Meetup (Nov 2026)",
@@ -303,7 +354,7 @@
   "why": "Cloud infrastructure peers (AWS/Azure identity overlaps)",
   "src": "Luma",
   "rec": false,
-  "id": "ev-17-nyc-alt-cloud-meetup-n",
+  "id": "ev-20-nyc-alt-cloud-meetup-n",
   "start_et": "Wed Nov 18, 2026 · 5:30 PM ET"
  },
  {
@@ -320,7 +371,7 @@
   "why": "Career/hiring conversations",
   "src": "Luma",
   "rec": true,
-  "id": "ev-18-the-future-of-work-ai",
+  "id": "ev-21-the-future-of-work-ai",
   "start_et": "Sat Nov 21, 2026 · 6:30 PM ET"
  },
  {
@@ -337,7 +388,7 @@
   "rec": false,
   "end": null,
   "src": "Official site",
-  "id": "ev-19-isc2-nyc-long-island-c",
+  "id": "ev-22-isc2-nyc-long-island-c",
   "start_et": "Tue Nov 24, 2026 · 5:00 PM ET"
  },
  {
@@ -354,7 +405,7 @@
   "city": null,
   "miles": null,
   "src": "Official site",
-  "id": "ev-20-okta-streamcast-inside",
+  "id": "ev-23-okta-streamcast-inside",
   "start_et": "Tue Dec 01, 2026 · 12:00 PM ET"
  },
  {
@@ -371,7 +422,7 @@
   "why": "Security community; good for networking",
   "src": "Luma",
   "rec": false,
-  "id": "ev-21-agentic-finance-hack",
+  "id": "ev-24-agentic-finance-hack",
   "start_et": "Sat Dec 05, 2026 · 9:30 AM ET"
  },
  {
@@ -388,7 +439,7 @@
   "rec": false,
   "end": null,
   "src": "Official site",
-  "id": "ev-22-gartner-identity-acces",
+  "id": "ev-25-gartner-identity-acces",
   "start_et": "Mon Dec 07, 2026 · 11:00 AM ET"
  },
  {
@@ -405,7 +456,7 @@
   "why": "Cloud infrastructure peers (AWS/Azure identity overlaps)",
   "src": "Luma",
   "rec": false,
-  "id": "ev-23-nyc-alt-cloud-meetup-d",
+  "id": "ev-26-nyc-alt-cloud-meetup-d",
   "start_et": "Wed Dec 16, 2026 · 5:30 PM ET"
  },
  {
@@ -422,7 +473,7 @@
   "rec": false,
   "end": null,
   "src": "Official site",
-  "id": "ev-24-identiverse-2027",
+  "id": "ev-27-identiverse-2027",
   "start_et": "Mon Jun 28, 2027 · 12:00 PM ET"
  }
 ]
