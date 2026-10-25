@@ -149,5 +149,50 @@
   "rec": false,
   "end": null,
   "src": "Official site"
+ },
+ {
+  "title": "SANS Fall Cyber Solutions Fest: Identity Security and Zero Trust Track",
+  "start": "2026-11-18T15:00:00Z",
+  "end": "2026-11-18T21:00:00Z",
+  "online": true,
+  "org": "SANS Institute",
+  "cost": "Free",
+  "url": "https://www.sans.org/webcasts/fall-cyber-solutions-fest-2026-identity-security-and-zero-trust-track",
+  "why": "A full free day on identity attacks, MFA bypass, ITDR and Zero Trust, with CPE credits; recordings available if you can't watch live",
+  "rec": true,
+  "venue": null,
+  "city": null,
+  "miles": null,
+  "src": "Official site"
+ },
+ {
+  "title": "FIDO Alliance webinar: The Frontline Authentication Gap (passwordless and shared devices)",
+  "start": "2026-11-03T15:00:00Z",
+  "end": "2026-11-03T16:00:00Z",
+  "online": true,
+  "org": "FIDO Alliance",
+  "cost": "Free",
+  "url": "https://fidoalliance.org/event/fido-sponsored-webinar-the-frontline-authentication-gap-what-it-means-for-mission-critical-organizations/",
+  "why": "Passkeys and passwordless authentication, a hot IAM interview topic",
+  "rec": false,
+  "venue": null,
+  "city": null,
+  "miles": null,
+  "src": "Official site"
+ },
+ {
+  "title": "Microsoft Entra: Prepare for SMS MFA retirement (Synergy Advisors webinar)",
+  "start": "2026-11-04T19:00:00Z",
+  "end": "2026-11-04T20:00:00Z",
+  "online": true,
+  "org": "Synergy Advisors (Microsoft partner)",
+  "cost": "Free",
+  "url": "https://synergyadvisors.biz/webinar/identity-protection-accelerator/",
+  "why": "Hands-on look at moving Entra ID to phishing-resistant MFA, directly useful for SC-300",
+  "rec": true,
+  "venue": null,
+  "city": null,
+  "miles": null,
+  "src": "Official site"
  }
 ]

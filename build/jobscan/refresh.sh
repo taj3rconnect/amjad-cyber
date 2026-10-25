@@ -2,7 +2,7 @@
 # 8:00 AM ET jobs refresh. DRY=1 -> scan + build jobs.json into /tmp, no site change, no deploy.
 set -uo pipefail; export TZ=America/New_York; cd "$(dirname "$0")"
 echo "jobs refresh $(date '+%Y-%m-%d %I:%M %p %Z')"
-python3 scan.py; python3 li.py; python3 boards.py
+python3 scan.py; python3 workday.py; python3 li.py; python3 boards.py
 python3 merge.py || exit 1
 python3 live.py || exit 1
 if [ "${DRY:-0}" = 1 ]; then python3 ../build_jobs.py --out /tmp/jobs.dry.json; exit; fi

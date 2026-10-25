@@ -91,7 +91,7 @@ def norm(r):
 def key(j): return (slug(j['company']),slug(j['title']),j['state'])
 def main():
     raw=[]
-    for f in ('ats_raw.json','li_raw.json','boards_raw.json'):
+    for f in ('ats_raw.json','li_raw.json','boards_raw.json','wd_raw.json'):
         if os.path.exists(f): raw+=json.load(open(f))
     fresh={};
     for r in raw:
