@@ -1,7 +1,7 @@
 [
  {
   "title": "Simply Cyber Daily Cyber Threat Brief (weekdays 8 AM ET)",
-  "start": "2026-10-27T12:00:00Z",
+  "start": "2026-10-28T12:00:00Z",
   "online": true,
   "org": "Simply Cyber (Gerald Auger)",
   "cost": "Free",
@@ -15,7 +15,7 @@
   "miles": null,
   "src": "Official site",
   "id": "ev-0-simply-cyber-daily-cyb",
-  "start_et": "Tue Oct 27, 2026 · 8:00 AM ET"
+  "start_et": "Wed Oct 28, 2026 · 8:00 AM ET"
  },
  {
   "title": "Cyber Security Briefing: Defending at Machine Speed",
@@ -443,6 +443,23 @@
   "start_et": "Thu Nov 19, 2026 · 6:30 PM ET"
  },
  {
+  "title": "Worn: Smart Glasses Hackathon",
+  "start": "2026-11-20T22:00:00.000Z",
+  "end": "2026-11-21T23:00:00.000Z",
+  "online": false,
+  "venue": "Roosevelt Island",
+  "city": "New York, NY",
+  "miles": 29,
+  "org": "Somya Gupta, Stephen Jin",
+  "cost": "Free",
+  "url": "https://lu.ma/smart-glass-hack-nyc",
+  "why": "Security community; good for networking",
+  "src": "Luma",
+  "rec": false,
+  "id": "ev-26-worn-smart-glasses-hac",
+  "start_et": "Fri Nov 20, 2026 · 5:00 PM ET"
+ },
+ {
   "title": "The Future of Work: AI x Careers Mixer",
   "start": "2026-11-21T23:30:00.000Z",
   "end": "2026-11-22T01:30:00.000Z",
@@ -456,8 +473,25 @@
   "why": "Career/hiring conversations",
   "src": "Luma",
   "rec": true,
-  "id": "ev-26-the-future-of-work-ai",
+  "id": "ev-27-the-future-of-work-ai",
   "start_et": "Sat Nov 21, 2026 · 6:30 PM ET"
+ },
+ {
+  "title": "Non-Slop Hackathon | Pangram x Nous Research x Reducto",
+  "start": "2026-11-22T14:00:00.000Z",
+  "end": "2026-11-22T23:00:00.000Z",
+  "online": false,
+  "venue": "Brooklyn",
+  "city": "Brooklyn, NY",
+  "miles": 25,
+  "org": "Pangram Labs, witcheer x",
+  "cost": "Free",
+  "url": "https://lu.ma/enrexhqq",
+  "why": "Security community; good for networking",
+  "src": "Luma",
+  "rec": false,
+  "id": "ev-28-non-slop-hackathon-pan",
+  "start_et": "Sun Nov 22, 2026 · 9:00 AM ET"
  },
  {
   "title": "ISC2 NYC & Long Island Chapter Monthly Meeting",
@@ -473,7 +507,7 @@
   "rec": false,
   "end": null,
   "src": "Official site",
-  "id": "ev-27-isc2-nyc-long-island-c",
+  "id": "ev-29-isc2-nyc-long-island-c",
   "start_et": "Tue Nov 24, 2026 · 5:00 PM ET"
  },
  {
@@ -490,7 +524,7 @@
   "why": "Catch the big AWS announcements (including IAM/security) to keep your AWS IAM experience current; 11:30 AM ET",
   "rec": false,
   "src": "Official site",
-  "id": "ev-28-aws-re-invent-2026-ceo",
+  "id": "ev-30-aws-re-invent-2026-ceo",
   "start_et": "Tue Dec 01, 2026 · 11:30 AM ET"
  },
  {
@@ -507,7 +541,7 @@
   "city": null,
   "miles": null,
   "src": "Official site",
-  "id": "ev-29-okta-streamcast-inside",
+  "id": "ev-31-okta-streamcast-inside",
   "start_et": "Tue Dec 01, 2026 · 12:00 PM ET"
  },
  {
@@ -524,7 +558,7 @@
   "why": "Security community; good for networking",
   "src": "Luma",
   "rec": false,
-  "id": "ev-30-agentic-finance-hack",
+  "id": "ev-32-agentic-finance-hack",
   "start_et": "Sat Dec 05, 2026 · 9:30 AM ET"
  },
  {
@@ -541,7 +575,7 @@
   "rec": false,
   "end": "2026-12-09T23:00:00Z",
   "src": "Official site",
-  "id": "ev-31-gartner-identity-acces",
+  "id": "ev-33-gartner-identity-acces",
   "start_et": "Mon Dec 07, 2026 · 11:00 AM ET"
  },
  {
@@ -558,7 +592,7 @@
   "why": "Cloud infrastructure peers (AWS/Azure identity overlaps)",
   "src": "Luma",
   "rec": false,
-  "id": "ev-32-nyc-alt-cloud-meetup-d",
+  "id": "ev-34-nyc-alt-cloud-meetup-d",
   "start_et": "Wed Dec 16, 2026 · 5:30 PM ET"
  },
  {
@@ -575,7 +609,7 @@
   "rec": false,
   "end": null,
   "src": "Official site",
-  "id": "ev-33-identiverse-2027",
+  "id": "ev-35-identiverse-2027",
   "start_et": "Mon Jun 28, 2027 · 12:00 PM ET"
  }
 ]
