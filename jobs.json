@@ -868,42 +868,6 @@
    "frameable": false
   },
   {
-   "id": "guardian-manager-identity-governance-op-480141",
-   "title": "Manager, Identity Governance Operations",
-   "company": "Guardian",
-   "pay": "$118,980–$195,465/yr",
-   "pay_min": 118980.0,
-   "pay_est": false,
-   "type": "Full-time",
-   "mode": "On-site NY/NJ",
-   "location": "New York, NY",
-   "state": "NY",
-   "source": "LinkedIn",
-   "url": "https://www.linkedin.com/jobs/view/4481480141/",
-   "posted": "2026-10-27",
-   "reqs": [
-    "Entra ID / Azure AD",
-    "Okta",
-    "SailPoint",
-    "CyberArk",
-    "Joiner-Mover-Leaver",
-    "RBAC",
-    "SOX / audit"
-   ],
-   "fit": "You already work with Entra ID / Azure AD, Joiner-Mover-Leaver, RBAC, SOX / audit.",
-   "gaps": [
-    "Okta: covered in your Steps",
-    "SailPoint: covered in your Steps",
-    "CyberArk: covered in your Steps"
-   ],
-   "work_mode": "On-site",
-   "job_type": "Full-time",
-   "employer_type": "Direct employer",
-   "group": "main",
-   "summary": "Position Overview The Manager, Identity Governance Operations is a hands-on people leader responsible for leading and developing the Identity Governance & Administration (IGA) team while ensuring effective execution of…",
-   "frameable": false
-  },
-  {
    "id": "twilio-staff-product-manager-identity-319160",
    "title": "Staff, Product Manager - Identity",
    "company": "Twilio",
