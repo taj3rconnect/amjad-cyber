@@ -1,4 +1,4 @@
-const V='amjad-v38',SHELL=['./','index.html','today.html','history.html','app.js','askdad.js','shell.js','shell2.js','shell3.js','visit.js','claudecert.html','sync.js','config.js','manifest.json','today.json','jobs.json','icons/icon-192.png','icons/icon-512.png','favicon.png'];
+const V='amjad-v39',SHELL=['./','index.html','today.html','history.html','app.js','askdad.js','shell.js','shell2.js','shell3.js','visit.js','claudecert.html','sync.js','config.js','manifest.json','today.json','jobs.json','icons/icon-192.png','icons/icon-512.png','favicon.png'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(V).then(c=>c.addAll(SHELL)));self.skipWaiting()});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(k=>Promise.all(k.filter(x=>x!==V).map(x=>caches.delete(x))))));self.clients.claim()});
 self.addEventListener('fetch',e=>{const u=new URL(e.request.url);if(e.request.method!=='GET'||u.origin!==location.origin)return;
