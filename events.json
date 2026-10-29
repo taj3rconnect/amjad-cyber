@@ -1,7 +1,7 @@
 [
  {
   "title": "Simply Cyber Daily Cyber Threat Brief (weekdays 8 AM ET)",
-  "start": "2026-10-28T12:00:00Z",
+  "start": "2026-10-29T12:00:00Z",
   "online": true,
   "org": "Simply Cyber (Gerald Auger)",
   "cost": "Free",
@@ -15,41 +15,7 @@
   "miles": null,
   "src": "Official site",
   "id": "ev-0-simply-cyber-daily-cyb",
-  "start_et": "Wed Oct 28, 2026 · 8:00 AM ET"
- },
- {
-  "title": "Cyber Security Briefing: Defending at Machine Speed",
-  "start": "2026-10-28T21:30:00.000Z",
-  "end": "2026-10-29T01:00:00.000Z",
-  "online": false,
-  "venue": null,
-  "city": "New York, NY",
-  "miles": 28,
-  "org": "SIM NY Metro",
-  "cost": "Free",
-  "url": "https://lu.ma/1x544oex",
-  "why": "Meet NYC security engineers and hiring managers",
-  "src": "Luma",
-  "rec": true,
-  "id": "ev-1-cyber-security-briefin",
-  "start_et": "Wed Oct 28, 2026 · 5:30 PM ET"
- },
- {
-  "title": "ISACA NJ webinar: Every Line of Code Has a Passport (SBOMs, governance, supply chain risk)",
-  "start": "2026-10-29T23:00:00Z",
-  "end": "2026-10-30T00:00:00Z",
-  "online": true,
-  "city": null,
-  "venue": "Online",
-  "miles": null,
-  "org": "ISACA New Jersey Chapter",
-  "cost": "Free",
-  "url": "https://engage.isaca.org/newjerseychapter/events/eventdescription?CalendarEventKey=d569b363-251b-496d-93a3-01a135f22191&CommunityKey=3de06995-136a-4983-8ad6-433ba10225ff",
-  "why": "Free evening session from your local ISACA chapter on third-party/software supply chain risk; useful GRC vocabulary",
-  "rec": false,
-  "src": "Official site",
-  "id": "ev-2-isaca-nj-webinar-every",
-  "start_et": "Thu Oct 29, 2026 · 7:00 PM ET"
+  "start_et": "Thu Oct 29, 2026 · 8:00 AM ET"
  },
  {
   "title": "NYC Frontier Hackathon: Build your Autonomous Code Factory",
@@ -65,7 +31,7 @@
   "why": "Security community; good for networking",
   "src": "Luma",
   "rec": false,
-  "id": "ev-3-nyc-frontier-hackathon",
+  "id": "ev-1-nyc-frontier-hackathon",
   "start_et": "Fri Oct 30, 2026 · 9:30 AM ET"
  },
  {
@@ -82,7 +48,7 @@
   "why": "Cloud skills + AWS IAM talking points",
   "src": "Luma",
   "rec": false,
-  "id": "ev-4-aws-ai-launchpad-for-b",
+  "id": "ev-2-aws-ai-launchpad-for-b",
   "start_et": "Fri Oct 30, 2026 · 10:00 AM ET"
  },
  {
@@ -99,7 +65,7 @@
   "city": null,
   "miles": null,
   "src": "Official site",
-  "id": "ev-5-fido-alliance-webinar",
+  "id": "ev-3-fido-alliance-webinar",
   "start_et": "Tue Nov 03, 2026 · 10:00 AM ET"
  },
  {
@@ -116,7 +82,7 @@
   "why": "Meet NYC security engineers and hiring managers",
   "src": "Luma",
   "rec": false,
-  "id": "ev-6-tribeca-club-infra-cyb",
+  "id": "ev-4-tribeca-club-infra-cyb",
   "start_et": "Tue Nov 03, 2026 · 6:30 PM ET"
  },
  {
@@ -133,7 +99,7 @@
   "why": "Career/hiring conversations",
   "src": "Luma",
   "rec": true,
-  "id": "ev-7-career-talk-avery-iori",
+  "id": "ev-5-career-talk-avery-iori",
   "start_et": "Wed Nov 04, 2026 · 11:00 AM ET"
  },
  {
@@ -150,7 +116,7 @@
   "city": null,
   "miles": null,
   "src": "Official site",
-  "id": "ev-8-issa-international-usi",
+  "id": "ev-6-issa-international-usi",
   "start_et": "Wed Nov 04, 2026 · 1:00 PM ET"
  },
  {
@@ -167,8 +133,25 @@
   "city": null,
   "miles": null,
   "src": "Official site",
-  "id": "ev-9-microsoft-entra-prepar",
+  "id": "ev-7-microsoft-entra-prepar",
   "start_et": "Wed Nov 04, 2026 · 2:00 PM ET"
+ },
+ {
+  "title": "Agentics Spotlight: Skills, Harnesses & Agent Identity",
+  "start": "2026-11-04T23:00:00.000Z",
+  "end": "2026-11-05T03:00:00.000Z",
+  "online": false,
+  "venue": "Greenwich Village",
+  "city": "New York, NY",
+  "miles": 26,
+  "org": "Nori Agentic, Jesse Vincent",
+  "cost": "Free",
+  "url": "https://lu.ma/agentics-bos4",
+  "why": "Security community; good for networking",
+  "src": "Luma",
+  "rec": true,
+  "id": "ev-8-agentics-spotlight-ski",
+  "start_et": "Wed Nov 04, 2026 · 6:00 PM ET"
  },
  {
   "title": "Securing your CI/CD with zizmor",
@@ -184,25 +167,8 @@
   "why": "Security community; good for networking",
   "src": "Luma",
   "rec": false,
-  "id": "ev-10-securing-your-ci-cd-wi",
+  "id": "ev-9-securing-your-ci-cd-wi",
   "start_et": "Wed Nov 04, 2026 · 6:00 PM ET"
- },
- {
-  "title": "NY Metro Joint Cyber Security Conference (InfoSecurity.NYC)",
-  "start": "2026-11-05T13:30:00Z",
-  "end": "2026-11-05T23:00:00Z",
-  "online": false,
-  "city": "New York, NY",
-  "venue": "Civic Hall, 124 East 14th Street (Union Square); livestream also offered",
-  "miles": 28,
-  "org": "NY Metro Joint Cyber Security Coalition (ISSA NY Metro, ISACA NJ/NY, ISC2 NJ, OWASP, CSA and more)",
-  "cost": "See site",
-  "url": "https://infosecurity.nyc/",
-  "why": "13th annual regional conference run by the local ISSA/ISACA/ISC2/OWASP chapters: CPEs and the best one-day networking room for NY/NJ security jobs",
-  "rec": true,
-  "src": "Official site",
-  "id": "ev-11-ny-metro-joint-cyber-s",
-  "start_et": "Thu Nov 05, 2026 · 8:30 AM ET"
  },
  {
   "title": "Fintech Coffee: What an Agentic World means for Identity, Risk and Compliance",
@@ -218,7 +184,7 @@
   "why": "IAM topic: learn and meet identity practitioners",
   "src": "Luma",
   "rec": true,
-  "id": "ev-12-fintech-coffee-what-an",
+  "id": "ev-10-fintech-coffee-what-an",
   "start_et": "Thu Nov 05, 2026 · 9:00 AM ET"
  },
  {
@@ -235,7 +201,7 @@
   "city": null,
   "miles": null,
   "src": "Official site",
-  "id": "ev-13-okta-webinar-stop-frag",
+  "id": "ev-11-okta-webinar-stop-frag",
   "start_et": "Thu Nov 05, 2026 · 12:00 PM ET"
  },
  {
@@ -252,7 +218,7 @@
   "why": "Security community; good for networking",
   "src": "Luma",
   "rec": false,
-  "id": "ev-14-base44-x-contextral-bu",
+  "id": "ev-12-base44-x-contextral-bu",
   "start_et": "Thu Nov 05, 2026 · 3:00 PM ET"
  },
  {
@@ -269,7 +235,7 @@
   "why": "IAM topic: learn and meet identity practitioners",
   "src": "Luma",
   "rec": true,
-  "id": "ev-15-the-borderless-office",
+  "id": "ev-13-the-borderless-office",
   "start_et": "Thu Nov 05, 2026 · 7:00 PM ET"
  },
  {
@@ -286,7 +252,7 @@
   "why": "Security community; good for networking",
   "src": "Luma",
   "rec": false,
-  "id": "ev-16-rooted-in-security-s5",
+  "id": "ev-14-rooted-in-security-s5",
   "start_et": "Wed Nov 11, 2026 · 6:00 PM ET"
  },
  {
@@ -303,7 +269,7 @@
   "why": "Tech community in NYC/NJ; practise your IAM pitch",
   "src": "Luma",
   "rec": false,
-  "id": "ev-17-drinks-and-hacking-it",
+  "id": "ev-15-drinks-and-hacking-it",
   "start_et": "Wed Nov 11, 2026 · 6:00 PM ET"
  },
  {
@@ -320,7 +286,7 @@
   "rec": true,
   "end": null,
   "src": "Official site",
-  "id": "ev-18-isc2-new-jersey-chapte",
+  "id": "ev-16-isc2-new-jersey-chapte",
   "start_et": "Thu Nov 12, 2026 · 6:00 PM ET"
  },
  {
@@ -337,42 +303,8 @@
   "rec": false,
   "end": null,
   "src": "Official site",
-  "id": "ev-19-isc2-nj-chapter-captur",
+  "id": "ev-17-isc2-nj-chapter-captur",
   "start_et": "Sat Nov 14, 2026 · 9:00 AM ET"
- },
- {
-  "title": "New York Cybersecurity Summit (18th edition)",
-  "start": "2026-11-17T13:00:00Z",
-  "end": "2026-11-17T23:00:00Z",
-  "online": false,
-  "city": "New York, NY",
-  "venue": "Sheraton New York Times Square, 811 7th Ave",
-  "miles": 29,
-  "org": "Official Cybersecurity Summit (via ISACA NJ)",
-  "cost": "Free with ISACA NJ code CSS26-ISACANJ",
-  "url": "https://engage.isaca.org/newjerseychapter/events/eventdescription?CalendarEventKey=c66f4951-a3b7-4b4f-a114-01a12b8f5ce6&CommunityKey=3de06995-136a-4983-8ad6-433ba10225ff",
-  "why": "Free pass via the ISACA NJ chapter; identity attack surface is a key topic, plus vendor demos and a room full of security leaders",
-  "rec": false,
-  "src": "Official site",
-  "id": "ev-20-new-york-cybersecurity",
-  "start_et": "Tue Nov 17, 2026 · 8:00 AM ET"
- },
- {
-  "title": "Microsoft Ignite 2026 (free digital pass: keynotes + Entra/security sessions)",
-  "start": "2026-11-17T18:00:00Z",
-  "end": "2026-11-20T00:00:00Z",
-  "online": true,
-  "city": null,
-  "venue": null,
-  "miles": null,
-  "org": "Microsoft",
-  "cost": "Free (digital)",
-  "url": "https://ignite.microsoft.com/en-US/home",
-  "why": "Where Microsoft announces what's new in Entra ID and Security; great SC-300 and interview talking points. Online Nov 17-19, opening keynote 10 AM PT / 1 PM ET",
-  "rec": true,
-  "src": "Official site",
-  "id": "ev-21-microsoft-ignite-2026",
-  "start_et": "Tue Nov 17, 2026 · 1:00 PM ET"
  },
  {
   "title": "ISSA New Jersey: AI Governance (Azhar Kazi)",
@@ -388,7 +320,7 @@
   "rec": true,
   "end": null,
   "src": "Official site",
-  "id": "ev-22-issa-new-jersey-ai-gov",
+  "id": "ev-18-issa-new-jersey-ai-gov",
   "start_et": "Tue Nov 17, 2026 · 6:00 PM ET"
  },
  {
@@ -405,7 +337,7 @@
   "city": null,
   "miles": null,
   "src": "Official site",
-  "id": "ev-23-sans-fall-cyber-soluti",
+  "id": "ev-19-sans-fall-cyber-soluti",
   "start_et": "Wed Nov 18, 2026 · 10:00 AM ET"
  },
  {
@@ -422,41 +354,24 @@
   "why": "Cloud infrastructure peers (AWS/Azure identity overlaps)",
   "src": "Luma",
   "rec": false,
-  "id": "ev-24-nyc-alt-cloud-meetup-n",
+  "id": "ev-20-nyc-alt-cloud-meetup-n",
   "start_et": "Wed Nov 18, 2026 · 5:30 PM ET"
- },
- {
-  "title": "ISACA New Jersey Chapter Membership Meeting (speaker: Mike Gandara, BNY)",
-  "start": "2026-11-19T23:30:00Z",
-  "end": "2026-11-20T02:00:00Z",
-  "online": false,
-  "city": "Edison, NJ",
-  "venue": "Pines Manor, 2085 State Route 27",
-  "miles": 2,
-  "org": "ISACA New Jersey Chapter",
-  "cost": "See event page (dinner buffet included)",
-  "url": "https://engage.isaca.org/newjerseychapter/events/eventdescription?CalendarEventKey=ee293d4c-2d69-4fc1-ab87-01a135f715fb&CommunityKey=3de06995-136a-4983-8ad6-433ba10225ff",
-  "why": "Right in Edison: meet NJ GRC, audit and security leaders over dinner; talk on cyber risk and resilience at BNY",
-  "rec": true,
-  "src": "Official site",
-  "id": "ev-25-isaca-new-jersey-chapt",
-  "start_et": "Thu Nov 19, 2026 · 6:30 PM ET"
  },
  {
   "title": "Worn: Smart Glasses Hackathon",
   "start": "2026-11-20T22:00:00.000Z",
   "end": "2026-11-21T23:00:00.000Z",
   "online": false,
-  "venue": "Roosevelt Island",
-  "city": "New York, NY",
-  "miles": 29,
+  "venue": "Downtown Brooklyn",
+  "city": "Brooklyn, NY",
+  "miles": 25,
   "org": "Somya Gupta, Stephen Jin",
   "cost": "Free",
   "url": "https://lu.ma/smart-glass-hack-nyc",
   "why": "Security community; good for networking",
   "src": "Luma",
   "rec": false,
-  "id": "ev-26-worn-smart-glasses-hac",
+  "id": "ev-21-worn-smart-glasses-hac",
   "start_et": "Fri Nov 20, 2026 · 5:00 PM ET"
  },
  {
@@ -473,7 +388,7 @@
   "why": "Career/hiring conversations",
   "src": "Luma",
   "rec": true,
-  "id": "ev-27-the-future-of-work-ai",
+  "id": "ev-22-the-future-of-work-ai",
   "start_et": "Sat Nov 21, 2026 · 6:30 PM ET"
  },
  {
@@ -490,7 +405,7 @@
   "why": "Security community; good for networking",
   "src": "Luma",
   "rec": false,
-  "id": "ev-28-non-slop-hackathon-pan",
+  "id": "ev-23-non-slop-hackathon-pan",
   "start_et": "Sun Nov 22, 2026 · 9:00 AM ET"
  },
  {
@@ -507,25 +422,8 @@
   "rec": false,
   "end": null,
   "src": "Official site",
-  "id": "ev-29-isc2-nyc-long-island-c",
+  "id": "ev-24-isc2-nyc-long-island-c",
   "start_et": "Tue Nov 24, 2026 · 5:00 PM ET"
- },
- {
-  "title": "AWS re:Invent 2026 CEO Keynote (Matt Garman) free livestream",
-  "start": "2026-12-01T16:30:00Z",
-  "end": "2026-12-01T18:30:00Z",
-  "online": true,
-  "city": null,
-  "venue": null,
-  "miles": null,
-  "org": "Amazon Web Services",
-  "cost": "Free (livestream)",
-  "url": "https://aws.amazon.com/events/reinvent/",
-  "why": "Catch the big AWS announcements (including IAM/security) to keep your AWS IAM experience current; 11:30 AM ET",
-  "rec": false,
-  "src": "Official site",
-  "id": "ev-30-aws-re-invent-2026-ceo",
-  "start_et": "Tue Dec 01, 2026 · 11:30 AM ET"
  },
  {
   "title": "Okta Streamcast: Inside a real vishing operation (phishing resistance)",
@@ -541,7 +439,7 @@
   "city": null,
   "miles": null,
   "src": "Official site",
-  "id": "ev-31-okta-streamcast-inside",
+  "id": "ev-25-okta-streamcast-inside",
   "start_et": "Tue Dec 01, 2026 · 12:00 PM ET"
  },
  {
@@ -558,7 +456,7 @@
   "why": "Security community; good for networking",
   "src": "Luma",
   "rec": false,
-  "id": "ev-32-agentic-finance-hack",
+  "id": "ev-26-agentic-finance-hack",
   "start_et": "Sat Dec 05, 2026 · 9:30 AM ET"
  },
  {
@@ -570,12 +468,12 @@
   "miles": null,
   "org": "Gartner",
   "cost": "Paid",
-  "url": "https://www.gartner.com/en/conferences/na/identity-access-management-us",
+  "url": "https://www.gartner.com/en/conferences/hub/identity-access-management-conferences",
   "why": "The big IAM industry summit; follow the agenda/talks online even if not attending",
   "rec": false,
-  "end": "2026-12-09T23:00:00Z",
+  "end": null,
   "src": "Official site",
-  "id": "ev-33-gartner-identity-acces",
+  "id": "ev-27-gartner-identity-acces",
   "start_et": "Mon Dec 07, 2026 · 11:00 AM ET"
  },
  {
@@ -592,7 +490,7 @@
   "why": "Cloud infrastructure peers (AWS/Azure identity overlaps)",
   "src": "Luma",
   "rec": false,
-  "id": "ev-34-nyc-alt-cloud-meetup-d",
+  "id": "ev-28-nyc-alt-cloud-meetup-d",
   "start_et": "Wed Dec 16, 2026 · 5:30 PM ET"
  },
  {
@@ -609,7 +507,7 @@
   "rec": false,
   "end": null,
   "src": "Official site",
-  "id": "ev-35-identiverse-2027",
+  "id": "ev-29-identiverse-2027",
   "start_et": "Mon Jun 28, 2027 · 12:00 PM ET"
  }
 ]
