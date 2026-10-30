@@ -2,7 +2,7 @@
 # Back up build/ to the agent store and to repo branch build-backup (path build/, never served: Pages serves main only). No secrets are in build/.
 set -euo pipefail; export TZ=America/New_York; cd "$(dirname "$0")"
 ST=/cursor/stores/store-389efb40-c207-4ce4-88b2-1706916c4bf8/amjad-build
-cpy(){ rm -rf "$1"; mkdir -p "$1"; tar --exclude='*_raw.json' -cf - . | tar -xf - -C "$1"; }
+cpy(){ rm -rf "$1"; mkdir -p "$1"; tar --exclude='*_raw.json' -cf - . | tar --no-same-owner --no-same-permissions -m -xf - -C "$1"; }
 cpy $ST/build && echo "store backup ok"
 W=/tmp/amjad-backup-wt; R=../site
 git -C $R fetch -q origin build-backup 2>/dev/null || true
