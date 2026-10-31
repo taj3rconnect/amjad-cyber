@@ -9441,38 +9441,6 @@
    "frameable": false
   },
   {
-   "id": "zp-azure-iam",
-   "title": "Azure IAM Engineer",
-   "company": "Piper Companies (client: technology organization)",
-   "pay": "$105,000–$129,000/yr",
-   "pay_min": 105000,
-   "type": "Full-time",
-   "mode": "Remote",
-   "location": "Remote (US, EST/CST)",
-   "source": "Employer site",
-   "url": "https://careers.zpgroup.com/details/2932/azure_iam_engineer",
-   "posted": "2026-10-16",
-   "summary": "Design and run Entra ID for a highly secure cloud environment (new IL5 offering): SSO, MFA, conditional access, RBAC/ABAC, app integration, documentation.",
-   "reqs": [
-    "Administering Entra ID",
-    "SSO, MFA, conditional access, RBAC",
-    "Identity federation",
-    "Okta/SailPoint/IaC a plus"
-   ],
-   "fit": "Entra ID + MFA + least-privilege groups are your daily work; Security+ fits secure-environment roles.",
-   "gaps": [
-    "Conditional access design (Step 4)",
-    "IL5 / government cloud basics",
-    "Terraform or IaC basics"
-   ],
-   "group": "main",
-   "work_mode": "Remote",
-   "job_type": "Full-time",
-   "employer_type": "Staffing agency",
-   "state": "US",
-   "frameable": false
-  },
-  {
    "id": "riot-platforms-director-identity-access-manag-entiam",
    "title": "Director, Identity & Access Management (IAM)",
    "company": "Riot Platforms",
