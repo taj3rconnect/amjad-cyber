@@ -127,37 +127,6 @@
   "frameable": false
  },
  {
-  "id": "smtb-iam-analyst",
-  "title": "Identity Access Management Analyst",
-  "company": "Sumitomo Mitsui Trust Bank",
-  "pay": "$90,000\u2013$125,000/yr",
-  "pay_min": 90000,
-  "type": "Full-time",
-  "mode": "On-site/Hybrid NY/NJ",
-  "location": "New York, NY (hybrid)",
-  "source": "Teal (aggregator)",
-  "url": "https://www.tealhq.com/job/identity-access-management-analyst_7ea1aead85d366465753320e9bbbe7d4eefe2",
-  "posted": "2026-08",
-  "summary": "Bank IAM analyst: provisioning, access reviews and controls evidence.",
-  "reqs": [
-   "User provisioning",
-   "Access recertification",
-   "Audit and controls",
-   "AD / Entra"
-  ],
-  "fit": "Banks value your audit-trail and least-privilege habits.",
-  "gaps": [
-   "Access review campaigns (Step 6)",
-   "SOX-style controls language"
-  ],
-  "group": "main",
-  "work_mode": "Hybrid",
-  "job_type": "Full-time",
-  "employer_type": "Direct employer",
-  "state": "NY",
-  "frameable": true
- },
- {
   "id": "guardian-sr-iam",
   "title": "Senior Identity and Access Management Engineer",
   "company": "Guardian Life",
@@ -242,37 +211,6 @@
   "gaps": [
    "Consulting-style case answers",
    "One IGA tool demo (SailPoint/Okta)"
-  ],
-  "group": "main",
-  "work_mode": "Remote + travel",
-  "job_type": "Full-time",
-  "employer_type": "Consulting/SI",
-  "state": "US",
-  "frameable": false
- },
- {
-  "id": "deloitte-iam-architect",
-  "title": "IAM Architect, Delivery Senior Consultant",
-  "company": "Deloitte",
-  "pay": "$124,700\u2013$207,800/yr",
-  "pay_min": 124700,
-  "type": "Full-time",
-  "mode": "Travel",
-  "location": "US (about 15% travel)",
-  "source": "Company career page",
-  "url": "https://apply.deloitte.com/en_US/careers/JobDetail/IAM-Architect-Delivery-Senior-Consultant/366528",
-  "posted": "2026-10",
-  "summary": "Senior consultant designing and delivering IAM solutions for clients; about 15% travel.",
-  "reqs": [
-   "IAM architecture and delivery",
-   "IGA/AM/PAM platforms",
-   "Client stakeholder management",
-   "Documentation and design"
-  ],
-  "fit": "Stretch consulting role: your end-to-end JML design is the core story.",
-  "gaps": [
-   "Architecture diagrams of your JML flow",
-   "SC-300 + Okta milestones"
   ],
   "group": "main",
   "work_mode": "Remote + travel",
