@@ -1,7 +1,7 @@
 [
  {
   "title": "Simply Cyber Daily Cyber Threat Brief (weekdays 8 AM ET)",
-  "start": "2026-11-02T12:00:00Z",
+  "start": "2026-11-03T13:00:00Z",
   "online": true,
   "org": "Simply Cyber (Gerald Auger)",
   "cost": "Free",
@@ -15,7 +15,7 @@
   "miles": null,
   "src": "Official site",
   "id": "ev-0-simply-cyber-daily-cyb",
-  "start_et": "Mon Nov 02, 2026 · 7:00 AM ET"
+  "start_et": "Tue Nov 03, 2026 · 8:00 AM ET"
  },
  {
   "title": "FIDO Alliance webinar: The Frontline Authentication Gap (passwordless and shared devices)",
@@ -103,23 +103,6 @@
   "start_et": "Wed Nov 04, 2026 · 2:00 PM ET"
  },
  {
-  "title": "Agentics Spotlight: Skills, Harnesses & Agent Identity",
-  "start": "2026-11-04T23:00:00.000Z",
-  "end": "2026-11-05T03:00:00.000Z",
-  "online": false,
-  "venue": "Greenwich Village",
-  "city": "New York, NY",
-  "miles": 26,
-  "org": "Nori Agentic, Jesse Vincent",
-  "cost": "Free",
-  "url": "https://lu.ma/agentics-bos4",
-  "why": "Security community; good for networking",
-  "src": "Luma",
-  "rec": true,
-  "id": "ev-6-agentics-spotlight-ski",
-  "start_et": "Wed Nov 04, 2026 · 6:00 PM ET"
- },
- {
   "title": "Securing your CI/CD with zizmor",
   "start": "2026-11-04T23:00:00.000Z",
   "end": "2026-11-05T01:00:00.000Z",
@@ -133,8 +116,25 @@
   "why": "Security community; good for networking",
   "src": "Luma",
   "rec": false,
-  "id": "ev-7-securing-your-ci-cd-wi",
+  "id": "ev-6-securing-your-ci-cd-wi",
   "start_et": "Wed Nov 04, 2026 · 6:00 PM ET"
+ },
+ {
+  "title": "Agentics Spotlight: Skills, Harnesses & Agent Identity",
+  "start": "2026-11-04T23:30:00.000Z",
+  "end": "2026-11-05T02:30:00.000Z",
+  "online": false,
+  "venue": "Greenwich Village",
+  "city": "New York, NY",
+  "miles": 26,
+  "org": "Nori Agentic, Jesse Vincent",
+  "cost": "Free",
+  "url": "https://lu.ma/agentics-bos4",
+  "why": "Security community; good for networking",
+  "src": "Luma",
+  "rec": true,
+  "id": "ev-7-agentics-spotlight-ski",
+  "start_et": "Wed Nov 04, 2026 · 6:30 PM ET"
  },
  {
   "title": "NY Metro Joint Cyber Security Conference (InfoSecurity.NYC)",
@@ -426,7 +426,7 @@
   "start_et": "Sat Nov 21, 2026 · 6:30 PM ET"
  },
  {
-  "title": "Non-Slop Hackathon | Pangram x Nous Research x Reducto",
+  "title": "NYC Non-Slop Hackathon | Pangram x Nous Research x Reducto",
   "start": "2026-11-22T14:00:00.000Z",
   "end": "2026-11-22T23:00:00.000Z",
   "online": false,
@@ -439,7 +439,7 @@
   "why": "Security community; good for networking",
   "src": "Luma",
   "rec": false,
-  "id": "ev-25-non-slop-hackathon-pan",
+  "id": "ev-25-nyc-non-slop-hackathon",
   "start_et": "Sun Nov 22, 2026 · 9:00 AM ET"
  },
  {
