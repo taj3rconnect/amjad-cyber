@@ -1,0 +1,20 @@
+name: amjad-cyber
+
+services:
+  web:
+    build: .
+    image: amjad-cyber-web
+    container_name: amjad-cyber
+    restart: unless-stopped
+    # This PC has used up Docker's address pools, so a project network fails.
+    network_mode: bridge
+    ports:
+      # Port 3079 is registered in the vault PORT_REGISTRY. Loopback only.
+      - "127.0.0.1:3079:8080"
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
