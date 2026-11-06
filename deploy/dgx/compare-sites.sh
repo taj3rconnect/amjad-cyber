@@ -8,8 +8,8 @@ set -u
 
 PAGES=https://taj3rconnect.github.io/amjad-cyber
 NEW=${1:-https://amjad.haslani.com}
-# manifest.json is rewritten by nginx. Dotfiles are blocked on purpose.
-EXPECTED_DIFF='^(manifest\.json|\.nojekyll)$'
+# manifest.json is rewritten by nginx. Dotfiles and the non-site files are blocked on purpose.
+EXPECTED_DIFF='^(manifest\.json|\.nojekyll|\.dockerignore|\.claude/.*|deploy/.*|docker/.*|Dockerfile|docker-compose\.yml)$'
 
 same=0; expected=0; bad=0
 while IFS= read -r f; do
